@@ -38,5 +38,24 @@ public class Player : MonoBehaviour
                 LevelManager.switchScene("Park");
             }
         }
+
+
+        if (LevelManager.currentLevel == "AlleyInside") {
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+                LevelManager.switchScene("AlleyOutside");
+            }
+        }
+
+        if (LevelManager.currentLevel == "AlleyOutside") {
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
+                LevelManager.switchScene("AlleyInside");
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.gameObject.tag == "Item") {
+            Destroy(collider.gameObject);
+        }
     }
 }
