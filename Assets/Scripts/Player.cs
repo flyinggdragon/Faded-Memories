@@ -8,41 +8,35 @@ public class Player : MonoBehaviour
     private float horizontal;
     public float speed = 6f;
     public Rigidbody2D rb;
-    LevelManager levelManager;
+    private float screenLimitLeft = -9f;
+    private float screenLimitRight = 9f;
 
-    void Start()
-    {
-        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+    void Start() {
+        
     }
 
-    void Update()
-    {
+    void Update() {
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, 0);
 
-        if (transform.position.x > 9) {
-            if (levelManager.currentLevel == "Street") {
-                levelManager.switchScene("AlleyOutside");
-                levelManager.currentLevel = "AlleyOutside";
+        if (transform.position.x >= screenLimitRight) {
+            if (LevelManager.currentLevel == "Street") {
+                LevelManager.switchScene("AlleyOutside");
             }
 
-            if (levelManager.currentLevel == "AlleyOutside") {
-                levelManager.switchScene("Park");
-                levelManager.currentLevel = "Park";
-
+            if (LevelManager.currentLevel == "Park") {
+                LevelManager.switchScene("Street");
             }
         }
 
-        if (transform.position.x < -9) {
-            if (levelManager.currentLevel == "AlleyOutside") {
-                levelManager.switchScene("Street");
-                levelManager.currentLevel = "Street";
+        if (transform.position.x <= screenLimitLeft) {
+            if (LevelManager.currentLevel == "AlleyOutside") {
+                LevelManager.switchScene("Street");
             }
 
-            else if (levelManager.currentLevel == "Park") {
-                levelManager.switchScene("AlleyOutside");
-                levelManager.currentLevel = "AlleyOutside";
+            if (LevelManager.currentLevel == "Street") {
+                LevelManager.switchScene("Park");
             }
         }
-    }  
+    }
 }

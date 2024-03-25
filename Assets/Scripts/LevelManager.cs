@@ -3,24 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
-{
+public static class LevelManager {
     
-    public string currentLevel;
+    public static string currentLevel = "Street";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        currentLevel = "Street";
+    public static string CurrentLevel {
+        get { return currentLevel; }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void switchScene(string stage) {
+    public static void switchScene(string stage) {
         SceneManager.LoadScene(stage);
+        currentLevel = stage;
     }
 }
