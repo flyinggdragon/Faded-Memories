@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
+    private Notebook notebookScript;
     private float horizontal;
     public float speed = 6f;
     public Rigidbody2D rb;
@@ -12,12 +12,19 @@ public class Player : MonoBehaviour
     private float screenLimitRight = 9f;
 
     void Start() {
-        
+        notebookScript = GameObject.Find("Notebook Holder").GetComponent<Notebook>();
+        GameObject.Find("Notebook Holder").SetActive(false);
     }
 
     void Update() {
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, 0);
+
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            if (notebookScript != null) {
+                notebookScript.ToggleNotebook();
+            }
+        }
 
         if (transform.position.x >= screenLimitRight) {
             if (LevelManager.currentLevel == "Street") {

@@ -6,13 +6,13 @@ using UnityEngine.Events;
 public class DialogueTrigger : MonoBehaviour {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
 
-    private bool hasSpoken = false;
+    //private bool hasSpoken = false;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player") && !hasSpoken) {
+        if (other.CompareTag("Player") /*&& !hasSpoken*/) {
             other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
 
-            hasSpoken = true;
+            //hasSpoken = true;
         }
     }
 }

@@ -16,6 +16,12 @@ public class DialogueManager : MonoBehaviour {
 
     private List<DialogueString> dialogueList;
 
+    private bool isDialoguing = false;
+
+    public bool IsDialoguing {
+        get { return isDialoguing; }
+    }
+
     [Header("Player")]
     // parar movimento
 
@@ -30,6 +36,8 @@ public class DialogueManager : MonoBehaviour {
         //disable player control
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        
+        isDialoguing = true;
 
         dialogueList = textToPrint;
         currentDialogueIndex = 0;
@@ -107,6 +115,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     private void DialogueStop() {
+        isDialoguing = false;
+
         StopAllCoroutines();
         dialogueText.text = "";
         dialogueParent.SetActive(false);
