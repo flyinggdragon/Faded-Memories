@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour {
     // [SerializeField] private float turnSpeed = 2f;
 
     private List<DialogueString> dialogueList;
+    private AudioSource audioSource;
 
     private bool isDialoguing = false;
 
@@ -32,6 +33,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void DialogueStart(List<DialogueString> textToPrint) {
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+
         dialogueParent.SetActive(true);
         //disable player control
         Cursor.lockState = CursorLockMode.None;
@@ -61,6 +64,10 @@ public class DialogueManager : MonoBehaviour {
             DialogueString line = dialogueList[currentDialogueIndex];
 
             line.startDialogueEvent?.Invoke();
+            
+            if (line.dialogueSoundEffect != null) {
+                audioSource.PlayOneShot(line.dialogueSoundEffect); // Reproduz o áudio como um som único
+            }
 
             if (line.isQuestion) {
                 yield return StartCoroutine(TypeText(line.text));

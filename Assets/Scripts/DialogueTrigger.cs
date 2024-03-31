@@ -32,4 +32,7 @@ public class DialogueString {
     [Header("Triggered Events")]
     public UnityEvent startDialogueEvent;
     public UnityEvent endDialogueEvent;
+
+    [Header("Audio")]
+    public AudioClip dialogueSoundEffect;
 }
