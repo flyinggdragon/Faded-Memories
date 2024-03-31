@@ -5,14 +5,11 @@ using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
-
-    //private bool hasSpoken = false;
-
+    // LEMBRETE: Fazer o diálogo começar com o pressionar de um botão
+    
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player") /*&& !hasSpoken*/) {
             other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
-
-            //hasSpoken = true;
         }
     }
 }

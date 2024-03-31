@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour {
 
     private List<DialogueString> dialogueList;
     private AudioSource audioSource;
+    private AudioManager audioManager;
 
     private bool isDialoguing = false;
 
@@ -30,13 +31,17 @@ public class DialogueManager : MonoBehaviour {
 
     private void Start() {
         dialogueParent.SetActive(false);
+
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
+        if (audioManager == null) {
+            Debug.LogError("AudioManager not found in the scene.");
+        }
     }
 
     public void DialogueStart(List<DialogueString> textToPrint) {
-        audioSource = this.gameObject.AddComponent<AudioSource>();
 
         dialogueParent.SetActive(true);
-        //disable player control
+        //DESATIVAR CONTROLE DO JOGADOR
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         
@@ -66,7 +71,7 @@ public class DialogueManager : MonoBehaviour {
             line.startDialogueEvent?.Invoke();
 
             if (line.dialogueSoundEffect != null) {
-                audioSource.PlayOneShot(line.dialogueSoundEffect);
+                audioManager.PlaySound(line.dialogueSoundEffect);
             }
 
             if (line.isQuestion) {
@@ -128,7 +133,7 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = "";
         dialogueParent.SetActive(false);
 
-        //disable player control
+        //ATIVAR CONTROLE DO JOGADOR
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
