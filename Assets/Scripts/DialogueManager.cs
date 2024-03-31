@@ -64,9 +64,9 @@ public class DialogueManager : MonoBehaviour {
             DialogueString line = dialogueList[currentDialogueIndex];
 
             line.startDialogueEvent?.Invoke();
-            
+
             if (line.dialogueSoundEffect != null) {
-                audioSource.PlayOneShot(line.dialogueSoundEffect); // Reproduz o áudio como um som único
+                audioSource.PlayOneShot(line.dialogueSoundEffect);
             }
 
             if (line.isQuestion) {
