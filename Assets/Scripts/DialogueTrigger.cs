@@ -7,10 +7,8 @@ public class DialogueTrigger : MonoBehaviour {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
     // LEMBRETE: Fazer o diálogo começar com o pressionar de um botão
     
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player") /*&& !hasSpoken*/) {
-            other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
-        }
+    public void StartDialogue(GameObject gObj) {
+        gObj.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
     }
 }
 

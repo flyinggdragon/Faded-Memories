@@ -42,7 +42,6 @@ public class Notebook : MonoBehaviour {
             Debug.LogError("Pistas Content not found!");
         }
 
-        // Encontrar os botões dentro do Notebook Back
         frasesButton = transform.Find("Notebook Back/Button Holder/FrasesButton").GetComponent<Button>();
         pistasButton = transform.Find("Notebook Back/Button Holder/PistasButton").GetComponent<Button>();
 
@@ -52,10 +51,6 @@ public class Notebook : MonoBehaviour {
         if (pistasButton == null) {
             Debug.LogError("Pistas Button not found!");
         }
-
-        // Adicionar os listeners aos botões
-        frasesButton.onClick.AddListener(ActivateFrasesContent);
-        pistasButton.onClick.AddListener(ActivatePistasContent);
     }
 
     public void ToggleNotebook() {
@@ -83,6 +78,8 @@ public class Notebook : MonoBehaviour {
     }
 
     public void ActivatePistasContent() {
+        audioManager.PlaySound(openAudio);
+
         frasesContent.SetActive(false);
         frasesButton.interactable = true;
         pistasContent.SetActive(true);
@@ -90,6 +87,8 @@ public class Notebook : MonoBehaviour {
     }
 
     public void ActivateFrasesContent() {
+        audioManager.PlaySound(openAudio);
+
         pistasContent.SetActive(false);
         pistasButton.interactable = true;
         frasesContent.SetActive(true);
