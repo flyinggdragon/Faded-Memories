@@ -7,7 +7,7 @@ public class Main : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("AlleyInside");
+        SceneManager.LoadScene("Street");
     }
 
     public void QuitGame()

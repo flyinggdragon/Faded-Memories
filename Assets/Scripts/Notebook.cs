@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Notebook : MonoBehaviour {
     public GameObject NotebookObject;
@@ -18,17 +19,43 @@ public class Notebook : MonoBehaviour {
 
     // Fim das inutilidades
     private AudioManager audioManager;
+    private GameObject frasesContent;
+    private GameObject pistasContent;
+    private Button frasesButton;
+    private Button pistasButton;
 
     void Start() {
         dialogueManager = GameObject.Find("Player").GetComponent<DialogueManager>();
         
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = openAudio;
-
-        audioManager = GameObject.FindObjectOfType<AudioManager>();
+        audioManager = FindObjectOfType<AudioManager>();
         if (audioManager == null) {
             Debug.LogError("AudioManager not found in the scene.");
         }
+
+        frasesContent = transform.Find("Notebook Back/FrasesContent").gameObject;
+        pistasContent = transform.Find("Notebook Back/PistasContent").gameObject;
+        
+        if (frasesContent == null) {
+            Debug.LogError("Frases Content not found!");
+        }
+        if (pistasContent == null) {
+            Debug.LogError("Pistas Content not found!");
+        }
+
+        // Encontrar os botões dentro do Notebook Back
+        frasesButton = transform.Find("Notebook Back/Button Holder/FrasesButton").GetComponent<Button>();
+        pistasButton = transform.Find("Notebook Back/Button Holder/PistasButton").GetComponent<Button>();
+
+        if (frasesButton == null) {
+            Debug.LogError("Frases Button not found!");
+        }
+        if (pistasButton == null) {
+            Debug.LogError("Pistas Button not found!");
+        }
+
+        // Adicionar os listeners aos botões
+        frasesButton.onClick.AddListener(ActivateFrasesContent);
+        pistasButton.onClick.AddListener(ActivatePistasContent);
     }
 
     public void ToggleNotebook() {
@@ -42,7 +69,6 @@ public class Notebook : MonoBehaviour {
             
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-
         }
 
         else {
@@ -54,5 +80,19 @@ public class Notebook : MonoBehaviour {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+    }
+
+    public void ActivatePistasContent() {
+        frasesContent.SetActive(false);
+        frasesButton.interactable = true;
+        pistasContent.SetActive(true);
+        pistasButton.interactable = false;
+    }
+
+    public void ActivateFrasesContent() {
+        pistasContent.SetActive(false);
+        pistasButton.interactable = true;
+        frasesContent.SetActive(true);
+        frasesButton.interactable = false;
     }
 }
