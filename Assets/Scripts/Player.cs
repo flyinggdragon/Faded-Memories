@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
     private float screenLimitLeft = -9f;
     private float screenLimitRight = 9f;
     private bool inTrigger = false;
+    private string triggerType;
     private bool haltMovement = false;
 
     void Start() {
@@ -23,7 +24,7 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        if (dialogueManager.IsDialoguing || notebook.IsOpen) {
+        if (dialogueManager.IsDialoguing || notebook.IsOpen /*|| *modal.IsOpen*/) {
             haltMovement = true;
         } else { haltMovement = false; }
 
@@ -41,10 +42,14 @@ public class Player : MonoBehaviour {
             notebook.ToggleNotebook();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing) {
-            // ifs para verificar se é item, diálogo, etc.
-            
-            dialogueTrigger.StartDialogue();
+        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing) {            
+            if (triggerType == "NPC") {
+                dialogueTrigger.StartDialogue();
+            }
+
+            else if (triggerType == "Item") {
+                Debug.Log(triggerType);
+            }
         }
 
         // Verificação para troca de cenas
@@ -83,14 +88,12 @@ public class Player : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("NPC")) {
-            inTrigger = true;
-        }
+        triggerType = other.tag;
+        inTrigger = true;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        if (other.CompareTag("NPC")) {
-            inTrigger = false;
-        }
+        triggerType = null;
+        inTrigger = false;
     }
 }
