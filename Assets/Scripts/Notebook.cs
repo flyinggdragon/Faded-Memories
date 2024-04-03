@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class Notebook : MonoBehaviour {
     public GameObject NotebookObject;
     private bool isOpen = false;
-    private DialogueManager dialogueManager;
+
+    public bool IsOpen {
+        get { return isOpen; }
+    }
 
     /*
     Isso aqui tudo é inútil. Pode-se colocar um caminho direto pro arquivo de áudio
@@ -25,56 +28,35 @@ public class Notebook : MonoBehaviour {
     private Button pistasButton;
 
     void Start() {
-        dialogueManager = GameObject.Find("Player").GetComponent<DialogueManager>();
-        
         audioManager = FindObjectOfType<AudioManager>();
-        if (audioManager == null) {
-            Debug.LogError("AudioManager not found in the scene.");
-        }
 
         frasesContent = transform.Find("Notebook Back/FrasesContent").gameObject;
         pistasContent = transform.Find("Notebook Back/PistasContent").gameObject;
-        
-        if (frasesContent == null) {
-            Debug.LogError("Frases Content not found!");
-        }
-        if (pistasContent == null) {
-            Debug.LogError("Pistas Content not found!");
-        }
 
         frasesButton = transform.Find("Notebook Back/Button Holder/FrasesButton").GetComponent<Button>();
         pistasButton = transform.Find("Notebook Back/Button Holder/PistasButton").GetComponent<Button>();
-
-        if (frasesButton == null) {
-            Debug.LogError("Frases Button not found!");
-        }
-        if (pistasButton == null) {
-            Debug.LogError("Pistas Button not found!");
-        }
     }
 
     public void ToggleNotebook() {
-        if (dialogueManager.IsDialoguing) { return; }
-
-        if (!isOpen) { 
+        // Abre
+        if (!isOpen) {
             NotebookObject.SetActive(true);
             isOpen = true;
-            
-            audioManager.PlaySound(openAudio);
             
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
 
+        // Fecha
         else {
             NotebookObject.SetActive(false);
             isOpen = false;
 
-            audioManager.PlaySound(openAudio);
-
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+        
+        audioManager.PlaySound(openAudio);
     }
 
     public void ActivatePistasContent() {

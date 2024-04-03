@@ -24,24 +24,17 @@ public class DialogueManager : MonoBehaviour {
         get { return isDialoguing; }
     }
 
-    [Header("Player")]
-    // parar movimento
-
     private int currentDialogueIndex = 0;
 
     private void Start() {
         dialogueParent.SetActive(false);
 
         audioManager = GameObject.FindObjectOfType<AudioManager>();
-        if (audioManager == null) {
-            Debug.LogError("AudioManager not found in the scene.");
-        }
     }
 
     public void DialogueStart(List<DialogueString> textToPrint) {
 
         dialogueParent.SetActive(true);
-        //DESATIVAR CONTROLE DO JOGADOR
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         
@@ -55,11 +48,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     private void DisableButtons() {
-        option1Button.interactable = false;
-        option2Button.interactable = false;
-
-        option1Button.GetComponentInChildren<TMP_Text>().text = "No Option";
-        option2Button.GetComponentInChildren<TMP_Text>().text = "No Option";
+        option1Button.gameObject.SetActive(false);
+        option2Button.gameObject.SetActive(false);
     }
     
     private bool optionSelected = false;
@@ -77,8 +67,9 @@ public class DialogueManager : MonoBehaviour {
             if (line.isQuestion) {
                 yield return StartCoroutine(TypeText(line.text));
             
-                option1Button.interactable = true;
-                option2Button.interactable = true;
+                
+                option1Button.gameObject.SetActive(true);
+                option2Button.gameObject.SetActive(true);
 
                 option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
                 option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
@@ -133,7 +124,6 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = "";
         dialogueParent.SetActive(false);
 
-        //ATIVAR CONTROLE DO JOGADOR
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

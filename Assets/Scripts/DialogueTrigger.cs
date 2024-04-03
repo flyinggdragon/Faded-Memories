@@ -5,10 +5,9 @@ using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
-    // LEMBRETE: Fazer o diálogo começar com o pressionar de um botão
     
-    public void StartDialogue(GameObject gObj) {
-        gObj.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
+    public void StartDialogue() {
+        GameObject.FindWithTag("Player").GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
     }
 }
 

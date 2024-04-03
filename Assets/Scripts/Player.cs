@@ -4,34 +4,50 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
-    private Notebook notebookScript;
+    private Notebook notebook;
     private float horizontal;
     public float speed = 6f;
     public Rigidbody2D rb;
     private DialogueTrigger dialogueTrigger;
+    private DialogueManager dialogueManager;
     private float screenLimitLeft = -9f;
     private float screenLimitRight = 9f;
+    private bool inTrigger = false;
+    private bool haltMovement = false;
 
     void Start() {
-        notebookScript = GameObject.Find("Notebook Holder").GetComponent<Notebook>();
+        notebook = GameObject.Find("Notebook Holder").GetComponent<Notebook>();
         GameObject.Find("Notebook Holder").SetActive(false);
-
         dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
-        if (dialogueTrigger == null) {
-            Debug.LogError("dialogueTrigger não pôde ser encontrado na cena.");
-        }
+        dialogueManager = this.GetComponent<DialogueManager>();
     }
 
     void Update() {
+        if (dialogueManager.IsDialoguing || notebook.IsOpen) {
+            haltMovement = true;
+        } else { haltMovement = false; }
+
+        // Define a velocidade de acordo. speed = 0f -> travar movimento
+        speed = haltMovement ? 0f : 6f;
+        
+        // Movimentação padrão
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, 0);
 
-        if (Input.GetKeyDown(KeyCode.E)) {
-            if (notebookScript != null) {
-                notebookScript.ToggleNotebook();
-            }
+        // Inputs
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            if (dialogueManager.IsDialoguing) { return; }
+
+            notebook.ToggleNotebook();
         }
 
+        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing) {
+            // ifs para verificar se é item, diálogo, etc.
+            
+            dialogueTrigger.StartDialogue();
+        }
+
+        // Verificação para troca de cenas
         if (transform.position.x >= screenLimitRight) {
             if (LevelManager.currentLevel == "Street") {
                 LevelManager.switchScene("AlleyOutside");
@@ -66,15 +82,15 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collider) {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            if (collider.gameObject.tag == "Item") {
-                Destroy(collider.gameObject);
-            }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("NPC")) {
+            inTrigger = true;
+        }
+    }
 
-            if (collider.gameObject.tag == "NPC") {
-                dialogueTrigger.StartDialogue(this.gameObject);
-            }
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.CompareTag("NPC")) {
+            inTrigger = false;
         }
     }
 }
