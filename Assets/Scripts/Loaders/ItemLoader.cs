@@ -10,7 +10,7 @@ public class ItemLoader : MonoBehaviour {
     public class Item {
         public int id;
         public string name;
-        public string path;
+        public string fileName;
         public string description;
     }
 
