@@ -1,0 +1,16 @@
+{
+    "item": [
+        {
+            "id": 1,
+            "name": "Faca",
+            "path": "Assets/Sprites/knife.png",
+            "description": "Uma faca de bolso. Um pouco cega, mas ainda afiada. Pode-se notar uma mancha de sangue próxima à ponta."  
+        },
+        {
+            "id": 2,
+            "name": "Cédula de 200 Rukhs",
+            "path": "Assets/Sprites/banknote.png",
+            "description": "Uma nota de 200 Rukhs, a moeda usada em Solkhor. Tem sinais de ser um pouco antiga, mas ainda é válida. É a cédula de valor mais alto. Pode comprar várias coisas, inclusive alguns favores."
+        }
+    ]
+}
