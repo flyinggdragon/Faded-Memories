@@ -22,19 +22,19 @@ public class Notebook : MonoBehaviour {
 
     // Fim das inutilidades
     private AudioManager audioManager;
-    private GameObject frasesContent;
-    private GameObject pistasContent;
-    private Button frasesButton;
-    private Button pistasButton;
+    private GameObject sentencesContent;
+    private GameObject cluesContent;
+    private Button sentencesButton;
+    private Button cluesButton;
 
     void Start() {
         audioManager = FindObjectOfType<AudioManager>();
 
-        frasesContent = transform.Find("Notebook Back/FrasesContent").gameObject;
-        pistasContent = transform.Find("Notebook Back/PistasContent").gameObject;
+        sentencesContent = transform.Find("Notebook Back/Sentences Content").gameObject;
+        cluesContent = transform.Find("Notebook Back/Clues Content").gameObject;
 
-        frasesButton = transform.Find("Notebook Back/Button Holder/FrasesButton").GetComponent<Button>();
-        pistasButton = transform.Find("Notebook Back/Button Holder/PistasButton").GetComponent<Button>();
+        sentencesButton = transform.Find("Notebook Back/Button Holder/Sentences Button").GetComponent<Button>();
+        cluesButton = transform.Find("Notebook Back/Button Holder/Clues Button").GetComponent<Button>();
     }
 
     public void ToggleNotebook() {
@@ -59,21 +59,21 @@ public class Notebook : MonoBehaviour {
         audioManager.PlaySound(openAudio);
     }
 
-    public void ActivatePistasContent() {
+    public void ActivateCluesContent() {
         audioManager.PlaySound(openAudio);
 
-        frasesContent.SetActive(false);
-        frasesButton.interactable = true;
-        pistasContent.SetActive(true);
-        pistasButton.interactable = false;
+        sentencesContent.SetActive(false);
+        sentencesButton.interactable = true;
+        cluesContent.SetActive(true);
+        cluesButton.interactable = false;
     }
 
-    public void ActivateFrasesContent() {
+    public void ActivateSentencesContent() {
         audioManager.PlaySound(openAudio);
 
-        pistasContent.SetActive(false);
-        pistasButton.interactable = true;
-        frasesContent.SetActive(true);
-        frasesButton.interactable = false;
+        cluesContent.SetActive(false);
+        cluesButton.interactable = true;
+        sentencesContent.SetActive(true);
+        sentencesButton.interactable = false;
     }
 }

@@ -12,6 +12,7 @@ public class ItemLoader : MonoBehaviour {
         public string name;
         public string fileName;
         public string description;
+        public bool collected;
     }
 
     [System.Serializable]
