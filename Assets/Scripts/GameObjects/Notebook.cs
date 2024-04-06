@@ -38,22 +38,16 @@ public class Notebook : MonoBehaviour {
     }
 
     public void ToggleNotebook() {
-        // Abre
-        if (!isOpen) {
-            NotebookObject.SetActive(true);
-            isOpen = true;
-            
+        isOpen = !isOpen;
+        NotebookObject.SetActive(isOpen);
+        Cursor.visible = isOpen;
+
+        if (isOpen) {
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
         }
 
-        // Fecha
         else {
-            NotebookObject.SetActive(false);
-            isOpen = false;
-
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
         
         audioManager.PlaySound(openAudio);

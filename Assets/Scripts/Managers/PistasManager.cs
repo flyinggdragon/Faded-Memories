@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq; // Adicione este using para usar o método FirstOrDefault
+using System.Linq;
+using System.IO;
 
 public class PistasManager : MonoBehaviour {
     private ItemLoader.ItemList itemList;
@@ -12,32 +13,30 @@ public class PistasManager : MonoBehaviour {
     private GameObject cells;
 
     void Start() {
-        itemList = FindObjectOfType<ItemLoader>().itemList;
-
+        itemList = LoadItems();
         GenItemCells();
     }
 
     void Update() {
-        // Muito ineficiente, mas funciona. Por ora deixa assim.
-        // Classe Item pra cada instância dessa deve arrumar.
-        foreach (Transform cell in cells.transform) {
-            string itemName = cell.gameObject.name.Replace("Cell ", "");
-            ItemLoader.Item item = itemList.item.ToList().FirstOrDefault(x => x.name == itemName);
-            
-            cell.gameObject.SetActive(item.collected);
-            
-        }
+        
+    }
+
+    private ItemLoader.ItemList LoadItems() {
+        string path = "Assets/GameData/ItemList.json";
+        string jsonContent = File.ReadAllText(path);
+        
+        return JsonUtility.FromJson<ItemLoader.ItemList>(jsonContent);
     }
 
     private void GenItemCells() {
         cells = this.transform.GetChild(0).gameObject;
 
         foreach (ItemLoader.Item item in itemList.item) {
-            item.collected = false;
+            item.Collected = true;
 
-            GameObject cell = new GameObject("Cell " + item.name);
+            GameObject cell = new GameObject("Cell " + item.itemName);
             cell.transform.SetParent(cells.transform);
-            cell.gameObject.SetActive(item.collected);
+            cell.gameObject.SetActive(item.Collected);
             
             RectTransform rectTransform = cell.AddComponent<RectTransform>();
 
@@ -52,6 +51,8 @@ public class PistasManager : MonoBehaviour {
             float aspectRatio = width / height;
 
             rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.y * aspectRatio, rectTransform.sizeDelta.y);
+            
+            item.Obj = cell;
         }
     }
 }
