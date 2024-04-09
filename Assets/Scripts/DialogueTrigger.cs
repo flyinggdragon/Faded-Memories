@@ -5,9 +5,17 @@ using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
+    private ElementContainer elementContainer;
+    private DialogueManager dialogueManager;
+
+    void Start() {
+        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
+        dialogueManager = elementContainer.dialogueManager;
+    }
     
     public void StartDialogue() {
-        GameObject.FindWithTag("Player").GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
+        // Talvez possa dar problema dependendo, se tiver mais de um DlgMngr? Por ora OK.
+        dialogueManager.DialogueStart(dialogueStrings);
     }
 }
 

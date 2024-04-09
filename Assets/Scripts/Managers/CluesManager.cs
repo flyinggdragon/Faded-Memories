@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using TMPro;
+using System.Linq;
 
 public class CluesManager : MonoBehaviour {
     private string jsonFilePath = "Assets/GameData/ItemList.json";
@@ -12,6 +13,8 @@ public class CluesManager : MonoBehaviour {
     public List<GameObject> cells;
     
     void Start() {
+        GameObject.Find("Clues Content").SetActive(false);
+
         itemList = LoadItems(jsonFilePath);
         cells = GenerateCells();
     }
@@ -63,6 +66,10 @@ public class CluesManager : MonoBehaviour {
         }
 
         return cellsList;
+    }
+
+    public CluesManager.Item FindItem(string name) {
+        return itemList.FirstOrDefault(item => item.itemName == name);
     }
 
     [System.Serializable]

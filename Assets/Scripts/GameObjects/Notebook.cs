@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Notebook : MonoBehaviour {
+    private ElementContainer elementContainer;
     public GameObject NotebookObject;
     private bool isOpen = false;
 
@@ -28,7 +29,9 @@ public class Notebook : MonoBehaviour {
     private Button cluesButton;
 
     void Start() {
-        audioManager = FindObjectOfType<AudioManager>();
+        GameObject.Find("Notebook Holder").SetActive(false);
+        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
+        audioManager = elementContainer.audioManager;
 
         sentencesContent = transform.Find("Notebook Back/Sentences Content").gameObject;
         cluesContent = transform.Find("Notebook Back/Clues Content").gameObject;

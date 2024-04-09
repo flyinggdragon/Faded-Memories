@@ -93,7 +93,7 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
         return Instance;
     }
     
-    
+
 
     public virtual T SetBody(string text)
     {

@@ -4,25 +4,32 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
+    private ElementContainer elementContainer;
     private Notebook notebook;
+    private DialogueTrigger dialogueTrigger;
+    private DialogueManager dialogueManager;
+    private UIManager uiManager;
+    private CluesManager cluesManager;
+
+
     private float horizontal;
     public float speed = 6f;
     public Rigidbody2D rb;
-    private DialogueTrigger dialogueTrigger;
-    private DialogueManager dialogueManager;
     private float screenLimitLeft = -9f;
     private float screenLimitRight = 9f;
     private bool inTrigger = false;
+    private string otherName = "";
     private string triggerType;
     private bool haltMovement = false;
 
-
-
     void Start() {
-        notebook = GameObject.Find("Notebook Holder").GetComponent<Notebook>();
-        GameObject.Find("Notebook Holder").SetActive(false);
-        dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
+        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
+
+        notebook = elementContainer.notebook;
+        cluesManager = elementContainer.cluesManager;
+        dialogueTrigger = elementContainer.dialogueTrigger;
         dialogueManager = this.GetComponent<DialogueManager>();
+        uiManager = elementContainer.uiManager;
     }
 
 
@@ -38,7 +45,6 @@ public class Player : MonoBehaviour {
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, 0);
 
-        // Inputs
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (dialogueManager.IsDialoguing) { return; }
 
@@ -51,15 +57,12 @@ public class Player : MonoBehaviour {
             }
 
             else if (triggerType == "Item") {
-                Debug.Log(triggerType);
+                CluesManager.Item item = cluesManager.FindItem(otherName);
+                string info = "\n" + item.itemName + "\n" + item.description;
+
+                uiManager.CreateSimpleModal("Você coletou " + otherName + info, "Item pego!");
             }
-
-
-        
-        
         }
-
-
 
         // Verificação para troca de cenas
         if (transform.position.x >= screenLimitRight) {
@@ -99,16 +102,12 @@ public class Player : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         triggerType = other.tag;
         inTrigger = true;
+        otherName = other.gameObject.name;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         triggerType = null;
         inTrigger = false;
+        otherName = "";
     }
-
-
-
-
-
-
 }
