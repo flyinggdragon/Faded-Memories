@@ -28,8 +28,9 @@ public class Notebook : MonoBehaviour {
     private Button sentencesButton;
     private Button cluesButton;
 
-    void Start() {
+    void Awake() {
         GameObject.Find("Notebook Holder").SetActive(false);
+
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
         audioManager = elementContainer.audioManager;
 
@@ -38,6 +39,7 @@ public class Notebook : MonoBehaviour {
 
         sentencesButton = transform.Find("Notebook Back/Button Holder/Sentences Button").GetComponent<Button>();
         cluesButton = transform.Find("Notebook Back/Button Holder/Clues Button").GetComponent<Button>();
+    
     }
 
     public void ToggleNotebook() {

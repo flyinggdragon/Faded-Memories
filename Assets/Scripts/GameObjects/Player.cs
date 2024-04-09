@@ -61,6 +61,7 @@ public class Player : MonoBehaviour {
                 string info = "\n" + item.itemName + "\n" + item.description;
 
                 uiManager.CreateSimpleModal("Você coletou " + otherName + info, "Item pego!");
+                cluesManager.CollectItem(item);
             }
         }
 
@@ -98,7 +99,8 @@ public class Player : MonoBehaviour {
             }
         }
     }
-
+    
+    // refazer, isso é digno de r/programminghorror
     private void OnTriggerEnter2D(Collider2D other) {
         triggerType = other.tag;
         inTrigger = true;
@@ -109,5 +111,13 @@ public class Player : MonoBehaviour {
         triggerType = null;
         inTrigger = false;
         otherName = "";
+
+        // solução temporária. acho que não tem jeito, vou ter que refazer essa parte.
+        if (triggerType == "Item") {
+            Destroy(other.gameObject);
+        }
+
+        // while ontriggerstay AND ontriggerexit não chamado?
+        // não tenho uma solução ainda.
     }
 }

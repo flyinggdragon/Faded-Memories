@@ -8,13 +8,13 @@
         },
         {
             "id": 2,
-            "itemName": "Cédula de 200 Rukhs",
+            "itemName": "Cedula de 200 Rukhs",
             "fileName": "banknote",
             "description": "Uma nota de 200 Rukhs, a moeda usada em Solkhor. Tem sinais de ser um pouco antiga, mas ainda é válida. É a cédula de valor mais alto. Pode comprar várias coisas, inclusive alguns favores."
         },
         {
             "id": 3,
-            "itemName": "Insígnia",
+            "itemName": "Insignia",
             "fileName": "order",
             "description": "Um patch preto que contém uma insignia. Já vi este símbolo por pixações pela cidade. Por algum motivo ele me é familiar, mas não sei de onde."
         },

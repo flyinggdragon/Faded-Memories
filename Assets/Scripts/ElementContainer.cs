@@ -12,7 +12,7 @@ public class ElementContainer : MonoBehaviour {
     public DialogueTrigger dialogueTrigger;
     public DialogueManager dialogueManager;
 
-    void Start() {
+    void Awake() {
         GameObject notebookHolder = GameObject.Find("Notebook Holder");
         GameObject cluesContent = GameObject.Find("Clues Content");
 
@@ -24,5 +24,9 @@ public class ElementContainer : MonoBehaviour {
         uiManager = GameObject.Find("UI Manager").GetComponent<UIManager>();
         dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
         dialogueManager = this.player.GetComponent<DialogueManager>();
+    }
+
+    void Start() {
+        cluesManager.StartRun();
     }
 }

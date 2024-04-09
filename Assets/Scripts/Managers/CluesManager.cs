@@ -10,27 +10,17 @@ public class CluesManager : MonoBehaviour {
     private string jsonFilePath = "Assets/GameData/ItemList.json";
     [SerializeField]
     public List<Item> itemList;
-    public List<GameObject> cells;
+    public List<Cell> cells;
     
-    void Start() {
-        GameObject.Find("Clues Content").SetActive(false);
+    public void StartRun() {
+        gameObject.SetActive(false);
 
         itemList = LoadItems(jsonFilePath);
         cells = GenerateCells();
-    }
 
-    void Update() {
-        /*
-        foreach (GameObject cell in cells) {
-            Debug.Log(cell.GetComponent<Cell>().itemId);
-            Debug.Log(cell.GetComponent<Cell>().collected);
-            cell.GetComponent<Cell>().QualquerMetodo();
+        foreach (Cell cell in cells) {
+            cell.ToggleVisibility();
         }
-
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            cells[0].GetComponent<Cell>().ToggleVisibility();
-        }
-        */
     }
 
     private List<Item> LoadItems(string path) {
@@ -40,9 +30,9 @@ public class CluesManager : MonoBehaviour {
         return wrapper.item;
     }
 
-    private List<GameObject> GenerateCells() {
+    private List<Cell> GenerateCells() {
         GameObject cellContainer = this.transform.GetChild(0).gameObject;
-        List<GameObject> cellsList = new List<GameObject>();
+        List<Cell> cellsList = new List<Cell>();
 
         foreach (Item item in itemList) {
             Sprite sprite = Resources.Load<Sprite>("Sprites/" + item.fileName);
@@ -58,18 +48,26 @@ public class CluesManager : MonoBehaviour {
 
             Cell cellData = obj.AddComponent<Cell>();
             cellData.itemId = item.id;
+            cellData.collected = item.collected;
 
             Image image = obj.AddComponent<Image>();
             image.sprite = sprite;
 
-            cellsList.Add(obj);
+            cellsList.Add(cellData);
         }
 
         return cellsList;
     }
 
-    public CluesManager.Item FindItem(string name) {
+    public Item FindItem(string name) {
         return itemList.FirstOrDefault(item => item.itemName == name);
+    }
+
+    public void CollectItem(Item item) {
+        item.collected = !item.collected;
+
+        cells[item.id - 1].collected = item.collected;
+        cells[item.id - 1].ToggleVisibility();
     }
 
     [System.Serializable]
@@ -78,7 +76,7 @@ public class CluesManager : MonoBehaviour {
         public string itemName;
         public string fileName;
         public string description;
-        public bool collected;
+        public bool collected = false;
     }
 
     [System.Serializable]
@@ -86,12 +84,13 @@ public class CluesManager : MonoBehaviour {
         public List<Item> item;
     }
 
-    public class Cell : MonoBehaviour {
+    public class Cell : MonoBehaviour { 
         public int itemId;
-        public bool collected = false;
+        public bool collected; 
+
         public void ToggleVisibility() {
             Image image = GetComponent<Image>();
-            image.enabled = !image.enabled;
+            image.enabled = collected; 
         }
     }
 }
