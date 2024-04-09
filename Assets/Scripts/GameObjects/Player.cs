@@ -16,12 +16,15 @@ public class Player : MonoBehaviour {
     private string triggerType;
     private bool haltMovement = false;
 
+
+
     void Start() {
         notebook = GameObject.Find("Notebook Holder").GetComponent<Notebook>();
         GameObject.Find("Notebook Holder").SetActive(false);
         dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
         dialogueManager = this.GetComponent<DialogueManager>();
     }
+
 
     void Update() {
         if (dialogueManager.IsDialoguing || notebook.IsOpen /*|| *modal.IsOpen*/) {
@@ -50,7 +53,13 @@ public class Player : MonoBehaviour {
             else if (triggerType == "Item") {
                 Debug.Log(triggerType);
             }
+
+
+        
+        
         }
+
+
 
         // Verificação para troca de cenas
         if (transform.position.x >= screenLimitRight) {
@@ -96,4 +105,10 @@ public class Player : MonoBehaviour {
         triggerType = null;
         inTrigger = false;
     }
+
+
+
+
+
+
 }
