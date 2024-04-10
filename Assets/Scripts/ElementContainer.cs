@@ -11,6 +11,7 @@ public class ElementContainer : MonoBehaviour {
     public UIManager uiManager;
     public DialogueTrigger dialogueTrigger;
     public DialogueManager dialogueManager;
+    public LevelManager levelManager;
 
     void Awake() {
         GameObject notebookHolder = GameObject.Find("Notebook Holder");
@@ -24,6 +25,7 @@ public class ElementContainer : MonoBehaviour {
         uiManager = GameObject.Find("UI Manager").GetComponent<UIManager>();
         dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
         dialogueManager = this.player.GetComponent<DialogueManager>();
+        levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
     }
 
     void Start() {

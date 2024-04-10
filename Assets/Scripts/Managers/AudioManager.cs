@@ -4,25 +4,44 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
     private AudioSource audioSource;
-
+    [SerializeField]
+    private List<AudioClip> audioClips = new List<AudioClip>();
+    // Adicionar lista de SFX se necessário depois.
+    // Variável volume pra controlar volume.
+    // Controlar volume relativo multiplicando volume por uma constante k.
 
     void Start() {
         audioSource = GetComponent<AudioSource>();
 
-        if (audioSource == null) {
-            Debug.LogError("AudioSource component not found on SoundManager GameObject.");
-        }
-
-        // Chamada pra tocar a musica de fundo deve ir aqui. Por ora, deixa como está.
+        LoadAudioClips();
     }
 
-    public void PlaySound(AudioClip clip) {
-        if (clip != null) {
-            audioSource.PlayOneShot(clip);
+    public void PlayBackgroundMusic(AudioClip clip, float volume = 0.5f) {
+        audioSource.volume = volume;
+        audioSource.loop = true;
+        audioSource.PlayOneShot(clip);
+    }
+
+    public void PlaySound(AudioClip clip, float volume = 0.5f) {
+        audioSource.volume = volume;
+        audioSource.PlayOneShot(clip);
+    }
+
+    public AudioClip FindAudioClip(string name) {
+        foreach (AudioClip audioClip in audioClips) {
+            string audioFileName = System.IO.Path.GetFileNameWithoutExtension(audioClip.name);
+            
+            if (audioFileName == name) {
+                return audioClip;
+            }
         }
 
-        else {
-            Debug.LogWarning("Trying to play a null AudioClip.");
-        }
-    } 
+        return null;
+    }
+
+    private void LoadAudioClips() {
+        AudioClip[] clips = Resources.LoadAll<AudioClip>("Audio/Music");
+
+        audioClips.AddRange(clips);
+    }
 }

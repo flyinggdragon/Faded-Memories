@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
     private DialogueManager dialogueManager;
     private UIManager uiManager;
     private CluesManager cluesManager;
+    private LevelManager levelManager;
 
 
     private float horizontal;
@@ -30,8 +31,8 @@ public class Player : MonoBehaviour {
         dialogueTrigger = elementContainer.dialogueTrigger;
         dialogueManager = this.GetComponent<DialogueManager>();
         uiManager = elementContainer.uiManager;
+        levelManager = elementContainer.levelManager;
     }
-
 
     void Update() {
         if (dialogueManager.IsDialoguing || notebook.IsOpen || uiManager.modalOpen) {
@@ -65,40 +66,37 @@ public class Player : MonoBehaviour {
 
         // Verificação para troca de cenas
         if (transform.position.x >= screenLimitRight) {
-            if (LevelManager.currentLevelName == "Street") {
-                LevelManager.LoadLevel("AlleyOutside");
+            if (!string.IsNullOrEmpty(levelManager.currentLevel.rightName)) {
+                levelManager.ExitRight();
             }
 
-            if (LevelManager.currentLevelName == "Park") {
-                LevelManager.LoadLevel("Street");
-            }
+            // Impedir de ir mais para a direita
         }
 
         if (transform.position.x <= screenLimitLeft) {
-            if (LevelManager.currentLevelName == "AlleyOutside") {
-                LevelManager.LoadLevel("Street");
+            if (!string.IsNullOrEmpty(levelManager.currentLevel.leftName)) {
+                levelManager.ExitLeft();
             }
-
-            if (LevelManager.currentLevelName == "Street") {
-                LevelManager.LoadLevel("Park");
+            
+            // Impedir de ir mais para a esquerda
+        }
+        
+        // Verificar também se está no trigger para tal.
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
+            if (!string.IsNullOrEmpty(levelManager.currentLevel.upName)) {
+                levelManager.ExitUp();
             }
         }
 
-
-        if (LevelManager.currentLevelName == "AlleyInside") {
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-                LevelManager.LoadLevel("AlleyOutside");
-            }
-        }
-
-        if (LevelManager.currentLevelName == "AlleyOutside") {
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-                LevelManager.LoadLevel("AlleyInside");
+        // Verificar também se está no trigger para tal.
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+            if (!string.IsNullOrEmpty(levelManager.currentLevel.downName)) {
+                levelManager.ExitDown();
             }
         }
     }
     
-    // refazer, isso é digno de r/programminghorror
+    // Refazer, isso é digno de r/programminghorror
     private void OnTriggerEnter2D(Collider2D other) {
         triggerType = other.tag;
         inTrigger = true;

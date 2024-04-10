@@ -6,23 +6,42 @@ using System.IO;
 
 public class LevelManager : MonoBehaviour {
 
+    private string jsonPath = "Assets/GameData/LevelList.json";
     [SerializeField]
     public List<Level> levelList;
-    private string jsonPath = "Assets/GameData/LevelList.json";
-    public string currentLevelName;
-
-    public class Level {
-        public string levelName;
-        public int levelId;
-        public string leftName;
-        public string rightName;
-        public string upName;
-        public string downName;
-        public AudioClip backgroundSong;
-    }
+    public Level currentLevel;
+    private ElementContainer elementContainer;
+    private AudioManager audioManager;
 
     void Start() {
+        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
+        audioManager = elementContainer.audioManager;
+
         LoadLevelList(jsonPath);
+
+        foreach (Level level in levelList) {
+            AudioClip clip = audioManager.FindAudioClip(level.backgroundSong);
+            level.backgroundSongClip = clip;
+
+            if (level.leftName == "") {
+                level.leftName = null;
+            }
+
+            if (level.rightName == "") {
+                level.rightName = null;
+            }
+
+            if (level.upName == "") {
+                level.upName = null;
+            }
+
+            if (level.downName == "") {
+                level.downName = null;
+            }
+        }
+        
+        currentLevel = levelList[0]; // Street.
+        audioManager.PlayBackgroundMusic(currentLevel.backgroundSongClip);
     }
 
     public void LoadLevelList(string path) {
@@ -33,37 +52,42 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void LoadLevel(string levelName) {
+        currentLevel = FindLevelByName(levelName);
         SceneManager.LoadScene(levelName);
     }
 
     public void ExitLeft() {
-        Level currentLevel = FindLevelByName(currentLevelName);
-        if (currentLevel != null && !string.IsNullOrEmpty(currentLevel.leftName))
-            LoadLevel(currentLevel.leftName);
+        LoadLevel(currentLevel.leftName);
     }
 
     public void ExitRight() {
-        Level currentLevel = FindLevelByName(currentLevelName);
-        if (currentLevel != null && !string.IsNullOrEmpty(currentLevel.rightName))
-            LoadLevel(currentLevel.rightName);
+        LoadLevel(currentLevel.rightName);
     }
 
     public void ExitUp() {
-        Level currentLevel = FindLevelByName(currentLevelName);
-        if (currentLevel != null && !string.IsNullOrEmpty(currentLevel.upName))
-            LoadLevel(currentLevel.upName);
+        LoadLevel(currentLevel.upName);
     }
 
     public void ExitDown() {
-        Level currentLevel = FindLevelByName(currentLevelName);
-        if (currentLevel != null && !string.IsNullOrEmpty(currentLevel.downName))
-            LoadLevel(currentLevel.downName);
+        LoadLevel(currentLevel.downName);
     }
 
     private Level FindLevelByName(string levelName) {
         return levelList.Find(level => level.levelName == levelName);
     }
 
+    [System.Serializable]
+    public class Level {
+        public string levelName;
+        public int levelId;
+        public string leftName;
+        public string rightName;
+        public string upName;
+        public string downName;
+        public string backgroundSong;
+        public AudioClip backgroundSongClip;
+    }
+    
     [System.Serializable]
     public class LevelListWrapper {
         public List<Level> level;

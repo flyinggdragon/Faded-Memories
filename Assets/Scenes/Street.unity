@@ -159,6 +159,7 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   dialogueTrigger: {fileID: 0}
   dialogueManager: {fileID: 0}
+  levelManager: {fileID: 0}
 --- !u!4 &82368965
 Transform:
   m_ObjectHideFlags: 0
@@ -1156,6 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClips: []
 --- !u!4 &476438400
 Transform:
   m_ObjectHideFlags: 0
@@ -1774,6 +1776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 894021467}
+  - component: {fileID: 894021468}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -1796,6 +1799,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1305926301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &894021468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894021466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045ab7d25c5470344a7b795ed57882ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelList: []
+  currentLevel:
+    levelName: 
+    levelId: 0
+    leftName: 
+    rightName: 
+    upName: 
+    downName: 
+    backgroundSong: 
+    backgroundSongClip: {fileID: 0}
 --- !u!1 &988958391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,7 +2985,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3o _ _ _ _ _ _ _ _ _ _ _ Superior.
+  m_text: "3\xB0 _ _ _ _ _ _ _ _ _ _ _ Superior."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3478,7 +3503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1898361944
 Transform:
   m_ObjectHideFlags: 0
@@ -3501,7 +3526,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898361943}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9a19bcae94409094e891077d2a90685e, type: 3}
