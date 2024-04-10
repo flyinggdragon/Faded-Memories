@@ -34,24 +34,22 @@ public class Player : MonoBehaviour {
 
 
     void Update() {
-        if (dialogueManager.IsDialoguing || notebook.IsOpen /*|| *modal.IsOpen*/) {
+        if (dialogueManager.IsDialoguing || notebook.IsOpen || uiManager.modalOpen) {
             haltMovement = true;
         } else { haltMovement = false; }
 
-        // Define a velocidade de acordo. speed = 0f -> travar movimento
-        speed = haltMovement ? 0f : 6f;
-        
-        // Movimentação padrão
-        horizontal = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(horizontal * speed, 0);
-
-        if (Input.GetKeyDown(KeyCode.Q)) {
-            if (dialogueManager.IsDialoguing) { return; }
-
-            notebook.ToggleNotebook();
+        if (!haltMovement) {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(horizontal * speed, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing) {            
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            if (!dialogueManager.IsDialoguing && !uiManager.modalOpen) {
+                notebook.ToggleNotebook();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !uiManager.modalOpen) {            
             if (triggerType == "NPC") {
                 dialogueTrigger.StartDialogue();
             }
@@ -67,35 +65,35 @@ public class Player : MonoBehaviour {
 
         // Verificação para troca de cenas
         if (transform.position.x >= screenLimitRight) {
-            if (LevelManager.currentLevel == "Street") {
-                LevelManager.switchScene("AlleyOutside");
+            if (LevelManager.currentLevelName == "Street") {
+                LevelManager.LoadLevel("AlleyOutside");
             }
 
-            if (LevelManager.currentLevel == "Park") {
-                LevelManager.switchScene("Street");
+            if (LevelManager.currentLevelName == "Park") {
+                LevelManager.LoadLevel("Street");
             }
         }
 
         if (transform.position.x <= screenLimitLeft) {
-            if (LevelManager.currentLevel == "AlleyOutside") {
-                LevelManager.switchScene("Street");
+            if (LevelManager.currentLevelName == "AlleyOutside") {
+                LevelManager.LoadLevel("Street");
             }
 
-            if (LevelManager.currentLevel == "Street") {
-                LevelManager.switchScene("Park");
+            if (LevelManager.currentLevelName == "Street") {
+                LevelManager.LoadLevel("Park");
             }
         }
 
 
-        if (LevelManager.currentLevel == "AlleyInside") {
+        if (LevelManager.currentLevelName == "AlleyInside") {
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-                LevelManager.switchScene("AlleyOutside");
+                LevelManager.LoadLevel("AlleyOutside");
             }
         }
 
-        if (LevelManager.currentLevel == "AlleyOutside") {
+        if (LevelManager.currentLevelName == "AlleyOutside") {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-                LevelManager.switchScene("AlleyInside");
+                LevelManager.LoadLevel("AlleyInside");
             }
         }
     }

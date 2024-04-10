@@ -1,0 +1,40 @@
+{
+    "level": [
+        {
+            "levelName": "Street",
+            "levelId": 1,
+            "leftName": "Park",
+            "rightName": "AlleyOutside",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "backgroundmusic"
+        },
+        {
+            "levelName": "AlleyOutside",
+            "levelId": 2,
+            "leftName": "Street",
+            "rightName": "",
+            "upName": "AlleyInside",
+            "downName": "",
+            "backgroundSong": "backgroundmusic"
+        },
+        {
+            "levelName": "AlleyInside",
+            "levelId": 3,
+            "leftName": "",
+            "rightName": "",
+            "upName": "",
+            "downName": "AlleyOutside",
+            "backgroundSong": "backgroundmusic"
+        },
+        {
+            "levelName": "Park",
+            "levelId": 4,
+            "leftName": "",
+            "rightName": "Street",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "backgroundmusic"
+        }
+    ]
+}

@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour {
+    public bool modalOpen = false;
+
     public void CreateSimpleModal(string body, string header = "") {
+        modalOpen = true;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         SimpleModalWindow.Create()
                    .SetHeader(header)
                    .SetBody(body)
