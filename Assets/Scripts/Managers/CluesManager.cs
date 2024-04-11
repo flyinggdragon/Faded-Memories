@@ -5,14 +5,20 @@ using UnityEngine.UI;
 using System.IO;
 using TMPro;
 using System.Linq;
+using UnityEngine.EventSystems;
 
 public class CluesManager : MonoBehaviour {
     private string jsonFilePath = "Assets/GameData/ItemList.json";
     [SerializeField]
     public List<Item> itemList;
     public List<Cell> cells;
+    private ElementContainer elementContainer;
+    private UIManager uiManager;
     
     public void StartRun() {
+        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
+        uiManager = elementContainer.uiManager;
+        
         gameObject.SetActive(false);
 
         itemList = LoadItems(jsonFilePath);
@@ -46,14 +52,16 @@ public class CluesManager : MonoBehaviour {
             float aspectRatio = sprite.rect.width / sprite.rect.height;
             rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.y * aspectRatio, rectTransform.sizeDelta.y);
 
-            Cell cellData = obj.AddComponent<Cell>();
-            cellData.itemId = item.id;
-            cellData.collected = item.collected;
+            Cell cell = obj.AddComponent<Cell>();
+            cell.itemId = item.id;
+            cell.collected = item.collected;
 
             Image image = obj.AddComponent<Image>();
             image.sprite = sprite;
 
-            cellsList.Add(cellData);
+            cell.uiManager = uiManager;
+
+            cellsList.Add(cell);
         }
 
         return cellsList;
@@ -86,11 +94,24 @@ public class CluesManager : MonoBehaviour {
 
     public class Cell : MonoBehaviour { 
         public int itemId;
-        public bool collected; 
+        public bool collected;
+        public UIManager uiManager;
+
+        private void Start() {
+            EventTrigger trigger = gameObject.AddComponent<EventTrigger>();
+            EventTrigger.Entry entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.PointerEnter;
+            entry.callback.AddListener((data) => { OnPointerEnter(); });
+            trigger.triggers.Add(entry);
+        }
 
         public void ToggleVisibility() {
             Image image = GetComponent<Image>();
-            image.enabled = collected; 
+            image.enabled = collected;
+        }
+
+        private void OnPointerEnter() {
+            uiManager.CreateFloatingWindow();
         }
     }
 }

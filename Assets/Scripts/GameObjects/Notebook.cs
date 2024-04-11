@@ -55,11 +55,11 @@ public class Notebook : MonoBehaviour {
             Cursor.lockState = CursorLockMode.Locked;
         }
         
-        audioManager.PlaySound(openAudio);
+        audioManager.PlaySound(openAudio, 1f);
     }
 
     public void ActivateCluesContent() {
-        audioManager.PlaySound(openAudio);
+        audioManager.PlaySound(openAudio, 1f);
 
         sentencesContent.SetActive(false);
         sentencesButton.interactable = true;
@@ -68,7 +68,7 @@ public class Notebook : MonoBehaviour {
     }
 
     public void ActivateSentencesContent() {
-        audioManager.PlaySound(openAudio);
+        audioManager.PlaySound(openAudio, 1f);
 
         cluesContent.SetActive(false);
         cluesButton.interactable = true;
