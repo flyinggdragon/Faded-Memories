@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
     private string otherName = "";
     private string triggerType;
     private bool haltMovement = false;
+    private Collider2D collidingWith;
 
     void Start() {
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
@@ -50,17 +51,21 @@ public class Player : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !uiManager.modalOpen) {            
-            if (triggerType == "NPC") {
+        if (Input.GetKeyDown(KeyCode.E) && collidingWith && !dialogueManager.IsDialoguing && !uiManager.modalOpen) {            
+            if (collidingWith.tag == "NPC") {
                 dialogueTrigger.StartDialogue();
             }
 
-            else if (triggerType == "Item") {
+            else if (collidingWith.tag == "Item") {
                 CluesManager.Item item = cluesManager.FindItem(otherName);
                 string info = "\n" + item.itemName + "\n" + item.description;
 
                 uiManager.CreateSimpleModal("Você coletou " + otherName + info, "Item pego!");
                 cluesManager.CollectItem(item);
+            }
+
+            if (collidingWith) {
+                
             }
         }
 
@@ -96,24 +101,13 @@ public class Player : MonoBehaviour {
         }
     }
     
-    // Refazer, isso é digno de r/programminghorror
     private void OnTriggerEnter2D(Collider2D other) {
-        triggerType = other.tag;
+        collidingWith = other;
         inTrigger = true;
-        otherName = other.gameObject.name;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        triggerType = null;
+        collidingWith = null;
         inTrigger = false;
-        otherName = "";
-
-        // solução temporária. acho que não tem jeito, vou ter que refazer essa parte.
-        if (triggerType == "Item") {
-            Destroy(other.gameObject);
-        }
-
-        // while ontriggerstay AND ontriggerexit não chamado?
-        // não tenho uma solução ainda.
     }
 }
