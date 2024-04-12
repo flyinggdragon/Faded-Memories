@@ -57,9 +57,9 @@ public class Player : MonoBehaviour {
 
             else if (triggerType == "Item") {
                 CluesManager.Item item = cluesManager.FindItem(otherName);
-                string info = "\n" + item.itemName + "\n" + item.description;
+                string info = "\n" + item.itemName + "\n" + item.description + "\n" + item.keyword;
 
-                uiManager.CreateSimpleModal("Você coletou " + otherName + info, "Item pego!");
+                uiManager.CreateSimpleModal("Você coletou " + item.itemName + info, "Item pego!");
                 cluesManager.CollectItem(item);
             }
         }
