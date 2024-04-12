@@ -4,43 +4,50 @@
             "id": 1,
             "itemName": "Faca",
             "fileName": "knife",
-            "description": "Uma faca de bolso. Um pouco cega, mas ainda afiada. Pode-se notar uma mancha de sangue próxima à ponta."  
+            "description": "Uma faca de bolso. Um pouco cega, mas ainda afiada. Pode-se notar uma mancha de sangue próxima à ponta.",
+            "keyword": "Assassinato"
         },
         {
             "id": 2,
             "itemName": "Cedula de 200 Rukhs",
             "fileName": "banknote",
-            "description": "Uma nota de 200 Rukhs, a moeda usada em Solkhor. Tem sinais de ser um pouco antiga, mas ainda é válida. É a cédula de valor mais alto. Pode comprar várias coisas, inclusive alguns favores."
+            "description": "Uma nota de 200 Rukhs, a moeda usada em Solkhor. Tem sinais de ser um pouco antiga, mas ainda é válida. É a cédula de valor mais alto. Pode comprar várias coisas, inclusive alguns favores.",
+            "keyword": "Suborno"
         },
         {
             "id": 3,
             "itemName": "Insignia",
             "fileName": "order",
-            "description": "Um patch preto que contém uma insignia. Já vi este símbolo por pixações pela cidade. Por algum motivo ele me é familiar, mas não sei de onde."
+            "description": "Um patch preto que contém uma insignia. Já vi este símbolo por pixações pela cidade. Por algum motivo ele me é familiar, mas não sei de onde.",
+            "keyword": "Culto"
         },
         {
             "id": 4,
             "itemName": "Chave",
             "fileName": "key",
-            "description": "Uma chave. Está em bom estado. Ela deve destrancar uma das centenas de milhares de portas nessa cidade."
+            "description": "Uma chave. Está em bom estado. Ela deve destrancar uma das centenas de milhares de portas nessa cidade.",
+            "keyword": "Tranca"
         },
         {
             "id": 5,
             "itemName": "Seringa Usada",
             "fileName": "syringe",
-            "description": "Uma seringa usada. Ainda há resquícios de líquido dentro. Não posso em hipótese alguma deixar isso me furar."
+            "description": "Uma seringa usada. Ainda há resquícios de líquido dentro. Não posso em hipótese alguma deixar isso me furar.",
+            "keyword": "Overdose"
         },
         {
             "id": 6,
             "itemName": "Traje",
             "fileName": "suit",
-            "description": "Traje preto de mangas longas e um capuz. Parece pertencer a alguém, pois as axilas cheiram como tal."
+            "description": "Traje preto de mangas longas e um capuz. Parece pertencer a alguém, pois as axilas cheiram como tal.",
+            "keyword": "Secretário"
         },
         {
             "id": 7,
             "itemName": "Documento",
             "fileName": "idcard",
-            "description": "Um documento com foto. Parece-me perfeitamente oficial. Pertence a um tal de Mikay Hervin."
+            "description": "Um documento com foto. Parece-me perfeitamente oficial. Pertence a um tal de Mikay Hervin.",
+            "keyword": "Líder"
         }
     ]
 }

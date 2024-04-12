@@ -84,6 +84,7 @@ public class CluesManager : MonoBehaviour {
         public string itemName;
         public string fileName;
         public string description;
+        public string keyword;
         public bool collected = false;
     }
 
@@ -103,6 +104,11 @@ public class CluesManager : MonoBehaviour {
             entry.eventID = EventTriggerType.PointerEnter;
             entry.callback.AddListener((data) => { OnPointerEnter(); });
             trigger.triggers.Add(entry);
+
+            EventTrigger.Entry entryExit = new EventTrigger.Entry();
+            entryExit.eventID = EventTriggerType.PointerExit;
+            entryExit.callback.AddListener((data) => { OnPointerExit(); });
+            trigger.triggers.Add(entryExit);
         }
 
         public void ToggleVisibility() {
@@ -112,6 +118,10 @@ public class CluesManager : MonoBehaviour {
 
         private void OnPointerEnter() {
             uiManager.CreateFloatingWindow();
+        }
+
+        private void OnPointerExit() {
+            uiManager.UnCreateFloatingWindow();
         }
     }
 }
