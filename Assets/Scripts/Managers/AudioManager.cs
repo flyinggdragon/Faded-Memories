@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
-    private AudioSource audioSource;
+    private AudioSource bgMusicSource;
+    private AudioSource sfxSource;
     [SerializeField]
     private List<AudioClip> audioClips = new List<AudioClip>();
     // Adicionar lista de SFX se necessário depois.
@@ -11,20 +12,21 @@ public class AudioManager : MonoBehaviour {
     // Controlar volume relativo multiplicando volume por uma constante k.
 
     void Start() {
-        audioSource = GetComponent<AudioSource>();
+        bgMusicSource = gameObject.AddComponent<AudioSource>();
+        sfxSource = gameObject.AddComponent<AudioSource>();
 
         LoadAudioClips();
     }
 
     public void PlayBackgroundMusic(AudioClip clip, float volume = 0.5f) {
-        audioSource.volume = volume;
-        audioSource.loop = true;
-        audioSource.PlayOneShot(clip);
+        bgMusicSource.volume = volume;
+        bgMusicSource.loop = true;
+        bgMusicSource.PlayOneShot(clip);
     }
 
     public void PlaySound(AudioClip clip, float volume = 0.5f) {
-        audioSource.volume = volume;
-        audioSource.PlayOneShot(clip);
+        sfxSource.volume = volume;
+        sfxSource.PlayOneShot(clip);
     }
 
     public AudioClip FindAudioClip(string name) {
