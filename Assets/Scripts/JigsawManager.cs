@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class JigsawManager : MonoBehaviour {
   [Header("Game Elements")]
   [Range(2, 6)]
   [SerializeField] private int difficulty = 4;

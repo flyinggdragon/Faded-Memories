@@ -121,7 +121,11 @@ public class CluesManager : MonoBehaviour {
         }
 
         private void OnPointerExit() {
-            uiManager.UnCreateFloatingWindow();
+          //  uiManager.UnCreateFloatingWindow();
         }
+
+
+
+
     }
 }
