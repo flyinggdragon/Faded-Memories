@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
     public bool modalOpen = false;
 
-    private void lockCursor() {
+    private void LockCursor() {
         modalOpen = true;
 
         Cursor.lockState = CursorLockMode.None;
@@ -13,7 +14,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void CreateSimpleModal(string body, string header = "") {
-        lockCursor();
+        LockCursor();
 
         SimpleModalWindow.Create()
                    .SetHeader(header)
@@ -27,7 +28,7 @@ public class UIManager : MonoBehaviour {
         string btn2 = "Não", 
         string header = ""
         ) {
-        lockCursor();
+        LockCursor();
 
         SimpleModalWindow.Create()
                    .SetHeader(header)
@@ -45,7 +46,7 @@ public class UIManager : MonoBehaviour {
         string btn2 = "Não",
         string header = ""
     ) {
-        lockCursor();
+        LockCursor();
 
         SimpleModalWindow.Create(false)
                    .SetHeader(header)
@@ -55,21 +56,24 @@ public class UIManager : MonoBehaviour {
                    .Show();
     }
 
-    public void CreateInputModal(
-        string body, 
+    public InputModalWindow CreateInputModal(
+        string body,
         string header = ""
-    ) {
-        lockCursor();
+        ) {
+        LockCursor();
 
-        InputModalWindow.Create()
-                   .SetHeader(header)
-                   .SetBody(body)
-                   .SetInputField((inputResult) => print("Text: " + inputResult), "Initial value", "It is a placeholder")
-                   .Show();
+        InputModalWindow modal = InputModalWindow.Create()
+            .SetHeader(header)
+            .SetBody(body)
+            .SetInputField((inputResult) => print("Text: " + inputResult), "Initial value", "It is a placeholder");
+
+        modal.Show();
+            
+        return modal;
     }
 
     public void CreateToastModal(string body, string header = "") {
-        lockCursor();
+        LockCursor();
 
         ToastModalWindow.Create(ignorable: true)
                         .SetHeader(header)
