@@ -19,18 +19,18 @@ public class HoverTipManager : MonoBehaviour
     private void OnEnable()
     {
         OnMouseHover += ShowTip;
-        OnMouseHover += ShowImage;
+        //OnMouseHover += ShowImage;
         OnMouseLoseFocus += HideTip;
-        OnMouseLoseFocus += HideImage;
+        //OnMouseLoseFocus += HideImage;
         
     }
 
     private void OnDisable()
     {
         OnMouseHover -= ShowTip;
-        OnMouseHover -= ShowImage;
+        //OnMouseHover -= ShowImage;
         OnMouseLoseFocus -= HideTip;
-        OnMouseLoseFocus -= HideImage;
+        //OnMouseLoseFocus -= HideImage;
     }
 
     void Start()
@@ -47,14 +47,14 @@ public class HoverTipManager : MonoBehaviour
         tipWindow.transform.position = new Vector2((mousePos.x + tipWindow.sizeDelta.x / 2) +10, mousePos.y);
     }
 
-    private void ShowImage(string img, Vector2 mousePos)
-    {
-        tipImage.sprite = Resources.Load<Sprite>(img);
-        tipWindow.sizeDelta = new Vector2(tipImage.preferredWidth > 100 ? 100 : tipImage.preferredWidth, tipImage.preferredHeight);
+   // private void ShowImage(string img, Vector2 mousePos)
+   // {
+    //    tipImage.sprite = Resources.Load<Sprite>(img);
+      //  tipWindow.sizeDelta = new Vector2(tipImage.preferredWidth > 100 ? 100 : tipImage.preferredWidth, tipImage.preferredHeight);
 
-        tipWindow.gameObject.SetActive(true);
-        tipWindow.transform.position = new Vector2((mousePos.x + tipWindow.sizeDelta.x /2) +10, mousePos.y);
-    }
+        //tipWindow.gameObject.SetActive(true);
+        //tipWindow.transform.position = new Vector2((mousePos.x + tipWindow.sizeDelta.x /2) +10, mousePos.y);
+    //}
 
     private void HideTip()
     {
@@ -62,11 +62,11 @@ public class HoverTipManager : MonoBehaviour
         tipWindow.gameObject.SetActive(false);
     }
 
-    private void HideImage()
-    {
-        tipText.text = default;
-        tipWindow.gameObject.SetActive(false);
-    }
+   // private void HideImage()
+    //{
+     //   tipText.text = default;
+      //  tipWindow.gameObject.SetActive(false);
+    //}
 
 
 }

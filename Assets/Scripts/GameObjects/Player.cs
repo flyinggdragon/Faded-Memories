@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour {
     private ElementContainer elementContainer;
@@ -22,6 +23,8 @@ public class Player : MonoBehaviour {
     private string otherName = "";
     private string triggerType;
     private bool haltMovement = false;
+    public GameObject PopUp;
+   
 
     void Start() {
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
@@ -94,6 +97,18 @@ public class Player : MonoBehaviour {
                 levelManager.ExitDown();
             }
         }
+
+        if (inTrigger == true)
+        {
+            PopUp.SetActive(true);
+        }
+
+        else 
+        {
+            PopUp.SetActive(false);
+        }
+
+
     }
     
     // Refazer, isso é digno de r/programminghorror

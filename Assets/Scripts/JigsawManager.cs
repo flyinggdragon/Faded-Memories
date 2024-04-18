@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class JigsawManager : MonoBehaviour {
   [Header("Game Elements")]
   [Range(2, 6)]
-  [SerializeField] private int difficulty = 4;
+  [SerializeField] private int difficulty = 10;
   [SerializeField] private Transform gameHolder;
   [SerializeField] private Transform piecePrefab;
 
@@ -29,10 +29,10 @@ public class JigsawManager : MonoBehaviour {
   void Start() {
     // Create the UI
     foreach (Texture2D texture in imageTextures) {
-      Image image = Instantiate(levelSelectPrefab, levelSelectPanel);
-      image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+      //Image image = Instantiate(levelSelectPrefab, levelSelectPanel);
+      //image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
       // Assign button action
-      image.GetComponent<Button>().onClick.AddListener(delegate { StartGame(texture); });
+      StartGame(texture);
     }
   }
 
