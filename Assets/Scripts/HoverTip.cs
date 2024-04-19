@@ -24,6 +24,7 @@ public class HoverTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         HoverTipManager.OnMouseHover(tipToShow, Input.mousePosition);
     }
+    
 
     private IEnumerator StartTimer()
     {

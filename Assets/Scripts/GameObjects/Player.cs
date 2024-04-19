@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour {
     private static Player instance;
@@ -24,6 +25,8 @@ public class Player : MonoBehaviour {
     private string otherName = "";
     private string triggerType;
     private bool haltMovement = false;
+    public GameObject PopUp;
+   
 
     void Start() {
         if (instance != null && instance != this) {
@@ -103,6 +106,18 @@ public class Player : MonoBehaviour {
                 levelManager.ExitDown();
             }
         }
+
+        if (inTrigger == true)
+        {
+            PopUp.SetActive(true);
+        }
+
+        else 
+        {
+            PopUp.SetActive(false);
+        }
+
+
     }
     
     public static Player Instance {

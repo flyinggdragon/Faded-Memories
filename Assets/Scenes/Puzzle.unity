@@ -845,14 +845,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d7514c4a771a54dac31d84837802fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 4
+  difficulty: 6
   gameHolder: {fileID: 1384743795}
   piecePrefab: {fileID: 6298677490831331941, guid: 279fdcdb6903d9c41a320d5f8c24e74e, type: 3}
   imageTextures:
-  - {fileID: 2800000, guid: a086b0c0328ca2e4895a845f234a0eaa, type: 3}
-  - {fileID: 2800000, guid: e3ed1b166b4f4c540bdc19b2a4ba58b4, type: 3}
-  - {fileID: 2800000, guid: d56913b9d9a36f946989fc6825cd7446, type: 3}
-  - {fileID: 2800000, guid: da7d73de7d206244eb95e49bc44ae070, type: 3}
+  - {fileID: 2800000, guid: 02772b33a1197c74087e10d4d2b846c3, type: 3}
   levelSelectPanel: {fileID: 2036059305}
   levelSelectPrefab: {fileID: 3775886492528415236, guid: 0c35e75a2d086fb42835a2fd646a2e38, type: 3}
   playAgainButton: {fileID: 402882157}
