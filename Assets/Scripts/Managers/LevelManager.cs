@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour {
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-        
+
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
         audioManager = elementContainer.audioManager;
 
@@ -72,19 +72,47 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void ExitLeft() {
-        LoadLevel(currentLevel.leftName);
+        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.leftName).backgroundSong) {
+            audioManager.sameBgMusic = true;
+        }
+
+        currentLevel = FindLevelByName(currentLevel.leftName);
+        LoadLevel(currentLevel.levelName);
+
+        audioManager.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
     }
 
     public void ExitRight() {
-        LoadLevel(currentLevel.rightName);
+        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.rightName).backgroundSong) {
+            audioManager.sameBgMusic = true;
+        }
+
+        currentLevel = FindLevelByName(currentLevel.rightName);
+        LoadLevel(currentLevel.levelName);
+
+        audioManager.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
     }
 
     public void ExitUp() {
-        LoadLevel(currentLevel.upName);
+        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.upName).backgroundSong) {
+            audioManager.sameBgMusic = true;
+        }
+
+        currentLevel = FindLevelByName(currentLevel.upName);
+        LoadLevel(currentLevel.levelName);
+
+        audioManager.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
     }
 
     public void ExitDown() {
-        LoadLevel(currentLevel.downName);
+        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.downName).backgroundSong) {
+            audioManager.sameBgMusic = true;
+        }
+
+        currentLevel = FindLevelByName(currentLevel.downName);
+        LoadLevel(currentLevel.levelName);
+
+        audioManager.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
     }
 
     private Level FindLevelByName(string levelName) {

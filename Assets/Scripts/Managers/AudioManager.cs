@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour {
     // Variável volume pra controlar volume.
     // Controlar volume relativo multiplicando volume por uma constante k.
 
+    public bool sameBgMusic;
+
     public static AudioManager Instance {
         get {
             return instance;
@@ -26,6 +28,7 @@ public class AudioManager : MonoBehaviour {
         instance = this;
         DontDestroyOnLoad(gameObject);
 
+        sameBgMusic = false;
         bgMusicSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
 
@@ -33,9 +36,17 @@ public class AudioManager : MonoBehaviour {
     }
 
     public void PlayBackgroundMusic(AudioClip clip, float volume = 0.5f) {
-        bgMusicSource.volume = volume;
-        bgMusicSource.loop = true;
-        bgMusicSource.PlayOneShot(clip);
+        if (!sameBgMusic) {
+            if (bgMusicSource.isPlaying) { StopBackgroundMusic(); }
+
+            bgMusicSource.volume = volume;
+            bgMusicSource.loop = true;
+            bgMusicSource.PlayOneShot(clip);
+        }
+    }
+
+    public void StopBackgroundMusic() {
+        bgMusicSource.Stop();
     }
 
     public void PlaySound(AudioClip clip, float volume = 0.5f) {
