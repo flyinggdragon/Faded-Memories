@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
+    private static AudioManager instance;
     private AudioSource bgMusicSource;
     private AudioSource sfxSource;
     [SerializeField]
@@ -11,7 +12,20 @@ public class AudioManager : MonoBehaviour {
     // Variável volume pra controlar volume.
     // Controlar volume relativo multiplicando volume por uma constante k.
 
+    public static AudioManager Instance {
+        get {
+            return instance;
+        }
+    }
+
     void Start() {
+        if (instance != null & instance != this) {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
         bgMusicSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
 

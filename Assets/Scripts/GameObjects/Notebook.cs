@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Notebook : MonoBehaviour {
+    private static Notebook instance;
     private ElementContainer elementContainer;
     public GameObject NotebookObject;
     private bool isOpen = false;
@@ -28,7 +29,21 @@ public class Notebook : MonoBehaviour {
     private Button sentencesButton;
     private Button cluesButton;
 
+    public static Notebook Instance {
+        get {
+            return instance;
+        }
+    }
+
     void Awake() {
+        if (instance != null && instance != this) {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
         GameObject.Find("Notebook Holder").SetActive(false);
 
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();

@@ -7,7 +7,8 @@ using System.IO;
 using TMPro;
 
 public class SentenceSlots : MonoBehaviour {
-    private Image image;private ElementContainer elementContainer;
+    private Image image;
+    private ElementContainer elementContainer;
     private InputModalWindow inputModalWindow;
     private UIManager uiManager;
     private int i;

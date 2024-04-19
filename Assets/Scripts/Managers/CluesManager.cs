@@ -8,12 +8,32 @@ using System.Linq;
 using UnityEngine.EventSystems;
 
 public class CluesManager : MonoBehaviour {
+    private static CluesManager instance;
+
     private string jsonFilePath = "Assets/GameData/ItemList.json";
     [SerializeField]
     public List<Item> itemList;
     public List<Cell> cells;
     private ElementContainer elementContainer;
     private UIManager uiManager;
+
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(gameObject);
+        }
+    }
+
+    public static CluesManager Instance {
+        get {
+            if (instance == null) {
+                Debug.LogError("CluesManager instance is null.");
+            }
+            return instance;
+        }
+    }
     
     public void StartRun() {
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
@@ -117,15 +137,11 @@ public class CluesManager : MonoBehaviour {
         }
 
         private void OnPointerEnter() {
-            uiManager.CreateFloatingWindow();
+            //uiManager.CreateFloatingWindow();
         }
 
         private void OnPointerExit() {
-          //  uiManager.UnCreateFloatingWindow();
+           //uiManager.UnCreateFloatingWindow();
         }
-
-
-
-
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 
 public class LevelManager : MonoBehaviour {
+    private static LevelManager instance;
 
     private string jsonPath = "Assets/GameData/LevelList.json";
     [SerializeField]
@@ -13,7 +14,21 @@ public class LevelManager : MonoBehaviour {
     private ElementContainer elementContainer;
     private AudioManager audioManager;
 
+    public static LevelManager Instance {
+        get {
+            return instance;
+        }
+    }
+
     void Start() {
+        if (instance != null && instance != this) {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
         audioManager = elementContainer.audioManager;
 

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
+    private static Player instance;
+
     private ElementContainer elementContainer;
     private Notebook notebook;
     private DialogueTrigger dialogueTrigger;
@@ -24,6 +26,13 @@ public class Player : MonoBehaviour {
     private bool haltMovement = false;
 
     void Start() {
+        if (instance != null && instance != this) {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
 
         notebook = elementContainer.notebook;
@@ -96,8 +105,13 @@ public class Player : MonoBehaviour {
         }
     }
     
-    // Refazer, isso é digno de r/programminghorror
-    private void OnTriggerEnter2D(Collider2D other) {
+    public static Player Instance {
+        get {
+            return instance;
+        }
+    }
+
+   private void OnTriggerEnter2D(Collider2D other) {
         triggerType = other.tag;
         inTrigger = true;
         otherName = other.gameObject.name;

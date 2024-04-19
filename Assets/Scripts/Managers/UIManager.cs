@@ -4,13 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
+    private static UIManager instance;
     public bool modalOpen = false;
 
+    public static UIManager Instance {
+        get {
+            return instance;
+        }
+    }
+    
     private void LockCursor() {
         modalOpen = true;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+    
+    void Awake() {
+        if (instance != null & instance != this) {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public void CreateSimpleModal(string body, string header = "") {
