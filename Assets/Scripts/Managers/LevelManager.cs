@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour {
     public Level currentLevel;
     private ElementContainer elementContainer;
     private AudioManager audioManager;
+    private Player player;
 
     public static LevelManager Instance {
         get {
@@ -31,6 +32,7 @@ public class LevelManager : MonoBehaviour {
 
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
         audioManager = elementContainer.audioManager;
+        player = elementContainer.player;
 
         LoadLevelList(jsonPath);
 
@@ -74,7 +76,9 @@ public class LevelManager : MonoBehaviour {
     public void ExitLeft() {
         if (currentLevel.backgroundSong == FindLevelByName(currentLevel.leftName).backgroundSong) {
             audioManager.sameBgMusic = true;
-        }
+        } else { audioManager.sameBgMusic = false; }
+
+        player.transform.position = new Vector3(player.screenLimitRight - 0.5f, player.transform.position.y, player.transform.position.z);
 
         currentLevel = FindLevelByName(currentLevel.leftName);
         LoadLevel(currentLevel.levelName);
@@ -86,6 +90,8 @@ public class LevelManager : MonoBehaviour {
         if (currentLevel.backgroundSong == FindLevelByName(currentLevel.rightName).backgroundSong) {
             audioManager.sameBgMusic = true;
         }
+
+        player.transform.position = new Vector3(player.screenLimitLeft + 0.5f, player.transform.position.y, player.transform.position.z);
 
         currentLevel = FindLevelByName(currentLevel.rightName);
         LoadLevel(currentLevel.levelName);

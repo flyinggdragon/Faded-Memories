@@ -19,8 +19,8 @@ public class Player : MonoBehaviour {
     private float horizontal;
     public float speed = 6f;
     public Rigidbody2D rb;
-    private float screenLimitLeft = -9f;
-    private float screenLimitRight = 9f;
+    public float screenLimitLeft = -7.2f;
+    public float screenLimitRight = 6.1f;
     private bool inTrigger = false;
     private string otherName = "";
     private string triggerType;
@@ -56,6 +56,9 @@ public class Player : MonoBehaviour {
             rb.velocity = new Vector2(horizontal * speed, 0);
         }
 
+        float newX = Mathf.Clamp(transform.position.x, screenLimitLeft, screenLimitRight);
+        transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (!dialogueManager.IsDialoguing && !uiManager.modalOpen) {
                 notebook.ToggleNotebook();
@@ -73,6 +76,8 @@ public class Player : MonoBehaviour {
 
                 uiManager.CreateSimpleModal("Você coletou " + item.itemName + info, "Item pego!");
                 cluesManager.CollectItem(item);
+
+                Destroy(GameObject.Find(otherName));
             }
         }
 
@@ -81,16 +86,12 @@ public class Player : MonoBehaviour {
             if (!string.IsNullOrEmpty(levelManager.currentLevel.rightName)) {
                 levelManager.ExitRight();
             }
-
-            // Impedir de ir mais para a direita
         }
 
         if (transform.position.x <= screenLimitLeft) {
             if (!string.IsNullOrEmpty(levelManager.currentLevel.leftName)) {
                 levelManager.ExitLeft();
             }
-            
-            // Impedir de ir mais para a esquerda
         }
         
         // Verificar também se está no trigger para tal.
@@ -107,17 +108,13 @@ public class Player : MonoBehaviour {
             }
         }
 
-        if (inTrigger == true)
-        {
+        if (inTrigger == true) {
             PopUp.SetActive(true);
         }
 
-        else 
-        {
+        else {
             PopUp.SetActive(false);
         }
-
-
     }
     
     public static Player Instance {
@@ -136,13 +133,5 @@ public class Player : MonoBehaviour {
         triggerType = null;
         inTrigger = false;
         otherName = "";
-
-        // solução temporária. acho que não tem jeito, vou ter que refazer essa parte.
-        if (triggerType == "Item") {
-            Destroy(other.gameObject);
-        }
-
-        // while ontriggerstay AND ontriggerexit não chamado?
-        // não tenho uma solução ainda.
     }
 }
