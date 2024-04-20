@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6608406296298630002}
   - component: {fileID: 3244958966402821298}
   m_Layer: 0
-  m_Name: Item
+  m_Name: PistaItem
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
