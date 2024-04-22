@@ -40,6 +40,8 @@ public class JigsawManager : MonoBehaviour {
     // Hide the UI
     levelSelectPanel.gameObject.SetActive(false);
 
+    Cursor.visible = true;
+
     // We store a list of the transform for each jigsaw piece so we can track them later.
     pieces = new List<Transform>();
 
@@ -54,6 +56,7 @@ public class JigsawManager : MonoBehaviour {
     UpdateBorder();
 
     piecesCorrect = 0;
+
   }
 
   Vector2Int GetDimensions(Texture2D jigsawTexture, int difficulty) {
@@ -207,17 +210,22 @@ public class JigsawManager : MonoBehaviour {
     }
   }
 
-  public void RestartGame() 
-  {
-    foreach (Transform piece in pieces) 
-    {
-      Destroy(piece.gameObject);
-    }  
-    pieces.Clear();
-    gameHolder.GetComponent<LineRenderer>().enabled = false;
+  //public void RestartGame() 
+  //{
+  //  foreach (Transform piece in pieces) 
+  //  {
+  //    Destroy(piece.gameObject);
+  //  }  
+  //  pieces.Clear();
+  //  gameHolder.GetComponent<LineRenderer>().enabled = false;
 
-    playAgainButton.SetActive(false);
-    levelSelectPanel.gameObject.SetActive(true);
+  //  playAgainButton.SetActive(false);
+  //  levelSelectPanel.gameObject.SetActive(true);
+  //}
+
+  public void QuitGame()
+  {
+    Application.Quit();
   }
 }
 

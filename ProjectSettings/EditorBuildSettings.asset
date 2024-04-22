@@ -13,8 +13,11 @@ EditorBuildSettings:
     guid: 5c62d3c64f600a94488a73a37794b9d7
   - enabled: 1
     path: Assets/Scenes/Park.unity
-    guid: fdf0c08469cc3a9449f0dc68eefbc45e
+    guid: ca78dc4b0628b6d40812a461435bda15
   - enabled: 1
     path: Assets/Scenes/AlleyInside.unity
     guid: d819c8f87610b91488bd9c5c7febd260
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: dadcd5992919fff4e81f4dbf66131572
   m_configObjects: {}

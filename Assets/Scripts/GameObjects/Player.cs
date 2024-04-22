@@ -29,12 +29,12 @@ public class Player : MonoBehaviour {
    
 
     void Start() {
-        if (instance != null && instance != this) {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-        DontDestroyOnLoad(gameObject);
+        //if (instance != null && instance != this) {
+        //    Destroy(gameObject);
+        //    return;
+        //}
+        //instance = this;
+        //DontDestroyOnLoad(gameObject);//
 
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
 
@@ -44,6 +44,7 @@ public class Player : MonoBehaviour {
         dialogueManager = this.GetComponent<DialogueManager>();
         uiManager = elementContainer.uiManager;
         levelManager = elementContainer.levelManager;
+        
     }
 
     void Update() {

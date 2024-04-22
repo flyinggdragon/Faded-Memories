@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Again?
+  m_text: Fim do Alpha
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -321,8 +321,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1803707437}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_TargetAssemblyTypeName: JigsawManager, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -845,7 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d7514c4a771a54dac31d84837802fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 6
+  difficulty: 4
   gameHolder: {fileID: 1384743795}
   piecePrefab: {fileID: 6298677490831331941, guid: 279fdcdb6903d9c41a320d5f8c24e74e, type: 3}
   imageTextures:

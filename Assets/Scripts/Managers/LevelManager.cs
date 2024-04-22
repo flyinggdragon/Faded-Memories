@@ -22,12 +22,12 @@ public class LevelManager : MonoBehaviour {
     }
 
     void Start() {
-        if (instance != null && instance != this) {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-        DontDestroyOnLoad(gameObject);
+        //if (instance != null && instance != this) {
+        //    Destroy(gameObject);
+          //  return;
+        //}
+        //instance = this;
+        //DontDestroyOnLoad(gameObject);
 
 
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
