@@ -2,22 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CanvasDialogue : MonoBehaviour
-{
-    private static CanvasDialogue instance;
+public class CanvasDialogue : MonoBehaviour {
 
-    public static CanvasDialogue Instance {
-        get { return instance; }
-    }
-
+    public static CanvasDialogue Instance { get; private set; }
+   
     void Awake() {
-        if (instance != null && instance != this) {
-            Destroy(gameObject);
-            return;
-        }
-        else {
-            instance = this;
+        if (Instance == null && Instance != this) {
+            Instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+
+        else {
+            Destroy(gameObject);
         }
     }
 }
