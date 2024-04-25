@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Starter : MonoBehaviour {
     void Start() {
-        //GameManager.Initialize();
+        GameManager.Initialize();
     }
 }

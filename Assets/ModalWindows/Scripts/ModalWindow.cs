@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
 {
-    private ElementContainer elementContainer;
-    private UIManager uiManager;
-
     protected const string PREFABS_DIR_IN_RESOURCES = "Modal Windows/";
     protected const string BUTTONS_PATH= "Buttons/Button_";     
 
@@ -85,9 +82,6 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
 
     private void Awake()
     {
-        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
-        uiManager = elementContainer.uiManager;
-
         if (backgroundButton) backgroundButton.onClick.AddListener(new UnityEngine.Events.UnityAction(UI_IgnorePopup));
         if (closeButton) closeButton.onClick.AddListener(new UnityEngine.Events.UnityAction(UI_IgnorePopup));
     }
@@ -173,7 +167,7 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        uiManager.modalOpen = false;
+        UIManager.Instance.modalOpen = false;
         
         Close();
     }

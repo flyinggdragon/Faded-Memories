@@ -8,9 +8,7 @@ using TMPro;
 
 public class SentenceSlots : MonoBehaviour {
     private Image image;
-    private ElementContainer elementContainer;
     private InputModalWindow inputModalWindow;
-    private UIManager uiManager;
     private int i;
     private List<string> answers;
     private string jsonFilePath = "Assets/GameData/SlotsAnswers.json";
@@ -18,9 +16,6 @@ public class SentenceSlots : MonoBehaviour {
     private EventTrigger trigger;
     
     public void Start() {
-        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
-        uiManager = elementContainer.uiManager;
-
         image = transform.GetChild(0).GetComponent<Image>();
 
         i = int.Parse(gameObject.name.Replace("Space ", ""));
@@ -65,7 +60,7 @@ public class SentenceSlots : MonoBehaviour {
     }
 
     private void OnPointerClick() {
-        inputModalWindow = uiManager.CreateInputModal("Preencha o espaço vazio", "Preencher");
+        inputModalWindow = UIManager.Instance.CreateInputModal("Preencha o espaço vazio", "Preencher");
         inputModalWindow.SetInputField((inputResult) => { OnInputDone(inputResult); });
     }
 

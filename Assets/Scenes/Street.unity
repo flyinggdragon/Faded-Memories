@@ -198,58 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43225575}
   m_CullTransparentMesh: 1
---- !u!1 &82368963
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 82368965}
-  - component: {fileID: 82368964}
-  m_Layer: 0
-  m_Name: Element Container
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &82368964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82368963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80a815d523e7774693fb839adf5058a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notebook: {fileID: 0}
-  player: {fileID: 0}
-  audioManager: {fileID: 0}
-  cluesManager: {fileID: 0}
-  uiManager: {fileID: 0}
-  dialogueTrigger: {fileID: 0}
-  dialogueManager: {fileID: 0}
-  levelManager: {fileID: 0}
---- !u!4 &82368965
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82368963}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &86863179
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +437,7 @@ GameObject:
   - component: {fileID: 134895546}
   - component: {fileID: 134895545}
   - component: {fileID: 134895544}
+  - component: {fileID: 134895548}
   m_Layer: 5
   m_Name: Canvas Dialogue
   m_TagString: Untagged
@@ -579,6 +528,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &134895548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134895543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d360cd7f3ad6eda4d90d58117133c588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &143608617
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc15fb7b7882894c9bf91dab7f52a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList: []
   cells: []
 --- !u!1 &298885135
 GameObject:
@@ -1360,7 +1320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: []
   sameBgMusic: 0
 --- !u!4 &476438400
 Transform:
@@ -2179,16 +2138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045ab7d25c5470344a7b795ed57882ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelList: []
-  currentLevel:
-    levelName: 
-    levelId: 0
-    leftName: 
-    rightName: 
-    upName: 
-    downName: 
-    backgroundSong: 
-    backgroundSongClip: {fileID: 0}
 --- !u!1 &964906683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539da8755e7f94f4da09615111a7c76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
   speed: 6
   rb: {fileID: 988958393}
   screenLimitLeft: -7.2
@@ -4510,7 +4460,6 @@ SceneRoots:
   - {fileID: 661849677}
   - {fileID: 651366265}
   - {fileID: 1955164995}
-  - {fileID: 82368965}
   - {fileID: 476438400}
   - {fileID: 894021467}
   - {fileID: 1481584359}

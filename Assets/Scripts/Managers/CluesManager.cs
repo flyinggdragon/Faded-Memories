@@ -8,12 +8,8 @@ using System.Linq;
 using UnityEngine.EventSystems;
 
 public class CluesManager : MonoBehaviour {
-    private string jsonFilePath = "Assets/GameData/ItemList.json";
     [SerializeField]
-    public List<Item> itemList;
     public List<Cell> cells;
-    private ElementContainer elementContainer;
-    private UIManager uiManager;
     public static CluesManager Instance { get; private set; }
 
     private void Awake() {
@@ -28,12 +24,8 @@ public class CluesManager : MonoBehaviour {
     }
     
     public void StartRun() {
-        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
-        uiManager = elementContainer.uiManager;
-        
         gameObject.SetActive(false);
 
-        itemList = LoadItems(jsonFilePath);
         cells = GenerateCells();
 
         foreach (Cell cell in cells) {
@@ -41,8 +33,8 @@ public class CluesManager : MonoBehaviour {
         }
     }
 
-    private List<Item> LoadItems(string path) {
-        string jsonText = File.ReadAllText(jsonFilePath);
+    public List<Item> LoadItemList(string path) {
+        string jsonText = File.ReadAllText(path);
         ItemListWrapper wrapper = JsonUtility.FromJson<ItemListWrapper>(jsonText);
         
         return wrapper.item;
@@ -52,7 +44,7 @@ public class CluesManager : MonoBehaviour {
         GameObject cellContainer = this.transform.GetChild(0).gameObject;
         List<Cell> cellsList = new List<Cell>();
 
-        foreach (Item item in itemList) {
+        foreach (Item item in GameManager.items) {
             Sprite sprite = Resources.Load<Sprite>("Sprites/" + item.fileName);
 
             GameObject obj = new GameObject(item.itemName);
@@ -71,8 +63,6 @@ public class CluesManager : MonoBehaviour {
             Image image = obj.AddComponent<Image>();
             image.sprite = sprite;
 
-            cell.uiManager = uiManager;
-
             cellsList.Add(cell);
         }
 
@@ -80,14 +70,19 @@ public class CluesManager : MonoBehaviour {
     }
 
     public Item FindItem(string name) {
-        return itemList.FirstOrDefault(item => item.itemName == name);
+        return GameManager.items.FirstOrDefault(item => item.itemName == name);
     }
 
     public void CollectItem(Item item) {
-        item.collected = !item.collected;
+        if (!item.collected) {
+            string info = "\n" + item.itemName + "\n" + item.description + "\n" + item.keyword;
+            UIManager.Instance.CreateSimpleModal("Você coletou " + item.itemName + info, "Item pego!");
 
-        cells[item.id - 1].collected = item.collected;
-        cells[item.id - 1].ToggleVisibility();
+            item.collected = false;
+
+            cells[item.id - 1].collected = item.collected;
+            cells[item.id - 1].ToggleVisibility();
+        }
     }
 
     [System.Serializable]
@@ -108,7 +103,6 @@ public class CluesManager : MonoBehaviour {
     public class Cell : MonoBehaviour { 
         public int itemId;
         public bool collected;
-        public UIManager uiManager;
 
         private void Start() {
             EventTrigger trigger = gameObject.AddComponent<EventTrigger>();
@@ -129,11 +123,11 @@ public class CluesManager : MonoBehaviour {
         }
 
         private void OnPointerEnter() {
-            //uiManager.CreateFloatingWindow();
+            //UIManager.Instance.CreateFloatingWindow();
         }
 
         private void OnPointerExit() {
-           //uiManager.UnCreateFloatingWindow();
+           //UIManager.Instance.UnCreateFloatingWindow();
         }
     }
 }

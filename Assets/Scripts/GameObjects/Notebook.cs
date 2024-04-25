@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Notebook : MonoBehaviour {
     private static Notebook instance;
-    private ElementContainer elementContainer;
     public GameObject NotebookObject;
     public bool isOpen = false;
 
@@ -38,8 +37,6 @@ public class Notebook : MonoBehaviour {
 
     void Start() {
         GameObject.Find("Notebook Holder").SetActive(false);
-
-        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
 
         sentencesContent = transform.Find("Notebook Back/Sentences Content").gameObject;
         cluesContent = transform.Find("Notebook Back/Clues Content").gameObject;

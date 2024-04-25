@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour {
-    private ElementContainer elementContainer;
     private DialogueTrigger dialogueTrigger;
-    private DialogueManager dialogueManager;
+    public DialogueManager dialogueManager;
 
 
     private float horizontal;
@@ -34,11 +33,9 @@ public class Player : MonoBehaviour {
     }
 
     void Start() {
-        elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
-
-        dialogueTrigger = elementContainer.dialogueTrigger;
+        // Atualizar o trigger ao trocar de cena. Isso vai fazer o diálogo do Pedro repetir com a Lourdes.
+        dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
         dialogueManager = this.GetComponent<DialogueManager>();
-        
     }
 
     void Update() {
@@ -67,9 +64,7 @@ public class Player : MonoBehaviour {
 
             else if (triggerType == "Item") {
                 var item = CluesManager.Instance.FindItem(otherName);
-                string info = "\n" + item.itemName + "\n" + item.description + "\n" + item.keyword;
-
-                UIManager.Instance.CreateSimpleModal("Você coletou " + item.itemName + info, "Item pego!");
+                
                 CluesManager.Instance.CollectItem(item);
 
                 Destroy(GameObject.Find(otherName));
@@ -78,27 +73,27 @@ public class Player : MonoBehaviour {
 
         // Verificação para troca de cenas
         if (transform.position.x >= screenLimitRight) {
-            if (!string.IsNullOrEmpty(LevelManager.Instance.currentLevel.rightName)) {
+            if (!string.IsNullOrEmpty(GameManager.currentLevel.rightName)) {
                 LevelManager.Instance.ExitRight();
             }
         }
 
         if (transform.position.x <= screenLimitLeft) {
-            if (!string.IsNullOrEmpty(LevelManager.Instance.currentLevel.leftName)) {
+            if (!string.IsNullOrEmpty(GameManager.currentLevel.leftName)) {
                 LevelManager.Instance.ExitLeft();
             }
         }
         
         // Verificar também se está no trigger para tal.
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-            if (!string.IsNullOrEmpty(LevelManager.Instance.currentLevel.upName)) {
+            if (!string.IsNullOrEmpty(GameManager.currentLevel.upName)) {
                 LevelManager.Instance.ExitUp();
             }
         }
 
         // Verificar também se está no trigger para tal.
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-            if (!string.IsNullOrEmpty(LevelManager.Instance.currentLevel.downName)) {
+            if (!string.IsNullOrEmpty(GameManager.currentLevel.downName)) {
                 LevelManager.Instance.ExitDown();
             }
         }
