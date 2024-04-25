@@ -8,30 +8,22 @@ using System.Linq;
 using UnityEngine.EventSystems;
 
 public class CluesManager : MonoBehaviour {
-    private static CluesManager instance;
-
     private string jsonFilePath = "Assets/GameData/ItemList.json";
     [SerializeField]
     public List<Item> itemList;
     public List<Cell> cells;
     private ElementContainer elementContainer;
     private UIManager uiManager;
+    public static CluesManager Instance { get; private set; }
 
     private void Awake() {
-       // if (instance == null) {
-       //     instance = this;
-       //     DontDestroyOnLoad(gameObject);
-       // } else {
-       //     Destroy(gameObject);
-       // }
-    }
+       if (Instance == null && Instance != this) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
-    public static CluesManager Instance {
-        get {
-            if (instance == null) {
-                Debug.LogError("CluesManager instance is null.");
-            }
-            return instance;
+        else {
+            Destroy(gameObject);
         }
     }
     

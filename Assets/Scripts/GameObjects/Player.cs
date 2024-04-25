@@ -5,15 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour {
-    private static Player instance;
-
     private ElementContainer elementContainer;
-    private Notebook notebook;
     private DialogueTrigger dialogueTrigger;
     private DialogueManager dialogueManager;
-    private UIManager uiManager;
-    private CluesManager cluesManager;
-    private LevelManager levelManager;
 
 
     private float horizontal;
@@ -26,29 +20,29 @@ public class Player : MonoBehaviour {
     private string triggerType;
     private bool haltMovement = false;
     public GameObject PopUp;
+    public static Player Instance { get; private set; }
    
+    void Awake() {
+        if (Instance == null && Instance != this) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else {
+            Destroy(gameObject);
+        }
+    }
 
     void Start() {
-        //if (instance != null && instance != this) {
-        //    Destroy(gameObject);
-        //    return;
-        //}
-        //instance = this;
-        //DontDestroyOnLoad(gameObject);//
-
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
 
-        notebook = elementContainer.notebook;
-        cluesManager = elementContainer.cluesManager;
         dialogueTrigger = elementContainer.dialogueTrigger;
         dialogueManager = this.GetComponent<DialogueManager>();
-        uiManager = elementContainer.uiManager;
-        levelManager = elementContainer.levelManager;
         
     }
 
     void Update() {
-        if (dialogueManager.IsDialoguing || notebook.IsOpen || uiManager.modalOpen) {
+        if (dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen) {
             haltMovement = true;
         } else { haltMovement = false; }
 
@@ -61,22 +55,22 @@ public class Player : MonoBehaviour {
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
 
         if (Input.GetKeyDown(KeyCode.Q)) {
-            if (!dialogueManager.IsDialoguing && !uiManager.modalOpen) {
-                notebook.ToggleNotebook();
+            if (!dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen) {
+                Notebook.Instance.ToggleNotebook();
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !uiManager.modalOpen) {            
+        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen) {            
             if (triggerType == "NPC") {
                 dialogueTrigger.StartDialogue();
             }
 
             else if (triggerType == "Item") {
-                CluesManager.Item item = cluesManager.FindItem(otherName);
+                var item = CluesManager.Instance.FindItem(otherName);
                 string info = "\n" + item.itemName + "\n" + item.description + "\n" + item.keyword;
 
-                uiManager.CreateSimpleModal("Você coletou " + item.itemName + info, "Item pego!");
-                cluesManager.CollectItem(item);
+                UIManager.Instance.CreateSimpleModal("Você coletou " + item.itemName + info, "Item pego!");
+                CluesManager.Instance.CollectItem(item);
 
                 Destroy(GameObject.Find(otherName));
             }
@@ -84,28 +78,28 @@ public class Player : MonoBehaviour {
 
         // Verificação para troca de cenas
         if (transform.position.x >= screenLimitRight) {
-            if (!string.IsNullOrEmpty(levelManager.currentLevel.rightName)) {
-                levelManager.ExitRight();
+            if (!string.IsNullOrEmpty(LevelManager.Instance.currentLevel.rightName)) {
+                LevelManager.Instance.ExitRight();
             }
         }
 
         if (transform.position.x <= screenLimitLeft) {
-            if (!string.IsNullOrEmpty(levelManager.currentLevel.leftName)) {
-                levelManager.ExitLeft();
+            if (!string.IsNullOrEmpty(LevelManager.Instance.currentLevel.leftName)) {
+                LevelManager.Instance.ExitLeft();
             }
         }
         
         // Verificar também se está no trigger para tal.
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-            if (!string.IsNullOrEmpty(levelManager.currentLevel.upName)) {
-                levelManager.ExitUp();
+            if (!string.IsNullOrEmpty(LevelManager.Instance.currentLevel.upName)) {
+                LevelManager.Instance.ExitUp();
             }
         }
 
         // Verificar também se está no trigger para tal.
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-            if (!string.IsNullOrEmpty(levelManager.currentLevel.downName)) {
-                levelManager.ExitDown();
+            if (!string.IsNullOrEmpty(LevelManager.Instance.currentLevel.downName)) {
+                LevelManager.Instance.ExitDown();
             }
         }
 
@@ -115,12 +109,6 @@ public class Player : MonoBehaviour {
 
         else {
             PopUp.SetActive(false);
-        }
-    }
-    
-    public static Player Instance {
-        get {
-            return instance;
         }
     }
 

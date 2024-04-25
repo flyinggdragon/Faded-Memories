@@ -16,7 +16,6 @@ public class DialogueManager : MonoBehaviour {
 
     private List<DialogueString> dialogueList;
     private AudioSource audioSource;
-    private AudioManager audioManager;
 
     private bool isDialoguing = false;
 
@@ -28,8 +27,6 @@ public class DialogueManager : MonoBehaviour {
 
     private void Start() {
         dialogueParent.SetActive(false);
-
-        audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     public void DialogueStart(List<DialogueString> textToPrint) {
@@ -61,7 +58,7 @@ public class DialogueManager : MonoBehaviour {
             line.startDialogueEvent?.Invoke();
 
             if (line.dialogueSoundEffect != null) {
-                audioManager.PlaySound(line.dialogueSoundEffect);
+                AudioManager.Instance.PlaySound(line.dialogueSoundEffect);
             }
 
             if (line.isQuestion) {

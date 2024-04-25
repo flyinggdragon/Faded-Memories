@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
     private static UIManager instance;
     public bool modalOpen = false;
+    public static UIManager Instance { get; private set; }
 
-    public static UIManager Instance {
-        get {
-            return instance;
+    void Awake() {
+        if (Instance == null && Instance != this) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else {
+            Destroy(gameObject);
         }
     }
     
@@ -18,15 +24,6 @@ public class UIManager : MonoBehaviour {
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-    }
-    
-    void Awake() {
-        if (instance != null & instance != this) {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void CreateSimpleModal(string body, string header = "") {

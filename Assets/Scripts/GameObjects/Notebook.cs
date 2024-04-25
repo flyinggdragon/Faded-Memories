@@ -7,11 +7,7 @@ public class Notebook : MonoBehaviour {
     private static Notebook instance;
     private ElementContainer elementContainer;
     public GameObject NotebookObject;
-    private bool isOpen = false;
-
-    public bool IsOpen {
-        get { return isOpen; }
-    }
+    public bool isOpen = false;
 
     /*
     Isso aqui tudo é inútil. Pode-se colocar um caminho direto pro arquivo de áudio
@@ -23,31 +19,27 @@ public class Notebook : MonoBehaviour {
     private AudioSource audioSource;
 
     // Fim das inutilidades
-    private AudioManager audioManager;
     private GameObject sentencesContent;
     private GameObject cluesContent;
     private Button sentencesButton;
     private Button cluesButton;
+    public static Notebook Instance { get; private set; }
 
-    public static Notebook Instance {
-        get {
-            return instance;
+    void Awake() {
+        if (Instance == null && Instance != this) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else {
+            Destroy(gameObject);
         }
     }
 
-    void Awake() {
-        if (instance != null && instance != this) {
-            Destroy(gameObject);
-            return;
-        }
-
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-
+    void Start() {
         GameObject.Find("Notebook Holder").SetActive(false);
 
         elementContainer = GameObject.Find("Element Container").GetComponent<ElementContainer>();
-        audioManager = elementContainer.audioManager;
 
         sentencesContent = transform.Find("Notebook Back/Sentences Content").gameObject;
         cluesContent = transform.Find("Notebook Back/Clues Content").gameObject;
@@ -70,11 +62,11 @@ public class Notebook : MonoBehaviour {
             Cursor.lockState = CursorLockMode.Locked;
         }
         
-        audioManager.PlaySound(openAudio, 1f);
+        AudioManager.Instance.PlaySound(openAudio, 1f);
     }
 
     public void ActivateCluesContent() {
-        audioManager.PlaySound(openAudio, 1f);
+        AudioManager.Instance.PlaySound(openAudio, 1f);
 
         sentencesContent.SetActive(false);
         sentencesButton.interactable = true;
@@ -83,7 +75,7 @@ public class Notebook : MonoBehaviour {
     }
 
     public void ActivateSentencesContent() {
-        audioManager.PlaySound(openAudio, 1f);
+        AudioManager.Instance.PlaySound(openAudio, 1f);
 
         cluesContent.SetActive(false);
         cluesButton.interactable = true;
