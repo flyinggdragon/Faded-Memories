@@ -33,8 +33,6 @@ public class Player : MonoBehaviour {
     }
 
     void Start() {
-        // Atualizar o trigger ao trocar de cena. Isso vai fazer o diálogo do Pedro repetir com a Lourdes.
-        dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
         dialogueManager = this.GetComponent<DialogueManager>();
     }
 
@@ -59,6 +57,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen) {            
             if (triggerType == "NPC") {
+                dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
                 dialogueTrigger.StartDialogue();
             }
 
