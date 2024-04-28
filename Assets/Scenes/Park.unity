@@ -810,6 +810,92 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &2851460465883292992
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[0].text
+      value: "Eu apaguei o di\xE1logo da Lourdes dnv sem querer eu sou burro. N\xE3o
+        vou fazer de novo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311932205852427031, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de6e22e21d104d74bbe1fe44e0c50d32, type: 3}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065830839806535355, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7700837
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065830839806535355, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.0093203
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065830839806535355, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2518
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065830839806535355, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2674
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_Name
+      value: Dialogue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -818,3 +904,4 @@ SceneRoots:
   - {fileID: 143608618}
   - {fileID: 661849677}
   - {fileID: 5016272}
+  - {fileID: 2851460465883292992}

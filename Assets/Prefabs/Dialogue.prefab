@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2390421222910332884
+--- !u!1 &421419596700171777
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,69 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3996058847183928377}
-  - component: {fileID: 3873525225030181224}
+  - component: {fileID: 1745069057999345776}
   m_Layer: 0
-  m_Name: pedestrian
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3996058847183928377
+--- !u!4 &1745069057999345776
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390421222910332884}
+  m_GameObject: {fileID: 421419596700171777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8689638210217024659}
+  m_Father: {fileID: 8503813891310398091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3634720973940194446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8689638210217024659}
+  - component: {fileID: 2311932205852427031}
+  m_Layer: 0
+  m_Name: NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8689638210217024659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634720973940194446}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0.43, z: 0}
   m_LocalScale: {x: 0.6996, y: 0.6996, z: 0.6996}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1542954210008694910}
+  m_Father: {fileID: 1745069057999345776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3873525225030181224
+--- !u!212 &2311932205852427031
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390421222910332884}
+  m_GameObject: {fileID: 3634720973940194446}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,7 +116,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &5460577635610818200
+--- !u!1 &6057581391576007995
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,10 +124,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2759386118241194381}
-  - component: {fileID: 768018403183466960}
-  - component: {fileID: 6555421558665092743}
-  - component: {fileID: 2533444517600886769}
+  - component: {fileID: 8065830839806535355}
+  - component: {fileID: 6601234845635761163}
+  - component: {fileID: 1604211681662699659}
+  - component: {fileID: 6867080035707387782}
   m_Layer: 0
   m_Name: Dialogue Trigger
   m_TagString: NPC
@@ -103,28 +135,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2759386118241194381
+--- !u!4 &8065830839806535355
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5460577635610818200}
+  m_GameObject: {fileID: 6057581391576007995}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0753, y: -0.502, z: 0}
-  m_LocalScale: {x: 3.8616579, y: 4.7651424, z: 1}
+  m_LocalPosition: {x: -0.2191, y: 0.1206, z: 0}
+  m_LocalScale: {x: 2.5531118, y: 3.5200107, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 319819022171688529}
+  m_Father: {fileID: 2839345182384550383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &768018403183466960
+--- !u!212 &6601234845635761163
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5460577635610818200}
+  m_GameObject: {fileID: 6057581391576007995}
   m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -170,96 +202,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6555421558665092743
+--- !u!114 &1604211681662699659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5460577635610818200}
+  m_GameObject: {fileID: 6057581391576007995}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40df39bfcd8958344a3a48a7b66a3ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueStrings:
-  - text: Bom dia. Eu sou o Pedro.
-    isEnd: 0
-    isQuestion: 0
-    answerOption1: 
-    answerOption2: 
-    option1IndexJump: 0
-    option2IndexJump: 0
-    startDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    endDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    dialogueSoundEffect: {fileID: 8300000, guid: e0388ea404c98124c8e633f966a437a7, type: 3}
-  - text: "Como voc\xEA est\xE1?"
-    isEnd: 0
-    isQuestion: 1
-    answerOption1: "T\xF4 bem"
-    answerOption2: '*xingar*'
-    option1IndexJump: 2
-    option2IndexJump: 3
-    startDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    endDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    dialogueSoundEffect: {fileID: 8300000, guid: e0388ea404c98124c8e633f966a437a7, type: 3}
-  - text: Que bom!
-    isEnd: 1
-    isQuestion: 0
-    answerOption1: 
-    answerOption2: 
-    option1IndexJump: 0
-    option2IndexJump: 0
-    startDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    endDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    dialogueSoundEffect: {fileID: 8300000, guid: e0388ea404c98124c8e633f966a437a7, type: 3}
-  - text: ...
-    isEnd: 0
-    isQuestion: 0
-    answerOption1: 
-    answerOption2: 
-    option1IndexJump: 0
-    option2IndexJump: 0
-    startDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    endDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    dialogueSoundEffect: {fileID: 8300000, guid: fa69bf5c534177d45b21d46ba088193b, type: 3}
-  - text: vai te catar
-    isEnd: 1
-    isQuestion: 0
-    answerOption1: 
-    answerOption2: 
-    option1IndexJump: 0
-    option2IndexJump: 0
-    startDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    endDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    dialogueSoundEffect: {fileID: 8300000, guid: 885981c5a7df648428282800a92e23cf, type: 3}
---- !u!61 &2533444517600886769
+  dialogueStrings: []
+--- !u!61 &6867080035707387782
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5460577635610818200}
+  m_GameObject: {fileID: 6057581391576007995}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -285,7 +247,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07563622, y: 0.11898512}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -296,9 +258,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7241503, y: 0.76202977}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &5865109963656381116
+--- !u!1 &9035750951431159236
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,39 +268,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1542954210008694910}
-  m_Layer: 0
-  m_Name: NPC
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1542954210008694910
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5865109963656381116}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3996058847183928377}
-  m_Father: {fileID: 6090603584107245879}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7845516967409485226
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6090603584107245879}
+  - component: {fileID: 8503813891310398091}
   m_Layer: 0
   m_Name: Models
   m_TagString: Untagged
@@ -346,23 +276,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6090603584107245879
+--- !u!4 &8503813891310398091
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7845516967409485226}
+  m_GameObject: {fileID: 9035750951431159236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1542954210008694910}
-  m_Father: {fileID: 319819022171688529}
+  - {fileID: 1745069057999345776}
+  m_Father: {fileID: 2839345182384550383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8163530055934974768
+--- !u!1 &9141080504594895913
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,28 +300,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 319819022171688529}
+  - component: {fileID: 2839345182384550383}
   m_Layer: 0
-  m_Name: "NPC com di\xE1logo"
+  m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &319819022171688529
+--- !u!4 &2839345182384550383
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8163530055934974768}
+  m_GameObject: {fileID: 9141080504594895913}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.22, y: -2.11, z: 0}
+  m_LocalPosition: {x: -2.31, y: -3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6090603584107245879}
-  - {fileID: 2759386118241194381}
+  - {fileID: 8503813891310398091}
+  - {fileID: 8065830839806535355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

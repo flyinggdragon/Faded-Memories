@@ -84,6 +84,8 @@ public class SentenceSlots : MonoBehaviour {
         else {
             UIManager.Instance.CreateToastModal("Resposta Incorreta!");
         }
+
+        UIManager.Instance.UnlockCursor();
     }
 
     public class WordsData {
