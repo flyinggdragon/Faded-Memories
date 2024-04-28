@@ -17,7 +17,6 @@ public class Player : MonoBehaviour {
     private bool inTrigger = false;
     private string otherName = "";
     private string triggerType;
-    private bool haltMovement = false;
     public GameObject PopUp;
     public static Player Instance { get; private set; }
    
@@ -37,14 +36,10 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        if (dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen) {
-            haltMovement = true;
-        } else { haltMovement = false; }
-
-        if (!haltMovement) {
+        if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen)) {
             horizontal = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(horizontal * speed, 0);
-        }
+        } else { rb.velocity = Vector2.zero; }
 
         float newX = Mathf.Clamp(transform.position.x, screenLimitLeft, screenLimitRight);
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
