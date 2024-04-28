@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private Button option1Button;
     [SerializeField] private Button option2Button;
+    [SerializeField] private Image dialogueImage;
 
     [SerializeField] private float typingSpeed = 0.05f;
     // [SerializeField] private float turnSpeed = 2f;

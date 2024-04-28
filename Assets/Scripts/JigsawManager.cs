@@ -26,6 +26,8 @@ public class JigsawManager : MonoBehaviour {
 
   private int piecesCorrect;
 
+
+
   void Start() {
     // Create the UI
     foreach (Texture2D texture in imageTextures) {
@@ -57,6 +59,8 @@ public class JigsawManager : MonoBehaviour {
 
     piecesCorrect = 0;
 
+    GameObject.Find("Player").SetActive(false);
+    
   }
 
   Vector2Int GetDimensions(Texture2D jigsawTexture, int difficulty) {
