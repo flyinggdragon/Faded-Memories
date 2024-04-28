@@ -43,7 +43,6 @@ public class Notebook : MonoBehaviour {
 
         sentencesButton = transform.Find("Notebook Back/Button Holder/Sentences Button").GetComponent<Button>();
         cluesButton = transform.Find("Notebook Back/Button Holder/Clues Button").GetComponent<Button>();
-    
     }
 
     public void ToggleNotebook() {

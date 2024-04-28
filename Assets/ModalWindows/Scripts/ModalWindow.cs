@@ -149,6 +149,9 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
 
     public virtual T Close()
     {
+        UIManager.Instance.modalOpen = false;
+        UIManager.Instance.LockCursor();
+        
         Visible = false;
         Destroy(gameObject, 1f);
         return Instance;
@@ -164,11 +167,6 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
 
     public virtual void ButtonPressedCallback(ModalWindowButton modalWindowButton)
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        UIManager.Instance.modalOpen = false;
-        
         Close();
     }
 }

@@ -10,8 +10,6 @@ public class SentenceSlots : MonoBehaviour {
     private Image image;
     private InputModalWindow inputModalWindow;
     private int i;
-    private List<string> answers;
-    private string jsonFilePath = "Assets/GameData/SlotsAnswers.json";
     private string answer;
     private EventTrigger trigger;
     
@@ -20,9 +18,7 @@ public class SentenceSlots : MonoBehaviour {
 
         i = int.Parse(gameObject.name.Replace("Space ", ""));
 
-        answers = LoadAnswers(jsonFilePath);
-
-        answer = answers[i - 1];
+        answer = GameManager.answers[i - 1];
 
         trigger = image.gameObject.AddComponent<EventTrigger>();
         EventTrigger.Entry entryEnter = new EventTrigger.Entry();
@@ -41,7 +37,7 @@ public class SentenceSlots : MonoBehaviour {
         trigger.triggers.Add(entryClick);
     }
 
-    private List<string> LoadAnswers(string path) {
+    public static List<string> LoadAnswers(string path) {
         List<string> loadedAnswers = new List<string>();
         
         string jsonData = File.ReadAllText(path);
@@ -65,7 +61,7 @@ public class SentenceSlots : MonoBehaviour {
     }
 
     private void OnInputDone(string inputResult) {
-        if (inputResult == answer) {
+        if (inputResult.ToUpper() == answer.ToUpper()) {
             GameObject textObject = new GameObject("Answer " + i.ToString());
         
             TextMeshProUGUI textComponent = textObject.AddComponent<TextMeshProUGUI>();
@@ -84,9 +80,12 @@ public class SentenceSlots : MonoBehaviour {
 
             trigger.triggers.Clear();
         }
+
+        else {
+            UIManager.Instance.CreateToastModal("Resposta Incorreta!");
+        }
     }
 
-    [System.Serializable]
     public class WordsData {
         public string[] answers;
     }

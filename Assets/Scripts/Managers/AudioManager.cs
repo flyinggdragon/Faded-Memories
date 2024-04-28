@@ -49,7 +49,7 @@ public class AudioManager : MonoBehaviour {
     }
 
     public AudioClip FindAudioClip(string name) {
-        foreach (AudioClip audioClip in GameManager.audioClips) {
+        foreach (AudioClip audioClip in GameManager.audios) {
             string audioFileName = System.IO.Path.GetFileNameWithoutExtension(audioClip.name);
             
             if (audioFileName == name) {

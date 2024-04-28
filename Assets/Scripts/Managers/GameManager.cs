@@ -5,13 +5,15 @@ using UnityEngine;
 public static class GameManager {
     public static List<LevelManager.Level> levels;
     public static List<CluesManager.Item> items;
-    public static List<AudioClip> audioClips;
+    public static List<AudioClip> audios;
+    public static List<string> answers;
     public static LevelManager.Level currentLevel;
 
     public static void Initialize() {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");
         items = CluesManager.Instance.LoadItemList("Assets/GameData/ItemList.json");
-        audioClips = AudioManager.Instance.LoadAudioClips();
+        audios = AudioManager.Instance.LoadAudioClips();
+        answers = SentenceSlots.LoadAnswers("Assets/GameData/SlotsAnswers.json");
         
         currentLevel = levels[0];
 
