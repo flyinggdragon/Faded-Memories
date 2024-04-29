@@ -50,7 +50,27 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadLevel(string levelName) {
         GameManager.currentLevel = FindLevelByName(levelName);
-        SceneManager.LoadScene(levelName);
+        StartCoroutine(AsyncLoadLevel(levelName));
+    }
+
+    private IEnumerator AsyncLoadLevel(string levelName) {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelName);
+
+        while (!asyncLoad.isDone) {
+            yield return null;
+        }
+
+        UnloadCollectedItems();
+    }
+
+    private void UnloadCollectedItems() {
+        foreach (GameObject itemObj in GameObject.FindGameObjectsWithTag("Item")) {
+            CluesManager.Item item = CluesManager.Instance.FindItem(itemObj.name);
+            
+            if (item.collected) {
+                Destroy(itemObj);
+            }
+        }
     }
 
     public void ExitLeft() {
@@ -109,7 +129,7 @@ public class LevelManager : MonoBehaviour {
         AudioManager.Instance.PlayBackgroundMusic(GameManager.currentLevel.backgroundSongClip, 0.5f);
     }
 
-    private Level FindLevelByName(string levelName) {
+    public Level FindLevelByName(string levelName) {
         return GameManager.levels.Find(level => level.levelName == levelName);
     }
 

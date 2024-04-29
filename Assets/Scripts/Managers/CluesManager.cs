@@ -78,8 +78,8 @@ public class CluesManager : MonoBehaviour {
             string info = "\n" + item.itemName + "\n" + item.description + "\n" + item.keyword;
             UIManager.Instance.CreateSimpleModal("Você coletou " + item.itemName + info, "Item pego!");
 
-            item.collected = false;
-
+            item.collected = true;
+            
             cells[item.id - 1].collected = item.collected;
             cells[item.id - 1].ToggleVisibility();
         }
@@ -92,7 +92,7 @@ public class CluesManager : MonoBehaviour {
         public string fileName;
         public string description;
         public string keyword;
-        public bool collected = false;
+        public bool collected;
     }
 
     [System.Serializable]

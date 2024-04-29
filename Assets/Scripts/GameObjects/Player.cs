@@ -58,9 +58,8 @@ public class Player : MonoBehaviour {
 
             else if (triggerType == "Item") {
                 var item = CluesManager.Instance.FindItem(otherName);
-                
-                CluesManager.Instance.CollectItem(item);
 
+                CluesManager.Instance.CollectItem(item);
                 Destroy(GameObject.Find(otherName));
             }
         }
