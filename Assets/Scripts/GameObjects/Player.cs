@@ -15,8 +15,7 @@ public class Player : MonoBehaviour {
     public float screenLimitLeft = -7.2f;
     public float screenLimitRight = 6.1f;
     private bool inTrigger = false;
-    private string otherName = "";
-    private string triggerType;
+    private Collider2D currentTrigger;
     public GameObject PopUp;
     public static Player Instance { get; private set; }
    
@@ -51,20 +50,19 @@ public class Player : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen) {            
-            if (triggerType == "NPC") {
-                dialogueTrigger = GameObject.Find("Dialogue Trigger").GetComponent<DialogueTrigger>();
-                dialogueTrigger.StartDialogue();
+            if (currentTrigger.CompareTag("NPC")) {
+                dialogueTrigger = currentTrigger.GetComponent<DialogueTrigger>();
+                dialogueTrigger?.StartDialogue();
             }
 
-            else if (triggerType == "Item") {
-                var item = CluesManager.Instance.FindItem(otherName);
+            else if (currentTrigger.CompareTag("Item")) {
+                var item = CluesManager.Instance.FindItem(currentTrigger.name);
 
                 CluesManager.Instance.CollectItem(item);
-                Destroy(GameObject.Find(otherName));
+                Destroy(GameObject.Find(currentTrigger.name));
             }
         }
 
-        // Verificação para troca de cenas
         if (transform.position.x >= screenLimitRight) {
             if (!string.IsNullOrEmpty(GameManager.currentLevel.rightName)) {
                 LevelManager.Instance.ExitRight();
@@ -101,14 +99,12 @@ public class Player : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        triggerType = other.tag;
+        currentTrigger = other;
         inTrigger = true;
-        otherName = other.gameObject.name;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        triggerType = null;
+        currentTrigger = null;
         inTrigger = false;
-        otherName = "";
     }
 }
