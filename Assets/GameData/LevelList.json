@@ -1,9 +1,9 @@
 {
     "level": [
         {
-            "levelName": "Street",
+            "levelName": "StartAlley",
             "levelId": 1,
-            "leftName": "Park",
+            "leftName": "",
             "rightName": "AlleyOutside",
             "upName": "",
             "downName": "",
