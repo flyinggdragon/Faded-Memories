@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 363331354}
   - component: {fileID: 363331355}
   m_Layer: 0
-  m_Name: elprota
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2327,7 +2327,7 @@ MonoBehaviour:
   rb: {fileID: 988958393}
   screenLimitLeft: -7.2
   screenLimitRight: 6.1
-  PopUp: {fileID: 1846876256}
+  HoverPopUp: {fileID: 1846876256}
 --- !u!50 &988958393
 Rigidbody2D:
   serializedVersion: 4
@@ -4013,7 +4013,7 @@ GameObject:
   - component: {fileID: 1846876258}
   - component: {fileID: 1846876257}
   m_Layer: 0
-  m_Name: popup
+  m_Name: HoverPopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4068,7 +4068,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1846876258

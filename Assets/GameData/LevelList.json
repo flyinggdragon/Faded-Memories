@@ -12,9 +12,9 @@
         {
             "levelName": "AlleyOutside",
             "levelId": 2,
-            "leftName": "Street",
+            "leftName": "",
             "rightName": "",
-            "upName": "AlleyInside",
+            "upName": "StartAlley",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },

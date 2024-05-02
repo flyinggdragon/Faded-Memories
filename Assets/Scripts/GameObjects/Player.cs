@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
     public float screenLimitRight = 6.1f;
     private bool inTrigger = false;
     private Collider2D currentTrigger;
-    public GameObject PopUp;
+    public GameObject HoverPopUp;
     public static Player Instance { get; private set; }
    
     void Awake() {
@@ -76,25 +76,39 @@ public class Player : MonoBehaviour {
         }
         
         // Verificar também se está no trigger para tal.
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-            if (!string.IsNullOrEmpty(GameManager.currentLevel.upName)) {
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && inTrigger) {
+            if (currentTrigger.CompareTag("TriggerUp")) {
                 LevelManager.Instance.ExitUp();
             }
         }
 
         // Verificar também se está no trigger para tal.
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
             if (!string.IsNullOrEmpty(GameManager.currentLevel.downName)) {
                 LevelManager.Instance.ExitDown();
             }
         }
 
         if (inTrigger == true) {
-            PopUp.SetActive(true);
+            Sprite sprite = null;
+
+            if (currentTrigger.CompareTag("Item") || currentTrigger.CompareTag("NPC") || currentTrigger.CompareTag("Puzzle")) {
+                sprite = Resources.Load<Sprite>("Sprites/key_e");
+            }
+
+            else if (currentTrigger.CompareTag("TriggerUp")) {
+                sprite = Resources.Load<Sprite>("Sprites/key_w");
+            }
+            
+            HoverPopUp.SetActive(true);
+
+            if (sprite) {
+                HoverPopUp.GetComponent<SpriteRenderer>().sprite = sprite;
+            }
         }
 
         else {
-            PopUp.SetActive(false);
+            HoverPopUp.SetActive(false);
         }
     }
 

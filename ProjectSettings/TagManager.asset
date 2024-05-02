@@ -6,6 +6,9 @@ TagManager:
   tags:
   - NPC
   - Item
+  - TriggerUp
+  - TriggerDown
+  - Puzzle
   layers:
   - Default
   - TransparentFX

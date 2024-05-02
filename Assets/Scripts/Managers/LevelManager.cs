@@ -74,7 +74,9 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void ExitLeft() {
-        if (GameManager.currentLevel.backgroundSong == FindLevelByName(GameManager.currentLevel.leftName).backgroundSong) {
+        Level currentLevel = GameManager.currentLevel;
+
+        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.leftName).backgroundSong) {
             AudioManager.Instance.sameBgMusic = true;
         } else { AudioManager.Instance.sameBgMusic = false; }
 
@@ -84,16 +86,18 @@ public class LevelManager : MonoBehaviour {
             Player.Instance.transform.position.z
             );
 
-        GameManager.currentLevel = FindLevelByName(GameManager.currentLevel.leftName);
-        LoadLevel(GameManager.currentLevel.levelName);
+        currentLevel = FindLevelByName(currentLevel.leftName);
+        LoadLevel(currentLevel.levelName);
 
-        AudioManager.Instance.PlayBackgroundMusic(GameManager.currentLevel.backgroundSongClip, 0.5f);
+        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
     }
 
     public void ExitRight() {
-        if (GameManager.currentLevel.backgroundSong == FindLevelByName(GameManager.currentLevel.rightName).backgroundSong) {
+        Level currentLevel = GameManager.currentLevel;
+
+        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.rightName).backgroundSong) {
             AudioManager.Instance.sameBgMusic = true;
-        }
+        } else { AudioManager.Instance.sameBgMusic = false; }
 
         Player.Instance.transform.position = new Vector3(
             Player.Instance.screenLimitLeft + 0.5f, 
@@ -101,32 +105,36 @@ public class LevelManager : MonoBehaviour {
             Player.Instance.transform.position.z
             );
 
-        GameManager.currentLevel = FindLevelByName(GameManager.currentLevel.rightName);
-        LoadLevel(GameManager.currentLevel.levelName);
+        currentLevel = FindLevelByName(currentLevel.rightName);
+        LoadLevel(currentLevel.levelName);
 
-        AudioManager.Instance.PlayBackgroundMusic(GameManager.currentLevel.backgroundSongClip, 0.5f);
+        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
     }
 
     public void ExitUp() {
-        if (GameManager.currentLevel.backgroundSong == FindLevelByName(GameManager.currentLevel.upName).backgroundSong) {
+        Level currentLevel = GameManager.currentLevel;
+
+        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.upName).backgroundSong) {
             AudioManager.Instance.sameBgMusic = true;
-        }
+        } else { AudioManager.Instance.sameBgMusic = false; }
 
-        GameManager.currentLevel = FindLevelByName(GameManager.currentLevel.upName);
-        LoadLevel(GameManager.currentLevel.levelName);
+        currentLevel = FindLevelByName(GameManager.currentLevel.upName);
+        LoadLevel(currentLevel.levelName);
 
-        AudioManager.Instance.PlayBackgroundMusic(GameManager.currentLevel.backgroundSongClip, 0.5f);
+        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
     }
 
     public void ExitDown() {
-        if (GameManager.currentLevel.backgroundSong == FindLevelByName(GameManager.currentLevel.downName).backgroundSong) {
+        Level currentLevel = GameManager.currentLevel;
+
+        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.downName).backgroundSong) {
             AudioManager.Instance.sameBgMusic = true;
         }
 
-        GameManager.currentLevel = FindLevelByName(GameManager.currentLevel.downName);
-        LoadLevel(GameManager.currentLevel.levelName);
+        currentLevel = FindLevelByName(currentLevel.downName);
+        LoadLevel(currentLevel.levelName);
 
-        AudioManager.Instance.PlayBackgroundMusic(GameManager.currentLevel.backgroundSongClip, 0.5f);
+        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
     }
 
     public Level FindLevelByName(string levelName) {
