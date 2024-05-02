@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,11 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private Button option1Button;
     [SerializeField] private Button option2Button;
-    [SerializeField] private Image dialogueImage;
+    [SerializeField] private Button option3Button;
+    [SerializeField] private Button option4Button;
+    [SerializeField] private Button option5Button;
+    private List<Button> activeOptions;
+    private Image dialogueImage;
 
     [SerializeField] private float typingSpeed = 0.05f;
     // [SerializeField] private float turnSpeed = 2f;
@@ -28,13 +33,13 @@ public class DialogueManager : MonoBehaviour {
 
     private void Start() {
         dialogueParent.SetActive(false);
+        activeOptions = new List<Button>();
     }
 
     public void DialogueStart(List<DialogueString> textToPrint) {
 
         dialogueParent.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        UIManager.Instance.UnlockCursor();
         
         isDialoguing = true;
 
@@ -48,6 +53,9 @@ public class DialogueManager : MonoBehaviour {
     private void DisableButtons() {
         option1Button.gameObject.SetActive(false);
         option2Button.gameObject.SetActive(false);
+        option3Button.gameObject.SetActive(false);
+        option4Button.gameObject.SetActive(false);
+        option5Button.gameObject.SetActive(false);
     }
     
     private bool optionSelected = false;
@@ -64,22 +72,48 @@ public class DialogueManager : MonoBehaviour {
 
             if (line.isQuestion) {
                 yield return StartCoroutine(TypeText(line.text));
-            
                 
-                option1Button.gameObject.SetActive(true);
-                option2Button.gameObject.SetActive(true);
+                if (!string.IsNullOrEmpty(line.answerOption1)) {
+                    option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
+                    option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1IndexJump));
+                    activeOptions.Add(option1Button);
+                } else { throw new Exception("A opção 1 não pode estar vazia."); }
+                
+                if (!string.IsNullOrEmpty(line.answerOption2)) {
+                    option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
+                    option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2IndexJump));
+                    activeOptions.Add(option2Button);
+                }
 
-                option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
-                option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
-            
-                option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1IndexJump));
-                option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2IndexJump));
-            
+                if (!string.IsNullOrEmpty(line.answerOption3)) {
+                    option3Button.GetComponentInChildren<TMP_Text>().text = line.answerOption3;
+                    option3Button.onClick.AddListener(() => HandleOptionSelected(line.option3IndexJump));
+                    activeOptions.Add(option3Button);
+                }
+
+                if (!string.IsNullOrEmpty(line.answerOption4)) {
+                    option4Button.GetComponentInChildren<TMP_Text>().text = line.answerOption4;
+                    option4Button.onClick.AddListener(() => HandleOptionSelected(line.option4IndexJump));
+                    activeOptions.Add(option4Button);
+                }
+
+                if (!string.IsNullOrEmpty(line.answerOption5)) {
+                    option5Button.GetComponentInChildren<TMP_Text>().text = line.answerOption5;
+                    option5Button.onClick.AddListener(() => HandleOptionSelected(line.option5IndexJump));
+                    activeOptions.Add(option5Button);
+                }
+
+                foreach (Button option in activeOptions) {
+                    option.gameObject.SetActive(true);
+                }
+
                 yield return new WaitUntil(() => optionSelected);
             }
 
             else {
                 yield return StartCoroutine(TypeText(line.text));
+
+                if (activeOptions.Count > 0) { activeOptions.Clear(); }
             }
 
             line.endDialogueEvent?.Invoke();
@@ -122,7 +156,6 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = "";
         dialogueParent.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        UIManager.Instance.LockCursor();
     }
 }

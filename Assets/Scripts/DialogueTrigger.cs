@@ -20,8 +20,14 @@ public class DialogueString {
     public bool isQuestion;
     public string answerOption1;
     public string answerOption2; 
+    public string answerOption3; 
+    public string answerOption4; 
+    public string answerOption5; 
     public int option1IndexJump;
     public int option2IndexJump;
+    public int option3IndexJump;
+    public int option4IndexJump;
+    public int option5IndexJump;
 
     [Header("Triggered Events")]
     public UnityEvent startDialogueEvent;

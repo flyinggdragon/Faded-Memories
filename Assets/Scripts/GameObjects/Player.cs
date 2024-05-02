@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
     public float screenLimitRight = 6.1f;
     private bool inTrigger = false;
     private Collider2D currentTrigger;
-    public GameObject HoverPopUp;
+    public GameObject hoverPopUp;
     public static Player Instance { get; private set; }
    
     void Awake() {
@@ -100,15 +100,15 @@ public class Player : MonoBehaviour {
                 sprite = Resources.Load<Sprite>("Sprites/key_w");
             }
             
-            HoverPopUp.SetActive(true);
+            hoverPopUp.SetActive(true);
 
             if (sprite) {
-                HoverPopUp.GetComponent<SpriteRenderer>().sprite = sprite;
+                hoverPopUp.GetComponent<SpriteRenderer>().sprite = sprite;
             }
         }
 
         else {
-            HoverPopUp.SetActive(false);
+            hoverPopUp.SetActive(false);
         }
     }
 
