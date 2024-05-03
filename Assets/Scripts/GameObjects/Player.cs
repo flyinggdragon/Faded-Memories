@@ -52,7 +52,7 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen) {            
             if (currentTrigger.CompareTag("NPC")) {
                 dialogueTrigger = currentTrigger.GetComponent<DialogueTrigger>();
-                dialogueTrigger?.StartDialogue();
+                dialogueTrigger?.DialogueStart();
             }
 
             else if (currentTrigger.CompareTag("Item")) {

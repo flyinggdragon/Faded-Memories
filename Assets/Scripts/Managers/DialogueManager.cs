@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour {
     private AudioSource audioSource;
 
     private bool isDialoguing = false;
+    private string npcName;
 
     public bool IsDialoguing {
         get { return isDialoguing; }
@@ -36,8 +37,8 @@ public class DialogueManager : MonoBehaviour {
         activeOptions = new List<Button>();
     }
 
-    public void DialogueStart(List<DialogueString> textToPrint) {
-
+    public void DialogueStart(List<DialogueString> textToPrint, string name) {
+        npcName = name;
         dialogueParent.SetActive(true);
         UIManager.Instance.UnlockCursor();
         
@@ -62,6 +63,7 @@ public class DialogueManager : MonoBehaviour {
 
     private IEnumerator PrintDialogue() {
         while (currentDialogueIndex < dialogueList.Count) {
+            dialogueParent.transform.GetChild(0).GetComponentInChildren<TMP_Text>().text = npcName;
             DialogueString line = dialogueList[currentDialogueIndex];
 
             line.startDialogueEvent?.Invoke();
@@ -105,6 +107,9 @@ public class DialogueManager : MonoBehaviour {
 
                 foreach (Button option in activeOptions) {
                     option.gameObject.SetActive(true);
+
+                    dialogueParent.GetComponent<RectTransform>().sizeDelta += new Vector2(0, 20);
+                    dialogueParent.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, 10);
                 }
 
                 yield return new WaitUntil(() => optionSelected);

@@ -5,9 +5,10 @@ using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
-    
-    public void StartDialogue() {
-        Player.Instance.dialogueManager.DialogueStart(dialogueStrings);
+    [SerializeField] public string npcName;
+
+    public void DialogueStart() {
+        Player.Instance.dialogueManager.DialogueStart(dialogueStrings, npcName);
     }
 }
 
