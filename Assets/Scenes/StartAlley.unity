@@ -2872,6 +2872,7 @@ MonoBehaviour:
   option3Button: {fileID: 279165572}
   option4Button: {fileID: 700634086}
   option5Button: {fileID: 1000328569}
+  nextIndicator: {fileID: 0}
   typingSpeed: 0.05
 --- !u!1 &1000328567
 GameObject:

@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour {
 
     public void DialogueStart() {
         Player.Instance.dialogueManager.DialogueStart(dialogueStrings, npcName, firstInteraction);
-        firstInteraction = false;
+         firstInteraction = false;
     }
 }
 

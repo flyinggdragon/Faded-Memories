@@ -8,6 +8,7 @@ public static class GameManager {
     public static List<AudioClip> audios;
     public static List<string> answers;
     public static LevelManager.Level currentLevel;
+    public static float money = 50.0f;
 
     public static void Initialize() {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour {
@@ -14,13 +13,13 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] private Button option3Button;
     [SerializeField] private Button option4Button;
     [SerializeField] private Button option5Button;
+    [SerializeField] private Image nextIndicator; // Adicione esta linha
+
     private List<Button> activeOptions;
     private Image dialogueImage;
 
     [SerializeField] private float typingSpeed = 0.05f;
     private AudioClip typingSound;
-    // [SerializeField] private float turnSpeed = 2f;
-
     private List<DialogueString> dialogueList;
     private AudioSource audioSource;
 
@@ -37,17 +36,17 @@ public class DialogueManager : MonoBehaviour {
         dialogueParent.SetActive(false);
         activeOptions = new List<Button>();
         typingSound = Resources.Load<AudioClip>("Audio/SFX/typingSound");
+        nextIndicator.gameObject.SetActive(false); // Inicialmente desativado
     }
 
     public void DialogueStart(List<DialogueString> textToPrint, string name, bool firstInteraction) {
-        if (firstInteraction == false)
-        {
+        if (!firstInteraction) {
             typingSpeed = 0.01f;
         }
         npcName = name;
         dialogueParent.SetActive(true);
         UIManager.Instance.UnlockCursor();
-        
+
         isDialoguing = true;
 
         dialogueList = textToPrint;
@@ -64,7 +63,7 @@ public class DialogueManager : MonoBehaviour {
         option4Button.gameObject.SetActive(false);
         option5Button.gameObject.SetActive(false);
     }
-    
+
     private bool optionSelected = false;
 
     private IEnumerator PrintDialogue() {
@@ -78,15 +77,18 @@ public class DialogueManager : MonoBehaviour {
                 AudioManager.Instance.PlaySound(line.dialogueSoundEffect);
             }
 
+            nextIndicator.gameObject.SetActive(false); // Esconder o triângulo durante a digitação
             if (line.isQuestion) {
                 yield return StartCoroutine(TypeText(line.text));
-                
+
                 if (!string.IsNullOrEmpty(line.answerOption1)) {
                     option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
                     option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1IndexJump));
                     activeOptions.Add(option1Button);
-                } else { throw new Exception("A opção 1 não pode estar vazia."); }
-                
+                } else {
+                    throw new Exception("A opção 1 não pode estar vazia.");
+                }
+
                 if (!string.IsNullOrEmpty(line.answerOption2)) {
                     option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
                     option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2IndexJump));
@@ -113,18 +115,15 @@ public class DialogueManager : MonoBehaviour {
 
                 foreach (Button option in activeOptions) {
                     option.gameObject.SetActive(true);
-
-                    //dialogueParent.GetComponent<RectTransform>().sizeDelta += new Vector2(0, 20);
-                    //dialogueParent.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, 10);
                 }
 
                 yield return new WaitUntil(() => optionSelected);
-            }
-
-            else {
+            } else {
                 yield return StartCoroutine(TypeText(line.text));
-
-                if (activeOptions.Count > 0) { activeOptions.Clear(); }
+                nextIndicator.gameObject.SetActive(true); // Mostrar o triângulo após a digitação
+                if (activeOptions.Count > 0) {
+                    activeOptions.Clear();
+                }
             }
 
             line.endDialogueEvent?.Invoke();
@@ -137,7 +136,6 @@ public class DialogueManager : MonoBehaviour {
     private void HandleOptionSelected(int indexJump) {
         optionSelected = true;
         DisableButtons();
-
         currentDialogueIndex = indexJump;
     }
 
@@ -151,14 +149,15 @@ public class DialogueManager : MonoBehaviour {
         }
 
         if (!dialogueList[currentDialogueIndex].isQuestion) {
+            nextIndicator.gameObject.SetActive(true); // Mostrar o triângulo após a digitação
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            nextIndicator.gameObject.SetActive(false); // Esconder o triângulo após clicar
         }
 
         if (dialogueList[currentDialogueIndex].isEnd) {
             DialogueStop();
         }
 
-        
         currentDialogueIndex++;
     }
 
@@ -170,5 +169,6 @@ public class DialogueManager : MonoBehaviour {
         dialogueParent.SetActive(false);
 
         UIManager.Instance.LockCursor();
+        nextIndicator.gameObject.SetActive(false); // Esconder o triângulo quando o diálogo termina
     }
 }
