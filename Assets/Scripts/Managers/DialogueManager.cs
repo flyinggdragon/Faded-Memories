@@ -114,8 +114,8 @@ public class DialogueManager : MonoBehaviour {
                 foreach (Button option in activeOptions) {
                     option.gameObject.SetActive(true);
 
-                    dialogueParent.GetComponent<RectTransform>().sizeDelta += new Vector2(0, 20);
-                    dialogueParent.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, 10);
+                    //dialogueParent.GetComponent<RectTransform>().sizeDelta += new Vector2(0, 20);
+                    //dialogueParent.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, 10);
                 }
 
                 yield return new WaitUntil(() => optionSelected);

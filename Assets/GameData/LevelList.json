@@ -4,34 +4,52 @@
             "levelName": "StartAlley",
             "levelId": 1,
             "leftName": "",
-            "rightName": "AlleyOutside",
+            "rightName": "Street",
             "upName": "",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
-            "levelName": "AlleyOutside",
+            "levelName": "Street",
             "levelId": 2,
             "leftName": "",
-            "rightName": "",
-            "upName": "StartAlley",
+            "rightName": "PubOutside",
+            "upName": "",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
-            "levelName": "AlleyInside",
+            "levelName": "PubOutside",
             "levelId": 3,
+            "leftName": "Street",
+            "rightName": "",
+            "upName": "PubInside",
+            "downName": "",
+            "backgroundSong": "Empire City Night"
+        },
+        {
+            "levelName": "PubInside",
+            "levelId": 4,
             "leftName": "",
             "rightName": "",
-            "upName": "",
-            "downName": "AlleyOutside",
-            "backgroundSong": "Empire City Night"
+            "upName": "Street",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "Park",
-            "levelId": 4,
+            "levelId": 5,
             "leftName": "",
-            "rightName": "Street",
+            "rightName": "",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "PoliceStationMainRoom",
+            "levelId": 6,
+            "leftName": "",
+            "rightName": "",
             "upName": "",
             "downName": "",
             "backgroundSong": "Heaven Central Authority"
