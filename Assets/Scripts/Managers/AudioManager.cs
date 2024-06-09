@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour {
         sfxSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void PlayBackgroundMusic(AudioClip clip, float volume = 0.5f) {
+    public void PlayBackgroundMusic(AudioClip clip, float volume = 0.2f) {
         if (!sameBgMusic) {
             if (bgMusicSource.isPlaying) { StopBackgroundMusic(); }
 

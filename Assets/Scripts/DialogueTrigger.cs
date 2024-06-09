@@ -6,9 +6,11 @@ using UnityEngine.Events;
 public class DialogueTrigger : MonoBehaviour {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
     [SerializeField] public string npcName;
+    public bool firstInteraction = true;
 
     public void DialogueStart() {
-        Player.Instance.dialogueManager.DialogueStart(dialogueStrings, npcName);
+        Player.Instance.dialogueManager.DialogueStart(dialogueStrings, npcName, firstInteraction);
+        firstInteraction = false;
     }
 }
 

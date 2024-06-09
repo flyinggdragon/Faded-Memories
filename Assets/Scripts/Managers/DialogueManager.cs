@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour {
     private Image dialogueImage;
 
     [SerializeField] private float typingSpeed = 0.05f;
+    private AudioClip typingSound;
     // [SerializeField] private float turnSpeed = 2f;
 
     private List<DialogueString> dialogueList;
@@ -35,9 +36,14 @@ public class DialogueManager : MonoBehaviour {
     private void Start() {
         dialogueParent.SetActive(false);
         activeOptions = new List<Button>();
+        typingSound = Resources.Load<AudioClip>("Audio/SFX/typingSound");
     }
 
-    public void DialogueStart(List<DialogueString> textToPrint, string name) {
+    public void DialogueStart(List<DialogueString> textToPrint, string name, bool firstInteraction) {
+        if (firstInteraction == false)
+        {
+            typingSpeed = 0.01f;
+        }
         npcName = name;
         dialogueParent.SetActive(true);
         UIManager.Instance.UnlockCursor();
@@ -140,6 +146,7 @@ public class DialogueManager : MonoBehaviour {
 
         foreach (char letter in text.ToCharArray()) {
             dialogueText.text += letter;
+            AudioManager.Instance.PlaySound(typingSound, 0.8f);
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -151,6 +158,7 @@ public class DialogueManager : MonoBehaviour {
             DialogueStop();
         }
 
+        
         currentDialogueIndex++;
     }
 
