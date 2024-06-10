@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pub_Outside.unity
     guid: b5cc1158c172fe04c8c399598e3c4a0f
+  - enabled: 1
+    path: Assets/Scenes/Home_Inside.unity
+    guid: 3f9f717d0bba6e647a505c400fc6ba17
   m_configObjects: {}

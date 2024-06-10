@@ -5,15 +5,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour {
-    private DialogueTrigger dialogueTrigger;
     public DialogueManager dialogueManager;
 
 
     private float horizontal;
     public float speed = 6f;
     public Rigidbody2D rb;
-    public float screenLimitLeft = -7.2f;
-    public float screenLimitRight = 6.1f;
+    public float screenLimitLeft = -9.5f;
+    public float screenLimitRight = 9.0f;
     private bool inTrigger = false;
     private Collider2D currentTrigger;
     public GameObject hoverPopUp;
@@ -51,8 +50,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen) {            
             if (currentTrigger.CompareTag("NPC")) {
-                dialogueTrigger = currentTrigger.GetComponent<DialogueTrigger>();
-                dialogueTrigger?.DialogueStart();
+                currentTrigger.GetComponent<DialogueTrigger>().DialogueStart();
             }
 
             else if (currentTrigger.CompareTag("Item")) {

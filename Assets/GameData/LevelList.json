@@ -1,7 +1,7 @@
 {
     "level": [
         {
-            "levelName": "StartAlley",
+            "levelName": "AlleyStart",
             "levelId": 1,
             "leftName": "",
             "rightName": "Street",
@@ -14,7 +14,7 @@
             "levelId": 2,
             "leftName": "",
             "rightName": "Pub_Outside",
-            "upName": "",
+            "upName": "AlleyStart",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
@@ -48,6 +48,24 @@
         {
             "levelName": "PoliceStation_Main",
             "levelId": 6,
+            "leftName": "",
+            "rightName": "",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Home_Outside",
+            "levelId": 7,
+            "leftName": "",
+            "rightName": "",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Home_Inside",
+            "levelId": 8,
             "leftName": "",
             "rightName": "",
             "upName": "",

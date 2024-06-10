@@ -5,12 +5,14 @@ using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
-    [SerializeField] public string npcName;
+
     public bool firstInteraction = true;
 
     public void DialogueStart() {
+        string npcName = transform.parent.GetComponent<NPC>().npcName;
+
         Player.Instance.dialogueManager.DialogueStart(dialogueStrings, npcName, firstInteraction);
-         firstInteraction = false;
+        firstInteraction = false;
     }
 }
 

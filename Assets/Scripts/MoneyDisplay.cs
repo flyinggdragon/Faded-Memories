@@ -11,6 +11,6 @@ public class MoneyDisplay : MonoBehaviour {
     }
 
     void Update() {
-        txtObj.text = $"{GameManager.money}";
+        txtObj.text = $"ɻ${GameManager.money}";
     }
 }
