@@ -13,26 +13,26 @@
             "levelName": "Street",
             "levelId": 2,
             "leftName": "",
-            "rightName": "PubOutside",
+            "rightName": "Pub_Outside",
             "upName": "",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
-            "levelName": "PubOutside",
+            "levelName": "Pub_Outside",
             "levelId": 3,
             "leftName": "Street",
             "rightName": "",
-            "upName": "PubInside",
+            "upName": "Pub_Inside",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
-            "levelName": "PubInside",
+            "levelName": "Pub_Inside",
             "levelId": 4,
             "leftName": "",
             "rightName": "",
-            "upName": "Street",
+            "upName": "Pub_Outside",
             "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
@@ -46,7 +46,7 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
-            "levelName": "PoliceStationMainRoom",
+            "levelName": "PoliceStation_Main",
             "levelId": 6,
             "leftName": "",
             "rightName": "",

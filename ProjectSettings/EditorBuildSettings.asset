@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartAlley.unity
+    path: Assets/Scenes/AlleyStart.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Park.unity
@@ -18,12 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Street.unity
     guid: 030908f6bf60dca4e8003eea4ea71a48
   - enabled: 1
-    path: Assets/Scenes/PoliceStationMainRoom.unity
+    path: Assets/Scenes/PoliceStation_Main.unity
     guid: eafa561ac7ef48b49a910aadf9f8ad52
   - enabled: 1
-    path: Assets/Scenes/PubInside.unity
+    path: Assets/Scenes/Pub_Inside.unity
     guid: acd5539bdbc61c14d8ae195425fe32d0
   - enabled: 1
-    path: Assets/Scenes/PubOutside.unity
+    path: Assets/Scenes/Pub_Outside.unity
     guid: b5cc1158c172fe04c8c399598e3c4a0f
   m_configObjects: {}
