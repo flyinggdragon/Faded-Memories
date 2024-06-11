@@ -10,21 +10,48 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Park.unity
-    guid: ca78dc4b0628b6d40812a461435bda15
+    guid: d7b60e6a36a7d9f4eb9c27879c9209e5
   - enabled: 1
     path: Assets/Scenes/Puzzle.unity
     guid: dadcd5992919fff4e81f4dbf66131572
   - enabled: 1
     path: Assets/Scenes/Street.unity
-    guid: 030908f6bf60dca4e8003eea4ea71a48
+    guid: 027365ff831c5dc4687f73b95b04547b
   - enabled: 1
-    path: Assets/Scenes/PoliceStation_Main.unity
+    path: Assets/Scenes/CultHQ_Sanctuary.unity
+    guid: 776161be240f4ee48b15f358b623d79c
+  - enabled: 1
+    path: Assets/Scenes/Hall.unity
+    guid: f8480dbcf54a09f4e8175ceb95d752cf
+  - enabled: 1
+    path: Assets/Scenes/Template.unity
+    guid: 42e918e45d856a6419b5c0a29faf850e
+  - enabled: 1
+    path: Assets/Scenes/testeesxcxene.unity
+    guid: d270aef8434554a4ea2d366cc6ecf5ac
+  - enabled: 0
+    path: Assets/Scenes/PoliceStationMainRoom.unity
     guid: eafa561ac7ef48b49a910aadf9f8ad52
   - enabled: 1
-    path: Assets/Scenes/Pub_Inside.unity
-    guid: acd5539bdbc61c14d8ae195425fe32d0
+    path: Assets/Scenes/Home_Outside.unity
+    guid: 74a83b292e783cd428ba7a0f4cf99b72
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 0e8292ab677224f4da7ee169c19fbb43
   - enabled: 1
     path: Assets/Scenes/Pub_Outside.unity
+    guid: 7211d11e7a4110540b201f23acc9c440
+  - enabled: 0
+    path: Assets/Scenes/PubInside.unity
+    guid: acd5539bdbc61c14d8ae195425fe32d0
+  - enabled: 1
+    path: Assets/Scenes/PoliceStation_Main.unity
+    guid: dca0cdc3820b6984b8d343d507b06899
+  - enabled: 1
+    path: Assets/Scenes/Pub_Inside.unity
+    guid: 9742b1f5399c22246a446cf1a2c3aa5d
+  - enabled: 0
+    path: Assets/Scenes/PubOutside.unity
     guid: b5cc1158c172fe04c8c399598e3c4a0f
   - enabled: 1
     path: Assets/Scenes/Home_Inside.unity

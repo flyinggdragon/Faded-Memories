@@ -1,12 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class HoverTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {   
-    public string tipToShow;
+    string tipToShow = "Nome: Faca \nDescrição: Faca enferrujada bla bla bla \nPalavra-Chave: Suborno";
+
+
+
+    
+    
+
+
+
+    
+    
     public float timeToWait = 0.5f;
+
+    public void SetItemNames()
+    {
+        
+
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {

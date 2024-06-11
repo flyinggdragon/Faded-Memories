@@ -57,6 +57,7 @@ public class CluesManager : MonoBehaviour {
             rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.y * aspectRatio, rectTransform.sizeDelta.y);
 
             Cell cell = obj.AddComponent<Cell>();
+            obj.AddComponent<HoverTip>();
             cell.itemId = item.id;
             cell.collected = item.collected;
 
