@@ -40,11 +40,13 @@ public class CluesManager : MonoBehaviour {
         return wrapper.item;
     }
 
-    private List<Cell> GenerateCells() {
+    private List<Cell> GenerateCells()
+    {
         GameObject cellContainer = this.transform.GetChild(0).gameObject;
         List<Cell> cellsList = new List<Cell>();
 
-        foreach (Item item in GameManager.items) {
+        foreach (Item item in GameManager.items)
+        {
             Sprite sprite = Resources.Load<Sprite>("Sprites/" + item.fileName);
 
             GameObject obj = new GameObject(item.itemName);
@@ -57,16 +59,17 @@ public class CluesManager : MonoBehaviour {
             rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.y * aspectRatio, rectTransform.sizeDelta.y);
 
             Cell cell = obj.AddComponent<Cell>();
-            obj.AddComponent<HoverTip>();
             cell.itemId = item.id;
             cell.collected = item.collected;
 
             Image image = obj.AddComponent<Image>();
             image.sprite = sprite;
+            
+            HoverTip hoverTip = obj.AddComponent<HoverTip>();
+            hoverTip.RetrieveData(item);
 
             cellsList.Add(cell);
         }
-
         return cellsList;
     }
 
@@ -105,30 +108,9 @@ public class CluesManager : MonoBehaviour {
         public int itemId;
         public bool collected;
 
-        private void Start() {
-            EventTrigger trigger = gameObject.AddComponent<EventTrigger>();
-            EventTrigger.Entry entry = new EventTrigger.Entry();
-            entry.eventID = EventTriggerType.PointerEnter;
-            entry.callback.AddListener((data) => { OnPointerEnter(); });
-            trigger.triggers.Add(entry);
-
-            EventTrigger.Entry entryExit = new EventTrigger.Entry();
-            entryExit.eventID = EventTriggerType.PointerExit;
-            entryExit.callback.AddListener((data) => { OnPointerExit(); });
-            trigger.triggers.Add(entryExit);
-        }
-
         public void ToggleVisibility() {
             Image image = GetComponent<Image>();
             image.enabled = collected;
-        }
-
-        private void OnPointerEnter() {
-            //UIManager.Instance.CreateFloatingWindow();
-        }
-
-        private void OnPointerExit() {
-           //UIManager.Instance.UnCreateFloatingWindow();
         }
     }
 }

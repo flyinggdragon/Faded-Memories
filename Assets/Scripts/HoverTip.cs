@@ -7,47 +7,24 @@ using UnityEngine.EventSystems;
 
 public class HoverTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {   
-    string tipToShow = "Nome: Faca \nDescrição: Faca enferrujada bla bla bla \nPalavra-Chave: Suborno";
+    public CluesManager.Item tipData;
 
-
-
-    
-    
-
-
-
-    
-    
-    public float timeToWait = 0.5f;
-
-    public void SetItemNames()
-    {
-        
-
+    public void RetrieveData(CluesManager.Item tip) {
+        tipData = tip;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        StopAllCoroutines();
-        StartCoroutine(StartTimer());
+        ShowMessage(tipData);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        StopAllCoroutines();
         HoverTipManager.OnMouseLoseFocus();
     }
 
-    private void ShowMessage()
+    private void ShowMessage(CluesManager.Item tipData)
     {
-        HoverTipManager.OnMouseHover(tipToShow, Input.mousePosition);
-    }
-    
-
-    private IEnumerator StartTimer()
-    {
-        yield return new WaitForSeconds(timeToWait);
-
-        ShowMessage();
+        HoverTipManager.OnMouseHover(tipData, Input.mousePosition);
     }
 }

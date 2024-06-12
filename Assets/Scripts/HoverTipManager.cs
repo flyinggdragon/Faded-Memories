@@ -8,19 +8,19 @@ using UnityEngine.UI;
 
 public class HoverTipManager : MonoBehaviour
 {   
-
-    public TextMeshProUGUI tipText;
     public RectTransform tipWindow;
 
-    public static Action<string, Vector2> OnMouseHover;
+    public static Action<CluesManager.Item, Vector2> OnMouseHover;
     public static Action OnMouseLoseFocus;
+
+    public TMP_Text tipItemName;
+    public TMP_Text tipKeyword;
+    public TMP_Text tipDescription;
 
     private void OnEnable()
     {
         OnMouseHover += ShowTip;
         OnMouseLoseFocus += HideTip;
-        
-        
     }
 
     private void OnDisable()
@@ -34,10 +34,10 @@ public class HoverTipManager : MonoBehaviour
         HideTip();
     }
 
-    private void ShowTip(string tip, Vector2 mousePos)
+    private void ShowTip(CluesManager.Item tipData, Vector2 mousePos)
     {
-        tipText.text = tip;
-        tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 200 ? 200 : tipText.preferredWidth, tipText.preferredHeight);
+        AssignInfo(tipData);
+        tipWindow.sizeDelta = new Vector2(tipItemName.preferredWidth > 200 ? 200 : tipItemName.preferredWidth, tipItemName.preferredHeight);
         
         tipWindow.gameObject.SetActive(true);
         tipWindow.transform.position = new Vector2(mousePos.x + tipWindow.sizeDelta.x / 2 +15, mousePos.y);
@@ -46,8 +46,15 @@ public class HoverTipManager : MonoBehaviour
 
     private void HideTip()
     {
-        tipText.text = default;
         tipWindow.gameObject.SetActive(false);
+    }
+
+    private void AssignInfo(CluesManager.Item tipData) {
+        if (tipData != null) {
+            tipItemName.text = tipData.itemName;
+            tipKeyword.text = $"Palavra-chave: {tipData.keyword}";
+            tipDescription.text = tipData.description;
+        }
     }
 
 }
