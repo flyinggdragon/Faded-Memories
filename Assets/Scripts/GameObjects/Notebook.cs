@@ -65,37 +65,46 @@ public class Notebook : MonoBehaviour {
         AudioManager.Instance.PlaySound(openAudio, 1f);
     }
 
-    //Otimizar isso
     public void ActivateCluesContent() {
         AudioManager.Instance.PlaySound(openAudio, 1f);
 
-        sentencesContent.SetActive(false);
-        sentencesButton.interactable = true;
-        objectivesContent.SetActive(false);
-        objectivesButton.interactable = true;
+        DeactivateSentencesContent();
+        DeactivateObjectivesContent();
         cluesContent.SetActive(true);
         cluesButton.interactable = false;
     }
 
+    public void DeactivateCluesContent() {
+        cluesContent.SetActive(false);
+        cluesButton.interactable = true;
+    }
+
+
     public void ActivateSentencesContent() {
         AudioManager.Instance.PlaySound(openAudio, 1f);
 
-        cluesContent.SetActive(false);
-        cluesButton.interactable = true;
-        objectivesContent.SetActive(false);
-        objectivesButton.interactable = true;
+        DeactivateCluesContent();
+        DeactivateObjectivesContent();
         sentencesContent.SetActive(true);
         sentencesButton.interactable = false;
+    }
+
+    public void DeactivateSentencesContent() {
+        sentencesContent.SetActive(false);
+        sentencesButton.interactable = true;
     }
 
     public void ActivateObjectivesContent() {
         AudioManager.Instance.PlaySound(openAudio, 1f);
 
-        cluesContent.SetActive(false);
-        cluesButton.interactable = true;
-        sentencesContent.SetActive(false);
-        sentencesButton.interactable = true;
+        DeactivateCluesContent();
+        DeactivateSentencesContent();
         objectivesContent.SetActive(true);
         objectivesButton.interactable = false;
+    }
+
+    public void DeactivateObjectivesContent() {
+        objectivesContent.SetActive(false);
+        objectivesButton.interactable = true;
     }
 }
