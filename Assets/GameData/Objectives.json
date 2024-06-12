@@ -1,0 +1,22 @@
+{
+    "objective": [
+        {
+            "title": "Comer alguma coisa",
+            "description": "Estou com fome, preciso comer urgentemente.",
+            "active": true,
+            "finished": false
+        },
+        {
+            "title": "Achar a utilidade deste bilhete",
+            "description": "Este bilhete estava no meu bolso. Devo descobrir para que ele serve.",
+            "active": true,
+            "finished": false
+        },
+        {
+            "title": "Encontrar a chave da Casa Abandonada",
+            "description": "Em troca de sua ajuda, aquele homem me pediu para encontrar uma chave, que abre a porta de uma Casa Abandonada.",
+            "active": false,
+            "finished": false
+        }
+    ]
+}

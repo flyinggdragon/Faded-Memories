@@ -20,8 +20,10 @@ public class Notebook : MonoBehaviour {
     // Fim das inutilidades
     private GameObject sentencesContent;
     private GameObject cluesContent;
+    private GameObject objectivesContent;
     private Button sentencesButton;
     private Button cluesButton;
+    private Button objectivesButton;
     public static Notebook Instance { get; private set; }
 
     void Awake() {
@@ -40,9 +42,11 @@ public class Notebook : MonoBehaviour {
 
         sentencesContent = transform.Find("Notebook Back/Sentences Content").gameObject;
         cluesContent = transform.Find("Notebook Back/Clues Content").gameObject;
+        objectivesContent = transform.Find("Notebook Back/Objectives Content").gameObject;
 
         sentencesButton = transform.Find("Notebook Back/Button Holder/Sentences Button").GetComponent<Button>();
         cluesButton = transform.Find("Notebook Back/Button Holder/Clues Button").GetComponent<Button>();
+        objectivesButton = transform.Find("Notebook Back/Button Holder/Objectives Button").GetComponent<Button>();
     }
 
     public void ToggleNotebook() {
@@ -61,11 +65,14 @@ public class Notebook : MonoBehaviour {
         AudioManager.Instance.PlaySound(openAudio, 1f);
     }
 
+    //Otimizar isso
     public void ActivateCluesContent() {
         AudioManager.Instance.PlaySound(openAudio, 1f);
 
         sentencesContent.SetActive(false);
         sentencesButton.interactable = true;
+        objectivesContent.SetActive(false);
+        objectivesButton.interactable = true;
         cluesContent.SetActive(true);
         cluesButton.interactable = false;
     }
@@ -75,7 +82,20 @@ public class Notebook : MonoBehaviour {
 
         cluesContent.SetActive(false);
         cluesButton.interactable = true;
+        objectivesContent.SetActive(false);
+        objectivesButton.interactable = true;
         sentencesContent.SetActive(true);
         sentencesButton.interactable = false;
+    }
+
+    public void ActivateObjectivesContent() {
+        AudioManager.Instance.PlaySound(openAudio, 1f);
+
+        cluesContent.SetActive(false);
+        cluesButton.interactable = true;
+        sentencesContent.SetActive(false);
+        sentencesButton.interactable = true;
+        objectivesContent.SetActive(true);
+        objectivesButton.interactable = false;
     }
 }

@@ -7,7 +7,9 @@ public static class GameManager {
     public static List<CluesManager.Item> items;
     public static List<AudioClip> audios;
     public static List<string> answers;
+    public static List<ObjectivesManager.Objective> objectives;
     public static LevelManager.Level currentLevel;
+    public static ObjectivesManager.Objective currentObjective;
     public static float money = 445.0f;
 
     public static void Initialize() {
@@ -15,10 +17,11 @@ public static class GameManager {
         items = CluesManager.Instance.LoadItemList("Assets/GameData/ItemList.json");
         audios = AudioManager.Instance.LoadAudioClips();
         answers = SentenceSlots.LoadAnswers("Assets/GameData/SlotsAnswers.json");
-        
+        objectives = ObjectivesManager.LoadObjectiveList("Assets/GameData/Objectives.json");
+
+        currentObjective = objectives[0];
         currentLevel = levels[0];
 
-        CluesManager.Instance.StartRun();
         LevelManager.Instance.AssignBackgroundMusic();
 
         AudioManager.Instance.PlayBackgroundMusic(GameManager.currentLevel.backgroundSongClip);

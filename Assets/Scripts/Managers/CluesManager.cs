@@ -23,7 +23,7 @@ public class CluesManager : MonoBehaviour {
         }
     }
     
-    public void StartRun() {
+    public void Start() {
         gameObject.SetActive(false);
 
         cells = GenerateCells();
