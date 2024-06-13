@@ -18,7 +18,7 @@ public static class GameManager {
         audios = AudioManager.Instance.LoadAudioClips();
         answers = SentenceSlots.LoadAnswers("Assets/GameData/SlotsAnswers.json");
         objectives = ObjectivesManager.LoadObjectiveList("Assets/GameData/Objectives.json");
-
+        
         currentObjective = objectives[0];
         currentLevel = levels[0];
 
