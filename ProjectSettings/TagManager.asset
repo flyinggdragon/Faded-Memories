@@ -9,6 +9,8 @@ TagManager:
   - TriggerUp
   - TriggerDown
   - Puzzle
+  - TriggerRight
+  - TriggerLeft
   layers:
   - Default
   - TransparentFX

@@ -103,8 +103,4 @@ public class UIManager : MonoBehaviour {
                         //.SetIcon(sprite) // Also you can set icon
                         .Show();
     }
-
-    public void CreateFloatingWindow() {
-        Debug.Log("Isso deve funcionar");
-    }
 }

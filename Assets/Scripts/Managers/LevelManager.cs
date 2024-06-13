@@ -80,12 +80,6 @@ public class LevelManager : MonoBehaviour {
             AudioManager.Instance.sameBgMusic = true;
         } else { AudioManager.Instance.sameBgMusic = false; }
 
-        Player.Instance.transform.position = new Vector3(
-            Player.Instance.screenLimitRight - 0.5f, 
-            Player.Instance.transform.position.y, 
-            Player.Instance.transform.position.z
-            );
-
         currentLevel = FindLevelByName(currentLevel.leftName);
         LoadLevel(currentLevel.levelName);
 
@@ -98,12 +92,6 @@ public class LevelManager : MonoBehaviour {
         if (currentLevel.backgroundSong == FindLevelByName(currentLevel.rightName).backgroundSong) {
             AudioManager.Instance.sameBgMusic = true;
         } else { AudioManager.Instance.sameBgMusic = false; }
-
-        Player.Instance.transform.position = new Vector3(
-            Player.Instance.screenLimitLeft + 0.5f, 
-            Player.Instance.transform.position.y, 
-            Player.Instance.transform.position.z
-            );
 
         currentLevel = FindLevelByName(currentLevel.rightName);
         LoadLevel(currentLevel.levelName);
