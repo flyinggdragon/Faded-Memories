@@ -26,7 +26,7 @@ RectTransform:
   m_GameObject: {fileID: 331844181038541796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10.131121}
-  m_LocalScale: {x: 0.06962424, y: 0.06962424, z: 0.06962424}
+  m_LocalScale: {x: 0.37049407, y: 0.37049407, z: 0.37049407}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1089874737157337894}
@@ -69,7 +69,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20256996, y: 0.8778019}
+  m_Offset: {x: -0.1622119, y: 0.8501813}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -80,7 +80,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.372883, y: 9.913069}
+  m_Size: {x: 2.0277238, y: 2.946014}
   m_EdgeRadius: 0
 --- !u!1 &3665062626582448152
 GameObject:
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1089874737157337894}
   - component: {fileID: 6358622161935011645}
   m_Layer: 0
-  m_Name: knife
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9c7522566d037354cb71298c42902b2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 54c01acbe14591a44b9087a714a0a7d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

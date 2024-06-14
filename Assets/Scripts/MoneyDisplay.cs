@@ -8,6 +8,7 @@ public class MoneyDisplay : MonoBehaviour {
 
     void Start() {
         txtObj = GetComponentInChildren<TMP_Text>();
+        txtObj.text = "ɻ$275";
     }
 
     void Update() {

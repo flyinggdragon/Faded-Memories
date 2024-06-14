@@ -77,10 +77,12 @@ public class Player : MonoBehaviour {
             }
 
             else if (currentTrigger.CompareTag("Item")) {
-                var item = CluesManager.Instance.FindItem(currentTrigger.name);
-
-                CluesManager.Instance.CollectItem(item);
-                Destroy(GameObject.Find(currentTrigger.name));
+                if (CluesManager.Instance.cells.Count > 0) { 
+                    var item = CluesManager.Instance.FindItem(currentTrigger.name);
+                    
+                    CluesManager.Instance.CollectItem(item);
+                    Destroy(GameObject.Find(currentTrigger.name));
+                }
             }
         }
         

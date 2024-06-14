@@ -40,14 +40,12 @@ public class CluesManager : MonoBehaviour {
         return wrapper.item;
     }
 
-    private List<Cell> GenerateCells()
-    {
+    private List<Cell> GenerateCells() {
         GameObject cellContainer = this.transform.GetChild(0).gameObject;
         List<Cell> cellsList = new List<Cell>();
 
-        foreach (Item item in GameManager.items)
-        {
-            Sprite sprite = Resources.Load<Sprite>("Sprites/" + item.fileName);
+        foreach (Item item in GameManager.items) {
+            Sprite sprite = Resources.Load<Sprite>("Sprites/Itens/" + item.fileName);
 
             GameObject obj = new GameObject(item.itemName);
             obj.transform.SetParent(cellContainer.transform);
