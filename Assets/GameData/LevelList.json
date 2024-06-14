@@ -22,7 +22,7 @@
             "levelName": "Pub_Outside",
             "levelId": 3,
             "leftName": "Street",
-            "rightName": "",
+            "rightName": "Downtown_Low",
             "upName": "Pub_Inside",
             "downName": "",
             "backgroundSong": "Empire City Night"
@@ -39,8 +39,8 @@
         {
             "levelName": "Park",
             "levelId": 5,
-            "leftName": "",
-            "rightName": "",
+            "leftName": "Downtown_High",
+            "rightName": "Home_Outside",
             "upName": "",
             "downName": "",
             "backgroundSong": "Heaven Central Authority"
@@ -50,13 +50,85 @@
             "levelId": 6,
             "leftName": "",
             "rightName": "",
-            "upName": "",
+            "upName": "Downtown_Low",
             "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "Home_Outside",
             "levelId": 7,
+            "leftName": "Park",
+            "rightName": "",
+            "upName": "Home_Inside",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Home_Inside",
+            "levelId": 8,
+            "leftName": "",
+            "rightName": "",
+            "upName": "Home_Outside",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Downtown_Low",
+            "levelId": 9,
+            "leftName": "Pub_Outside",
+            "rightName": "Downtown_High",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Empire City Night"
+        },
+        {
+            "levelName": "Downtown_High",
+            "levelId": 10,
+            "leftName": "Downtown_Low",
+            "rightName": "Park",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Empire City Night"
+        },
+        {
+            "levelName": "Rukon",
+            "levelId": 11,
+            "leftName": "Rukon_CrimeSceneOutside",
+            "rightName": "",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Empire City Night"
+        },
+        {
+            "levelName": "Rukon_CrimeSceneOutside",
+            "levelId": 12,
+            "leftName": "",
+            "rightName": "",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Empire City Night"
+        },
+        {
+            "levelName": "BusinessCenter",
+            "levelId": 13,
+            "leftName": "",
+            "rightName": "",
+            "upName": "Downtown_High",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "CityHall",
+            "levelId": 14,
+            "leftName": "",
+            "rightName": "",
+            "upName": "Downtown_High",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "CultHQ_Lobby",
+            "levelId": 15,
             "leftName": "",
             "rightName": "",
             "upName": "",
@@ -64,8 +136,26 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
-            "levelName": "Home_Inside",
-            "levelId": 8,
+            "levelName": "CultHQ_Santuary",
+            "levelId": 16,
+            "leftName": "",
+            "rightName": "",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "CultHQ_Corridor",
+            "levelId": 17,
+            "leftName": "",
+            "rightName": "",
+            "upName": "",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "CultHQ_Treasury",
+            "levelId": 18,
             "leftName": "",
             "rightName": "",
             "upName": "",
