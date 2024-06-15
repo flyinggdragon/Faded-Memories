@@ -31,8 +31,9 @@ public class JigsawManager : MonoBehaviour {
   void Start() {
     // Create the UI
     foreach (Texture2D texture in imageTextures) {
-      //Image image = Instantiate(levelSelectPrefab, levelSelectPanel);
-      //image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+      Image image = Instantiate(levelSelectPrefab, levelSelectPanel);
+      image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+      // comentar essas duas linhas depois
       // Assign button action
       StartGame(texture);
     }
@@ -59,7 +60,7 @@ public class JigsawManager : MonoBehaviour {
 
     piecesCorrect = 0;
 
-    GameObject.Find("Player").SetActive(false);
+    //GameObject.Find("Player").SetActive(false);
     
   }
 
@@ -182,7 +183,8 @@ public class JigsawManager : MonoBehaviour {
     if (draggingPiece)
     {
       Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-      //newPosition.z = draggingPiece.position.z;
+      newPosition.z = draggingPiece.position.z;
+      //comentar linha acima
       newPosition += offset;
       draggingPiece.position = newPosition;
     }
@@ -214,19 +216,19 @@ public class JigsawManager : MonoBehaviour {
     }
   }
 
-  //public void RestartGame() 
-  //{
-  //  foreach (Transform piece in pieces) 
-  //  {
-  //    Destroy(piece.gameObject);
-  //  }  
-  //  pieces.Clear();
-  //  gameHolder.GetComponent<LineRenderer>().enabled = false;
+  public void RestartGame() 
+  {
+    foreach (Transform piece in pieces) 
+    {
+      Destroy(piece.gameObject);
+    }  
+    pieces.Clear();
+    gameHolder.GetComponent<LineRenderer>().enabled = false;
 
-  //  playAgainButton.SetActive(false);
-  //  levelSelectPanel.gameObject.SetActive(true);
-  //}
-
+    playAgainButton.SetActive(false);
+    levelSelectPanel.gameObject.SetActive(true);
+  }
+//comentar essa função ^
   public void QuitGame()
   {
     Application.Quit();

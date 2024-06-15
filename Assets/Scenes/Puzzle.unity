@@ -426,7 +426,10 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   option1Button: {fileID: 0}
   option2Button: {fileID: 0}
-  dialogueImage: {fileID: 0}
+  option3Button: {fileID: 0}
+  option4Button: {fileID: 0}
+  option5Button: {fileID: 0}
+  nextIndicator: {fileID: 0}
   typingSpeed: 0.05
 --- !u!114 &584067976
 MonoBehaviour:
@@ -443,9 +446,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   speed: 6
   rb: {fileID: 584067978}
-  screenLimitLeft: -7.2
-  screenLimitRight: 6.1
-  PopUp: {fileID: 1770706073}
+  hoverPopUp: {fileID: 0}
 --- !u!61 &584067977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1114,7 +1115,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1770706075
@@ -1173,18 +1174,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803707434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d7514c4a771a54dac31d84837802fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 249d7087eb187d54b9de042a08bede5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 4
+  difficulty: 6
   gameHolder: {fileID: 1384743795}
   piecePrefab: {fileID: 6298677490831331941, guid: 279fdcdb6903d9c41a320d5f8c24e74e, type: 3}
   imageTextures:
-  - {fileID: 2800000, guid: 02772b33a1197c74087e10d4d2b846c3, type: 3}
+  - {fileID: 2800000, guid: acd980cc657381f4b8c703012cb49837, type: 3}
   levelSelectPanel: {fileID: 2036059305}
   levelSelectPrefab: {fileID: 3775886492528415236, guid: 0c35e75a2d086fb42835a2fd646a2e38, type: 3}
   playAgainButton: {fileID: 402882157}
-  player: {fileID: 584067974}
 --- !u!1 &2031972294
 GameObject:
   m_ObjectHideFlags: 0
