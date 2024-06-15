@@ -8,8 +8,15 @@ public class Barman : NPC {
     public override void Initialize() {}
     
     public override void Reset() {}
+    public bool paidFirstTime = true;
 
     public void Pay(int value) {
         GameManager.money -= value;
+
+        if (paidFirstTime) {
+            ObjectivesManager.Instance.FinishObjective(
+                ObjectivesManager.Instance.FindObjectiveByName("Comer alguma coisa")
+            );
+        }
     }
 }

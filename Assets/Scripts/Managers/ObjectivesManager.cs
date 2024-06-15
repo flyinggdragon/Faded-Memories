@@ -3,14 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using TMPro;
+using System.Linq;
 
 public class ObjectivesManager : MonoBehaviour {
     private List<Objective> objectives = new List<Objective>();
     private List<ObjectiveItem> objectiveItems = new List<ObjectiveItem>();
     private GameObject objectiveContainer;
     private GameObject currentObjective;
-
     private GameObject objectiveItemPrefab;
+    public static ObjectivesManager Instance { get; private set; }
+
+    private void Awake() {
+       if (Instance == null && Instance != this) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else {
+            Destroy(gameObject);
+        }
+    }
 
     public static List<Objective> LoadObjectiveList(string path) {
         string jsonText = File.ReadAllText(path);
@@ -29,7 +41,6 @@ public class ObjectivesManager : MonoBehaviour {
         objectiveItemPrefab = Resources.Load<GameObject>("Prefabs/ObjectiveItemPrefab");
 
         NewObjective(objectives[0]);
-        objectives.Remove(objectives[0]);
 
         foreach (Objective objective in objectives) {
             if (objective == GameManager.currentObjective) {
@@ -42,7 +53,17 @@ public class ObjectivesManager : MonoBehaviour {
         }
     }
 
+    void Update() {
+        foreach(ObjectiveItem objItem in objectiveItems) {
+            if (!objItem.objective.active) {
+                objItem.obj.SetActive(false);
+            }
+        }
+    }
+
     private void NewObjective(Objective newObjective) {
+        GameManager.currentObjective = newObjective;
+
         TMP_Text title = currentObjective.transform.GetChild(0).GetComponent<TMP_Text>();
         TMP_Text description = currentObjective.transform.GetChild(1).GetComponent<TMP_Text>();
 
@@ -53,7 +74,7 @@ public class ObjectivesManager : MonoBehaviour {
         UIManager.Instance.CreateToastModal(newObjective.title, "Nova Missão!");
     }
 
-    private void FinishObjective(Objective current) {
+    public void FinishObjective(Objective current) {
         current.finished = true;
         current.active = false;
 
@@ -61,7 +82,13 @@ public class ObjectivesManager : MonoBehaviour {
         objectives.Remove(current);
 
         // IEnumerator aqui para que isso só rode quando o toast de cima sair de cena.
-        NewObjective(objectives[0]);
+        if (current != objectives[0]) {
+            NewObjective(objectives[0]);
+        }
+    }
+
+    public Objective FindObjectiveByName(string name) {
+        return objectives.FirstOrDefault(objective => objective.title == name);
     }
 
     [System.Serializable]
