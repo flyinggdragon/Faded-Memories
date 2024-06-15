@@ -10,7 +10,7 @@ public static class GameManager {
     public static List<ObjectivesManager.Objective> objectives;
     public static LevelManager.Level currentLevel;
     public static ObjectivesManager.Objective currentObjective;
-    public static float money = 275.0f;
+    public static float money = 300.0f;
 
     public static void Initialize() {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");

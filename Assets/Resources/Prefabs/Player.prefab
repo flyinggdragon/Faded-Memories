@@ -265,7 +265,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.32127428, y: -0.062577486}
+  m_Offset: {x: 0.32127428, y: 1.278836}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -276,7 +276,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4172735, y: 4.363381}
+  m_Size: {x: 1.4172735, y: 4.4918704}
   m_EdgeRadius: 0
 --- !u!114 &3316104009146540101
 MonoBehaviour:
@@ -293,8 +293,6 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   speed: 6
   rb: {fileID: 8357991763115620244}
-  screenLimitLeft: -7.2
-  screenLimitRight: 6.1
   hoverPopUp: {fileID: 685869724771541024}
 --- !u!114 &7473405919961549583
 MonoBehaviour:

@@ -8,4 +8,8 @@ public class Barman : NPC {
     public override void Initialize() {}
     
     public override void Reset() {}
+
+    public void Pay(int value) {
+        GameManager.money -= value;
+    }
 }
