@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour {
         get { return isDialoguing; }
     }
 
-    private int currentDialogueIndex = 0;
+    public int currentDialogueIndex = 0;
 
     private void Start() {
         dialogueParent.SetActive(false);

@@ -8,13 +8,17 @@ public class Gerald : NPC {
 
     public override void Reset() {}
 
-    public void RevealName() {
-        npcName = "Gerald";
+    void Update() {
+        if (GameManager.knowsGeraldName) {
+            npcName = "Gerald";
+        }      
     }
 
     public void End() {
         ObjectivesManager.Instance.FinishObjective(
             ObjectivesManager.Instance.FindObjectiveByName("Achar a utilidade deste bilhete")
             );
+        
+        GameManager.talkedToGerald = true;
     }
 }
