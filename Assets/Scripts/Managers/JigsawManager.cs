@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class JigsawManager : MonoBehaviour {
   [Header("Game Elements")]
   [Range(2, 6)]
-  [SerializeField] private int difficulty = 10;
+  [SerializeField] private int difficulty = 4;
   [SerializeField] private Transform gameHolder;
   [SerializeField] private Transform piecePrefab;
 
@@ -60,7 +60,7 @@ public class JigsawManager : MonoBehaviour {
 
     piecesCorrect = 0;
 
-    //GameObject.Find("Player").SetActive(false);
+    GameObject.Find("Player").SetActive(false);
     
   }
 
@@ -183,8 +183,7 @@ public class JigsawManager : MonoBehaviour {
     if (draggingPiece)
     {
       Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-      newPosition.z = draggingPiece.position.z;
-      //comentar linha acima
+      //newPosition.z = draggingPiece.position.z;
       newPosition += offset;
       draggingPiece.position = newPosition;
     }
@@ -216,18 +215,18 @@ public class JigsawManager : MonoBehaviour {
     }
   }
 
-  public void RestartGame() 
-  {
-    foreach (Transform piece in pieces) 
-    {
-      Destroy(piece.gameObject);
-    }  
-    pieces.Clear();
-    gameHolder.GetComponent<LineRenderer>().enabled = false;
+  //public void RestartGame() 
+  //{
+  //  foreach (Transform piece in pieces) 
+  //  {
+  //    Destroy(piece.gameObject);
+  //  }  
+  //  pieces.Clear();
+  //  gameHolder.GetComponent<LineRenderer>().enabled = false;
 
-    playAgainButton.SetActive(false);
-    levelSelectPanel.gameObject.SetActive(true);
-  }
+  //  playAgainButton.SetActive(false);
+  //  levelSelectPanel.gameObject.SetActive(true);
+  //}
 //comentar essa função ^
   public void QuitGame()
   {

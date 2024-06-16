@@ -60,6 +60,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Downtown_Low.unity
     guid: 153b8b34982b0024f93e12acb1cddf51
   - enabled: 1
+    path: Assets/Scenes/Rukon.unity
+    guid: cb28147c8167dd445a59669ae6c9c540
+  - enabled: 1
     path: Assets/Scenes/Rukon_CrimeSceneOutside.unity
     guid: 95f4dc0af82453a44a10d0ba78722782
   m_configObjects: {}

@@ -86,7 +86,7 @@
             "levelId": 10,
             "leftName": "Downtown_Low",
             "rightName": "Park",
-            "upName": "",
+            "upName": "Rukon_CrimeSceneOutside",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
@@ -103,7 +103,7 @@
             "levelName": "Rukon_CrimeSceneOutside",
             "levelId": 12,
             "leftName": "",
-            "rightName": "",
+            "rightName": "Rukon",
             "upName": "",
             "downName": "",
             "backgroundSong": "Empire City Night"
@@ -148,8 +148,8 @@
             "levelName": "CultHQ_Corridor",
             "levelId": 17,
             "leftName": "",
-            "rightName": "",
-            "upName": "",
+            "rightName": "CultHQ_LeaderRoom",
+            "upName": "CultHQ_Treasury",
             "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
@@ -159,7 +159,6 @@
             "leftName": "",
             "rightName": "",
             "upName": "",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         }
     ]
