@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
 
 
     private float horizontal;
-    public float speed = 6.0f;
+    private float speed = 25.0f;
     public Rigidbody2D rb;
     private bool inTrigger = false;
     private Collider2D currentTrigger;
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
 
         if (currentTrigger != null && currentTrigger.CompareTag("TriggerLeft")) {
             if (!string.IsNullOrEmpty(GameManager.currentLevel.leftName)) {
-                if (Input.GetKeyDown(KeyCode.E)) {
+                if (Input.GetKeyDown(KeyCode.A)) {
                     LevelManager.Instance.ExitLeft();
 
                     transform.position = new Vector3(
@@ -90,6 +90,12 @@ public class Player : MonoBehaviour {
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && inTrigger) {
             if (currentTrigger.CompareTag("TriggerUp")) {
                 LevelManager.Instance.ExitUp();
+
+                transform.position = new Vector3(
+                        0.0f,
+                        transform.position.y,
+                        transform.position.z
+                    );
             }
         }
 

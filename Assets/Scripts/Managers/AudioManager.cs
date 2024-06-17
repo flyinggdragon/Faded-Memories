@@ -29,11 +29,11 @@ public class AudioManager : MonoBehaviour {
         sfxSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void PlayBackgroundMusic(AudioClip clip, float volume = 0.2f) {
+    public void PlayBackgroundMusic(AudioClip clip, float volume = 0.1f) {
         if (!sameBgMusic) {
             if (bgMusicSource.isPlaying) { StopBackgroundMusic(); }
 
-            bgMusicSource.volume = volume;
+            bgMusicSource.volume = 0.1f;
             bgMusicSource.loop = true;
             bgMusicSource.PlayOneShot(clip);
         }

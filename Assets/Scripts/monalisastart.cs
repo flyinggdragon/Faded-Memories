@@ -12,7 +12,8 @@ public class monalisastart : MonoBehaviour
     {
         if (triggerin && Input.GetKeyDown(KeyCode.E)) 
         {
-            SceneManager.LoadScene("Puzzle");
+            JigsawManager.ReceivePreviousScene(GameManager.currentLevel.levelName);
+            LevelManager.Instance.LoadLevel("Puzzle");
             Cursor.lockState = CursorLockMode.None;
         }
     }

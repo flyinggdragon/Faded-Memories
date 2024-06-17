@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class JigsawManager : MonoBehaviour {
   [Header("Game Elements")]
@@ -15,6 +16,7 @@ public class JigsawManager : MonoBehaviour {
   [SerializeField] private Transform levelSelectPanel;
   [SerializeField] private Image levelSelectPrefab;
   [SerializeField] private GameObject playAgainButton;
+  private GameObject player;
 
   private List<Transform> pieces;
   private Vector2Int dimensions;
@@ -25,8 +27,11 @@ public class JigsawManager : MonoBehaviour {
   private Vector3 offset;
 
   private int piecesCorrect;
+  private static string previousLevel;
 
-
+  public static void ReceivePreviousScene(string level) {
+    previousLevel = level;
+  }
 
   void Start() {
     // Create the UI
@@ -60,7 +65,8 @@ public class JigsawManager : MonoBehaviour {
 
     piecesCorrect = 0;
 
-    GameObject.Find("Player").SetActive(false);
+    player = GameObject.Find("Player");
+    player.SetActive(false);
     
   }
 
@@ -211,6 +217,8 @@ public class JigsawManager : MonoBehaviour {
       if (piecesCorrect == pieces.Count)  
       {
         playAgainButton.SetActive(true);
+        LevelManager.Instance.LoadLevel(previousLevel);
+        player.SetActive(true);
       }
     }
   }

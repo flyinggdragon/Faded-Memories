@@ -845,7 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 249d7087eb187d54b9de042a08bede5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 6
+  difficulty: 2
   gameHolder: {fileID: 1384743795}
   piecePrefab: {fileID: 6298677490831331941, guid: 279fdcdb6903d9c41a320d5f8c24e74e, type: 3}
   imageTextures:
