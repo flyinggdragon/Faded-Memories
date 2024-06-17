@@ -5,12 +5,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
     private AudioSource bgMusicSource;
     private AudioSource sfxSource;
-    // Adicionar lista de SFX se necessário depois.
-    // Variável volume pra controlar volume.
-    // Controlar volume relativo multiplicando volume por uma constante k.
 
     public bool sameBgMusic;
     public static AudioManager Instance { get; private set; }
+    public AudioClip doorLock;
 
     void Awake() {
         if (Instance == null && Instance != this) {
@@ -27,6 +25,8 @@ public class AudioManager : MonoBehaviour {
         sameBgMusic = false;
         bgMusicSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
+
+        doorLock = Resources.Load<AudioClip>("Audio/SFX/door lock sound");
     }
 
     public void PlayBackgroundMusic(AudioClip clip, float volume = 0.1f) {

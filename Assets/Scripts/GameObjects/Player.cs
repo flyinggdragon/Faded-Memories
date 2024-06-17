@@ -89,7 +89,18 @@ public class Player : MonoBehaviour {
         // Verificar também se está no trigger para tal.
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && inTrigger) {
             if (currentTrigger.CompareTag("TriggerUp")) {
-                LevelManager.Instance.ExitUp();
+                TriggerUp tu = currentTrigger.GetComponent<TriggerUp>();
+
+                Debug.Log(currentTrigger.name);
+
+                // Arrumar questão da música.
+                if (tu != null) {
+                    LevelManager.Instance.LoadLevel(tu.upName);
+                } else if (currentTrigger.name == "UpTrigger_Home_Inside") {
+                    GameObject.Find("UpTrigger_Home_Inside").GetComponent<HomeEntrance>().Enter();
+                } else {
+                    LevelManager.Instance.ExitUp();
+                }
 
                 transform.position = new Vector3(
                         0.0f,

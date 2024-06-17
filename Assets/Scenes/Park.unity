@@ -343,7 +343,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9988, y: 1.9988, z: 1.9988}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1065277703}
@@ -827,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.33923948
+      value: -11.8
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -972,10 +972,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 41.17177, y: 7.5609417}
+    - - {x: 37.018936, y: 7.6702266}
       - {x: -6.75497, y: 7.5604506}
-      - {x: -6.7626457, y: -2.495594}
-      - {x: 41.166786, y: -2.4820795}
+      - {x: -18.305912, y: 7.584795}
+      - {x: -18.360397, y: -2.3449745}
+      - {x: 37.049725, y: -2.4820795}
   m_UseDelaunayMesh: 0
 --- !u!4 &474242787
 Transform:
@@ -1119,6 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sameBgMusic: 0
+  doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:
   m_ObjectHideFlags: 0
@@ -2820,7 +2822,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4260042724158620689, guid: f949108269bce5945b5c4a33a39b85cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.31514
+      value: 23.98
       objectReference: {fileID: 0}
     - target: {fileID: 4260042724158620689, guid: f949108269bce5945b5c4a33a39b85cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3015,7 +3017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5777942044075181169, guid: e7d5df345835f7a438199315c843fafd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.19
+      value: -30.73
       objectReference: {fileID: 0}
     - target: {fileID: 5777942044075181169, guid: e7d5df345835f7a438199315c843fafd, type: 3}
       propertyPath: m_LocalPosition.y

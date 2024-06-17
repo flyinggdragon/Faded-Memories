@@ -59,7 +59,7 @@
             "levelId": 7,
             "leftName": "Park",
             "rightName": "",
-            "upName": "Home_Inside",
+            "upName": "",
             "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
@@ -77,7 +77,7 @@
             "levelId": 9,
             "leftName": "Pub_Outside",
             "rightName": "Downtown_High",
-            "upName": "PoliceStation_Main",
+            "upName": "",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
@@ -86,21 +86,21 @@
             "levelId": 10,
             "leftName": "Downtown_Low",
             "rightName": "Park",
-            "upName": "Rukon_CrimeSceneOutside",
+            "upName": "",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "Rukon",
             "levelId": 11,
-            "leftName": "Rukon_CrimeSceneOutside",
+            "leftName": "Downtown_High",
             "rightName": "",
-            "upName": "",
+            "upName": "Rukon_CrimeScene",
             "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
-            "levelName": "Rukon_CrimeSceneOutside",
+            "levelName": "Rukon_CrimeScene",
             "levelId": 12,
             "leftName": "",
             "rightName": "Rukon",
@@ -136,7 +136,7 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
-            "levelName": "CultHQ_Santuary",
+            "levelName": "CultHQ_Sanctuary",
             "levelId": 16,
             "leftName": "",
             "rightName": "",
@@ -147,9 +147,9 @@
         {
             "levelName": "CultHQ_Corridor",
             "levelId": 17,
-            "leftName": "",
+            "leftName": "Downtown_Low",
             "rightName": "CultHQ_LeaderRoom",
-            "upName": "CultHQ_Treasury",
+            "upName": "",
             "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
@@ -159,7 +159,16 @@
             "leftName": "",
             "rightName": "",
             "upName": "",
-            "downName": "CultHQ_Corridor",
+            "downName": "",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "CultHQ_LeaderRoom",
+            "levelId": 19,
+            "leftName": "CultHQ_Corridor",
+            "rightName": "",
+            "upName": "",
+            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         }
     ]

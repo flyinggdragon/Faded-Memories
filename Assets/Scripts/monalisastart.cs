@@ -16,6 +16,13 @@ public class monalisastart : MonoBehaviour
             LevelManager.Instance.LoadLevel("Puzzle");
             Cursor.lockState = CursorLockMode.None;
         }
+
+        if (GameManager.firstPuzzleCompleted) {
+            Destroy(gameObject);
+            
+            CluesManager.Item key = GameManager.items[2];
+            CluesManager.Instance.CollectItem(key);
+        }
     }
  
     private void OnTriggerEnter2D(Collider2D other) 
@@ -33,9 +40,4 @@ public class monalisastart : MonoBehaviour
             triggerin = false;
         }
     }
-
-
-
-    
-
 }

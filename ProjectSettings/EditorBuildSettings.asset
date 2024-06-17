@@ -60,9 +60,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Downtown_Low.unity
     guid: 153b8b34982b0024f93e12acb1cddf51
   - enabled: 1
-    path: Assets/Scenes/Rukon.unity
+    path: Assets/Scenes/Rukon_CrimeScene.unity
     guid: cb28147c8167dd445a59669ae6c9c540
   - enabled: 1
-    path: Assets/Scenes/Rukon_CrimeSceneOutside.unity
+    path: Assets/Scenes/Rukon.unity
     guid: 95f4dc0af82453a44a10d0ba78722782
+  - enabled: 1
+    path: Assets/Scenes/BusinessCenter.unity
+    guid: 3f41d53675c9df540b4ad1beea85c3ae
+  - enabled: 1
+    path: Assets/Scenes/CityHall.unity
+    guid: 667916d6bd8872d41a8f92de53c7c6eb
+  - enabled: 1
+    path: Assets/Scenes/CultHQ_LeaderRoom.unity
+    guid: 7c636b471579c4e48b6583b62bfcf473
   m_configObjects: {}

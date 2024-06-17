@@ -13,9 +13,10 @@ public static class GameManager {
     public static float money = 300.0f;
     public static bool talkedToGerald = false;
     public static bool knowsGeraldName = false;
+    public static bool firstPuzzleCompleted = false;
 
     public static void Initialize() {
-        levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");
+        levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");   
         items = CluesManager.Instance.LoadItemList("Assets/GameData/ItemList.json");
         audios = AudioManager.Instance.LoadAudioClips();
         answers = SentenceSlots.LoadAnswers("Assets/GameData/SlotsAnswers.json");

@@ -15,9 +15,11 @@ public class Gerald : NPC {
     }
 
     public void End() {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Achar a utilidade deste bilhete")
+        if (!GameManager.talkedToGerald) {
+            ObjectivesManager.Instance.FinishObjective(
+                ObjectivesManager.Instance.FindObjectiveByName("Achar a utilidade deste bilhete")
             );
+        }
         
         GameManager.talkedToGerald = true;
     }

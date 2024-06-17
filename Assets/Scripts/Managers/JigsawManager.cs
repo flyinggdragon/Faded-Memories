@@ -216,13 +216,14 @@ public class JigsawManager : MonoBehaviour {
       //Essa parte é onde provavelmente vai ir de volta pro jogo normal, mas vou deixar assim por enquanto
       if (piecesCorrect == pieces.Count)  
       {
-        playAgainButton.SetActive(true);
         LevelManager.Instance.LoadLevel(previousLevel);
+        
         player.SetActive(true);
+        
+        GameManager.firstPuzzleCompleted = true;
       }
     }
   }
-
   //public void RestartGame() 
   //{
   //  foreach (Transform piece in pieces) 
