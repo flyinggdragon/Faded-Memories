@@ -8,7 +8,7 @@ public class Barman : NPC {
     public override void Initialize() {}
     
     public override void Reset() {}
-    public bool paidFirstTime = false;
+    private bool paidFirstTime = false;
 
     public void Pay(int value) {
         GameManager.money -= value;
