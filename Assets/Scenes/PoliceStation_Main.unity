@@ -720,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.688007
+      value: 15.19
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1140,6 +1140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sameBgMusic: 0
+  doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:
   m_ObjectHideFlags: 0

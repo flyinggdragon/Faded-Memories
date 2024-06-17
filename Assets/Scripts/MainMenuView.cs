@@ -12,7 +12,7 @@ public class MainMenuView : View
 
     public override void Initialize()
     {   
-        _startButton.onClick.AddListener(() => SceneManager.LoadScene("Street"));
+        _startButton.onClick.AddListener(() => SceneManager.LoadScene("AlleyStart"));
         _optionsButton.onClick.AddListener(() => ViewManager.Show<SettingsMenuView>());
         _quitButton.onClick.AddListener(() => Application.Quit());
     }

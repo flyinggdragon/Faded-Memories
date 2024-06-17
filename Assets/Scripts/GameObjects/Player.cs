@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
 
 
     private float horizontal;
-    private float speed = 25.0f;
+    private float speed = 8.0f;
     public Rigidbody2D rb;
     private bool inTrigger = false;
     private Collider2D currentTrigger;

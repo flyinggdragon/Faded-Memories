@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 0e8292ab677224f4da7ee169c19fbb43
+  - enabled: 1
     path: Assets/Scenes/AlleyStart.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -32,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Home_Outside.unity
     guid: 74a83b292e783cd428ba7a0f4cf99b72
-  - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: 0e8292ab677224f4da7ee169c19fbb43
   - enabled: 1
     path: Assets/Scenes/Pub_Outside.unity
     guid: 7211d11e7a4110540b201f23acc9c440
