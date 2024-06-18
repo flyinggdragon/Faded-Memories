@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
     private bool inTrigger = false;
     private Collider2D currentTrigger;
     public GameObject hoverPopUp;
+    private int orientation = 1;
     public static Player Instance { get; private set; }
    
     void Awake() {
@@ -37,29 +38,48 @@ public class Player : MonoBehaviour {
             rb.velocity = new Vector2(horizontal * speed, 0);
         } else { rb.velocity = Vector2.zero; }
 
+        if (rb.velocity.x > 0) { orientation = 1; }
+        else if (rb.velocity.x < 0) { orientation = -1; }
+
+        transform.localScale = new Vector3(orientation, transform.localScale.y, transform.localScale.z);
+
         if (currentTrigger != null && currentTrigger.CompareTag("TriggerRight")) {
-            if (!string.IsNullOrEmpty(GameManager.currentLevel.rightName)) { 
-                if (Input.GetKeyDown(KeyCode.D)) {
-                    LevelManager.Instance.ExitRight();
+            if (Input.GetKeyDown(KeyCode.D)) {
+                Exit exit = currentTrigger.gameObject.GetComponent<Exit>();
+                if (!string.IsNullOrEmpty(exit.nextLevel)) {
+                    LevelManager.Instance.LoadLevel(exit.nextLevel);
 
                     transform.position = new Vector3(
-                        0.0f,
-                        transform.position.y,
+                        exit.nextPosX,
+                        exit.nextPosY,
                         transform.position.z
+                    );
+
+                    transform.localScale = new Vector3(
+                        exit.nextScaleX,
+                        transform.localScale.y,
+                        transform.localScale.z
                     );
                 }
             }
         }
 
         if (currentTrigger != null && currentTrigger.CompareTag("TriggerLeft")) {
-            if (!string.IsNullOrEmpty(GameManager.currentLevel.leftName)) {
-                if (Input.GetKeyDown(KeyCode.A)) {
-                    LevelManager.Instance.ExitLeft();
+            if (Input.GetKeyDown(KeyCode.A)) {
+                Exit exit = currentTrigger.gameObject.GetComponent<Exit>();
+                if (!string.IsNullOrEmpty(exit.nextLevel)) {
+                    LevelManager.Instance.LoadLevel(exit.nextLevel);
 
                     transform.position = new Vector3(
-                        0.0f,
-                        transform.position.y,
+                        exit.nextPosX,
+                        exit.nextPosY,
                         transform.position.z
+                    );
+
+                    transform.localScale = new Vector3(
+                        exit.nextScaleX,
+                        transform.localScale.y,
+                        transform.localScale.z
                     );
                 }
             }
@@ -89,24 +109,28 @@ public class Player : MonoBehaviour {
         // Verificar também se está no trigger para tal.
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && inTrigger) {
             if (currentTrigger.CompareTag("TriggerUp")) {
-                TriggerUp tu = currentTrigger.GetComponent<TriggerUp>();
+                Exit exit = currentTrigger.gameObject.GetComponent<Exit>();
+                if (exit == null) {
+                    HomeEntrance he = currentTrigger.gameObject.GetComponent<HomeEntrance>();
+                    he.Enter();
+                } 
+                else {
+                    if (!string.IsNullOrEmpty(exit?.nextLevel)) {
+                        LevelManager.Instance.LoadLevel(exit.nextLevel);
 
-                Debug.Log(currentTrigger.name);
+                        transform.position = new Vector3(
+                            exit.nextPosX,
+                            exit.nextPosY,
+                            transform.position.z
+                        );
 
-                // Arrumar questão da música.
-                if (tu != null) {
-                    LevelManager.Instance.LoadLevel(tu.upName);
-                } else if (currentTrigger.name == "UpTrigger_Home_Inside") {
-                    GameObject.Find("UpTrigger_Home_Inside").GetComponent<HomeEntrance>().Enter();
-                } else {
-                    LevelManager.Instance.ExitUp();
+                        transform.localScale = new Vector3(
+                            exit.nextScaleX,
+                            transform.localScale.y,
+                            transform.localScale.z
+                        );
+                    }
                 }
-
-                transform.position = new Vector3(
-                        0.0f,
-                        transform.position.y,
-                        transform.position.z
-                    );
             }
         }
 
@@ -142,9 +166,13 @@ public class Player : MonoBehaviour {
             
             hoverPopUp.SetActive(true);
 
-            if (sprite) {
+            Exit exit = currentTrigger.gameObject.GetComponent<Exit>();
+            if (sprite && !string.IsNullOrEmpty(exit?.nextLevel)) {
                 hoverPopUp.GetComponent<SpriteRenderer>().sprite = sprite;
             }
+
+            Transform ht = hoverPopUp.transform;
+            ht.localScale = new Vector3(orientation * 4.75f, ht.transform.localScale.y, ht.transform.localScale.z);
         }
 
         else {

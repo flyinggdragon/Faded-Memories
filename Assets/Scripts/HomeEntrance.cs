@@ -13,6 +13,18 @@ public class HomeEntrance : MonoBehaviour {
 
         else {
             LevelManager.Instance.LoadLevel("Home_Inside");
+
+            transform.position = new Vector3(
+                        -11.0f,
+                        -2.19f,
+                        transform.position.z
+                    );
+
+                    transform.localScale = new Vector3(
+                        1.0f,
+                        transform.localScale.y,
+                        transform.localScale.z
+                    );
         }
     }
 }

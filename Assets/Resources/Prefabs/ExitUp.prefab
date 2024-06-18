@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3827478434992302808}
   - component: {fileID: 8502907588709788478}
   m_Layer: 0
-  m_Name: UpTrigger
+  m_Name: ExitUp
   m_TagString: TriggerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
