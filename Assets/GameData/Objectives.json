@@ -1,20 +1,32 @@
 {
     "objective": [
         {
-            "title": "Comer alguma coisa",
-            "description": "Estou com fome, preciso comer urgentemente.",
+            "title": "Eat something.",
+            "description": "I'm starving. I  must find something to eat as soon as possible.",
             "active": true,
             "finished": false
         },
         {
-            "title": "Achar a utilidade deste bilhete",
-            "description": "Este bilhete estava no meu bolso. Devo descobrir para que ele serve.",
+            "title": "Find this note's purpose.",
+            "description": "This note was inside my pocket. It says 'Memories'. I should try to find out what it wants to tell me.",
             "active": true,
             "finished": false
         },
         {
-            "title": "Encontrar a chave da Casa Abandonada",
-            "description": "Em troca de sua ajuda, aquele homem me pediu para encontrar uma chave, que abre a porta de uma Casa Abandonada.",
+            "title": "Find the key to the Abandoned House.",
+            "description": "This unknown man asked me to find the key for an abandoned house in exchange of his help.",
+            "active": false,
+            "finished": false
+        },
+        {
+            "title": "Meet that man again.",
+            "description": "Now that I have the key, I should go after him. Maybe I should visit the Pub again.",
+            "active": false,
+            "finished": false
+        },
+        {
+            "title": "Go to the Hall",
+            "description": "This journalist gave me a letter saying 'Go to the Hall, you might find something good there'. I guess I have no choice.",
             "active": false,
             "finished": false
         }

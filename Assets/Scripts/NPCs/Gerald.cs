@@ -13,7 +13,7 @@ public class Gerald : NPC {
     public void End() {
         if (!GameManager.talkedToGerald) {
             ObjectivesManager.Instance.FinishObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Achar a utilidade deste bilhete")
+                ObjectivesManager.Instance.FindObjectiveByName("Find this note's purpose.")
             );
         }
         

@@ -117,18 +117,20 @@ public class DialogueManager : MonoBehaviour {
                     option5Button.onClick.AddListener(() => HandleOptionSelected(line.option5IndexJump));
                     activeOptions.Add(option5Button);
                 }
-
+                
+                Debug.Log("activeOptions Count: " + activeOptions.Count);
                 foreach (Button option in activeOptions) {
                     option.gameObject.SetActive(true);
+                }
+            
+                if (activeOptions.Count > 0) {
+                    activeOptions.Clear();
                 }
 
                 yield return new WaitUntil(() => optionSelected);
             } else {
                 yield return StartCoroutine(TypeText(line.text));
                 nextIndicator.gameObject.SetActive(true); // Mostrar o triângulo após a digitação
-                if (activeOptions.Count > 0) {
-                    activeOptions.Clear();
-                }
             }
 
             line.endDialogueEvent?.Invoke();

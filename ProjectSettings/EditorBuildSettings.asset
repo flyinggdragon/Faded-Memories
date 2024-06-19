@@ -74,4 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CultHQ_LeaderRoom.unity
     guid: 7c636b471579c4e48b6583b62bfcf473
+  - enabled: 1
+    path: Assets/Scenes/Pub_Inside_2.unity
+    guid: 93b56f783caf13f469c9849200e701fd
   m_configObjects: {}

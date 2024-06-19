@@ -28,7 +28,9 @@ public static class GameManager {
         LevelManager.Instance.AssignBackgroundMusic();
 
         AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.3f);
-    
+        
+        Notebook.Instance.ToggleNotebook();
+
         Starter.firstTime = false;
     }
 }

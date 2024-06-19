@@ -2727,7 +2727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 185.79, y: -446.23}
+  m_AnchoredPosition: {x: 527, y: -397}
   m_SizeDelta: {x: 264.1693, y: 76.7633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &723718182
@@ -2774,7 +2774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.3, y: -1.9}
+  m_AnchoredPosition: {x: -59.9, y: -1.9}
   m_SizeDelta: {x: 48.5608, y: 23.8414}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747071166
@@ -3367,7 +3367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.6, y: -0.3}
+  m_AnchoredPosition: {x: -50.1, y: -0.3}
   m_SizeDelta: {x: 48.5608, y: 23.8414}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964906685
@@ -4647,7 +4647,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: My name is             and i belonged to the
+  m_text: My name is             and I used to be a              member.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
   m_sharedMaterial: {fileID: -336017103543269328, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
@@ -5156,7 +5156,7 @@ RectTransform:
   m_GameObject: {fileID: 1312336009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8344605, y: 1.807998, z: 1.9868109}
+  m_LocalScale: {x: 0.621815, y: 1.3472662, z: 1.4805121}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1944663833}
@@ -5169,7 +5169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.446, y: 53.669}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 603.39, y: 284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1312336011
@@ -5343,7 +5343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I was the newest member of the
+  m_text: I was the newest member of the          .
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
   m_sharedMaterial: {fileID: -336017103543269328, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}

@@ -220,7 +220,10 @@ public class JigsawManager : MonoBehaviour {
         
         player.SetActive(true);
         
-        GameManager.firstPuzzleCompleted = true;
+        if (!GameManager.firstPuzzleCompleted) {
+            ObjectivesManager.Instance.FinishObjective(ObjectivesManager.Instance.FindObjectiveByName("Meet that man again."));
+            GameManager.firstPuzzleCompleted = true;
+        }
       }
     }
   }

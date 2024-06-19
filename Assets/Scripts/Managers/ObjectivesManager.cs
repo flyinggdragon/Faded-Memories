@@ -55,7 +55,9 @@ public class ObjectivesManager : MonoBehaviour {
 
     void Update() {
         foreach(ObjectiveItem objItem in objectiveItems) {
-            if (!objItem.objective.active) {
+            if (objItem.objective.active && objItem.objective != GameManager.currentObjective) {
+                objItem.obj.SetActive(true);
+            } else {
                 objItem.obj.SetActive(false);
             }
         }

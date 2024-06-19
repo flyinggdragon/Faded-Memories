@@ -11,7 +11,7 @@ public class Barman : NPC {
 
         if (!paidFirstTime) {
             ObjectivesManager.Instance.FinishObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Comer alguma coisa")
+                ObjectivesManager.Instance.FindObjectiveByName("Eat something.")
             );
             
             paidFirstTime = true;

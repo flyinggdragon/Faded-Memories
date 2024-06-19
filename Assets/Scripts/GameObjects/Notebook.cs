@@ -39,9 +39,7 @@ public class Notebook : MonoBehaviour {
 
     void Start() {
         GameObject.Find("Notebook Holder").SetActive(false);
-
-        UIManager.Instance.CreateToastModal("Aperte Q para abrir ou fechar sua Agenda.", "Informação:");
-
+        
         sentencesContent = transform.Find("Notebook Back/Sentences Content").gameObject;
         cluesContent = transform.Find("Notebook Back/Clues Content").gameObject;
         objectivesContent = transform.Find("Notebook Back/Objectives Content").gameObject;
