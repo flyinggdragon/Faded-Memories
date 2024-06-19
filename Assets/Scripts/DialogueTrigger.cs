@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour {
-    [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
+    [SerializeField] public List<DialogueString> dialogueStrings = new List<DialogueString>();
 
     public bool firstInteraction = true;
 

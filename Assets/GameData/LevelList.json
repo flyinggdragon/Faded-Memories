@@ -75,6 +75,10 @@
         {
             "levelName": "CultHQ_LeaderRoom",
             "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Puzzle",
+            "backgroundSong": "Heaven Central Authority"
         }
     ]
 }
