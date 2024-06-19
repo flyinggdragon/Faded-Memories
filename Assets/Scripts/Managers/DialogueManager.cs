@@ -42,7 +42,12 @@ public class DialogueManager : MonoBehaviour {
     public void DialogueStart(List<DialogueString> textToPrint, string name, bool firstInteraction) {
         if (!firstInteraction) {
             typingSpeed = 0.01f;
+        } else {
+            typingSpeed = 0.05f;
         }
+
+        Player.Instance.hoverPopUp.SetActive(false);
+
         npcName = name;
         dialogueParent.SetActive(true);
         UIManager.Instance.UnlockCursor();
@@ -149,9 +154,9 @@ public class DialogueManager : MonoBehaviour {
         }
 
         if (!dialogueList[currentDialogueIndex].isQuestion) {
-            nextIndicator.gameObject.SetActive(true); // Mostrar o triângulo após a digitação
+            nextIndicator.gameObject.SetActive(true);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-            nextIndicator.gameObject.SetActive(false); // Esconder o triângulo após clicar
+            nextIndicator.gameObject.SetActive(false);
         }
 
         if (dialogueList[currentDialogueIndex].isEnd) {
@@ -169,6 +174,6 @@ public class DialogueManager : MonoBehaviour {
         dialogueParent.SetActive(false);
 
         UIManager.Instance.LockCursor();
-        nextIndicator.gameObject.SetActive(false); // Esconder o triângulo quando o diálogo termina
+        nextIndicator.gameObject.SetActive(false);
     }
 }

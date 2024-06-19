@@ -27,7 +27,7 @@ public static class GameManager {
 
         LevelManager.Instance.AssignBackgroundMusic();
 
-        AudioManager.Instance.PlayBackgroundMusic(GameManager.currentLevel.backgroundSongClip);
+        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.3f);
     
         Starter.firstTime = false;
     }

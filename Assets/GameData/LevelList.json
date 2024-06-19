@@ -2,173 +2,78 @@
     "level": [
         {
             "levelName": "AlleyStart",
-            "levelId": 1,
-            "leftName": "",
-            "rightName": "Street",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "Street",
-            "levelId": 2,
-            "leftName": "",
-            "rightName": "Pub_Outside",
-            "upName": "AlleyStart",
-            "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "Pub_Outside",
-            "levelId": 3,
-            "leftName": "Street",
-            "rightName": "Downtown_Low",
-            "upName": "Pub_Inside",
-            "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "Pub_Inside",
-            "levelId": 4,
-            "leftName": "",
-            "rightName": "",
-            "upName": "Pub_Outside",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "Park",
-            "levelId": 5,
-            "leftName": "Downtown_High",
-            "rightName": "Home_Outside",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "PoliceStation_Main",
-            "levelId": 6,
-            "leftName": "",
-            "rightName": "",
-            "upName": "Downtown_Low",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "Home_Outside",
-            "levelId": 7,
-            "leftName": "Park",
-            "rightName": "",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "Home_Inside",
-            "levelId": 8,
-            "leftName": "",
-            "rightName": "",
-            "upName": "Home_Outside",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "Downtown_Low",
-            "levelId": 9,
-            "leftName": "Pub_Outside",
-            "rightName": "Downtown_High",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "Downtown_High",
-            "levelId": 10,
-            "leftName": "Downtown_Low",
-            "rightName": "Park",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "Rukon",
-            "levelId": 11,
-            "leftName": "Downtown_High",
-            "rightName": "",
-            "upName": "Rukon_CrimeScene",
-            "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "Rukon_CrimeScene",
-            "levelId": 12,
-            "leftName": "",
-            "rightName": "Rukon",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "BusinessCenter",
-            "levelId": 13,
-            "leftName": "",
-            "rightName": "",
-            "upName": "Downtown_High",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "CityHall",
-            "levelId": 14,
-            "leftName": "",
-            "rightName": "",
-            "upName": "Downtown_High",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "CultHQ_Lobby",
-            "levelId": 15,
-            "leftName": "",
-            "rightName": "",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "CultHQ_Sanctuary",
-            "levelId": 16,
-            "leftName": "",
-            "rightName": "",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "CultHQ_Corridor",
-            "levelId": 17,
-            "leftName": "Downtown_Low",
-            "rightName": "CultHQ_LeaderRoom",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "CultHQ_Treasury",
-            "levelId": 18,
-            "leftName": "",
-            "rightName": "",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         },
         {
             "levelName": "CultHQ_LeaderRoom",
-            "levelId": 19,
-            "leftName": "CultHQ_Corridor",
-            "rightName": "",
-            "upName": "",
-            "downName": "",
             "backgroundSong": "Heaven Central Authority"
         }
     ]

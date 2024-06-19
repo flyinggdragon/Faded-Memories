@@ -5,8 +5,6 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
     private AudioSource bgMusicSource;
     private AudioSource sfxSource;
-
-    public bool sameBgMusic;
     public static AudioManager Instance { get; private set; }
     public AudioClip doorLock;
 
@@ -22,21 +20,18 @@ public class AudioManager : MonoBehaviour {
     }
 
     void Start() {
-        sameBgMusic = false;
         bgMusicSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
 
         doorLock = Resources.Load<AudioClip>("Audio/SFX/door lock sound");
     }
 
-    public void PlayBackgroundMusic(AudioClip clip, float volume = 0.1f) {
-        if (!sameBgMusic) {
-            if (bgMusicSource.isPlaying) { StopBackgroundMusic(); }
+    public void PlayBackgroundMusic(AudioClip clip, float volume) {
+        if (bgMusicSource.isPlaying) { StopBackgroundMusic(); }
 
-            bgMusicSource.volume = 0.1f;
-            bgMusicSource.loop = true;
-            bgMusicSource.PlayOneShot(clip);
-        }
+        bgMusicSource.volume = volume;
+        bgMusicSource.loop = true;
+        bgMusicSource.PlayOneShot(clip);
     }
 
     public void StopBackgroundMusic() {

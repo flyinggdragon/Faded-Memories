@@ -22,22 +22,6 @@ public class LevelManager : MonoBehaviour {
         foreach (Level level in GameManager.levels) {
             AudioClip clip = AudioManager.Instance.FindAudioClip(level.backgroundSong);
             level.backgroundSongClip = clip;
-
-            if (level.leftName == "") {
-                level.leftName = null;
-            }
-
-            if (level.rightName == "") {
-                level.rightName = null;
-            }
-
-            if (level.upName == "") {
-                level.upName = null;
-            }
-
-            if (level.downName == "") {
-                level.downName = null;
-            }
         }
     }
 
@@ -49,10 +33,21 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void LoadLevel(string levelName) {
-        GameManager.currentLevel = FindLevelByName(levelName);
+        Level prevLevel = GameManager.currentLevel;
+        Level nextLevel = FindLevelByName(levelName);
+        bool sameBgMusic = CompareBackgroundMusic(prevLevel.backgroundSong, nextLevel.backgroundSong);
+
+        GameManager.currentLevel = nextLevel;
+
         StartCoroutine(AsyncLoadLevel(levelName));
+
+        if (!sameBgMusic) {
+            AudioClip clip = AudioManager.Instance.FindAudioClip(nextLevel.backgroundSong);
+            AudioManager.Instance.PlayBackgroundMusic(clip, 0.3f);
+        }
     }
 
+    // Suspeito que esse Async seja responsável pela "engasgada".
     private IEnumerator AsyncLoadLevel(string levelName) {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelName);
 
@@ -61,6 +56,11 @@ public class LevelManager : MonoBehaviour {
         }
 
         UnloadCollectedItems();
+    }
+
+    private bool CompareBackgroundMusic(string name1, string name2) {
+        if (name1 == name2) { return true; }
+        else { return false; }
     }
 
     private void UnloadCollectedItems() {
@@ -73,58 +73,6 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
-    public void ExitLeft() {
-        Level currentLevel = GameManager.currentLevel;
-
-        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.leftName).backgroundSong) {
-            AudioManager.Instance.sameBgMusic = true;
-        } else { AudioManager.Instance.sameBgMusic = false; }
-
-        currentLevel = FindLevelByName(currentLevel.leftName);
-        LoadLevel(currentLevel.levelName);
-
-        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
-    }
-
-    public void ExitRight() {
-        Level currentLevel = GameManager.currentLevel;
-
-        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.rightName).backgroundSong) {
-            AudioManager.Instance.sameBgMusic = true;
-        } else { AudioManager.Instance.sameBgMusic = false; }
-
-        currentLevel = FindLevelByName(currentLevel.rightName);
-        LoadLevel(currentLevel.levelName);
-
-        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
-    }
-
-    public void ExitUp() {
-        Level currentLevel = GameManager.currentLevel;
-
-        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.upName).backgroundSong) {
-            AudioManager.Instance.sameBgMusic = true;
-        } else { AudioManager.Instance.sameBgMusic = false; }
-
-        currentLevel = FindLevelByName(GameManager.currentLevel.upName);
-        LoadLevel(currentLevel.levelName);
-
-        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
-    }
-
-    public void ExitDown() {
-        Level currentLevel = GameManager.currentLevel;
-
-        if (currentLevel.backgroundSong == FindLevelByName(currentLevel.downName).backgroundSong) {
-            AudioManager.Instance.sameBgMusic = true;
-        }
-
-        currentLevel = FindLevelByName(currentLevel.downName);
-        LoadLevel(currentLevel.levelName);
-
-        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.5f);
-    }
-
     public Level FindLevelByName(string levelName) {
         return GameManager.levels.Find(level => level.levelName == levelName);
     }
@@ -132,11 +80,6 @@ public class LevelManager : MonoBehaviour {
     [System.Serializable]
     public class Level {
         public string levelName;
-        public int levelId;
-        public string leftName;
-        public string rightName;
-        public string upName;
-        public string downName;
         public string backgroundSong;
         public AudioClip backgroundSongClip;
     }

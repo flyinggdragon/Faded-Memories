@@ -6,8 +6,6 @@ using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour {
     public DialogueManager dialogueManager;
-
-
     private float horizontal;
     private float speed = 8.0f;
     public Rigidbody2D rb;
@@ -134,49 +132,47 @@ public class Player : MonoBehaviour {
             }
         }
 
-        // Verificar também se está no trigger para tal.
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-            if (!string.IsNullOrEmpty(GameManager.currentLevel.downName)) {
-                LevelManager.Instance.ExitDown();
-            }
-        }
-
         if (inTrigger == true) {
             Sprite sprite = null;
+            Exit exit = currentTrigger.gameObject.GetComponent<Exit>();
 
             if (currentTrigger.CompareTag("Item") || currentTrigger.CompareTag("NPC") || currentTrigger.CompareTag("Puzzle")) {
                 sprite = Resources.Load<Sprite>("Sprites/key_e");
             }
 
             else if (currentTrigger.CompareTag("TriggerRight")) {
-                sprite = Resources.Load<Sprite>("Sprites/key_d");
+                if (!string.IsNullOrEmpty(exit.nextLevel)) {
+                    sprite = Resources.Load<Sprite>("Sprites/key_d");
+                }
             }
 
             else if (currentTrigger.CompareTag("TriggerLeft")) {
-                sprite = Resources.Load<Sprite>("Sprites/key_a");
-            }
-
-            else if (currentTrigger.CompareTag("TriggerDown")) {
-                sprite = Resources.Load<Sprite>("Sprites/key_s");
+                if (!string.IsNullOrEmpty(exit.nextLevel)) {
+                    sprite = Resources.Load<Sprite>("Sprites/key_a");
+                }
             }
 
             else if (currentTrigger.CompareTag("TriggerUp")) {
                 sprite = Resources.Load<Sprite>("Sprites/key_w");
             }
-            
-            hoverPopUp.SetActive(true);
 
-            Exit exit = currentTrigger.gameObject.GetComponent<Exit>();
-            if (sprite && !string.IsNullOrEmpty(exit?.nextLevel)) {
+            if (sprite) {
                 hoverPopUp.GetComponent<SpriteRenderer>().sprite = sprite;
             }
 
             Transform ht = hoverPopUp.transform;
             ht.localScale = new Vector3(orientation * 4.75f, ht.transform.localScale.y, ht.transform.localScale.z);
+            
+            if (dialogueManager.IsDialoguing) {
+                hoverPopUp.GetComponent<SpriteRenderer>().sprite = null;
+            }
+
+            hoverPopUp.SetActive(true);
         }
 
         else {
             hoverPopUp.SetActive(false);
+            hoverPopUp.GetComponent<SpriteRenderer>().sprite = null;
         }
     }
 
