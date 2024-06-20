@@ -4,7 +4,7 @@ using UnityEngine;
 public class Journalist : NPC {
     public override string npcName { get; set; } = "Journalist";
 
-    public void RevealName() {
+    public override void RevealName() {
         npcName = "Peter";
     }
     

@@ -4,6 +4,7 @@ using UnityEngine;
 public class Inmate : NPC {
     public override string npcName { get; set; } = "Inmate";
     private DialogueTrigger dialogueTrigger;
+    public override void RevealName() {}
     public void RevealGeraldName() {
         GameManager.knowsGeraldName = true;
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Barman : NPC {
     public override string npcName { get; set; } = "Barman";
     private bool paidFirstTime = false;
+    public override void RevealName() {}
 
     public void Pay(int value) {
         GameManager.money -= value;

@@ -9,7 +9,11 @@ public class DialogueTrigger : MonoBehaviour {
     public bool firstInteraction = true;
 
     public void DialogueStart() {
-        string npcName = transform.parent.GetComponent<NPC>().npcName;
+        string npcName = transform.parent.GetComponent<NPC>()?.npcName;
+
+        if (npcName == null) {
+            npcName = "";
+        }
 
         Player.Instance.dialogueManager.DialogueStart(dialogueStrings, npcName, firstInteraction);
         firstInteraction = false;

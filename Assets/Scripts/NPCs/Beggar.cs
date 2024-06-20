@@ -4,6 +4,7 @@ using UnityEngine;
 public class Beggar : NPC {
     public override string npcName { get; set; } = "Beggar";
     private bool beenPaid = false;
+    public override void RevealName() {}
 
     public void BeenPaid(bool value) {
         beenPaid = value;
