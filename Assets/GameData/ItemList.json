@@ -2,101 +2,101 @@
     "item": [
         {
             "id": 1,
-            "itemName": "Bilhete",
+            "itemName": "Note",
             "fileName": "note",
-            "description": "Um bilhete escrito: “Memórias”",
-            "keyword": "Memórias"
+            "description": "A note with the sayings: \"Memories\"",
+            "keyword": "Memories"
         },
         {
             "id": 2,
-            "itemName": "Manto Ensanguentado",
+            "itemName": "Bloodied Cloak",
             "fileName": "cloakwithblood",
-            "description": "Um manto de um membro do Culto coberto de sangue",
-            "keyword": "Tortura"
+            "description": "A cloak from a Cult member covered in blood",
+            "keyword": "Torture"
         },
         {
             "id": 3,
-            "itemName": "Chave",
+            "itemName": "Key",
             "fileName": "key",
-            "description": "Uma chave. Está em bom estado. Ela deve destrancar uma das centenas de milhares de portas nessa cidade.",
-            "keyword": "Casa"
+            "description": "A key. It is in good condition. It must unlock one of the hundreds of thousands of doors in this city.",
+            "keyword": "Home"
         },
         {
             "id": 4,
-            "itemName": "Tatuagem",
+            "itemName": "Tattoo",
             "fileName": "cult",
-            "description": "A tatuagem que está no seu peito é exatamente igual ao símbolo pintado na parede",
-            "keyword": "Culto"
+            "description": "The tattoo on your chest is exactly like the symbol painted on the wall",
+            "keyword": "Cult"
         },
         {
             "id": 5,
-            "itemName": "Porta-retrato",
+            "itemName": "Picture Frame",
             "fileName": "pictureframe",
-            "description": "Esta fotografia mostra pessoas em algum tipo de cerimônia. Todos elas vestem mantos brancos e pretos. Eu sou a pessoa do meio.",
-            "keyword": "Assembleia"
+            "description": "This photograph shows people in some kind of ceremony. They are all wearing white and black cloaks. I am the person in the middle.",
+            "keyword": "Assembly"
         },
         {
             "id": 6,
-            "itemName": "Manto Velho",
+            "itemName": "Old Cloak",
             "fileName": "cloak",
-            "description": "Traje preto de mangas longas que encontrei na Casa Abandonada. Parece pertencer a alguém, o cheiro das axilas evidencia isso.",
-            "keyword": "Assembleia"
+            "description": "A long-sleeved black garment I found in the Abandoned House. It seems to belong to someone, the smell of the armpits proves it.",
+            "keyword": "Assembly"
         },
         {
             "id": 7,
-            "itemName": "Insígnia",
+            "itemName": "Patch",
             "fileName": "insignia",
-            "description": "Este item caiu de dentro do terno do parlamentar que tentou me imobilizar. Ele possui um símbolo de uma cobra.",
-            "keyword": "Ocultista"
+            "description": "This item fell out of the suit of the parliamentarian who tried to immobilize me. It has a symbol of a snake.",
+            "keyword": "Occultist"
         },
         {
             "id": 8,
-            "itemName": "Cédula de 200 Rukh",
+            "itemName": "200 Rukh Bill",
             "fileName": "200rukh",
-            "description": "Uma nota de 200 Rukhs (ɻ$200), a moeda usada em Harkan. Tem sinais de ser um pouco antiga, mas ainda é válida. É uma cédula de valor alto. Pode comprar várias coisas, inclusive alguns “favores”.",
-            "keyword": "Suborno"
+            "description": "A 200 Rukh bill (ɻ$200), the currency used in Harkan. It is a high-value bill. It can buy many things, including some “favors.”",
+            "keyword": "Bribe"
         },
         {
             "id": 9,
-            "itemName": "Autorização para Evento",
+            "itemName": "Event Authorization",
             "fileName": "authorization",
-            "description": "É uma autorização para a realização de um evento na Sede do Culto. Aquela é a minha assinatura, e embaixo está escrito meu nome, e minha posição: Oitavo Irmão da Assembleia.",
-            "keyword": "Assembleia"
+            "description": "It is an authorization for holding an event at the Cult Headquarters. That is my signature, and below it is my name and my position: 8th Assembly Brother.",
+            "keyword": "Assembly"
         },
         {
             "id": 10,
-            "itemName": "Colar com Pingente",
+            "itemName": "Necklace with Pendant",
             "fileName": "necklace",
-            "description": "Este colar estava na cena do crime, caído no chão. Não reconheço este símbolo, parece algo de outro país.",
-            "keyword": "Estrangeiro"
+            "description": "This necklace was at the crime scene, fallen on the ground. I do not recognize this symbol, it looks like something from another country.",
+            "keyword": "Foreigner"
         },
         {
             "id": 11,
-            "itemName": "Boletim de Ocorrência",
+            "itemName": "Occurrence Report",
             "fileName": "note",
-            "description": "Este boletim se refere ao assassinato de Amber Nikolsi. A polícia sabe que foi às ~21h de ontem, seus pertences foram roubados, suspeita de latrocínio, cadáver jogado no mato, e o assassino agiu sozinho.",
-            "keyword": "Assassinato"
+            "description": "This report refers to the murder of Amber Nikolsi. The police know it was around 9 PM yesterday, her belongings were stolen, suspected robbery, body dumped in the bush, and the murderer acted on their own.",
+            "keyword": "Murder"
         },
         {
             "id": 12,
-            "itemName": "Cartão de Visita",
+            "itemName": "Business Card",
             "fileName": "hemerbusinesscard",
-            "description": "Este cartão foi dado pelo Parlamentar Hemer Valinksiy, membro do Culto, subordinado de Jacob, membro da facção reformista do Culto. Aqui estão suas informações de contato.",
-            "keyword": "Reformista"
+            "description": "This card was given by Parliamentarian Hemer Valinksiy, a member of the Cult, subordinate of Jacob, a member of the reformist faction of the Cult. Here are his contact details.",
+            "keyword": "Reformist"
         },
         {
             "id": 13,
-            "itemName": "Bolsa",
+            "itemName": "Bag",
             "fileName": "bag",
-            "description": "Esta bolsa com certeza pertencia a Amber Nikolsi, os documentos dentro dela comprovam isso. Estava jogada no depósito do Culto",
-            "keyword": "Motivado"
+            "description": "This bag definitely belonged to Amber Nikolsi, the documents inside prove it. It was thrown in the Cult's depot.",
+            "keyword": "Premeditated"
         },
         {
             "id": 14,
-            "itemName": "Finanças do Culto",
+            "itemName": "Cult's Finances",
             "fileName": "docSpendings",
-            "description": "Estes documentos detalham as finanças do Culto. Mas algo parece não fechar aqui.",
-            "keyword": "Inconsistência"
+            "description": "These documents detail the finances of the Cult. But something seems off here.",
+            "keyword": "Inconsistency"
         }
     ]
 }

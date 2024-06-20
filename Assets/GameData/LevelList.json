@@ -65,6 +65,10 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
+            "levelName": "CultHQ_Outside",
+            "backgroundSong": "Empire City Night"
+        },
+        {
             "levelName": "CultHQ_Lobby",
             "backgroundSong": "Heaven Central Authority"
         },
