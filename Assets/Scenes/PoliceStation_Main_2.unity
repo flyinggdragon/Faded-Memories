@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.85
+      value: -29.41
       objectReference: {fileID: 0}
     - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -177,19 +177,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_Size.x
-      value: 3.1421604
+      value: 5.7656326
       objectReference: {fileID: 0}
     - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_Size.y
-      value: 6.0947185
+      value: 5.957005
       objectReference: {fileID: 0}
     - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_Offset.x
-      value: -0.0066137314
+      value: 0.3106289
       objectReference: {fileID: 0}
     - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_Offset.y
-      value: 1.6507366
+      value: 1.6828988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -216,9 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd18a8f35dce3654ab3e45007b043e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: PoliceStation_Main_2
-  nextPosX: 12
-  nextPosY: -3
+  nextLevel: Downtown_Low
+  nextPosX: 37.73
+  nextPosY: -2.08
   nextScaleX: 1
 --- !u!1 &129673462
 GameObject:
@@ -655,289 +655,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279165570}
   m_CullTransparentMesh: 1
---- !u!1001 &395059612
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.size
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[0].text
-      value: Good morning, how can I help you today?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[1].text
-      value: Everything we know has already been released to the media.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[2].text
-      value: I don't have anything super confidential to say.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[3].text
-      value: Even if I had, I wouldn't be allowed to tell you.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].text
-      value: Sure, what do you want to know?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[5].text
-      value: Rukon neighborhood. Close to the factories, inside an alley.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[6].text
-      value: Harkan is not a violent city, but that region is in Rukongai, that has
-        been infamously complicated with crime.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[7].text
-      value: Yesterday, at 9:33PM.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[8].text
-      value: We don't know who did it. They did a good job hiding their actions.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[9].text
-      value: We don't know who the killer is, nor their motivations.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[10].text
-      value: We do suspect it was an armed robbery, robbery followed by death, due
-        to the region.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[11].text
-      value: The murderer acted on their own. Amber's body was found in a wasteland
-        behind a factory, incredibly quick.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[12].text
-      value: They were probably following her, waited for her to lower her guard
-        and ambushed her in that alley.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[13].text
-      value: Amber's belongings were stolen, nothing was left in the crime scene,
-        other than blood.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[14].text
-      value: That's why we suspect it's an armed robbery.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[15].text
-      value: You seem interested in this, I'll give you a copy of the occurance report.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[16].text
-      value: Goodbye.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[1].isEnd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[2].isEnd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[3].isEnd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[12].isEnd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[14].isEnd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[15].isEnd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[16].isEnd
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[0].isQuestion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[1].isQuestion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[3].isQuestion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].isQuestion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[5].isQuestion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[0].answerOption1
-      value: I want to know more about Amber Nikolsi's murder.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[1].answerOption1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[3].answerOption1
-      value: Can you enlighten me of the details?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].answerOption1
-      value: Where was it?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].answerOption2
-      value: When did it happen?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].answerOption3
-      value: Who did it adn why?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].answerOption4
-      value: How did it happen?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].answerOption5
-      value: Bye, thanks.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[5].answerOption1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[5].answerOption2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[5].answerOption3
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[5].answerOption4
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[5].answerOption5
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[0].option1IndexJump
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[3].option1IndexJump
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].option1IndexJump
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].option2IndexJump
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].option3IndexJump
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].option4IndexJump
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[4].option5IndexJump
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.724739
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.31316036
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: m_Name
-      value: Police Chief
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 9035750951431159236, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 395059614}
-  m_SourcePrefab: {fileID: 100100000, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
---- !u!1 &395059613 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-  m_PrefabInstance: {fileID: 395059612}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &395059614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395059613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b837d50df4fe654881fbaaddd1e48dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &476438397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +884,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000004371139}
-  m_LocalPosition: {x: 4.5268207, y: 0.00392, z: -10}
+  m_LocalPosition: {x: 9.97, y: 0.00999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1268,11 +985,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 20.86608, y: 7.474893}
-      - {x: -16.034988, y: 7.555125}
-      - {x: -15.984065, y: -2.4318347}
+    - - {x: 26.154055, y: 7.5393806}
+      - {x: -21.512777, y: 7.533149}
+      - {x: -21.531132, y: -2.4492054}
       - {x: 7.5314236, y: -2.4561238}
-      - {x: 20.928568, y: -2.4605184}
+      - {x: 26.154512, y: -2.4605184}
   m_UseDelaunayMesh: 0
 --- !u!4 &527816537
 Transform:
@@ -1464,7 +1181,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4260042724158620689, guid: f949108269bce5945b5c4a33a39b85cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.98
+      value: 31.67
       objectReference: {fileID: 0}
     - target: {fileID: 4260042724158620689, guid: f949108269bce5945b5c4a33a39b85cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1699,7 +1416,7 @@ Transform:
   m_GameObject: {fileID: 693303087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.1, y: 0.00999999, z: -10}
+  m_LocalPosition: {x: 9.97, y: 0.00999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2199,17 +1916,114 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c0438f652cf357478dc17e0bd6d80f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0b4c0664b5e5b149a8952bab17746cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 81.03597, y: 22}
+  m_Size: {x: 143.03491, y: 22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1094100658
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.7617079
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.031096268
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887623068188134644, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_Name
+      value: UpTrigger_ChiefRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_Size.x
+      value: 3.141467
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_Size.y
+      value: 5.940949
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.006960392
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.70702
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4887623068188134644, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1094100660}
+  m_SourcePrefab: {fileID: 100100000, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+--- !u!1 &1094100659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4887623068188134644, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
+  m_PrefabInstance: {fileID: 1094100658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1094100660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094100659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd18a8f35dce3654ab3e45007b043e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel: PoliceStation_ChiefRoom_2
+  nextPosX: -14
+  nextPosY: -3
+  nextScaleX: 1
 --- !u!1 &1169001518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,13 +2980,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitLeft
       objectReference: {fileID: 0}
-    - target: {fileID: 3722947202363707298, guid: e7d5df345835f7a438199315c843fafd, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5777942044075181169, guid: e7d5df345835f7a438199315c843fafd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.77
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 5777942044075181169, guid: e7d5df345835f7a438199315c843fafd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3420,6 +3230,6 @@ SceneRoots:
   - {fileID: 693303091}
   - {fileID: 527816537}
   - {fileID: 55690352}
+  - {fileID: 1094100658}
   - {fileID: 1866011459}
   - {fileID: 657532003}
-  - {fileID: 395059612}
