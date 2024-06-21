@@ -25,20 +25,44 @@
             "finished": false
         },
         {
-            "title": "Go to the Hall",
+            "title": "Go to the Hall.",
             "description": "This journalist gave me a letter saying 'Go to the Hall, you might find something good there'. I guess I have no choice.",
             "active": false,
             "finished": false
         },
         {
-            "title": "Find the Mysterious Man",
+            "title": "Find the Mysterious Man.",
             "description": "He definitely knows me. I barely had time to ask him before he cut me off. I need to find him.",
             "active": false,
             "finished": false
         },
         {
-            "title": "Investigate more about the 'Cult of the Goddess of Death'",
+            "title": "Investigate more about the \"Cult of the Goddess of Death\".",
             "description": "I used to be a member at this institution, but I don't remember a thing about them. I should investigate them further.",
+            "active": false,
+            "finished": false
+        },
+        {
+            "title": "Investigate the murder of Amber Nikolsi.",
+            "description": "This crime sounds a bit suspicious, Jacob seems to know more than me about it, but at least he told me where the crime scene is, I should go check it out for myself.",
+            "active": false,
+            "finished": false
+        },
+        {
+            "title": "Find the suspect.",
+            "description": "That man is suspicious. He went into the crime scene and left, and was supposedly after something he lost. I have to find him.",
+            "active": false,
+            "finished": false
+        },
+        {
+            "title": "Follow the suspect.",
+            "description": "That man became even more suspicious. He is trying to escape from me. I'll follow him, but I must not be noticed.",
+            "active": false,
+            "finished": false
+        },
+        {
+            "title": "Escape.",
+            "description": "She seems serious about her threats. I need to get outta here, I need to find somewhere safe.",
             "active": false,
             "finished": false
         }
