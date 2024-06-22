@@ -95,4 +95,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CultHQ_Outside_2.unity
     guid: 98b4caf3e2c84ae42a063548a787a45e
+  - enabled: 1
+    path: Assets/Scenes/Home_Inside_4.unity
+    guid: 52387dbb2ac27a14dba3acbbbf718342
+  - enabled: 1
+    path: Assets/Scenes/Home_Inside_5.unity
+    guid: 62b605c1ac08ad642b419a71759fafb2
+  - enabled: 1
+    path: Assets/Scenes/Home_Inside_6.unity
+    guid: d28dde92791faaf4c972260f491a607f
   m_configObjects: {}
