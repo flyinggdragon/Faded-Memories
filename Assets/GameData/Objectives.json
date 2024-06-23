@@ -65,6 +65,18 @@
             "description": "She seems serious about her threats. I need to get outta here, I need to find somewhere safe.",
             "active": false,
             "finished": false
+        },
+        {
+            "title": "Report to the police.",
+            "description": "After Jacob's words, I am convinced to conduct a raid at the Cult. Let's report to the police now, along with Hemer.",
+            "active": false,
+            "finished": false
+        },
+        {
+            "title": "Infiltrate the Cult Headquarters.",
+            "description": "It's all or nothing. Time to infiltrate and look for more proof to show to the authorities.",
+            "active": false,
+            "finished": false
         }
     ]
 }
