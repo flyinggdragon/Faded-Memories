@@ -2,6 +2,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PoliceOfficer : NPC {
-    public override string npcName { get; set; } = "PoliceOfficer";
+    public override string npcName { get; set; } = "Police Officer";
     public override void RevealName() {}
+    private DialogueTrigger dt;
+
+    void Start() {
+        dt = GetComponentInChildren<DialogueTrigger>();
+    }
+
+    void Update() {
+        if (GameManager.knowsPoliceCrackdown) {
+            dt.dialogueStrings[4].answerOption4 = "Why was the Cult raid raided yesterday? (*Intimidate*)"; 
+            dt.dialogueStrings[4].option4IndexJump = 15;
+        } else {
+            dt.dialogueStrings[4].answerOption4 = "";
+            dt.dialogueStrings[4].option4IndexJump = 0;
+        }
+    }
 }

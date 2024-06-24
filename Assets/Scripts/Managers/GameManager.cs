@@ -11,9 +11,14 @@ public static class GameManager {
     public static LevelManager.Level currentLevel;
     public static ObjectivesManager.Objective currentObjective;
     public static float money = 300.0f;
+    public static bool knowsPoliceCrackdown = false;
     public static bool talkedToGerald = false;
     public static bool knowsGeraldName = false;
     public static bool firstPuzzleCompleted = false;
+    public static bool sawGraffiti = false;
+    public static bool firstTimeHome = true;
+    public static bool goingToFirstMeetJacob = false;
+    public static bool talkedToJacob = false;
 
     public static void Initialize() {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");   

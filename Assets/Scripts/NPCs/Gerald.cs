@@ -16,7 +16,7 @@ public class Gerald : NPC {
     public void End() {
         if (!GameManager.talkedToGerald) {
             ObjectivesManager.Instance.FinishObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Find this note's purpose.")
+                ObjectivesManager.Instance.FindObjectiveByName("Discover the meaning of this note.")
             );
         }
         

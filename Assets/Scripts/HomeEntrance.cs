@@ -8,7 +8,7 @@ public class HomeEntrance : MonoBehaviour {
     public void Enter() {
         if (!canEnter) {
             AudioManager.Instance.PlaySound(AudioManager.Instance.doorLock);
-            UIManager.Instance.CreateToastModal("Você não pode entrar sem a chave.", "Acesso negado!");
+            UIManager.Instance.CreateToastModal("You may not enter without the key.", "Access denied!");
         }
 
         else {

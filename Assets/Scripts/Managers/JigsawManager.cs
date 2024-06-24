@@ -27,11 +27,7 @@ public class JigsawManager : MonoBehaviour {
   private Vector3 offset;
 
   private int piecesCorrect;
-  private static string previousLevel;
-
-  public static void ReceivePreviousScene(string level) {
-    previousLevel = level;
-  }
+  public static string previousLevel;
 
   void Start() {
     // Create the UI
@@ -221,7 +217,9 @@ public class JigsawManager : MonoBehaviour {
         player.SetActive(true);
         
         if (!GameManager.firstPuzzleCompleted) {
-            ObjectivesManager.Instance.FinishObjective(ObjectivesManager.Instance.FindObjectiveByName("Meet that man again."));
+            ObjectivesManager.Instance.FinishObjective(
+                ObjectivesManager.Instance.FindObjectiveByName("Find the key to the Abandoned House.")
+                );
             GameManager.firstPuzzleCompleted = true;
         }
       }

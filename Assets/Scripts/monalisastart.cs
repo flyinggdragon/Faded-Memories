@@ -10,9 +10,12 @@ public class monalisastart : MonoBehaviour
 
     private void Update() 
     {
+        if (!GameManager.talkedToGerald) { gameObject.SetActive(false); }
+        else { gameObject.SetActive(true); }
+
         if (triggerin && Input.GetKeyDown(KeyCode.E)) 
         {
-            JigsawManager.ReceivePreviousScene(GameManager.currentLevel.levelName);
+            JigsawManager.previousLevel = GameManager.currentLevel.levelName;
             LevelManager.Instance.LoadLevel("Puzzle");
             Cursor.lockState = CursorLockMode.None;
         }

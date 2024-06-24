@@ -21,6 +21,18 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
+            "levelName": "Pub_Inside_3",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Hall",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Hall_",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
             "levelName": "Park",
             "backgroundSong": "Heaven Central Authority"
         },
@@ -29,7 +41,15 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
+            "levelName": "PoliceStation_Main_2",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
             "levelName": "PoliceStation_ChiefRoom",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "PoliceStation_ChiefRoom_2",
             "backgroundSong": "Heaven Central Authority"
         },
         {
@@ -38,6 +58,26 @@
         },
         {
             "levelName": "Home_Inside",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Home_Inside_2",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Home_Inside_3",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Home_Inside_4",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Home_Inside_5",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Home_Inside_6",
             "backgroundSong": "Heaven Central Authority"
         },
         {

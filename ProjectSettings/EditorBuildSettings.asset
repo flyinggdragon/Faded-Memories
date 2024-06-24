@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CultHQ_Sanctuary.unity
     guid: 776161be240f4ee48b15f358b623d79c
   - enabled: 1
-    path: Assets/Scenes/Hall.unity
+    path: Assets/Scenes/Hall_2.unity
     guid: f8480dbcf54a09f4e8175ceb95d752cf
   - enabled: 1
     path: Assets/Scenes/Template.unity
@@ -110,4 +110,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CultHQ_Lobby_2.unity
     guid: 5094515d4c276be4b916b616bb7344d4
+  - enabled: 1
+    path: Assets/Scenes/PoliceStation_ChiefRoom.unity
+    guid: bbce3b33526990b4fbe514188c805db2
+  - enabled: 1
+    path: Assets/Scenes/PoliceStation_ChiefRoom_2.unity
+    guid: 09937c9f039645d41831cdfee6558137
+  - enabled: 1
+    path: Assets/Scenes/Hall.unity
+    guid: 297556eb8cbf9c247a7b3ed37fc3eadd
   m_configObjects: {}

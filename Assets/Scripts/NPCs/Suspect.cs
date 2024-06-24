@@ -4,6 +4,6 @@ using UnityEngine;
 public class Suspect : NPC {
     public override string npcName { get; set; } = "???????";
     public override void RevealName() {
-        npcName = "Nimrod";
+        npcName = "Nimrod Vakjal";
     }
 }
