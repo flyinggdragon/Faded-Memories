@@ -13,7 +13,8 @@ public class HoverTipManager : MonoBehaviour
     public static Action<CluesManager.Item, Vector2> OnMouseHover;
     public static Action OnMouseLoseFocus;
 
-    public TMP_Text tipItemName;
+    public TMP_Text tipText;
+    //public TMP_Text tipItemName;
     //public TMP_Text tipKeyword;
     //public TMP_Text tipDescription;
 
@@ -37,12 +38,10 @@ public class HoverTipManager : MonoBehaviour
     private void ShowTip(CluesManager.Item tipData, Vector2 mousePos)
     {
         AssignInfo(tipData);
-        tipWindow.sizeDelta = new Vector2(tipItemName.preferredWidth > 200 ? 200 : tipItemName.preferredWidth, tipItemName.preferredHeight);
-        //tipWindow.sizeDelta = new Vector2(tipKeyword.preferredWidth > 200 ? 200 : tipKeyword.preferredWidth, tipKeyword.preferredHeight);
-        //tipWindow.sizeDelta = new Vector2(tipDescription.preferredWidth > 270 ? 270 : tipDescription.preferredWidth, tipDescription.preferredHeight);
-        
+        tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 550 ? 550 : tipText.preferredWidth, tipText.preferredHeight > 200 ? 200 : tipText.preferredHeight);
+
         tipWindow.gameObject.SetActive(true);
-        tipWindow.transform.position = new Vector2(mousePos.x + tipWindow.sizeDelta.x / 2 +30, mousePos.y);
+        tipWindow.transform.position = new Vector2(mousePos.x + tipWindow.sizeDelta.x / 2 -60, mousePos.y);
     }
 
 
@@ -53,9 +52,7 @@ public class HoverTipManager : MonoBehaviour
 
     private void AssignInfo(CluesManager.Item tipData) {
         if (tipData != null) {
-            tipItemName.text = tipData.itemName;
-            //tipKeyword.text = $"Palavra-chave: {tipData.keyword}";
-            //tipDescription.text = tipData.description;
+            tipText.text = $"{tipData.itemName}\n\n{tipData.description}\n\n<color=#F00>Keyword: {tipData.keyword}";
         }
     }
 

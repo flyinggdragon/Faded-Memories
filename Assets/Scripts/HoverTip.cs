@@ -16,19 +16,16 @@ public class HoverTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         ShowMessage(tipData);
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         HoverTipManager.OnMouseLoseFocus();
-        HoverTipManager1.OnMouseLoseFocus();
-        HoverTipManager2.OnMouseLoseFocus();
     }
 
     private void ShowMessage(CluesManager.Item tipData)
     {
         HoverTipManager.OnMouseHover(tipData, Input.mousePosition);
-        HoverTipManager1.OnMouseHover(tipData, Input.mousePosition);
-        HoverTipManager2.OnMouseHover(tipData, Input.mousePosition);
     }
 }

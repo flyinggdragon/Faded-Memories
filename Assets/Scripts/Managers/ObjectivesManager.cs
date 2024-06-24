@@ -73,14 +73,14 @@ public class ObjectivesManager : MonoBehaviour {
         description.text = newObjective.description;
 
         newObjective.active = true;
-        UIManager.Instance.CreateToastModal(newObjective.title, "Nova Missão!");
+        UIManager.Instance.CreateToastModal(newObjective.title, "New objective!");
     }
 
     public void FinishObjective(Objective current) {
         current.finished = true;
         current.active = false;
 
-        UIManager.Instance.CreateToastModal(current.title, "Missão Concluída!");
+        UIManager.Instance.CreateToastModal(current.title, "Objective complete!");
         objectives.Remove(current);
 
         // IEnumerator aqui para que isso só rode quando o toast de cima sair de cena.

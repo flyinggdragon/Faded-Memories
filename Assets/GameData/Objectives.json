@@ -2,31 +2,31 @@
     "objective": [
         {
             "title": "Eat something.",
-            "description": "I'm starving. I must find something to eat as soon as possible.",
+            "description": "I'm starving. I need to find something to eat as soon as possible.",
             "active": true,
             "finished": false
         },
         {
-            "title": "Find this note's purpose.",
-            "description": "I don't remember aything. This note was inside my pocket. It says 'Memories'. I should try to find out what it wants to tell me.",
+            "title": "Discover the meaning of this note.",
+            "description": "I don't remember aything. This note was inside my pocket. It has the word 'Memories' written on it. I should try to find out what it wants to tell me.",
             "active": true,
             "finished": false
         },
         {
             "title": "Find the key to the Abandoned House.",
-            "description": "This unknown man asked me to find the key for an abandoned house in exchange of his help.",
+            "description": "This unknown man asked me to find the key for an abandoned house in exchange for his help.",
             "active": false,
             "finished": false
         },
         {
-            "title": "Meet that man again.",
-            "description": "Now that I have the key, I should go after that man. Maybe I should visit the Pub again.",
+            "title": "Meet the unknown man again.",
+            "description": "Now that i have the key, i should go talk to that man again at the pub.",
             "active": false,
             "finished": false
         },
         {
             "title": "Go to the Hall.",
-            "description": "This journalist gave me a letter saying 'Go to the Hall, you might find something good there'. I guess I have no choice.",
+            "description": "This journalist gave me a letter saying 'Go to the Hall, you might find something good there'. I guess i have no choice.",
             "active": false,
             "finished": false
         },
@@ -38,13 +38,13 @@
         },
         {
             "title": "Investigate more about the \"Cult of the Goddess of Death\".",
-            "description": "I used to be a member at this institution, but I don't remember a thing about them. I should investigate them further.",
+            "description": "I used to be a member at this institution, but i don't remember a single thing about them. I should investigate them further.",
             "active": false,
             "finished": false
         },
         {
             "title": "Investigate the murder of Amber Nikolsi.",
-            "description": "This crime sounds a bit suspicious, Jacob seems to know more than me about it, but at least he told me where the crime scene is, I should go check it out for myself.",
+            "description": "This crime seems a bit suspicious, Jacob seems to know more than me about it, but at least he told me where the crime scene is, i should go check it out for myself.",
             "active": false,
             "finished": false
         },
@@ -56,7 +56,7 @@
         },
         {
             "title": "Follow the suspect.",
-            "description": "That man became even more suspicious. He is trying to escape from me. I'll follow him, but I must not be noticed.",
+            "description": "That man became even more suspicious. He is trying to escape from me. I'll follow him, but i must not be noticed.",
             "active": false,
             "finished": false
         },
@@ -68,7 +68,7 @@
         },
         {
             "title": "Report to the police.",
-            "description": "After Jacob's words, I am convinced to conduct a raid at the Cult. Let's report to the police now, along with Hemer.",
+            "description": "After Jacob's words, i am convinced to conduct a raid at the Cult. Let's report to the police now, along with Hemer.",
             "active": false,
             "finished": false
         },

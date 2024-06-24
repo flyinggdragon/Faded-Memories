@@ -4,42 +4,42 @@
             "id": 1,
             "itemName": "Note",
             "fileName": "note",
-            "description": "A note with the sayings: \"Memories\"",
+            "description": "A note with the word \"Memories\" written in it.",
             "keyword": "Memories"
         },
         {
             "id": 2,
             "itemName": "Bloodied Cloak",
             "fileName": "cloakwithblood",
-            "description": "A cloak from a Cult member covered in blood",
+            "description": "A cloak from a Cult member. It's covered in blood.",
             "keyword": "Torture"
         },
         {
             "id": 3,
             "itemName": "Key",
             "fileName": "key",
-            "description": "A key. It is in good condition. It must unlock one of the hundreds of thousands of doors in this city.",
+            "description": "A key. It's in good condition. It must unlock one of the hundreds of thousands of doors in this city.",
             "keyword": "Home"
         },
         {
             "id": 4,
             "itemName": "Tattoo",
             "fileName": "cult",
-            "description": "The tattoo on your chest is exactly like the symbol painted on the wall",
+            "description": "The tattoo on your chest is exactly like the symbol painted on the wall.",
             "keyword": "Cult"
         },
         {
             "id": 5,
             "itemName": "Picture Frame",
             "fileName": "pictureframe",
-            "description": "This photograph shows people in some kind of ceremony. They are all wearing white and black cloaks. I am the person in the middle.",
+            "description": "This photograph shows people in some kind of ceremony. They are all wearing white and black cloaks. I'm the one in the middle.",
             "keyword": "Assembly"
         },
         {
             "id": 6,
             "itemName": "Old Cloak",
             "fileName": "cloak",
-            "description": "A long-sleeved black garment I found in the Abandoned House. It has 8 strokes on the back. It seems to belong to someone, the smell of the armpits proves it.",
+            "description": "A long-sleeved black garment i found in the Abandoned House. It has 8 strokes on the back. It seems to belong to someone, the smell of the armpits proves it.",
             "keyword": "Assembly"
         },
         {
@@ -53,28 +53,28 @@
             "id": 8,
             "itemName": "200 Rukh Bill",
             "fileName": "200rukh",
-            "description": "A 200 Rukh bill (ɻ$200), the currency used in Harkan. It is a high-value bill. It can buy many things, including some “favors.”",
+            "description": "A 200 Rukh bill (ɻ$200), the currency used in Harkan. It's a high-value bill. It can buy many things, including some “favors.”",
             "keyword": "Bribe"
         },
         {
             "id": 9,
             "itemName": "Event Authorization",
             "fileName": "authorization",
-            "description": "It is an authorization for holding an event at the Cult Headquarters. That is my signature, and below it is my name and my position: 8th Assembly Brother.",
+            "description": "It's an authorization for holding an event at the Cult Headquarters. That's my signature, and below it is my name and my position: 8th Assembly Brother.",
             "keyword": "Assembly"
         },
         {
             "id": 10,
             "itemName": "Necklace with Pendant",
             "fileName": "necklace",
-            "description": "This necklace was at the crime scene, fallen on the ground. I do not recognize this symbol, it looks like something from another country.",
+            "description": "This necklace was at the crime scene, lying on the ground. I don't recognize this symbol, it looks like something from another country.",
             "keyword": "Foreigner"
         },
         {
             "id": 11,
             "itemName": "Occurrence Report",
             "fileName": "note",
-            "description": "This report refers to the murder of Amber Nikolsi. The police know it was around 9 PM yesterday, her belongings were stolen, suspected robbery, body dumped in the bush, and the murderer acted on their own.",
+            "description": "This report refers to the murder of Amber Nikolsi. The police know it was around 9 PM yesterday, her belongings were stolen, suspected robbery, her body dumped was dumped in a bush, and the murderer acted on their own.",
             "keyword": "Murder"
         },
         {

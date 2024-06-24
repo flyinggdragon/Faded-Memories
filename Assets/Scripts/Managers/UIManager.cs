@@ -41,8 +41,8 @@ public class UIManager : MonoBehaviour {
 
     public void CreateModalWithButtons(
         string body, 
-        string btn = "Sim", 
-        string btn2 = "Não", 
+        string btn = "Yes", 
+        string btn2 = "No", 
         string header = ""
         ) {
         modalOpen = true;
@@ -53,15 +53,15 @@ public class UIManager : MonoBehaviour {
                    .SetBody(body)
                    .AddButton(btn, () => print(btn + " pressed"), ModalButtonType.Success)
                    .AddButton(btn2, () => print(btn2 + " pressed"), ModalButtonType.Danger)
-                   .AddButton("Cancelar")
+                   .AddButton("Cancel")
                    .Show();
     }
 
     // é possível criar uma lista de botões usando uma estrutura List<String>
     public void CreateNonIgnorableModal(
         string body, 
-        string btn = "Sim", 
-        string btn2 = "Não",
+        string btn = "Yes", 
+        string btn2 = "No",
         string header = ""
     ) {
         modalOpen = true;

@@ -56,7 +56,7 @@ public class SentenceSlots : MonoBehaviour {
     }
 
     private void OnPointerClick() {
-        inputModalWindow = UIManager.Instance.CreateInputModal("Preencha o espaço vazio", "Preencher");
+        inputModalWindow = UIManager.Instance.CreateInputModal("Fill in the empty space", "Info");
         inputModalWindow.SetInputField((inputResult) => { OnInputDone(inputResult); });
     }
 
@@ -82,7 +82,7 @@ public class SentenceSlots : MonoBehaviour {
         }
 
         else {
-            UIManager.Instance.CreateToastModal("Resposta Incorreta!");
+            UIManager.Instance.CreateToastModal("Wrong Answer!");
         }
 
         UIManager.Instance.UnlockCursor();
