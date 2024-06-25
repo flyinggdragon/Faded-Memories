@@ -531,10 +531,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 35.81894, y: 7.5620236}
-      - {x: -3.1391542, y: 7.562073}
-      - {x: -3.138808, y: -2.481555}
-      - {x: 35.818752, y: -2.4820175}
+    - - {x: 42.36099, y: 7.431183}
+      - {x: -9.692685, y: 7.4593534}
+      - {x: -9.684088, y: -2.3953395}
+      - {x: 42.346478, y: -2.4114919}
   m_UseDelaunayMesh: 0
 --- !u!4 &319448196
 Transform:
@@ -780,7 +780,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000004371139}
-  m_LocalPosition: {x: 1.9195175, y: 0.00999, z: -10}
+  m_LocalPosition: {x: 1.9143395, y: 0.00999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2744,6 +2744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0fc373e05117f4da574abb2bdf843c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goingToFirstMeetJacob: 0
+  talkedToJacob: 0
 --- !u!1 &1283906381
 GameObject:
   m_ObjectHideFlags: 0
