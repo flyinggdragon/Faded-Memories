@@ -1807,7 +1807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[22].text
-      value: I was a coward. I failed with my favorite pupil, and I couldn't forgive
+      value: I was a coward. I failed with my favorite student, and I couldn't forgive
         myself.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -1817,8 +1817,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[24].text
-      value: I had no idea what they wanted to do to you. So that is why I, in the
-        middle of the night, helped you to escape.
+      value: I had no idea of what they wanted to do to you. So that is why I, in
+        the middle of the night, helped you to escape.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[25].text
@@ -1840,8 +1840,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[29].text
-      value: But yet, I am involving you in this problem I don't know whether you're
-        interested or not, promissing to help you.
+      value: But yet, I am here involving you in this problem I don't even know you
+        wanted to get involved with or not.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[30].text
@@ -2485,6 +2485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0fc373e05117f4da574abb2bdf843c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goingToFirstMeetJacob: 0
+  talkedToJacob: 0
 --- !u!1 &1065277702
 GameObject:
   m_ObjectHideFlags: 0

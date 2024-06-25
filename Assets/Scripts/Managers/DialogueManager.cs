@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour {
         if (!firstInteraction) {
             typingSpeed = 0.01f;
         } else {
-            typingSpeed = 0.05f;
+            typingSpeed = 0.01f;
         }
 
         Player.Instance.hoverPopUp.SetActive(false);
@@ -118,7 +118,6 @@ public class DialogueManager : MonoBehaviour {
                     activeOptions.Add(option5Button);
                 }
                 
-                Debug.Log("activeOptions Count: " + activeOptions.Count);
                 foreach (Button option in activeOptions) {
                     option.gameObject.SetActive(true);
                 }

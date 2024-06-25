@@ -63,7 +63,11 @@ public class ObjectivesManager : MonoBehaviour {
         }
     }
 
-    private void NewObjective(Objective newObjective) {
+    public void NewObjective(Objective newObjective) {
+        if (newObjective.finished) {
+            return;
+        }
+
         GameManager.currentObjective = newObjective;
 
         TMP_Text title = currentObjective.transform.GetChild(0).GetComponent<TMP_Text>();

@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class Player : MonoBehaviour {
     public DialogueManager dialogueManager;
     private float horizontal;
-    private float speed = 8.0f;
+    private float speed = 35.0f;
     public Rigidbody2D rb;
     private bool inTrigger = false;
     private Collider2D currentTrigger;

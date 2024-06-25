@@ -755,7 +755,7 @@ Camera:
   far clip plane: 1024.12
   field of view: 60
   orthographic: 1
-  orthographic size: -4.98
+  orthographic size: -4.92
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: -4.98
+    OrthographicSize: -4.92
     NearClipPlane: 0.01
     FarClipPlane: 1024.12
     Dutch: -180
@@ -2307,6 +2307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0fc373e05117f4da574abb2bdf843c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goingToFirstMeetJacob: 0
+  talkedToJacob: 0
 --- !u!1 &1283906381
 GameObject:
   m_ObjectHideFlags: 0

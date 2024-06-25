@@ -16,9 +16,10 @@ public static class GameManager {
     public static bool knowsGeraldName = false;
     public static bool firstPuzzleCompleted = false;
     public static bool sawGraffiti = false;
-    public static bool firstTimeHome = true;
     public static bool goingToFirstMeetJacob = false;
     public static bool talkedToJacob = false;
+    public static bool knowsRumour = false;
+    public static bool firstQuarterCompleted = false;
 
     public static void Initialize() {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");   
