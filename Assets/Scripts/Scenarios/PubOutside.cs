@@ -14,8 +14,7 @@ public class PubOutside : MonoBehaviour {
             upTrigger.nextLevel = "Pub_Inside_2";
         }
 
-        if (GameManager.spokeToChief)
-        {   
+        if (GameManager.talkedToSuspectInRukon) {   
             GameManager.firstPuzzleCompleted = false;
             upTrigger.nextLevel = "Pub_Inside_3";
         }

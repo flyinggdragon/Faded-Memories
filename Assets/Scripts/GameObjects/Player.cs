@@ -100,6 +100,10 @@ public class Player : MonoBehaviour {
                     
                     CluesManager.Instance.CollectItem(item);
                     Destroy(GameObject.Find(currentTrigger.name));
+
+                    if (item.itemName == "200 Rukh Bill") {
+                        GameManager.money += 200;
+                    }
                 }
             }
         }

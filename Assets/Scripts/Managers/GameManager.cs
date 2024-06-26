@@ -20,13 +20,12 @@ public static class GameManager {
     public static bool talkedToJacob = false;
     public static bool knowsRumour = false;
     public static bool firstQuarterCompleted = false;
+    public static bool secondQuarterCompleted = false;
+    public static bool thirdQuarterCompleted = false;
     public static bool wentToAlleyAndGotNecklace = false;
-    public static bool spokeToChief = false;
+    public static bool talkedToSuspectInRukon = false;
     public static bool spokeToNimrod = false;
-
-    
-
-
+    public static bool escaping = false;
 
     public static void Initialize() {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");   

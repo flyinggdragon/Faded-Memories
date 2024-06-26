@@ -13,15 +13,16 @@ public class HomeInside : MonoBehaviour {
         GameManager.firstQuarterCompleted = true;
         Debug.Log(GameManager.firstQuarterCompleted);
 
-        /*if (portraitCollected && cloakCollected) {
-            ObjectivesManager.Instance.FinishObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
-            );
+        if (!GameManager.secondQuarterCompleted) {
+            if (portraitCollected && cloakCollected) {
+                ObjectivesManager.Instance.FinishObjective(
+                    ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
+                );
 
-            ObjectivesManager.Instance.NewObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Investigate more about the \"Cult of the Goddess of Death\".")
-            );
-
-        }*/
+                ObjectivesManager.Instance.NewObjective(
+                    ObjectivesManager.Instance.FindObjectiveByName("Find the Mysterious Man.")
+                );
+            }
+        }
     }
 }

@@ -119,4 +119,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hall.unity
     guid: 297556eb8cbf9c247a7b3ed37fc3eadd
+  - enabled: 1
+    path: Assets/Scenes/Rukon_3.unity
+    guid: 61c3a565ae9d3b5478fb66eeec7ceefc
+  - enabled: 1
+    path: Assets/Scenes/Home_Inside_3.unity
+    guid: 184149538f9161e4f9fb38470120e1d8
   m_configObjects: {}

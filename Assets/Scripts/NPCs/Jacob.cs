@@ -7,8 +7,13 @@ public class Jacob : NPC {
         npcName = "Jacob";
     }
 
-    public bool goingToFirstMeetJacob = false;
     public bool talkedToJacob = false;
+
+    void Update() {
+        if (!GameManager.goingToFirstMeetJacob) {
+            gameObject.SetActive(false);
+        }
+    }
 
     public void TellToGoToHome() {
         if (talkedToJacob) { return; }
@@ -17,7 +22,24 @@ public class Jacob : NPC {
             ObjectivesManager.Instance.FindObjectiveByName("Go to the Hall.")
         );
 
-        goingToFirstMeetJacob = false;
         talkedToJacob = true;
+    }
+
+    public void SaveDaviFromArrest() {
+        ObjectivesManager.Instance.FinishObjective(
+            ObjectivesManager.Instance.FindObjectiveByName("Investigate more about the \"Cult of the Goddess of Death\".")
+        );
+
+        GameManager.secondQuarterCompleted = true;
+    }
+
+    public void DaviGoesSleep() {
+        LevelManager.Instance.LoadLevel("Home_Inside_3");
+    }
+
+    public void InvestigateMurder() {
+        ObjectivesManager.Instance.FinishObjective(
+            ObjectivesManager.Instance.FindObjectiveByName("Find the Mysterious Man.")
+        );
     }
 }

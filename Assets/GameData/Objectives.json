@@ -37,14 +37,14 @@
             "finished": false
         },
         {
-            "title": "Find the Mysterious Man.",
-            "description": "He definitely knows me. I barely had time to ask him before he cut me off. I need to find him.",
+            "title": "Investigate more about the \"Cult of the Goddess of Death\".",
+            "description": "I used to be a member at this institution, but I don't remember a single thing about them. I should investigate them further.",
             "active": false,
             "finished": false
         },
         {
-            "title": "Investigate more about the \"Cult of the Goddess of Death\".",
-            "description": "I used to be a member at this institution, but I don't remember a single thing about them. I should investigate them further.",
+            "title": "Find the Mysterious Man.",
+            "description": "He definitely knows me. I barely had time to ask him before he cut me off. I need to find him.",
             "active": false,
             "finished": false
         },
@@ -54,14 +54,6 @@
             "active": false,
             "finished": false
         },
-
-        {
-            "title": "Go to the Police Station to find more clues",
-            "description": "Jacob also said i could find some more information at the Police Station, i should go there.",
-            "active": false,
-            "finished": false
-        },
-
         {
             "title": "Find the suspect.",
             "description": "That man is suspicious. He went into the crime scene and left, and was supposedly after something he lost. I have to find him.",
@@ -70,7 +62,7 @@
         },
         {
             "title": "Follow the suspect.",
-            "description": "That man became even more suspicious. He is trying to escape from me. I'll follow him, but I must not be noticed.",
+            "description": "That man became even more suspicious. He is trying to escape from me. I'll follow him, but I must not be noticed. Wait... he is going towards the Cult Headquarters!",
             "active": false,
             "finished": false
         },

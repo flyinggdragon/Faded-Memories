@@ -11,13 +11,11 @@ public class CommonNPCDowntown : NPC {
     }
 
     void Update() {
-        /*
         if (GameManager.firstQuarterCompleted) {
             gameObject.SetActive(true);
         } else {
             gameObject.SetActive(false);
         }
-        */
         
         if (GameManager.sawGraffiti) {
             dt.dialogueStrings[1].answerOption3 = "I saw a graffiti...";

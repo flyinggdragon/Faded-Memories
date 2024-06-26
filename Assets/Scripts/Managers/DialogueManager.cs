@@ -39,6 +39,12 @@ public class DialogueManager : MonoBehaviour {
         nextIndicator.gameObject.SetActive(false); // Inicialmente desativado
     }
 
+    void Update() {
+        if (isDialoguing) {
+            UIManager.Instance.UnlockCursor();
+        }
+    }
+
     public void DialogueStart(List<DialogueString> textToPrint, string name, bool firstInteraction) {
         if (!firstInteraction) {
             typingSpeed = 0.01f;

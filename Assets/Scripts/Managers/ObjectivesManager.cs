@@ -64,10 +64,6 @@ public class ObjectivesManager : MonoBehaviour {
     }
 
     public void NewObjective(Objective newObjective) {
-        if (newObjective.finished) {
-            return;
-        }
-
         GameManager.currentObjective = newObjective;
 
         TMP_Text title = currentObjective.transform.GetChild(0).GetComponent<TMP_Text>();
@@ -76,8 +72,10 @@ public class ObjectivesManager : MonoBehaviour {
         title.text = newObjective.title;
         description.text = newObjective.description;
 
-        newObjective.active = true;
-        UIManager.Instance.CreateToastModal(newObjective.title, "New objective!");
+        if (!newObjective.active) {
+            newObjective.active = true;
+            UIManager.Instance.CreateToastModal(newObjective.title, "New objective!");
+        }
     }
 
     public void FinishObjective(Objective current) {

@@ -13,11 +13,6 @@ public class Kamu : NPC {
             ObjectivesManager.Instance.FindObjectiveByName("Follow the suspect.")
         );
 
-        ObjectivesManager.Instance.NewObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Escape.")
-        );
+        GameManager.escaping = true;
     }
-    
-
-
 }

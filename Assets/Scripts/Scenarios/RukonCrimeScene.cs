@@ -23,10 +23,6 @@ public class RukonCrimeScene : MonoBehaviour
                 ObjectivesManager.Instance.FindObjectiveByName("Investigate the murder of Amber Nikolsi.")
             );
 
-            ObjectivesManager.Instance.NewObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Go to the Police Station to find more clues.")
-            );
-
             GameManager.wentToAlleyAndGotNecklace = true;
 
         }

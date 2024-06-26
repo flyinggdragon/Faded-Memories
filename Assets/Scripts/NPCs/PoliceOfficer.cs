@@ -19,4 +19,8 @@ public class PoliceOfficer : NPC {
             dt.dialogueStrings[4].option4IndexJump = 0;
         }
     }
+
+    public void Bribe() {
+        GameManager.money -= 200;
+    }
 }

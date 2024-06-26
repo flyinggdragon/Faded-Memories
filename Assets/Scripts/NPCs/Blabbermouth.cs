@@ -11,13 +11,11 @@ public class Blabbermouth : NPC {
     }
 
     void Update() {
-        /*
         if (GameManager.firstQuarterCompleted) {
             gameObject.SetActive(true);
         } else {
             gameObject.SetActive(false);
         }
-        */
 
         if (GameManager.sawGraffiti) {
             dt.dialogueStrings[0].answerOption3 = "I saw a graffiti...";
@@ -30,5 +28,9 @@ public class Blabbermouth : NPC {
 
     public void TellRumour() {
         GameManager.knowsRumour = true;
+    }
+
+    public void Pay() {
+        GameManager.money -= 55;
     }
 }

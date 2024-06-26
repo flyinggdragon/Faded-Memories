@@ -11,8 +11,10 @@ public class DowntownHigh : MonoBehaviour
     }
 
     void Update() {
-        if (GameManager.talkedToJacob) {
+        if (GameManager.secondQuarterCompleted) {
             upTriggerRukon.nextLevel = "Rukon_2";
+        } else {
+            upTriggerRukon.nextLevel = "Rukon";
         }
     }
 }

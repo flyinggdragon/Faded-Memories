@@ -4,6 +4,24 @@ using UnityEngine;
 
 public class HomeEntrance : MonoBehaviour {
     private bool canEnter = GameManager.items[2].collected;
+    private string nextLevel;
+
+    void Start() {
+        nextLevel = "Home_Inside";
+    }
+
+    void Update() {
+        if (GameManager.secondQuarterCompleted) {
+            nextLevel = "Home_Inside_2";
+        }
+
+        if (GameManager.escaping) {
+            nextLevel = "Home_Inside_3";
+
+            GameManager.escaping = false;
+            GameManager.thirdQuarterCompleted = true;
+        }
+    }
 
     public void Enter() {
         if (!canEnter) {
@@ -12,7 +30,7 @@ public class HomeEntrance : MonoBehaviour {
         }
 
         else {
-            LevelManager.Instance.LoadLevel("Home_Inside");
+            LevelManager.Instance.LoadLevel(nextLevel);
 
             transform.position = new Vector3(
                         -11.0f,
