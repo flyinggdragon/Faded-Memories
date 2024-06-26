@@ -16,6 +16,10 @@ public class PoliceStation : MonoBehaviour {
         } else {
             upTrigger.gameObject.SetActive(false);
         }
+
+        if (GameManager.wentToAlleyAndGotNecklace) {
+            upTrigger.nextLevel = "PoliceStation_ChiefRoom_2";
+        }
     }
 
     public void BlindEye() {

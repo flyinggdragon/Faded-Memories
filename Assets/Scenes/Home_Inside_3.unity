@@ -1666,10 +1666,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 37.34435, y: 7.5609417}
-      - {x: -9.949606, y: 7.5604506}
-      - {x: -9.94165, y: -2.4796243}
-      - {x: 37.354073, y: -2.483952}
+    - - {x: 37.232628, y: 7.555062}
+      - {x: -9.827875, y: 7.554364}
+      - {x: -9.829357, y: -2.482304}
+      - {x: 37.230595, y: -2.4780722}
   m_UseDelaunayMesh: 0
 --- !u!4 &1023186330
 Transform:
@@ -2233,6 +2233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0fc373e05117f4da574abb2bdf843c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goingToFirstMeetJacob: 0
+  talkedToJacob: 0
 --- !u!1 &1065277702
 GameObject:
   m_ObjectHideFlags: 0

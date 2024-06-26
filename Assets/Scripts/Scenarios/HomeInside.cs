@@ -13,7 +13,7 @@ public class HomeInside : MonoBehaviour {
         GameManager.firstQuarterCompleted = true;
         Debug.Log(GameManager.firstQuarterCompleted);
 
-        if (portraitCollected && cloakCollected) {
+        /*if (portraitCollected && cloakCollected) {
             ObjectivesManager.Instance.FinishObjective(
                 ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
             );
@@ -22,6 +22,6 @@ public class HomeInside : MonoBehaviour {
                 ObjectivesManager.Instance.FindObjectiveByName("Investigate more about the \"Cult of the Goddess of Death\".")
             );
 
-        }
+        }*/
     }
 }

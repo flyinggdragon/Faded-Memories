@@ -6,4 +6,18 @@ public class Kamu : NPC {
     public override void RevealName() {
         npcName = "Kamu \"Sun\" Uepeker";
     }
+
+    public void TalkToCultists()
+    {
+        ObjectivesManager.Instance.FinishObjective(
+            ObjectivesManager.Instance.FindObjectiveByName("Follow the suspect.")
+        );
+
+        ObjectivesManager.Instance.NewObjective(
+            ObjectivesManager.Instance.FindObjectiveByName("Escape.")
+        );
+    }
+    
+
+
 }

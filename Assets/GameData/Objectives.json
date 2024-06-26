@@ -54,6 +54,14 @@
             "active": false,
             "finished": false
         },
+
+        {
+            "title": "Go to the Police Station to find more clues",
+            "description": "Jacob also said i could find some more information at the Police Station, i should go there.",
+            "active": false,
+            "finished": false
+        },
+
         {
             "title": "Find the suspect.",
             "description": "That man is suspicious. He went into the crime scene and left, and was supposedly after something he lost. I have to find him.",
