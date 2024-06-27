@@ -59,11 +59,12 @@ public class Notebook : MonoBehaviour {
         GameManager.sleptDay2 = true;
         GameManager.spokeToNimrod = true;
         GameManager.escaping = false;
-        GameManager.thirdQuarterCompleted = true;
+        GameManager.spokeToHemer = true;
 
         CluesManager.Instance.CollectItem(GameManager.items[2]);
         CluesManager.Instance.CollectItem(GameManager.items[4]);
         CluesManager.Instance.CollectItem(GameManager.items[5]);
+        CluesManager.Instance.CollectItem(GameManager.items[11]);
     }
 
     public void tp() {

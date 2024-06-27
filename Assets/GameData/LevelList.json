@@ -145,6 +145,14 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
+            "levelName": "CultHQ_Deposit",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "CultHQ_Deposit_2",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
             "levelName": "Puzzle",
             "backgroundSong": "Heaven Central Authority"
         }

@@ -27,6 +27,9 @@ public static class GameManager {
     public static bool sleptDay2 = false;
     public static bool spokeToNimrod = false;
     public static bool escaping = false;
+    public static bool spokeToHemer = false;
+    public static bool reportedCult = false;
+    public static bool raidTime = false;
 
     public static void Initialize() {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");   

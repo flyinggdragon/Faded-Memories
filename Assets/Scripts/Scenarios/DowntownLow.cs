@@ -16,5 +16,13 @@ public class DowntownLow : MonoBehaviour
         if (GameManager.spokeToNimrod) {
             upTriggerCult.nextLevel = "CultHQ_Outside_2";
         }
+
+        if (GameManager.raidTime) {
+            upTriggerCult.nextLevel = "CultHQ_Outside_3";
+        }
+
+        if (GameManager.spokeToHemer) {
+            upTriggerPoliceStation.nextLevel = "PoliceStation_Main_2";
+        }
     }
 }
