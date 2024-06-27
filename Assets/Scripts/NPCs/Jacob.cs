@@ -5,6 +5,7 @@ public class Jacob : NPC {
     public override string npcName { get; set; } = "Mysterious Man";
     public override void RevealName() {
         npcName = "Jacob";
+        Player.Instance.dialogueManager.UpdateNPCName(npcName);
     }
 
     public bool talkedToJacob = false;
@@ -35,6 +36,8 @@ public class Jacob : NPC {
 
     public void DaviGoesSleep() {
         LevelManager.Instance.LoadLevel("Home_Inside_3");
+
+        GameManager.sleptDay2 = true;
     }
 
     public void InvestigateMurder() {

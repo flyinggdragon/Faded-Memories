@@ -11,6 +11,7 @@ public class Journalist : NPC {
 
     public override void RevealName() {
         npcName = "Peter";
+        Player.Instance.dialogueManager.UpdateNPCName(npcName);
     }
 
     void Update() {

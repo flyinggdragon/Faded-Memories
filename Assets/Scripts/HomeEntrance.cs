@@ -11,15 +11,19 @@ public class HomeEntrance : MonoBehaviour {
     }
 
     void Update() {
-        if (GameManager.secondQuarterCompleted) {
-            nextLevel = "Home_Inside_2";
-        }
-
         if (GameManager.escaping) {
-            nextLevel = "Home_Inside_3";
+            nextLevel = "Home_Inside_4";
 
             GameManager.escaping = false;
             GameManager.thirdQuarterCompleted = true;
+        }
+
+        else if (GameManager.sleptDay2) {
+            nextLevel = "Home_Inside_3";
+        }
+
+        else if (GameManager.secondQuarterCompleted) {
+            nextLevel = "Home_Inside_2";
         }
     }
 

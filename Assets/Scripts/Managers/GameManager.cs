@@ -24,6 +24,7 @@ public static class GameManager {
     public static bool thirdQuarterCompleted = false;
     public static bool wentToAlleyAndGotNecklace = false;
     public static bool talkedToSuspectInRukon = false;
+    public static bool sleptDay2 = false;
     public static bool spokeToNimrod = false;
     public static bool escaping = false;
 

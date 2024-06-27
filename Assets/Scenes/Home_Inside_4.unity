@@ -1752,7 +1752,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[0].text
-      value: That's a doozy. They don't seem to enjoy your presence anymore.
+      value: So you had to escape? That's a doozy. They don't seem to enjoy your
+        presence anymore.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[1].text
@@ -2309,7 +2310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0fc373e05117f4da574abb2bdf843c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goingToFirstMeetJacob: 0
   talkedToJacob: 0
 --- !u!1 &1065277702
 GameObject:

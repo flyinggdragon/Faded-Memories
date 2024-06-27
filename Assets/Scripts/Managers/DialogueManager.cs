@@ -183,4 +183,8 @@ public class DialogueManager : MonoBehaviour {
         UIManager.Instance.LockCursor();
         nextIndicator.gameObject.SetActive(false);
     }
+
+    public void UpdateNPCName(string name) {
+        npcName = name;
+    }
 }

@@ -12,13 +12,11 @@ public class Businessman : NPC {
     }
 
     void Update() {
-        /*
         if (GameManager.firstQuarterCompleted) {
             gameObject.SetActive(true);
         } else {
             gameObject.SetActive(false);
         }
-        */
         
         if (GameManager.sawGraffiti) {
             dt.dialogueStrings[0].answerOption3 = "I saw a graffiti...";

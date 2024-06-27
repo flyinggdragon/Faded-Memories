@@ -5,6 +5,7 @@ public class Suspect : NPC {
     public override string npcName { get; set; } = "???????";
     public override void RevealName() {
         npcName = "Nimrod Vakjal";
+        Player.Instance.dialogueManager.UpdateNPCName(npcName);
     }
 
     public void TalkToSuspectInRukon() {
@@ -16,5 +17,9 @@ public class Suspect : NPC {
         ObjectivesManager.Instance.FinishObjective(
             ObjectivesManager.Instance.FindObjectiveByName("Find the suspect.")
         );
+    }
+
+    public void EnterCult() {
+        Destroy(gameObject);
     }
 }
