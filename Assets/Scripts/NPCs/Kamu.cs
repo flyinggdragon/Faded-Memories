@@ -6,6 +6,11 @@ public class Kamu : NPC {
     private DialogueTrigger dt;
 
     public override void RevealName() {
+        npcName = "Kamu Uepeker";
+        Player.Instance.dialogueManager.UpdateNPCName(npcName);
+    }
+
+    public void ReRevealName() {
         npcName = "Kamu \"Sun\" Uepeker";
         Player.Instance.dialogueManager.UpdateNPCName(npcName);
     }

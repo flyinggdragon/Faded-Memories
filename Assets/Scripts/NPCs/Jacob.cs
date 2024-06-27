@@ -45,4 +45,15 @@ public class Jacob : NPC {
             ObjectivesManager.Instance.FindObjectiveByName("Find the Mysterious Man.")
         );
     }
+
+    public void CallHemer() {
+        ObjectivesManager.Instance.FinishObjective(
+            ObjectivesManager.Instance.FindObjectiveByName("Escape.")
+        );
+
+        GameManager.escaping = false;
+        GameManager.thirdQuarterCompleted = true;
+
+        LevelManager.Instance.LoadLevel("Home_Inside_5");
+    }
 }

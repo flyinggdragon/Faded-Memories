@@ -37,6 +37,39 @@ public class Notebook : MonoBehaviour {
         }
     }
 
+    public void Debug3() {
+        for (int i = 0; i < 8; i++) {
+            ObjectivesManager.Instance.FinishObjective(
+                GameManager.objectives[i]
+            );
+        }
+
+        GameManager.knowsPoliceCrackdown = true;
+        GameManager.talkedToGerald = true;
+        GameManager.knowsGeraldName = true;
+        GameManager.firstPuzzleCompleted = true;
+        GameManager.sawGraffiti = true;
+        GameManager.goingToFirstMeetJacob = true;
+        GameManager.talkedToJacob = true;
+        GameManager.knowsRumour = true;
+        GameManager.firstQuarterCompleted = true;
+        GameManager.secondQuarterCompleted = true;
+        GameManager.thirdQuarterCompleted = true;
+        GameManager.wentToAlleyAndGotNecklace = true;
+        GameManager.sleptDay2 = true;
+        GameManager.spokeToNimrod = true;
+        GameManager.escaping = false;
+        GameManager.thirdQuarterCompleted = true;
+
+        CluesManager.Instance.CollectItem(GameManager.items[2]);
+        CluesManager.Instance.CollectItem(GameManager.items[4]);
+        CluesManager.Instance.CollectItem(GameManager.items[5]);
+    }
+
+    public void tp() {
+        LevelManager.Instance.LoadLevel("Home_Inside_5");
+    }
+
     void Start() {
         GameObject.Find("Notebook Holder").SetActive(false);
         
