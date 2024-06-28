@@ -173,7 +173,7 @@ public class DialogueManager : MonoBehaviour {
         currentDialogueIndex++;
     }
 
-    private void DialogueStop() {
+    public void DialogueStop() {
         isDialoguing = false;
 
         StopAllCoroutines();

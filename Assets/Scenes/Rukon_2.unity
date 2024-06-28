@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd18a8f35dce3654ab3e45007b043e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: Rukon_CrimeScene
+  nextLevel: Rukon_CrimeScene_1
   nextPosX: 5.73
   nextPosY: -2.19
   nextScaleX: -1

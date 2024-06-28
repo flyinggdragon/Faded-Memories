@@ -25,6 +25,10 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
+            "levelName": "Pub_Inside_4",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
             "levelName": "Hall",
             "backgroundSong": "Heaven Central Authority"
         },
@@ -105,6 +109,10 @@
             "backgroundSong": "Empire City Night"
         },
         {
+            "levelName": "Rukon_CrimeScene_2",
+            "backgroundSong": "Empire City Night"
+        },
+        {
             "levelName": "BusinessCenter",
             "backgroundSong": "Heaven Central Authority"
         },
@@ -129,7 +137,15 @@
             "backgroundSong": "Heaven Central Authority"
         },
         {
+            "levelName": "CultHQ_Lobby_2",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
             "levelName": "CultHQ_Sanctuary",
+            "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "CultHQ_Sanctuary_2",
             "backgroundSong": "Heaven Central Authority"
         },
         {
@@ -151,6 +167,10 @@
         {
             "levelName": "CultHQ_Deposit_2",
             "backgroundSong": "Heaven Central Authority"
+        },
+        {
+            "levelName": "Last_Scene",
+            "backgroundSong": "Empire City Night"
         },
         {
             "levelName": "Puzzle",

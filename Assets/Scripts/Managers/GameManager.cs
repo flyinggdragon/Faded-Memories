@@ -30,6 +30,9 @@ public static class GameManager {
     public static bool spokeToHemer = false;
     public static bool reportedCult = false;
     public static bool raidTime = false;
+    public static bool sawBag = false;
+    public static bool sawFinances = false;
+    public static bool sawConfidentialDocuments = false;
 
     public static void Initialize() {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");   

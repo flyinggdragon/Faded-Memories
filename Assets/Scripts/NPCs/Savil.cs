@@ -7,4 +7,8 @@ public class Savil : NPC {
         npcName = "Savil Kersiy, The Grand Leader";
         Player.Instance.dialogueManager.UpdateNPCName(npcName);
     }
+
+    public void SendToJournalist() {
+        LevelManager.Instance.LoadLevel("Last_Scene");
+    }
 }

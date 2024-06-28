@@ -410,10 +410,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 43.929813, y: 7.5648494}
+    - - {x: 53.87893, y: 7.591604}
       - {x: -11.250017, y: 7.564848}
       - {x: -11.250007, y: -2.4851012}
-      - {x: 43.930195, y: -2.484951}
+      - {x: 53.8258, y: -2.484951}
   m_UseDelaunayMesh: 0
 --- !u!4 &239136797
 Transform:
@@ -1457,6 +1457,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045ab7d25c5470344a7b795ed57882ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &967731404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967731406}
+  - component: {fileID: 967731405}
+  m_Layer: 0
+  m_Name: Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &967731405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967731404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876101b1508098542aac34409c4abc31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &967731406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967731404}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.794796, y: -1.7664113, z: -0.03484384}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000328567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,7 +2124,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.65
+      value: 12.1
       objectReference: {fileID: 0}
     - target: {fileID: 3827478434992302808, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2717,7 +2761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5777942044075181169, guid: e7d5df345835f7a438199315c843fafd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.79
+      value: -11.39
       objectReference: {fileID: 0}
     - target: {fileID: 5777942044075181169, guid: e7d5df345835f7a438199315c843fafd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2780,9 +2824,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd18a8f35dce3654ab3e45007b043e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: CultHQ_Lobby_2
-  nextPosX: 36.36
-  nextPosY: -2.19
+  nextLevel: CultHQ_Sanctuary_2
+  nextPosX: 13.28
+  nextPosY: -1.41
   nextScaleX: -1
 --- !u!1 &1897351869
 GameObject:
@@ -3048,7 +3092,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4260042724158620689, guid: f949108269bce5945b5c4a33a39b85cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.65
+      value: 49.82
       objectReference: {fileID: 0}
     - target: {fileID: 4260042724158620689, guid: f949108269bce5945b5c4a33a39b85cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3116,9 +3160,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: 
-  nextPosX: 0
-  nextPosY: 0
-  nextScaleX: 0
+  nextPosX: -4.2
+  nextPosY: -2.04
+  nextScaleX: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3136,3 +3180,4 @@ SceneRoots:
   - {fileID: 746295438}
   - {fileID: 239136797}
   - {fileID: 1383389118}
+  - {fileID: 967731406}

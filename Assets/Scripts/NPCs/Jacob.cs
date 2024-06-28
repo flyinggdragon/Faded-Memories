@@ -3,12 +3,17 @@ using UnityEngine;
 
 public class Jacob : NPC {
     public override string npcName { get; set; } = "Mysterious Man";
+    public DialogueTrigger dt;
+    public bool talkedToJacob = false;
+
+    void Start() {
+        dt = GetComponentInChildren<DialogueTrigger>();
+    }
+    
     public override void RevealName() {
         npcName = "Jacob";
         Player.Instance.dialogueManager.UpdateNPCName(npcName);
     }
-
-    public bool talkedToJacob = false;
 
     void Update() {
         if (!GameManager.goingToFirstMeetJacob) {
@@ -55,5 +60,25 @@ public class Jacob : NPC {
         GameManager.thirdQuarterCompleted = true;
 
         LevelManager.Instance.LoadLevel("Home_Inside_5");
+    }
+
+    public void LaunchRaid() {
+        ObjectivesManager.Instance.FinishObjective(
+            ObjectivesManager.Instance.FindObjectiveByName("Go see Jacob.")
+        );
+
+        GameManager.raidTime = true;
+    }
+
+    public void SeeBag() {
+        GameManager.sawBag = true;
+    }
+
+    public void SeeFinances() {
+        GameManager.sawFinances = true;
+    }
+
+    public void SeeConfidentialDocuments() {
+        GameManager.sawConfidentialDocuments = true;
     }
 }

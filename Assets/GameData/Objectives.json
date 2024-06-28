@@ -79,6 +79,12 @@
             "finished": false
         },
         {
+            "title": "Go see Jacob.",
+            "description": "Hemer asked me to see Jacob back at Home to organize everything.",
+            "active": false,
+            "finished": false
+        },
+        {
             "title": "Infiltrate the Cult Headquarters.",
             "description": "It's all or nothing. Time to infiltrate and look for more proof to show to the authorities.",
             "active": false,

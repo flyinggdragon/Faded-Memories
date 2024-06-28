@@ -134,4 +134,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CultHQ_Deposit_2.unity
     guid: 5ce4c047b37b4c14cb6654cc8c071514
+  - enabled: 1
+    path: Assets/Scenes/Pub_Inside_4.unity
+    guid: cef65314fed6c0948a948778be778bb7
+  - enabled: 1
+    path: Assets/Scenes/CultHQ_Outside_3.unity
+    guid: 7866f3009a48dd240ba1224102940c36
+  - enabled: 1
+    path: Assets/Scenes/Last_Scene.unity
+    guid: 8367237fd116c75418e7e528f819a917
+  - enabled: 1
+    path: Assets/Scenes/Rukon_CrimeScene_2.unity
+    guid: ad54abd849c366446989bb2003b055e8
   m_configObjects: {}
