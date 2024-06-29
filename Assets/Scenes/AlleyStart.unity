@@ -7420,7 +7420,7 @@ MonoBehaviour:
   textComponent: {fileID: 2035489679}
   nextIndicator: {fileID: 1283906383}
   ds1:
-  - text: "Mem\xF3ria 1"
+  - text: Wait... I remember something...
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -7440,7 +7440,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  - text: Teste 1
+  - text: You are a small child, roaming around the streets. Your parents are nowhere
+      to be seen.
     isEnd: 0
     isQuestion: 0
     answerOption1: 

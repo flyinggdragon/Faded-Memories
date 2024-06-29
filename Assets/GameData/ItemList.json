@@ -58,7 +58,7 @@
         },
         {
             "id": 9,
-            "itemName": "Event Authorization",
+            "itemName": "Authorization",
             "fileName": "authorization",
             "description": "It's an authorization for holding an event at the Cult Headquarters. That's my signature, and below it is my name and my position: 8th Assembly Brother.",
             "keyword": "Assembly"
@@ -90,13 +90,6 @@
             "fileName": "bag",
             "description": "This bag definitely belonged to Amber Nikolsi, the documents inside prove it. It was thrown in the Cult's depot.",
             "keyword": "Premeditated"
-        },
-        {
-            "id": 14,
-            "itemName": "Cult's Finances",
-            "fileName": "docSpendings",
-            "description": "These documents detail the finances of the Cult. But something seems off here.",
-            "keyword": "Inconsistency"
         }
     ]
 }
