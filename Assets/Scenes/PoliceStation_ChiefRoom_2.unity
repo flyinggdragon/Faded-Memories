@@ -123,6 +123,112 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &15561780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 519420032}
+    m_Modifications:
+    - target: {fileID: 591246465175885532, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 591246465175885532, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1048102961
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907997004359120887, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_Name
+      value: Location Name 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.56872
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1828
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.81424
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000008742278
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150728359914218836, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_text
+      value: Police Station - Chief Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150728359914218836, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_margin.w
+      value: -28.64392
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150728359914218836, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_margin.x
+      value: -150.04878
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150728359914218836, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_margin.z
+      value: -200.40828
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008492539016232401, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 332.872
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008492539016232401, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -9.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008492539016232401, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 166
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+--- !u!4 &15561781 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6081081991898386187, guid: 09b4ad9a3ffae514093bd013112c1d69, type: 3}
+  m_PrefabInstance: {fileID: 15561780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &55690352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1262,7 +1368,8 @@ Transform:
   m_LocalPosition: {x: 5.1, y: 0.00999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 15561781}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
