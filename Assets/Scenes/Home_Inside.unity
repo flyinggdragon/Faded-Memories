@@ -679,6 +679,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloakCollected: 0
   portraitCollected: 0
+  ds:
+  - text: "Mem\xF3ria 1"
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: Faz o Pix pro Marco
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: Ok?
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
 --- !u!4 &325561585
 Transform:
   m_ObjectHideFlags: 0

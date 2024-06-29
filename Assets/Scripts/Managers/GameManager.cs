@@ -48,8 +48,9 @@ public static class GameManager {
 
         AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.3f);
         
+        BlackScreenText.Instance.Hide();
         Notebook.Instance.ToggleNotebook();
-
+        
         Starter.firstTime = false;
     }
 }

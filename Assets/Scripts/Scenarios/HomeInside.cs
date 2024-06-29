@@ -19,9 +19,7 @@ public class HomeInside : MonoBehaviour {
                     ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
                 );
 
-                ObjectivesManager.Instance.NewObjective(
-                    ObjectivesManager.Instance.FindObjectiveByName("Find the Mysterious Man.")
-                );
+                //BlackScreenText.Instance.CreateBlackScreenWithText();
             }
         }
     }

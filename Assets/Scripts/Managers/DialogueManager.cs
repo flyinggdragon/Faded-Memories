@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] private Button option3Button;
     [SerializeField] private Button option4Button;
     [SerializeField] private Button option5Button;
-    [SerializeField] private Image nextIndicator; // Adicione esta linha
+    [SerializeField] private Image nextIndicator;
 
     private List<Button> activeOptions;
     private Image dialogueImage;
@@ -156,7 +156,7 @@ public class DialogueManager : MonoBehaviour {
 
         foreach (char letter in text.ToCharArray()) {
             dialogueText.text += letter;
-            AudioManager.Instance.PlaySound(typingSound, 0.8f);
+            AudioManager.Instance.PlaySound(typingSound, 0.5f);
             yield return new WaitForSeconds(typingSpeed);
         }
 

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Notebook : MonoBehaviour {
     private static Notebook instance;
+    public static Notebook Instance { get; private set; }
     public GameObject NotebookObject;
     public bool isOpen = false;
 
@@ -24,7 +25,6 @@ public class Notebook : MonoBehaviour {
     private Button sentencesButton;
     private Button cluesButton;
     private Button objectivesButton;
-    public static Notebook Instance { get; private set; }
 
     void Awake() {
         if (Instance == null && Instance != this) {

@@ -1,45 +1,75 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BlackScreenText : MonoBehaviour {
-    private Canvas canvas;
-    private Text textComponent;
-    private GameObject background;
+    public TMP_Text textComponent;
+    private static BlackScreenText instance;
+    public static BlackScreenText Instance { get; private set; }
+    private bool isActive = false;
+    private int textIndex = 0;
+    private int textInterval = 3;
+    [SerializeField] private Image nextIndicator;
+    
+    [SerializeField] public List<DialogueString> ds1 = new List<DialogueString>();
+    
+    [SerializeField] public List<DialogueString> ds2 = new List<DialogueString>();
+    
+    [SerializeField] public List<DialogueString> ds3 = new List<DialogueString>();
+    [SerializeField] public List<DialogueString> ds4 = new List<DialogueString>();
 
-    void Start() {
-        CreateBlackScreenWithText("Seu texto aqui...");
+    void Awake() {
+        if (Instance == null && Instance != this) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else {
+            Destroy(gameObject);
+        }
     }
 
-    public void CreateBlackScreenWithText(string message) {
-        // Create Canvas
-        GameObject canvasObject = new GameObject("BlackScreenCanvas");
-        canvas = canvasObject.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvasObject.AddComponent<CanvasScaler>();
-        canvasObject.AddComponent<GraphicRaycaster>();
+    public void CreateBlackScreenWithText(List<DialogueString> ds) {
+        isActive = true;
+        gameObject.SetActive(isActive);
 
-        background = new GameObject("Background");
-        background.transform.parent = canvasObject.transform;
-        RectTransform backgroundRectTransform = background.AddComponent<RectTransform>();
-        backgroundRectTransform.anchorMin = new Vector2(0, 0);
-        backgroundRectTransform.anchorMax = new Vector2(1, 1);
-        backgroundRectTransform.sizeDelta = Vector2.zero;
-        Image backgroundImage = background.AddComponent<Image>();
-        backgroundImage.color = Color.black;
+        nextIndicator.gameObject.SetActive(false);
 
-        GameObject textObject = new GameObject("Text");
-        textObject.transform.parent = background.transform;
-        textComponent = textObject.AddComponent<Text>();
-        RectTransform textRectTransform = textObject.GetComponent<RectTransform>();
-        textRectTransform.anchorMin = new Vector2(0, 0);
-        textRectTransform.anchorMax = new Vector2(1, 1);
-        textRectTransform.sizeDelta = Vector2.zero;
-        textRectTransform.anchoredPosition = Vector2.zero;
+        textIndex = 0;
 
-        textComponent.text = message;
-        textComponent.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
-        textComponent.alignment = TextAnchor.MiddleCenter;
-        textComponent.color = Color.white;
-        textComponent.fontSize = 30;
+        StartCoroutine(TextStart(ds));
+    }
+
+    public void Hide() {
+        isActive = false;
+        gameObject.SetActive(isActive);
+
+        textComponent.text = "";
+    }
+
+    private IEnumerator TextStart(List<DialogueString> ds) {
+        while(textIndex < ds.Count) {
+            DialogueString line = ds[textIndex];
+            textComponent.text = line.text;
+
+            nextIndicator.gameObject.SetActive(false);
+            yield return new WaitForSeconds(textInterval);
+            nextIndicator.gameObject.SetActive(true);
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            
+            if (line.isEnd) {
+                StopCoroutine("TextStart");
+                Hide();
+            }
+
+            textIndex++;
+        }
+    }
+
+    public void Debug1() {
+        CreateBlackScreenWithText(ds1);
     }
 }
