@@ -87,7 +87,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Home_Inside_2.unity
     guid: dd4be38407b4b424186ddbb6d6cb06b5
   - enabled: 1
-    path: Assets/Scenes/PoliceStation_Main_2.unity
+    path: Assets/Scenes/PoliceStation_Main_3.unity
     guid: 80be8ef08a800d545b6ef80209b13af9
   - enabled: 1
     path: Assets/Scenes/Pub_Inside_3.unity
@@ -146,4 +146,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rukon_CrimeScene_2.unity
     guid: ad54abd849c366446989bb2003b055e8
+  - enabled: 1
+    path: Assets/Scenes/PoliceStation_Main_2.unity
+    guid: f85d91211605c114d9413794eb01fbf9
   m_configObjects: {}

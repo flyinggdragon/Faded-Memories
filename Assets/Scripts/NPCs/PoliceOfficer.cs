@@ -5,6 +5,7 @@ public class PoliceOfficer : NPC {
     public override string npcName { get; set; } = "Police Officer";
     public override void RevealName() {}
     private DialogueTrigger dt;
+    private bool allowedEntrance = false;
 
     void Start() {
         dt = GetComponentInChildren<DialogueTrigger>();

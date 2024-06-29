@@ -28,6 +28,7 @@ public class Jacob : NPC {
             ObjectivesManager.Instance.FindObjectiveByName("Go to the Hall.")
         );
 
+        GameManager.goingToFirstMeetJacob = false;
         talkedToJacob = true;
     }
 

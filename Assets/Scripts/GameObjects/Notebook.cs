@@ -37,6 +37,52 @@ public class Notebook : MonoBehaviour {
         }
     }
 
+    public void Debug1() {
+
+        for (int i = 0; i < 6; i++) {
+            ObjectivesManager.Instance.FinishObjective(
+                GameManager.objectives[i]
+            );
+        }
+
+        GameManager.knowsPoliceCrackdown = true;
+        GameManager.talkedToGerald = true;
+        GameManager.knowsGeraldName = true;
+        GameManager.firstPuzzleCompleted = true;
+        GameManager.sawGraffiti = true;
+        GameManager.goingToFirstMeetJacob = true;
+        GameManager.talkedToJacob = true;
+        GameManager.knowsRumour = true;
+        GameManager.firstQuarterCompleted = true;
+        GameManager.secondQuarterCompleted = true;
+        
+
+        CluesManager.Instance.CollectItem(GameManager.items[2]);
+        CluesManager.Instance.CollectItem(GameManager.items[4]);
+        CluesManager.Instance.CollectItem(GameManager.items[5]);
+    }
+    public void Debug2() {
+        for (int i = 0; i < 8; i++) {
+            ObjectivesManager.Instance.FinishObjective(
+                GameManager.objectives[i]
+            );
+        }
+
+        GameManager.knowsPoliceCrackdown = true;
+        GameManager.talkedToGerald = true;
+        GameManager.knowsGeraldName = true;
+        GameManager.firstPuzzleCompleted = true;
+        GameManager.sawGraffiti = true;
+        GameManager.goingToFirstMeetJacob = true;
+        GameManager.talkedToJacob = true;
+        GameManager.knowsRumour = true;
+        GameManager.firstQuarterCompleted = true;
+        GameManager.secondQuarterCompleted = true;
+
+        CluesManager.Instance.CollectItem(GameManager.items[2]);
+        CluesManager.Instance.CollectItem(GameManager.items[4]);
+        CluesManager.Instance.CollectItem(GameManager.items[5]);
+    }
     public void Debug3() {
         for (int i = 0; i < 8; i++) {
             ObjectivesManager.Instance.FinishObjective(
@@ -69,10 +115,6 @@ public class Notebook : MonoBehaviour {
         CluesManager.Instance.CollectItem(GameManager.items[4]);
         CluesManager.Instance.CollectItem(GameManager.items[5]);
         CluesManager.Instance.CollectItem(GameManager.items[11]);
-    }
-
-    public void tp() {
-        LevelManager.Instance.LoadLevel("CultHQ_LeaderRoom");
     }
 
     void Start() {

@@ -221,6 +221,8 @@ public class JigsawManager : MonoBehaviour {
                 ObjectivesManager.Instance.FindObjectiveByName("Find the key to the Abandoned House.")
                 );
             GameManager.firstPuzzleCompleted = true;
+
+            PoliceStation.blindEye = false;
         }
       }
     }
