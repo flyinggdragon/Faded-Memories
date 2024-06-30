@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
-    private AudioSource bgMusicSource;
+    public AudioSource bgMusicSource;
     private AudioSource sfxSource;
     public static AudioManager Instance { get; private set; }
     public AudioClip doorLock;

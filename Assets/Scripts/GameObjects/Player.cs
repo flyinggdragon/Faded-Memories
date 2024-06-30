@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen)) {
+        if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive)) {
             horizontal = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(horizontal * speed, 0);
         } else { rb.velocity = Vector2.zero; }
@@ -84,12 +84,12 @@ public class Player : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) {
-            if (!dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen) {
+            if (!dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen && !BlackScreenText.Instance.isActive) {
                 Notebook.Instance.ToggleNotebook();
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen) {            
+        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen && !BlackScreenText.Instance.isActive) {            
             if (currentTrigger.CompareTag("NPC")) {
                 currentTrigger.GetComponent<DialogueTrigger>().DialogueStart();
             }
@@ -133,6 +133,13 @@ public class Player : MonoBehaviour {
                         );
                     }
                 }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.P)) {
+            if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive)) {
+                Pause.Instance.TogglePause();
+                rb.velocity = Vector2.zero;
             }
         }
 

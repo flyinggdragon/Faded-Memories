@@ -12,10 +12,10 @@ public class BlackScreenText : MonoBehaviour {
     public Image imageComponent;
     private static BlackScreenText instance;
     public static BlackScreenText Instance { get; private set; }
-    private bool isActive = false;
+    public bool isActive = false;
     private int textIndex = 0;
     private int textInterval = 3;
-    [SerializeField] private static Image nextIndicator;
+    [SerializeField] private Image nextIndicator;
 
     [SerializeField] public List<DialogueString> ds1 = new List<DialogueString>();
     [SerializeField] public List<DialogueString> ds2 = new List<DialogueString>();
@@ -43,6 +43,10 @@ public class BlackScreenText : MonoBehaviour {
         }
     }
 
+    void Start() {
+        container.SetActive(false);
+    }
+
     public void CreateBlackScreenWithText(List<DialogueString> ds) {
         Notebook.Instance.ToggleNotebook();
 
@@ -50,6 +54,7 @@ public class BlackScreenText : MonoBehaviour {
         gameObject.SetActive(isActive);
 
         imageContainer.SetActive(false);
+        container.SetActive(true);
         textContainer.SetActive(true);
         nextIndicator.gameObject.SetActive(false);
 
@@ -66,6 +71,7 @@ public class BlackScreenText : MonoBehaviour {
         gameObject.SetActive(isActive);
 
         imageContainer.SetActive(true);
+        container.SetActive(true);
         textContainer.SetActive(false);
 
         textIndex = 0;
@@ -112,6 +118,6 @@ public class BlackScreenText : MonoBehaviour {
     }
 
     public void Debug1() {
-        CreateTransparentItemDisplayer(authorization);
+        CreateBlackScreenWithText(ds1);
     }
 }
