@@ -7,6 +7,7 @@ public class Suspect : NPC {
         npcName = "Nimrod Vakjal";
         Player.Instance.dialogueManager.UpdateNPCName(npcName);
     }
+    public bool enteredCult = false;
 
     public void TalkToSuspectInRukon() {
         GameManager.talkedToSuspectInRukon = true;
@@ -20,6 +21,7 @@ public class Suspect : NPC {
     }
 
     public void EnterCult() {
+        enteredCult = true;
         Destroy(gameObject);
     }
 }

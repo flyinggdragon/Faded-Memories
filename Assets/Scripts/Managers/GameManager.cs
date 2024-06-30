@@ -38,7 +38,6 @@ public static class GameManager {
         levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");   
         items = CluesManager.Instance.LoadItemList("Assets/GameData/ItemList.json");
         audios = AudioManager.Instance.LoadAudioClips();
-        answers = SentenceSlots.LoadAnswers("Assets/GameData/SlotsAnswers.json");
         objectives = ObjectivesManager.LoadObjectiveList("Assets/GameData/Objectives.json");
         
         currentObjective = objectives[0];

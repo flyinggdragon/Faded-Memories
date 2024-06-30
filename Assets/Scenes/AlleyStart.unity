@@ -391,81 +391,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11941712}
   m_CullTransparentMesh: 1
---- !u!1 &43225575
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 43225576}
-  - component: {fileID: 43225578}
-  - component: {fileID: 43225577}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &43225576
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43225575}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 964906684}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0067, y: 0.0534}
-  m_SizeDelta: {x: 38.5051, y: 14.0331}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &43225577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43225575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &43225578
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43225575}
-  m_CullTransparentMesh: 1
 --- !u!1 &63959227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,17 +1194,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182680121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7476416, y: 0.44739658, z: 0.44739658}
+  m_LocalScale: {x: 0.7476416, y: 0.44739655, z: 0.44739658}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 94633782}
-  m_Father: {fileID: 1312336010}
+  m_Father: {fileID: 2084772925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121, y: -53.5}
+  m_AnchoredPosition: {x: -0, y: 24.799995}
   m_SizeDelta: {x: 279.7492, y: 33.6242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &182680123
@@ -1834,133 +1759,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279165570}
   m_CullTransparentMesh: 1
---- !u!1 &298885135
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 298885136}
-  - component: {fileID: 298885139}
-  - component: {fileID: 298885138}
-  - component: {fileID: 298885140}
-  - component: {fileID: 298885141}
-  m_Layer: 5
-  m_Name: Space 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &298885136
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298885135}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 839239267}
-  m_Father: {fileID: 1226345425}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.1, y: 16.3}
-  m_SizeDelta: {x: 48.5608, y: 23.8414}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &298885138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298885135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d050ebfe0d6c35c4ba81dc9f52886e16, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &298885139
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298885135}
-  m_CullTransparentMesh: 1
---- !u!114 &298885140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298885135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1955164994}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: SentenceSpaceEnter
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
---- !u!114 &298885141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298885135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b421ff8a520e85a45bdce918e33d34b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &342393644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,7 +2451,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000004371139}
-  m_LocalPosition: {x: 0.12286854, y: 0.014939999, z: -10}
+  m_LocalPosition: {x: 0.12308025, y: 0.014939999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3892,95 +3690,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &747071164
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 747071165}
-  - component: {fileID: 747071167}
-  - component: {fileID: 747071166}
-  - component: {fileID: 747071168}
-  m_Layer: 5
-  m_Name: Space 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &747071165
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747071164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1799249489}
-  m_Father: {fileID: 1226345425}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.9, y: -1.9}
-  m_SizeDelta: {x: 48.5608, y: 23.8414}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &747071166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747071164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d050ebfe0d6c35c4ba81dc9f52886e16, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &747071167
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747071164}
-  m_CullTransparentMesh: 1
---- !u!114 &747071168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747071164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b421ff8a520e85a45bdce918e33d34b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &767911680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4334,17 +4043,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781482872}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7476416, y: 0.44739658, z: 0.44739658}
+  m_LocalScale: {x: 0.7476416, y: 0.44739655, z: 0.44739658}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1120943497}
-  m_Father: {fileID: 1312336010}
+  m_Father: {fileID: 2084772925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121, y: -86.5}
+  m_AnchoredPosition: {x: -0, y: -8.199997}
   m_SizeDelta: {x: 279.7492, y: 33.6242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781482874
@@ -4544,81 +4253,6 @@ Transform:
   - {fileID: 970776231}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &839239266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 839239267}
-  - component: {fileID: 839239269}
-  - component: {fileID: 839239268}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &839239267
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839239266}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 298885136}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0067, y: 0.0534}
-  m_SizeDelta: {x: 38.5051, y: 14.0331}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &839239268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839239266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &839239269
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839239266}
-  m_CullTransparentMesh: 1
 --- !u!1 &894021466
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,157 +4444,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955374938}
   m_CullTransparentMesh: 1
---- !u!1 &964906683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 964906684}
-  - component: {fileID: 964906686}
-  - component: {fileID: 964906685}
-  - component: {fileID: 964906687}
-  - component: {fileID: 964906688}
-  m_Layer: 5
-  m_Name: Space 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &964906684
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964906683}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9875, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 43225576}
-  m_Father: {fileID: 1332409076}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.1, y: -0.3}
-  m_SizeDelta: {x: 48.5608, y: 23.8414}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &964906685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964906683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d050ebfe0d6c35c4ba81dc9f52886e16, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &964906686
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964906683}
-  m_CullTransparentMesh: 1
---- !u!114 &964906687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964906683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1955164994}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: SentenceSpaceEnter
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1955164994}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: SentenceSpaceLeave
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1955164994}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: SentenceSpaceClick
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &964906688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964906683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b421ff8a520e85a45bdce918e33d34b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &970776230
 GameObject:
   m_ObjectHideFlags: 3
@@ -6283,17 +5766,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194711090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7476416, y: 0.44739658, z: 0.44739658}
+  m_LocalScale: {x: 0.7476416, y: 0.44739655, z: 0.44739658}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 536139092}
-  m_Father: {fileID: 1312336010}
+  m_Father: {fileID: 2084772925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121, y: -103.1}
+  m_AnchoredPosition: {x: -0, y: -24.80001}
   m_SizeDelta: {x: 279.7492, y: 33.6242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194711092
@@ -6615,12 +6098,10 @@ RectTransform:
   m_GameObject: {fileID: 1226345424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3809524, y: 1.0989012, z: 1}
+  m_LocalScale: {x: 2.3809524, y: 1.098901, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 298885136}
-  - {fileID: 747071165}
-  m_Father: {fileID: 1250830987}
+  m_Children: []
+  m_Father: {fileID: 1560062084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6647,7 +6128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: My name is             and I used to be a              member.
+  m_text: My name is Davi and I used to be a Cult member.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
   m_sharedMaterial: {fileID: -336017103543269328, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
@@ -6867,6 +6348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1250830987}
+  - component: {fileID: 1250830989}
   - component: {fileID: 1250830988}
   m_Layer: 5
   m_Name: Sentences Content
@@ -6887,14 +6369,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1226345425}
-  - {fileID: 1332409076}
+  - {fileID: 1560062084}
   m_Father: {fileID: 1312336010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1.6029968, y: -20.358}
-  m_SizeDelta: {x: -68.096, y: 208.35}
+  m_AnchoredPosition: {x: -4.2156067, y: -11.9179}
+  m_SizeDelta: {x: -115.1248, y: 205.9383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250830988
 MonoBehaviour:
@@ -6905,21 +6386,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 1250830986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 180, y: 50}
-  m_Spacing: {x: 0, y: 0}
-  m_Constraint: 2
-  m_ConstraintCount: 3
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
+--- !u!114 &1250830989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250830986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 1560062084}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 0}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 0}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1267414376
 GameObject:
   m_ObjectHideFlags: 0
@@ -6946,17 +6447,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267414376}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7476416, y: 0.44739658, z: 0.44739658}
+  m_LocalScale: {x: 0.7476416, y: 0.44739655, z: 0.44739658}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1169266321}
-  m_Father: {fileID: 1312336010}
+  m_Father: {fileID: 2084772925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121, y: -69.8}
+  m_AnchoredPosition: {x: -0, y: 8.5}
   m_SizeDelta: {x: 279.7492, y: 33.6242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267414378
@@ -7339,10 +6840,7 @@ RectTransform:
   - {fileID: 368272703}
   - {fileID: 211030261}
   - {fileID: 539538760}
-  - {fileID: 1194711091}
-  - {fileID: 1267414377}
-  - {fileID: 182680122}
-  - {fileID: 781482873}
+  - {fileID: 2084772925}
   m_Father: {fileID: 86863183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7490,11 +6988,10 @@ RectTransform:
   m_GameObject: {fileID: 1332409075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3809524, y: 1.0989012, z: 1}
+  m_LocalScale: {x: 2.3809524, y: 1.098901, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 964906684}
-  m_Father: {fileID: 1250830987}
+  m_Children: []
+  m_Father: {fileID: 1560062084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7521,7 +7018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I was the newest member of the          .
+  m_text: I was the newest member of the Assembly.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
   m_sharedMaterial: {fileID: -336017103543269328, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
@@ -7619,6 +7116,140 @@ MonoBehaviour:
   nextPosX: -5.73
   nextPosY: -1.78
   nextScaleX: 1
+--- !u!1 &1377638340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377638341}
+  - component: {fileID: 1377638343}
+  - component: {fileID: 1377638342}
+  m_Layer: 5
+  m_Name: Sentence 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1377638341
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377638340}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3809524, y: 1.098901, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1560062084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1377638342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377638340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: The Cult wants to overthrow the government.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
+  m_sharedMaterial: {fileID: -336017103543269328, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 14.1
+  m_fontSizeBase: 14.1
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1377638343
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377638340}
+  m_CullTransparentMesh: 1
 --- !u!1 &1389408704
 GameObject:
   m_ObjectHideFlags: 0
@@ -8288,6 +7919,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491522568}
   m_CullTransparentMesh: 1
+--- !u!1 &1532715244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532715245}
+  - component: {fileID: 1532715247}
+  - component: {fileID: 1532715246}
+  m_Layer: 5
+  m_Name: Sentence 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1532715245
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532715244}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3809524, y: 1.098901, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1560062084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1532715246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532715244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: I suffered expulsion from the Cult, and the reason was betrayal.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
+  m_sharedMaterial: {fileID: -336017103543269328, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 14.1
+  m_fontSizeBase: 14.1
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1532715247
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532715244}
+  m_CullTransparentMesh: 1
 --- !u!1 &1533412858
 GameObject:
   m_ObjectHideFlags: 0
@@ -8934,6 +8699,27 @@ MonoBehaviour:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
   - text: 'You make up your mind, and the answer couldn''t be another: "Yes!"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: You wake up from this daydream. You are tired. You sleep inside this place
+      and weake up in the next morning.
     isEnd: 1
     isQuestion: 0
     answerOption1: 
@@ -8953,9 +8739,1261 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  ds2: []
-  ds3: []
-  ds4: []
+  ds2:
+  - text: "Mem\xF3ria 2"
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  ds3:
+  - text: Wait... I remember something...
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"The results are in, 7 in favor, 2 against."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Therefore, we have reached a majority. It is decided, we should continue
+      collaborating with our insiders, in order to reach our agreed objective"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"This ends the Assembly Meeting no, 878".'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"This is absurd!\" \u2014 sounds your voice."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: Everyone looks at you. Most faces show disdain. A deafing awkward silence
+      is sounding.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"Lynx, this is a democractic process, the majority decided in favor.\"
+      \u2014 sounds a firm voice after a few seconds of silence."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"You should understand that and refrain from letting your emotions get
+      in the way of reaason.\" \u2014 the same voice continues."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"I will not. This goes against this Institution''s legacy! It is not supposed
+      to do what has been agreed here!"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"Lynx, you are new here and should understand that your will does not
+      matter if you are outnumbered by us.\" \u2014 this time, a feminine voice can
+      be heard."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Stop! I can''t allow this absurd! How dare you! How dare you think this
+      is fine!??"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: Everyone stays in silence, in awe with your words.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"That''s right! I will get in contact with the media and the cops, this
+      cannot happen for the sake of this country."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"Silence. This is what traitors would say.\" \u2014 an intimidating voice
+      sounds. Everyone understands the message, but you continue."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Traitor? For what? Protecting this coutnry from this madness? Who do
+      you think you are!??"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"I am the Great Leader.\" \u2014 enounces this old aged man."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"Yeah, scold him, \"Snake\"! Put him back into his place!!\" \u2014 cheers
+      this enthusiastic voice upon the leader's intervention."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"This kind of declaration is unnaceptable, beg for pardon immediately!\"
+      \u2014 he orders firmly."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"No way, this is total b******t! The population will know of this!"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"That is it. Immobilize and tie him up."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: A group of 3 cultists jump at you and put you on the ground. They are cowardly
+      kicking your back, while you try to protect yourself.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: The remaining cultists stay in place, watching the situation.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"Take him to the Punishment Room.\" \u2014 sounds the order."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: 'You think to yourself: "wait, this Punishment Room is... the TORTURE ROOM."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: Before you can say anything, a voice can be heard.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Hey you, stop that!"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Wait, "Snake", this is too much! This is getting past the limits!"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"This is how we treat traitors here in this Institution, "Wolf"."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '""That" incident cannot repeat itself."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"You are not thinking to side with him, are you?\" \u2014 questions \"Snake\"
+      while looking firmly into \"Wolf\"'s eyes."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: It is a short and simple question, but it can also be seen as a more than
+      explicit threat.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: You are kind of hoping for this person named "Wolf" to take your side.
+      You don't want to be the only odd one out.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: The man backs up on his words, and stays silent.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Good."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: 'Other 2 cultists that had left to grab something return with a rope. '
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: They tie you up and cover your mouth with a tape, and direct you to a room
+      on the back of the building.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: The only thing that you remember right after, is being back at that alley.
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  ds4:
+  - text: Wait... I remember something...
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Snake" enters the punishment room after the "procedures" are completed.'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"\"Snake\", how dare you conspirate against Harkan? This city that open
+      its arms to the Goddess?\" \u2014 sounds your voice, in a disturbed tone."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Your opinion is unimportant. We will reach our goal."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"You are plotting to overthrow the government, and yet I can''t go to
+      the cops? You are a villain."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"No, you are going to ruin what we have been working for years. We cannot
+      allow this to happen."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"You either don''t get in the way, or you must be eliminated. All threats
+      to the Glory of the Goddess must be exterminated, understand?"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Together with Kakim, we will take this country, the Goddess will be able
+      to enter every home in this city, this is what She deserves."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"You cannot force them to follow the Goddess if they don''t have faith.
+      You don''t understand it."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"You are a fanatic...\" \u2014 you say that before coughing blood."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"You can''t see that I am doing them a favor, I am bringing the Goddess
+      into their lives, so that they can find the same light we have."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Also, fanatic, me? Every one in this Institution has the same opinion
+      as me, maybe you are not loyal enough to Her."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Which is another reason to have you eliminated."'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Liar! I''ve dedicated my entire life to Her, in order to have reached
+      the Assembly!"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Or is it maybe because "Wolf" likes you very much? And is always suggesting
+      me to promote you?"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Having a fan like him makes it a bit easier, doesn''t it?"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: You cannot feel anything than pure anger.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"LIAR! You never valued me! You only value those bootlickers that never
+      question you!"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: You are not even racionalizing at this point. You easily fall into his
+      provocation.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"Hmmmmmmm... hey "Raven", did you just hear how he called you?"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: The door creaks, "Raven" enters the room after hearing his name. "Snake"
+      understands the situation and so do you. "Snake" leaves right after.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"Do whatever the hell you want to him.\" \u2014 says \"Snake\", before
+      looking top-down at you."
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: You wake up from this daydream when you hear the door opening...
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    answerOption3: 
+    answerOption4: 
+    answerOption5: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
   authorization: {fileID: 21300000, guid: 75858d5607db38749a11b94c902fc737, type: 3}
   hemerBussinessCard: {fileID: 21300000, guid: 78471d3daf350274192f2ca453f01f65, type: 3}
   expelDoc: {fileID: 21300000, guid: 5a93618022bebf64a8a41d0eed213e86, type: 3}
@@ -9050,6 +10088,71 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1560062083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560062084}
+  - component: {fileID: 1560062085}
+  m_Layer: 5
+  m_Name: Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1560062084
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560062083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1226345425}
+  - {fileID: 1332409076}
+  - {fileID: 1532715245}
+  - {fileID: 2112188439}
+  - {fileID: 1377638341}
+  m_Father: {fileID: 1250830987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 244.13249, y: -102.97008}
+  m_SizeDelta: {x: 488.26, y: 205.94}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1560062085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560062083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_StartCorner: 0
+  m_StartAxis: 1
+  m_CellSize: {x: 180, y: 50}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 1
+  m_ConstraintCount: 1
 --- !u!1 &1581066963
 GameObject:
   m_ObjectHideFlags: 0
@@ -9148,81 +10251,6 @@ MonoBehaviour:
   nextPosX: 0
   nextPosY: 0
   nextScaleX: 0
---- !u!1 &1799249488
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1799249489}
-  - component: {fileID: 1799249491}
-  - component: {fileID: 1799249490}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1799249489
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799249488}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 747071165}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0067, y: 0.0534}
-  m_SizeDelta: {x: 38.5051, y: 14.0331}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1799249490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799249488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1799249491
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799249488}
-  m_CullTransparentMesh: 1
 --- !u!1 &1807792125
 GameObject:
   m_ObjectHideFlags: 0
@@ -10363,6 +11391,179 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071804550}
+  m_CullTransparentMesh: 1
+--- !u!1 &2084772924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084772925}
+  m_Layer: 5
+  m_Name: Debug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2084772925
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084772924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1194711091}
+  - {fileID: 1267414377}
+  - {fileID: 182680122}
+  - {fileID: 781482873}
+  m_Father: {fileID: 1312336010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 121, y: -78.3}
+  m_SizeDelta: {x: 209.15216, y: 64.64335}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2112188438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2112188439}
+  - component: {fileID: 2112188441}
+  - component: {fileID: 2112188440}
+  m_Layer: 5
+  m_Name: Sentence 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2112188439
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112188438}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3809524, y: 1.098901, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1560062084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2112188440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112188438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: The Cult's goal is to create a theocracy in Harkan.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
+  m_sharedMaterial: {fileID: -336017103543269328, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 14.1
+  m_fontSizeBase: 14.1
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2112188441
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112188438}
   m_CullTransparentMesh: 1
 --- !u!1 &2115019623
 GameObject:

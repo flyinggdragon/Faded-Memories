@@ -78,13 +78,16 @@ public class Notebook : MonoBehaviour {
         GameManager.knowsRumour = true;
         GameManager.firstQuarterCompleted = true;
         GameManager.secondQuarterCompleted = true;
+        GameManager.wentToAlleyAndGotNecklace = true;
+        GameManager.sleptDay2 = true;
+        GameManager.spokeToNimrod = true;
 
         CluesManager.Instance.CollectItem(GameManager.items[2]);
         CluesManager.Instance.CollectItem(GameManager.items[4]);
         CluesManager.Instance.CollectItem(GameManager.items[5]);
     }
     public void Debug3() {
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 10; i++) {
             ObjectivesManager.Instance.FinishObjective(
                 GameManager.objectives[i]
             );

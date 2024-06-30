@@ -5,6 +5,7 @@ public class Jacob : NPC {
     public override string npcName { get; set; } = "Mysterious Man";
     public DialogueTrigger dt;
     public bool talkedToJacob = false;
+    private bool passedInvestigateMission = false;
 
     void Start() {
         dt = GetComponentInChildren<DialogueTrigger>();
@@ -15,9 +16,12 @@ public class Jacob : NPC {
         Player.Instance.dialogueManager.UpdateNPCName(npcName);
     }
 
-    void Update() {
-        if (!GameManager.goingToFirstMeetJacob) {
-            gameObject.SetActive(false);
+    public void ShowDocument() {
+        if (dt.dialogueStrings[3].isEnd = true) {
+            dt.dialogueStrings[3].isEnd = false;
+            
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(BlackScreenText.Instance.authorization);
+            BlackScreenText.Instance.CreateBlackScreenWithText(BlackScreenText.Instance.ds2);
         }
     }
 
@@ -47,9 +51,11 @@ public class Jacob : NPC {
     }
 
     public void InvestigateMurder() {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Find the Mysterious Man.")
-        );
+        if (!passedInvestigateMission) {
+            ObjectivesManager.Instance.FinishObjective(
+                ObjectivesManager.Instance.FindObjectiveByName("Find the Mysterious Man.")
+            );
+        }
     }
 
     public void CallHemer() {

@@ -33,5 +33,7 @@ public class Kamu : NPC {
         );
 
         GameManager.escaping = true;
+
+        BlackScreenText.Instance.CreateBlackScreenWithText(BlackScreenText.Instance.ds3);
     }
 }

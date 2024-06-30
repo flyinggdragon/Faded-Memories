@@ -15,6 +15,7 @@ public class CultLeaderRoom : MonoBehaviour {
         if (
         GameManager.sawBag && GameManager.sawFinances && GameManager.sawConfidentialDocuments
         ) {
+            BlackScreenText.Instance.CreateBlackScreenWithText(BlackScreenText.Instance.ds4);
             Destroy(upTrigger);
             savil.SetActive(true);
         }

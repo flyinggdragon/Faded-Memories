@@ -48,8 +48,6 @@ public class BlackScreenText : MonoBehaviour {
     }
 
     public void CreateBlackScreenWithText(List<DialogueString> ds) {
-        Notebook.Instance.ToggleNotebook();
-
         isActive = true;
         gameObject.SetActive(isActive);
 
@@ -65,8 +63,6 @@ public class BlackScreenText : MonoBehaviour {
     }
 
     public void CreateTransparentItemDisplayer(Sprite image) {
-        Notebook.Instance.ToggleNotebook();
-
         isActive = true;
         gameObject.SetActive(isActive);
 

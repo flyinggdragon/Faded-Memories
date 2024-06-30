@@ -10,16 +10,16 @@ public class HomeInside : MonoBehaviour {
         portraitCollected = GameManager.items[4].collected;
         cloakCollected = GameManager.items[5].collected;
         
-        GameManager.firstQuarterCompleted = true;
-        Debug.Log(GameManager.firstQuarterCompleted);
 
         if (!GameManager.secondQuarterCompleted) {
             if (portraitCollected && cloakCollected) {
+                GameManager.firstQuarterCompleted = true;
+                
                 ObjectivesManager.Instance.FinishObjective(
                     ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
                 );
 
-                //BlackScreenText.Instance.CreateBlackScreenWithText();
+                BlackScreenText.Instance.CreateBlackScreenWithText(BlackScreenText.Instance.ds1);
             }
         }
     }
