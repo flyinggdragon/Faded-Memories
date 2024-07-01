@@ -781,6 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusicSource: {fileID: 0}
   doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:
@@ -4137,7 +4138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.861525
+      value: -11.86
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.y

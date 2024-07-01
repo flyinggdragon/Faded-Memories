@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4260042724158620689, guid: f949108269bce5945b5c4a33a39b85cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.06
+      value: 36.735
       objectReference: {fileID: 0}
     - target: {fileID: 4260042724158620689, guid: f949108269bce5945b5c4a33a39b85cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -677,6 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusicSource: {fileID: 0}
   doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:
@@ -780,7 +781,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000004371139}
-  m_LocalPosition: {x: -2.57, y: 0.00999999, z: -10}
+  m_LocalPosition: {x: -1.27, y: 0.00999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1523,7 +1524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.54
+      value: 33.19
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1591,6 +1592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 970073d2417b5794b80671550825d2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enteredCult: 0
 --- !u!1 &700634084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,11 +1775,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 42.006557, y: 7.544654}
-      - {x: -7.6261544, y: 7.559154}
-      - {x: -7.6039658, y: -2.4580374}
+    - - {x: 40.856197, y: 7.4769855}
+      - {x: -6.2205873, y: 7.431375}
+      - {x: -6.3687706, y: -2.50063}
       - {x: 23.238564, y: -2.4426284}
-      - {x: 42.009315, y: -2.4332914}
+      - {x: 40.825123, y: -2.4671254}
   m_UseDelaunayMesh: 0
 --- !u!4 &773066791
 Transform:
@@ -3534,6 +3536,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.000000029802322
       objectReference: {fileID: 0}
+    - target: {fileID: 8065830839806535355, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.43
+      objectReference: {fileID: 0}
     - target: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_Name
       value: Journalist
@@ -3578,7 +3584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5777942044075181169, guid: e7d5df345835f7a438199315c843fafd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.25
+      value: -10.18
       objectReference: {fileID: 0}
     - target: {fileID: 5777942044075181169, guid: e7d5df345835f7a438199315c843fafd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3875,7 +3881,7 @@ Transform:
   m_GameObject: {fileID: 1829719565}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.57, y: 0.00999999, z: -10}
+  m_LocalPosition: {x: -1.27, y: 0.00999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

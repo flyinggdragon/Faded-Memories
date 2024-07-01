@@ -917,7 +917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.8
+      value: -20.29
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -957,19 +957,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6867080035707387782, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_Size.x
-      value: 1.0847617
+      value: 1.6116025
       objectReference: {fileID: 0}
     - target: {fileID: 6867080035707387782, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_Size.y
-      value: 0.5901414
+      value: 1.3848206
       objectReference: {fileID: 0}
     - target: {fileID: 6867080035707387782, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_Offset.x
-      value: 0.14597839
+      value: 0.38057414
       objectReference: {fileID: 0}
     - target: {fileID: 6867080035707387782, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_Offset.y
-      value: -0.21176022
+      value: -0.6492352
       objectReference: {fileID: 0}
     - target: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_Name
@@ -1311,6 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusicSource: {fileID: 0}
   doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:

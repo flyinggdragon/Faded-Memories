@@ -677,6 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusicSource: {fileID: 0}
   doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:
@@ -780,7 +781,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000004371139}
-  m_LocalPosition: {x: -2.57, y: 0.00999999, z: -10}
+  m_LocalPosition: {x: -1.09, y: 0.00999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1338,11 +1339,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 42.006557, y: 7.544654}
-      - {x: -7.6261544, y: 7.559154}
-      - {x: -7.6039658, y: -2.4580374}
+    - - {x: 40.84091, y: 7.509331}
+      - {x: -6.3192163, y: 7.4885087}
+      - {x: -6.33235, y: -2.4933605}
       - {x: 23.238564, y: -2.4426284}
-      - {x: 42.009315, y: -2.4332914}
+      - {x: 40.702377, y: -2.4332914}
   m_UseDelaunayMesh: 0
 --- !u!4 &773066791
 Transform:
@@ -2951,7 +2952,7 @@ Transform:
   m_GameObject: {fileID: 1829719565}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.57, y: 0.00999999, z: -10}
+  m_LocalPosition: {x: -1.09, y: 0.00999999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
