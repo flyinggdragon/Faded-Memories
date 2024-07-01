@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Pause : MonoBehaviour {
     public Button resume;
@@ -22,6 +24,7 @@ public class Pause : MonoBehaviour {
     void Start() {
         holder.SetActive(false);
         isOpen = false;
+        quit.onClick.AddListener(() => SceneManager.LoadScene("Main Menu"));
     }
 
     public void TogglePause() {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour {
     public GameObject hoverPopUp;
     private int orientation = 1;
     public static Player Instance { get; private set; }
+
+    Animator animator;
    
     void Awake() {
         if (Instance == null && Instance != this) {
@@ -28,9 +31,12 @@ public class Player : MonoBehaviour {
 
     void Start() {
         dialogueManager = this.GetComponent<DialogueManager>();
+        animator = GetComponent<Animator>();
     }
 
     void Update() {
+
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
         if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive)) {
             horizontal = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(horizontal * speed, 0);
