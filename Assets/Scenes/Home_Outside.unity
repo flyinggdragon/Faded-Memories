@@ -596,6 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusicSource: {fileID: 0}
   doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:
@@ -2156,7 +2157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Park
   nextPosX: 22.68
-  nextPosY: -2.08
+  nextPosY: -2.17
   nextScaleX: -1
 --- !u!1 &1389408704
 GameObject:

@@ -4625,8 +4625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: Park
-  nextPosX: -28.51
-  nextPosY: -2.08
+  nextPosX: -30
+  nextPosY: -2.17
   nextScaleX: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

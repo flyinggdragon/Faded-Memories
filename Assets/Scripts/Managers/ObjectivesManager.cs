@@ -79,6 +79,10 @@ public class ObjectivesManager : MonoBehaviour {
     }
 
     public void FinishObjective(Objective current) {
+        if (current == null) {
+            return;
+        }
+        
         current.finished = true;
         current.active = false;
 

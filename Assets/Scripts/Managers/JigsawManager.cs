@@ -28,6 +28,7 @@ public class JigsawManager : MonoBehaviour {
 
   private int piecesCorrect;
   public static string previousLevel;
+  public static Vector3 previousPos;
 
   void Start() {
     // Create the UI
@@ -213,6 +214,7 @@ public class JigsawManager : MonoBehaviour {
       if (piecesCorrect == pieces.Count)  
       {
         LevelManager.Instance.LoadLevel(previousLevel);
+        player.transform.position = previousPos;
         
         player.SetActive(true);
         

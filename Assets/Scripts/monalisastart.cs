@@ -14,7 +14,8 @@ public class monalisastart : MonoBehaviour
         else { gameObject.SetActive(true); }
 
         if (triggerin && Input.GetKeyDown(KeyCode.E)) 
-        {
+        {   
+            JigsawManager.previousPos = Player.Instance.transform.position;
             JigsawManager.previousLevel = GameManager.currentLevel.levelName;
             LevelManager.Instance.LoadLevel("Puzzle");
             Cursor.lockState = CursorLockMode.None;

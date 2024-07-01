@@ -47,7 +47,7 @@ public class BlackScreenText : MonoBehaviour {
         container.SetActive(false);
     }
 
-    public void CreateBlackScreenWithText(List<DialogueString> ds) {
+    public IEnumerator CreateBlackScreenWithText(List<DialogueString> ds) {
         isActive = true;
         gameObject.SetActive(isActive);
 
@@ -59,10 +59,10 @@ public class BlackScreenText : MonoBehaviour {
         textIndex = 0;
 
         container.GetComponent<Image>().color = Color.black;
-        StartCoroutine(TextStart(ds));
+        yield return StartCoroutine(TextStart(ds));
     }
 
-    public void CreateTransparentItemDisplayer(Sprite image) {
+    public IEnumerator CreateTransparentItemDisplayer(Sprite image) {
         isActive = true;
         gameObject.SetActive(isActive);
 
@@ -73,7 +73,7 @@ public class BlackScreenText : MonoBehaviour {
         textIndex = 0;
 
         container.GetComponent<Image>().color = Color.clear;
-        StartCoroutine(ShowImage(image));
+        yield return StartCoroutine(ShowImage(image));
     }
 
     private IEnumerator TextStart(List<DialogueString> ds) {
@@ -114,6 +114,6 @@ public class BlackScreenText : MonoBehaviour {
     }
 
     public void Debug1() {
-        CreateBlackScreenWithText(ds1);
+        StartCoroutine(CreateBlackScreenWithText(ds1));
     }
 }

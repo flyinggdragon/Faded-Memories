@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,6 +35,10 @@ public class Kamu : NPC {
 
         GameManager.escaping = true;
 
-        BlackScreenText.Instance.CreateBlackScreenWithText(BlackScreenText.Instance.ds3);
+        StartCoroutine(
+            BlackScreenText.Instance.CreateBlackScreenWithText(
+                BlackScreenText.Instance.ds3
+            )
+        );
     }
 }

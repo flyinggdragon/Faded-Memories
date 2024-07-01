@@ -5,6 +5,7 @@ using UnityEngine;
 public class HomeInside : MonoBehaviour {
     public bool cloakCollected;
     public bool portraitCollected;
+    private bool memoryOne = false;
 
     void Update() {
         portraitCollected = GameManager.items[4].collected;
@@ -14,13 +15,25 @@ public class HomeInside : MonoBehaviour {
         if (!GameManager.secondQuarterCompleted) {
             if (portraitCollected && cloakCollected) {
                 GameManager.firstQuarterCompleted = true;
-                
-                ObjectivesManager.Instance.FinishObjective(
-                    ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
-                );
 
-                BlackScreenText.Instance.CreateBlackScreenWithText(BlackScreenText.Instance.ds1);
+                if (!memoryOne) {
+                    CompleteMission();
+
+                    memoryOne = true;
+                }
             }
         }
+    }
+
+    private void CompleteMission() {
+        ObjectivesManager.Instance.FinishObjective(
+            ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
+        );
+
+        StartCoroutine(
+            BlackScreenText.Instance.CreateBlackScreenWithText(
+                BlackScreenText.Instance.ds1
+            )
+        );
     }
 }

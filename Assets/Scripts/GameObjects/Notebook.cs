@@ -120,6 +120,33 @@ public class Notebook : MonoBehaviour {
         CluesManager.Instance.CollectItem(GameManager.items[11]);
     }
 
+    public void DebugM2() {
+        for (int i = 0; i < 5; i++) {
+            ObjectivesManager.Instance.FinishObjective(
+                GameManager.objectives[i]
+            );
+        }
+
+        GameManager.knowsPoliceCrackdown = true;
+        GameManager.talkedToGerald = true;
+        GameManager.knowsGeraldName = true;
+        GameManager.firstPuzzleCompleted = true;
+        GameManager.sawGraffiti = true;
+        GameManager.goingToFirstMeetJacob = true;
+        GameManager.talkedToJacob = true;
+        GameManager.knowsRumour = true;
+        GameManager.firstQuarterCompleted = true;
+        GameManager.secondQuarterCompleted = true;
+
+        CluesManager.Instance.CollectItem(GameManager.items[2]);
+        CluesManager.Instance.CollectItem(GameManager.items[4]);
+        CluesManager.Instance.CollectItem(GameManager.items[5]);
+    }
+
+    public void tp() {
+        LevelManager.Instance.LoadLevel("Home_Inside_2");
+    }
+
     void Start() {
         GameObject.Find("Notebook Holder").SetActive(false);
         

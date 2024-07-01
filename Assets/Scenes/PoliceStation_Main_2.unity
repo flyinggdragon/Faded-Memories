@@ -987,11 +987,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 35.11936, y: 7.57905}
-      - {x: -30.182894, y: 7.595106}
-      - {x: -30.197598, y: -2.4385953}
+    - - {x: 34.992596, y: 7.5315123}
+      - {x: -30.095743, y: 7.5396457}
+      - {x: -30.126038, y: -2.453929}
       - {x: 7.5314236, y: -2.4561238}
-      - {x: 35.11982, y: -2.4605184}
+      - {x: 35.000977, y: -2.4605184}
   m_UseDelaunayMesh: 0
 --- !u!4 &527816537
 Transform:
@@ -2126,7 +2126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: PoliceStation_ChiefRoom_2
   nextPosX: -14
-  nextPosY: -3
+  nextPosY: -2.23
   nextScaleX: 1
 --- !u!1 &1169001518
 GameObject:

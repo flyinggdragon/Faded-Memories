@@ -21,6 +21,7 @@ public class Politicians : NPC {
     }
 
     public void CallSecurity() {
+        //yield return StartCoroutine(ShowText());
         LevelManager.Instance.LoadLevel("Home_Inside_2");
     }
 }

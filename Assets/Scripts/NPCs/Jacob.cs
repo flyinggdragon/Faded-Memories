@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,12 +18,21 @@ public class Jacob : NPC {
     }
 
     public void ShowDocument() {
-        if (dt.dialogueStrings[3].isEnd = true) {
-            dt.dialogueStrings[3].isEnd = false;
-            
-            BlackScreenText.Instance.CreateTransparentItemDisplayer(BlackScreenText.Instance.authorization);
-            BlackScreenText.Instance.CreateBlackScreenWithText(BlackScreenText.Instance.ds2);
-        }
+        StartCoroutine(ShowUI());
+    }
+
+    private IEnumerator ShowUI() {
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.authorization
+            )
+        );
+
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateBlackScreenWithText(
+                BlackScreenText.Instance.ds2
+            )
+        );
     }
 
     public void TellToGoToHome() {

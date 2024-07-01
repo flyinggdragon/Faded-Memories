@@ -323,9 +323,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: PoliceStation_Main
-  nextPosX: 12
-  nextPosY: -3
-  nextScaleX: 1
+  nextPosX: 12.3
+  nextPosY: -2.17
+  nextScaleX: -1
 --- !u!1 &129673462
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,6 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusicSource: {fileID: 0}
   doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:
