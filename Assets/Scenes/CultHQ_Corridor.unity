@@ -411,8 +411,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 53.87893, y: 7.591604}
-      - {x: -11.250017, y: 7.564848}
-      - {x: -11.250007, y: -2.4851012}
+      - {x: -7.670927, y: 7.477553}
+      - {x: -7.6709175, y: -2.4851012}
       - {x: 53.8258, y: -2.484951}
   m_UseDelaunayMesh: 0
 --- !u!4 &239136797
@@ -677,6 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb25d08c0311a7143a380c0bca1c787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusicSource: {fileID: 0}
   doorLock: {fileID: 0}
 --- !u!4 &476438400
 Transform:
