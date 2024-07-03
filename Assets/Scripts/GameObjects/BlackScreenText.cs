@@ -110,7 +110,6 @@ public class BlackScreenText : MonoBehaviour {
         gameObject.SetActive(isActive);
 
         textComponent.text = "";
-        imageComponent.sprite = null;
     }
 
     public void Debug1() {

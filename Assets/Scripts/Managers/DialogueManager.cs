@@ -180,7 +180,6 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = "";
         dialogueParent.SetActive(false);
 
-        UIManager.Instance.LockCursor();
         nextIndicator.gameObject.SetActive(false);
     }
 

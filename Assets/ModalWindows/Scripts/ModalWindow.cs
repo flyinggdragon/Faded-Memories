@@ -150,7 +150,6 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
     public virtual T Close()
     {
         UIManager.Instance.modalOpen = false;
-        UIManager.Instance.LockCursor();
         
         Visible = false;
         Destroy(gameObject, 1f);

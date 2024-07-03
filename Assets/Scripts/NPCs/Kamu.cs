@@ -33,7 +33,13 @@ public class Kamu : NPC {
             ObjectivesManager.Instance.FindObjectiveByName("Follow the suspect.")
         );
 
+        StartCoroutine(TriggerMemory());
+
         GameManager.escaping = true;
+    }
+
+    public IEnumerator TriggerMemory() {
+        yield return StartCoroutine(Notebook.Instance.ToggleAndLock(3));
 
         StartCoroutine(
             BlackScreenText.Instance.CreateBlackScreenWithText(

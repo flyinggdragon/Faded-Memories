@@ -6,15 +6,8 @@ using UnityEngine.UI;
 public class Notebook : MonoBehaviour {
     private static Notebook instance;
     public static Notebook Instance { get; private set; }
-    public GameObject NotebookObject;
+    public GameObject notebookObject;
     public bool isOpen = false;
-
-    /*
-    Isso aqui tudo é inútil. Pode-se colocar um caminho direto pro arquivo de áudio
-    ao invés de manualmente colocar no Inspector. Também é desnecessário ter
-    um outro audioSource aqui, já que a classe AudioManager já cuida disso.
-    Vou deixar isso por ora, pois se eu tirar vai quebrar tudo.
-    */
     public AudioClip openAudio;
     private AudioSource audioSource;
 
@@ -25,6 +18,8 @@ public class Notebook : MonoBehaviour {
     private Button sentencesButton;
     private Button cluesButton;
     private Button objectivesButton;
+    public bool shouldNotClose = false;
+    private GameObject dimmedBackground;
 
     void Awake() {
         if (Instance == null && Instance != this) {
@@ -148,8 +143,11 @@ public class Notebook : MonoBehaviour {
     }
 
     void Start() {
-        GameObject.Find("Notebook Holder").SetActive(false);
-        
+        notebookObject.SetActive(false);
+
+        dimmedBackground = notebookObject.transform.GetChild(0).gameObject;
+        dimmedBackground.SetActive(false);
+
         sentencesContent = transform.Find("Notebook Back/Sentences Content").gameObject;
         cluesContent = transform.Find("Notebook Back/Clues Content").gameObject;
         objectivesContent = transform.Find("Notebook Back/Objectives Content").gameObject;
@@ -157,22 +155,51 @@ public class Notebook : MonoBehaviour {
         sentencesButton = transform.Find("Notebook Back/Button Holder/Sentences Button").GetComponent<Button>();
         cluesButton = transform.Find("Notebook Back/Button Holder/Clues Button").GetComponent<Button>();
         objectivesButton = transform.Find("Notebook Back/Button Holder/Objectives Button").GetComponent<Button>();
+    }
 
-        // POR QUE TU NÃO PÕE LITERALMENTE TUDO AQUI CARA?
+    public IEnumerator ToggleAndLock(int sentenceNumber) {
+        ToggleNotebook();
+        shouldNotClose = true;
+        
+
+        Transform container = sentencesContent.transform.GetChild(0);
+        Transform sentence = container.GetChild(sentenceNumber - 1);
+        Transform attention = sentence.GetChild(0);
+
+        attention.gameObject.SetActive(true);
+        dimmedBackground.SetActive(true);
+
+        bool AllSpacesFilled(Transform sentence) {
+            foreach (Transform child in sentence.transform) {
+                SentenceSlots slot = child.GetComponent<SentenceSlots>();
+                if (slot == null) {
+                    continue;
+                }
+                
+                else {
+                    if (!slot.spaceFilled) {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        yield return new WaitUntil(() => AllSpacesFilled(sentence));
+        
+        shouldNotClose = false;
+        attention.gameObject.SetActive(false);
+        dimmedBackground.SetActive(false);
     }
 
     public void ToggleNotebook() {
+        if (shouldNotClose) {
+            return;
+        }
+
         isOpen = !isOpen;
-        NotebookObject.SetActive(isOpen);
-        Cursor.visible = isOpen;
-
-        if (isOpen) {
-            Cursor.lockState = CursorLockMode.None;
-        }
-
-        else {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        notebookObject.SetActive(isOpen);
         
         AudioManager.Instance.PlaySound(openAudio, 1f);
     }

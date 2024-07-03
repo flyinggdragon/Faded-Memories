@@ -28,6 +28,10 @@ public class Jacob : NPC {
             )
         );
 
+        CluesManager.Instance.CollectItem(GameManager.items[8]);
+        
+        yield return StartCoroutine(Notebook.Instance.ToggleAndLock(2));
+
         yield return StartCoroutine(
             BlackScreenText.Instance.CreateBlackScreenWithText(
                 BlackScreenText.Instance.ds2
@@ -93,9 +97,81 @@ public class Jacob : NPC {
 
     public void SeeFinances() {
         GameManager.sawFinances = true;
+
+        StartCoroutine(ShowFinances());
+    }
+
+    private IEnumerator ShowFinances() {
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.membershipBoardDec
+            )
+        );
+
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.membershipBoardApr
+            )
+        );
+
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.membershipBoardMay
+            )
+        );
+
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.minutes879
+            )
+        );
+
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.spendingsApril
+            )
+        );
+
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.monthlySpendings
+            )
+        );
+
+        CluesManager.Instance.CollectItem(GameManager.items[13]);
     }
 
     public void SeeConfidentialDocuments() {
         GameManager.sawConfidentialDocuments = true;
+
+        StartCoroutine(ShowConfidentialDocuments());
+    }
+
+    private IEnumerator ShowConfidentialDocuments() {
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.letterToKakim
+            )
+        );
+
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.letterToNimrod
+            ) 
+        );
+
+        CluesManager.Instance.CollectItem(GameManager.items[14]);
+
+        yield return StartCoroutine(TriggerMemory());
+    }
+
+    private IEnumerator TriggerMemory() {
+        yield return StartCoroutine(Notebook.Instance.ToggleAndLock(4));
+
+        StartCoroutine(
+            BlackScreenText.Instance.CreateBlackScreenWithText(
+                BlackScreenText.Instance.ds4
+            )
+        );
     }
 }

@@ -12,6 +12,7 @@ public class SentenceSlots : MonoBehaviour {
     private int i;
     [SerializeField] public string answer;
     private EventTrigger trigger;
+    public bool spaceFilled = false;
     
     public void Start() {
         image = GetComponent<Image>();
@@ -49,13 +50,13 @@ public class SentenceSlots : MonoBehaviour {
     private void OnInputDone(string inputResult) {
         if (inputResult.ToUpper() == answer.ToUpper()) {
             gameObject.SetActive(false);
+
+            spaceFilled = true;
         }
 
         else {
             UIManager.Instance.CreateToastModal("Wrong Answer!");
         }
-
-        UIManager.Instance.UnlockCursor();
     }
 
     public class WordsData {

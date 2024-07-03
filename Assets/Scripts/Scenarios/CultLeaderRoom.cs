@@ -5,7 +5,6 @@ using UnityEngine;
 public class CultLeaderRoom : MonoBehaviour {
     GameObject upTrigger;
     GameObject savil;
-    private bool memoryFour = false;
 
     void Start() {
         upTrigger = GameObject.Find("ExitUp");
@@ -16,16 +15,6 @@ public class CultLeaderRoom : MonoBehaviour {
         if (
         GameManager.sawBag && GameManager.sawFinances && GameManager.sawConfidentialDocuments
         ) {
-            if (!memoryFour) {
-                StartCoroutine(
-                    BlackScreenText.Instance.CreateBlackScreenWithText(
-                        BlackScreenText.Instance.ds4
-                    )
-                );
-
-                memoryFour = true;
-            }
-
             Destroy(upTrigger);
             savil.SetActive(true);
         }

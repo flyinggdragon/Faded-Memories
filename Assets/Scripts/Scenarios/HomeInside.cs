@@ -17,7 +17,7 @@ public class HomeInside : MonoBehaviour {
                 GameManager.firstQuarterCompleted = true;
 
                 if (!memoryOne) {
-                    CompleteMission();
+                    StartCoroutine(CompleteMission());
 
                     memoryOne = true;
                 }
@@ -25,10 +25,12 @@ public class HomeInside : MonoBehaviour {
         }
     }
 
-    private void CompleteMission() {
+    private IEnumerator CompleteMission() {
         ObjectivesManager.Instance.FinishObjective(
             ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
         );
+
+        yield return StartCoroutine(Notebook.Instance.ToggleAndLock(1));
 
         StartCoroutine(
             BlackScreenText.Instance.CreateBlackScreenWithText(

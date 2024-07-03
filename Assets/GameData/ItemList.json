@@ -73,7 +73,7 @@
         {
             "id": 11,
             "itemName": "Occurrence Report",
-            "fileName": "note",
+            "fileName": "occurencereport",
             "description": "This report refers to the murder of Amber Nikolsi. The police know it was around 9 PM yesterday, her belongings were stolen, suspected robbery, her body dumped was dumped in a bush, and the murderer acted on their own.",
             "keyword": "Murder"
         },
@@ -90,6 +90,20 @@
             "fileName": "bag",
             "description": "This bag definitely belonged to Amber Nikolsi, the documents inside prove it. It was thrown in the Cult's depot.",
             "keyword": "Premeditated"
+        },
+        {
+            "id": 14,
+            "itemName": "Cult's Documents",
+            "fileName": "documents",
+            "description": "Jacob noticed that there is an amount of ɻ$889 not declared here. This doesn't add up. There are also official documents in here.",
+            "keyword": "Inconsistency, Expulsion"
+        },
+        {
+            "id": 15,
+            "itemName": "Great Leader's Compromising Documents",
+            "fileName": "documents",
+            "description": "Here is our proof. The Cult is conspirating with Kakim to overthrow the government. Let's take it back to the authorities.",
+            "keyword": "Theocracy, Overthrow, Government"
         }
     ]
 }
