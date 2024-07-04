@@ -15,9 +15,11 @@ public class Suspect : NPC {
 
     public void TalkToSuspectInPub() {
         GameManager.spokeToNimrod = true;
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Find the suspect.")
-        );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Find the suspect.");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
+        }
     }
 
     public void EnterCult() {

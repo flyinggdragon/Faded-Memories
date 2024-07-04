@@ -11,9 +11,8 @@ public class Barman : NPC {
         GameManager.money -= value;
 
         if (!paidFirstTime) {
-            ObjectivesManager.Instance.FinishObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Eat something.")
-            );
+            ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Eat something.");
+            ObjectivesManager.Instance.FinishObjective(obj);
             
             paidFirstTime = true;
         } else { return; }

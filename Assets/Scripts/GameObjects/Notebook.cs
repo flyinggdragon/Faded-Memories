@@ -160,7 +160,6 @@ public class Notebook : MonoBehaviour {
     public IEnumerator ToggleAndLock(int sentenceNumber) {
         ToggleNotebook();
         shouldNotClose = true;
-        
 
         Transform container = sentencesContent.transform.GetChild(0);
         Transform sentence = container.GetChild(sentenceNumber - 1);
@@ -191,6 +190,8 @@ public class Notebook : MonoBehaviour {
         shouldNotClose = false;
         attention.gameObject.SetActive(false);
         dimmedBackground.SetActive(false);
+        
+        ToggleNotebook();
     }
 
     public void ToggleNotebook() {

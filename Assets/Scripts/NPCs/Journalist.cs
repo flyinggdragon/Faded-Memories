@@ -17,9 +17,11 @@ public class Journalist : NPC {
     }
     
     public void TellToGoToHall() {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Meet the unknown man again.")
-        );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Meet the Unknown Man again.");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
+        }
 
         GameManager.goingToFirstMeetJacob = true;
     }

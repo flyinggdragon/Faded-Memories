@@ -19,8 +19,10 @@ public class Hemer : NPC {
             )
         );
         
-        CluesManager.Instance.CollectItem(
-            CluesManager.Instance.FindItem("Business Card")
-        );
+        if (!GameManager.items[11].collected) { 
+            CluesManager.Instance.CollectItem(
+                GameManager.items[11]
+            );
+        }
     }
 }

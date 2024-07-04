@@ -1813,19 +1813,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_Size.x
-      value: 20.194384
+      value: 18.912361
       objectReference: {fileID: 0}
     - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_Size.y
-      value: 9.897072
+      value: 7.2048216
       objectReference: {fileID: 0}
     - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_Offset.x
-      value: -8.541757
+      value: -9.182768
       objectReference: {fileID: 0}
     - target: {fileID: 8502907588709788478, guid: 4b4ba0a6f4f47f0418f9b2f404b766a0, type: 3}
       propertyPath: m_Offset.y
-      value: 1.1863852
+      value: 1.1863856
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd18a8f35dce3654ab3e45007b043e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: CulHQ_Lobby_2
+  nextLevel: CultHQ_Lobby_2
   nextPosX: 0
   nextPosY: -2.19
   nextScaleX: 1

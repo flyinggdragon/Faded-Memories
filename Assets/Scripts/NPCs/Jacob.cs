@@ -28,7 +28,11 @@ public class Jacob : NPC {
             )
         );
 
-        CluesManager.Instance.CollectItem(GameManager.items[8]);
+        if (!GameManager.items[8].collected) { 
+            CluesManager.Instance.CollectItem(
+                GameManager.items[8]
+            );
+        }
         
         yield return StartCoroutine(Notebook.Instance.ToggleAndLock(2));
 
@@ -51,9 +55,11 @@ public class Jacob : NPC {
     }
 
     public void SaveDaviFromArrest() {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Investigate more about the \"Cult of the Goddess of Death\".")
-        );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Investigate more about the \"Cult of the Goddess of Death\".");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
+        }
 
         GameManager.secondQuarterCompleted = true;
     }
@@ -73,9 +79,11 @@ public class Jacob : NPC {
     }
 
     public void CallHemer() {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Escape.")
-        );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Escape.");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
+        }
 
         GameManager.escaping = false;
         GameManager.thirdQuarterCompleted = true;
@@ -84,9 +92,11 @@ public class Jacob : NPC {
     }
 
     public void LaunchRaid() {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Go see Jacob.")
-        );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Go see Jacob.");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
+        }
 
         GameManager.raidTime = true;
     }
@@ -138,7 +148,11 @@ public class Jacob : NPC {
             )
         );
 
-        CluesManager.Instance.CollectItem(GameManager.items[13]);
+        if (!GameManager.items[13].collected) { 
+            CluesManager.Instance.CollectItem(
+                GameManager.items[13]
+            );
+        }
     }
 
     public void SeeConfidentialDocuments() {
@@ -160,7 +174,11 @@ public class Jacob : NPC {
             ) 
         );
 
-        CluesManager.Instance.CollectItem(GameManager.items[14]);
+        if (!GameManager.items[14].collected) { 
+            CluesManager.Instance.CollectItem(
+                GameManager.items[14]
+            );
+        }
 
         yield return StartCoroutine(TriggerMemory());
     }

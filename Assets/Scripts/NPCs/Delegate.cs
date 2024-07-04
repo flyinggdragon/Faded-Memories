@@ -6,9 +6,11 @@ public class Delegate : NPC {
     public override void RevealName() {}
 
     public void TalkToDelegate() {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Report to the police.")
-        );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Report to the police.");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
+        }
 
         GameManager.reportedCult = true;
     }

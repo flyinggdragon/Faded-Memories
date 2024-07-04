@@ -18,10 +18,12 @@ public class RukonCrimeScene : MonoBehaviour
         if (necklaceCollected) {
 
             exitRight.nextLevel = "Rukon_3";
-
-            ObjectivesManager.Instance.FinishObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Investigate the murder of Amber Nikolsi.")
-            );
+            
+            ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Investigate the murder of Amber Nikolsi.");
+        
+            if (obj != null) {
+                ObjectivesManager.Instance.FinishObjective(obj);
+            }
 
             GameManager.wentToAlleyAndGotNecklace = true;
 

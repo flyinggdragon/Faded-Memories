@@ -29,9 +29,11 @@ public class Kamu : NPC {
 
     public void TalkToCultists()
     {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Follow the suspect.")
-        );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Follow the suspect.");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
+        }
 
         StartCoroutine(TriggerMemory());
 

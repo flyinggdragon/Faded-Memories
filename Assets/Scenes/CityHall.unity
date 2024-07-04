@@ -1591,7 +1591,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.size
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[0].text
@@ -1643,20 +1643,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[11].text
-      value: SECURITY!
+      value: SECURITY!!
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[12].text
-      value: She resigned. What about it? We have nothing to with that.
+      value: WHERE IS SECURITY!?!?
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[13].text
-      value: We don't. That's her personal life. If she doesn't awnt to continue,
-        then someone else will.
+      value: She resigned. What about it? We have nothing to with that.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[14].text
-      value: We don't. That's her personal life. If she doesn't awnt to continue,
+      value: We don't. That's her personal life. If she doesn't want to continue,
         then someone else will.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -1677,15 +1676,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[11].isEnd
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[12].isEnd
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
-      propertyPath: dialogueStrings.Array.data[13].isEnd
+      propertyPath: dialogueStrings.Array.data[12].isEnd
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[13].isEnd
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[14].isEnd
@@ -1717,7 +1716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[6].isQuestion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[7].isQuestion
@@ -1741,11 +1740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[12].isQuestion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[13].isQuestion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[14].isQuestion
@@ -1821,11 +1820,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[12].answerOption1
-      value: You are from the same party as her. You must know more.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[13].answerOption1
-      value: 
+      value: You are from the same party as her. You must know more.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[14].answerOption1
@@ -1845,7 +1844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[3].option1IndexJump
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[4].option1IndexJump
@@ -1865,7 +1864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[6].option2IndexJump
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[7].option1IndexJump
@@ -1889,10 +1888,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[12].option1IndexJump
-      value: 13
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[13].option1IndexJump
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[11].startDialogueEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[12].startDialogueEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -1900,7 +1907,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[12].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[11].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 941937641}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[12].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 941937641}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -1908,7 +1923,15 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[12].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[11].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallSecurity
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[12].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CallSecurity
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -1916,7 +1939,15 @@ PrefabInstance:
       value: Politicians, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[12].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Politicians, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[11].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[12].startDialogueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -2008,6 +2039,491 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287c44a1018f9e042b49404fd6e58455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ds:
+  - text: The security is called.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: Two guards appear to remove you from the hall.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"I am not leaving until these guys here answer my questions!\" \u2014
+      you declare, imposingly."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: The security guards disregard your intentions and once again order you
+      to leave.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: '"I refuse! These politicians are hiding something very suspicious, perhaps
+      something very compromising... that could perhaps ruin their reputation. And
+      I am going to expose it!"'
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"You!\" \u2014 growls one of them."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: He jumps at you, trying to immobilize you. You resist.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: You notice he drops a patch from his suit. You pick it before he notices.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: A guard security kicks in and voices prison against you.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: He then interferes in the brawl, separating you two.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: The guard is about to buckle you up, when a man appears.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: He shows them some kind of document, with a patch similar to the one you've
+      just collected.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"Assembly...?\" \u2014 the guards and the other two politicians gasp."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: "\"Let this kid go with me, I'll take care of him.\" \u2014 says the man."
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: Submissively, the guards accept the request.
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: You don't know what to think. Is this good? You just got away from being
+      arrested, but this suspicious man said he would "take care of me".
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: They were so submissive to their request, is this man powerful enough to
+      inflict authority in a city hall security agent, or even parlamentarians?
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: Is this man from the Cult? Is he angry at me for trying to surface the
+      rumours? Am I in trouble?
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
+  - text: In total silence, this man guides you from the city hall back... wait...
+      back Home???
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    highlightOption1: 0
+    answerOption2: 
+    highlightOption2: 0
+    answerOption3: 
+    highlightOption3: 0
+    answerOption4: 
+    highlightOption4: 0
+    answerOption5: 
+    highlightOption5: 0
+    option1IndexJump: 0
+    option2IndexJump: 0
+    option3IndexJump: 0
+    option4IndexJump: 0
+    option5IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueSoundEffect: {fileID: 0}
 --- !u!4 &941937642 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}

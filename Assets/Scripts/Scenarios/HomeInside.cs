@@ -26,9 +26,11 @@ public class HomeInside : MonoBehaviour {
     }
 
     private IEnumerator CompleteMission() {
-        ObjectivesManager.Instance.FinishObjective(
-            ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".")
-        );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Go \"Home\".");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
+        }
 
         yield return StartCoroutine(Notebook.Instance.ToggleAndLock(1));
 

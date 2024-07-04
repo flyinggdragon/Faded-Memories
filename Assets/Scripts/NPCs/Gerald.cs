@@ -30,10 +30,10 @@ public class Gerald : NPC {
     }
 
     public void End() {
-        if (!GameManager.talkedToGerald) {
-            ObjectivesManager.Instance.FinishObjective(
-                ObjectivesManager.Instance.FindObjectiveByName("Discover the meaning of this note.")
-            );
+        ObjectivesManager.Objective obj = ObjectivesManager.Instance.FindObjectiveByName("Discover the meaning of this note.");
+        
+        if (obj != null) {
+            ObjectivesManager.Instance.FinishObjective(obj);
         }
         
         GameManager.talkedToGerald = true;

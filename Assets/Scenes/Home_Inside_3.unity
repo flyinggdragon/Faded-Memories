@@ -1845,11 +1845,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[14].text
-      value: 'Not at all. This is why I believe this crime was premeditated. '
+      value: 'Not the safest, but not like a warzone. But I still believe this crime
+        was premeditated. '
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[15].text
-      value: And I want to investigate it.
+      value: And I want to investigate it. You saw how those politicians were became
+        defensive when you surfaced those rumours, so there might be some kind of
+        relation between them and the crime.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[16].text
