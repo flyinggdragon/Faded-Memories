@@ -200,10 +200,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd18a8f35dce3654ab3e45007b043e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 
-  nextPosX: 0
-  nextPosY: 0
-  nextScaleX: 0
+  nextLevel: CultHQ_Corridor
+  nextPosX: -9.59
+  nextPosY: -2.16
+  nextScaleX: 1
 --- !u!1 &129673462
 GameObject:
   m_ObjectHideFlags: 0
