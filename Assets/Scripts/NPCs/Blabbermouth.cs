@@ -20,6 +20,7 @@ public class Blabbermouth : NPC {
         if (GameManager.sawGraffiti) {
             dt.dialogueStrings[0].answerOption3 = "I saw a graffiti...";
             dt.dialogueStrings[0].option3IndexJump = 21;
+            dt.dialogueStrings[0].highlightOption3 = true;
         } else { 
             dt.dialogueStrings[0].answerOption3 = "Bye";
             dt.dialogueStrings[0].option3IndexJump = 26;

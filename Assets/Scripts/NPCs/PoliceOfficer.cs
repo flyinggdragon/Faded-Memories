@@ -15,6 +15,7 @@ public class PoliceOfficer : NPC {
         if (GameManager.knowsPoliceCrackdown) {
             dt.dialogueStrings[4].answerOption4 = "Why was the Cult raid raided yesterday? (*Intimidate*)"; 
             dt.dialogueStrings[4].option4IndexJump = 15;
+            dt.dialogueStrings[4].highlightOption4 = true;
         } else {
             dt.dialogueStrings[4].answerOption4 = "";
             dt.dialogueStrings[4].option4IndexJump = 0;

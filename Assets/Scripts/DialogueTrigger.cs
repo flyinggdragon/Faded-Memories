@@ -28,11 +28,16 @@ public class DialogueString {
     
     [Header("Branch")]
     public bool isQuestion;
-    public string answerOption1;
+    public string answerOption1; 
+    public bool highlightOption1;
     public string answerOption2; 
+    public bool highlightOption2;
     public string answerOption3; 
+    public bool highlightOption3; 
     public string answerOption4; 
+    public bool highlightOption4; 
     public string answerOption5; 
+    public bool highlightOption5; 
     public int option1IndexJump;
     public int option2IndexJump;
     public int option3IndexJump;

@@ -48,6 +48,7 @@ public static class GameManager {
         AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.3f);
         
         Notebook.Instance.ToggleNotebook();
+        CluesManager.Instance.CollectItem(items[0]);
         
         Starter.firstTime = false;
     }

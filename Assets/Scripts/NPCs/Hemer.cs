@@ -7,10 +7,20 @@ public class Hemer : NPC {
     public override void RevealName() {}
 
     public void GiveBusinessCard() {
+        StartCoroutine(ShowBusiness());
+        
+        GameManager.spokeToHemer = true;
+    }
+
+    private IEnumerator ShowBusiness() {
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateTransparentItemDisplayer(
+                BlackScreenText.Instance.hemerBussinessCard
+            )
+        );
+        
         CluesManager.Instance.CollectItem(
             CluesManager.Instance.FindItem("Business Card")
         );
-
-        GameManager.spokeToHemer = true;
     }
 }

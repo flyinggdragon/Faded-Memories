@@ -9,10 +9,7 @@ public class Journalist : NPC {
         dt = GetComponentInChildren<DialogueTrigger>();
     }
 
-    public override void RevealName() {
-        npcName = "Peter";
-        Player.Instance.dialogueManager.UpdateNPCName(npcName);
-    }
+    public override void RevealName() {}
 
     void Update() {
         if (!GameManager.firstPuzzleCompleted) { dt.dialogueStrings[9].isEnd = true; }

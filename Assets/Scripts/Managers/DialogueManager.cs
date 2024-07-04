@@ -96,32 +96,60 @@ public class DialogueManager : MonoBehaviour {
                     option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
                     option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1IndexJump));
                     activeOptions.Add(option1Button);
-                } else {
-                    throw new Exception("A opção 1 não pode estar vazia.");
+
+                    if (line.highlightOption1) {
+                        UIManager.Instance.HighlightOption(1);
+                    } else {
+                        UIManager.Instance.UnHighlightOption(1);
+                    }
                 }
 
                 if (!string.IsNullOrEmpty(line.answerOption2)) {
                     option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
                     option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2IndexJump));
                     activeOptions.Add(option2Button);
+
+                    if (line.highlightOption2) {
+                        UIManager.Instance.HighlightOption(2);
+                    } else {
+                        UIManager.Instance.UnHighlightOption(2);
+                    }
                 }
 
                 if (!string.IsNullOrEmpty(line.answerOption3)) {
                     option3Button.GetComponentInChildren<TMP_Text>().text = line.answerOption3;
                     option3Button.onClick.AddListener(() => HandleOptionSelected(line.option3IndexJump));
                     activeOptions.Add(option3Button);
+
+                    if (line.highlightOption3) {
+                        UIManager.Instance.HighlightOption(3);
+                    } else {
+                        UIManager.Instance.UnHighlightOption(3);
+                    }
                 }
 
                 if (!string.IsNullOrEmpty(line.answerOption4)) {
                     option4Button.GetComponentInChildren<TMP_Text>().text = line.answerOption4;
                     option4Button.onClick.AddListener(() => HandleOptionSelected(line.option4IndexJump));
                     activeOptions.Add(option4Button);
+
+                    if (line.highlightOption4) {
+                        UIManager.Instance.HighlightOption(4);
+                    } else {
+                        UIManager.Instance.UnHighlightOption(4);
+                    }
                 }
 
                 if (!string.IsNullOrEmpty(line.answerOption5)) {
                     option5Button.GetComponentInChildren<TMP_Text>().text = line.answerOption5;
                     option5Button.onClick.AddListener(() => HandleOptionSelected(line.option5IndexJump));
                     activeOptions.Add(option5Button);
+
+                    if (line.highlightOption5) {
+                        UIManager.Instance.HighlightOption(5);
+                    } else {
+                        UIManager.Instance.UnHighlightOption(5);
+                    }
                 }
                 
                 foreach (Button option in activeOptions) {
