@@ -104,10 +104,10 @@ public class Notebook : MonoBehaviour {
         GameManager.spokeToNimrod = true;
         GameManager.escaping = false;
         GameManager.spokeToHemer = true;
-        GameManager.reportedCult = true;
+        GameManager.reportedCult = true;/*
         GameManager.raidTime = true;
         GameManager.sawBag = true;
-        GameManager.sawFinances = true;
+        GameManager.sawFinances = true;*/
 
         CluesManager.Instance.CollectItem(GameManager.items[2]);
         CluesManager.Instance.CollectItem(GameManager.items[4]);
@@ -139,7 +139,7 @@ public class Notebook : MonoBehaviour {
     }
 
     public void tp() {
-        LevelManager.Instance.LoadLevel("Home_Inside_2");
+        LevelManager.Instance.LoadLevel("Home_Inside_6");
     }
 
     void Start() {
