@@ -11,6 +11,7 @@ public class ObjectivesManager : MonoBehaviour {
     private GameObject objectiveContainer;
     private GameObject currentObjective;
     private GameObject objectiveItemPrefab;
+    private GameObject OCprefab;
     public static ObjectivesManager Instance { get; private set; }
 
     private void Awake() {
@@ -75,6 +76,7 @@ public class ObjectivesManager : MonoBehaviour {
 
         if (!newObjective.active) {
             newObjective.active = true;
+
             UIManager.Instance.CreateToastModal(newObjective.title, "New objective!");
         }
     }
@@ -87,7 +89,7 @@ public class ObjectivesManager : MonoBehaviour {
         current.finished = true;
         current.active = false;
 
-        UIManager.Instance.CreateToastModal(current.title, "Objective complete!");
+        InstantiateObjectiveComplete(current.title);
         objectives.Remove(current);
 
         // IEnumerator aqui para que isso só rode quando o toast de cima sair de cena.
@@ -98,6 +100,17 @@ public class ObjectivesManager : MonoBehaviour {
 
     public Objective FindObjectiveByName(string name) {
         return objectives.FirstOrDefault(objective => objective.title == name);
+    }
+
+    private void InstantiateObjectiveComplete(string name) {
+        OCprefab = Resources.Load<GameObject>("Prefabs/Objective Complete");
+        Vector3 position = new Vector3(0, 0, 0);
+        Quaternion rotation = Quaternion.identity;
+
+        GameObject instantiatedPrefab = Instantiate(OCprefab, position, rotation);
+
+        TMP_Text txt = instantiatedPrefab.transform.GetChild(1).GetComponentInChildren<TMP_Text>();
+        txt.text = name;
     }
 
     [System.Serializable]
