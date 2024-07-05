@@ -34,13 +34,14 @@ public class ObjectivesManager : MonoBehaviour {
     void Start() {
         gameObject.SetActive(false);
         objectives = LoadObjectiveList("Assets/GameData/Objectives.json");
+        GameManager.objectives = objectives;
 
         objectiveContainer = transform.GetChild(1).gameObject;
         currentObjective = transform.GetChild(0).gameObject; 
-        
-        objectiveItemPrefab = Resources.Load<GameObject>("Prefabs/ObjectiveItemPrefab");
 
         NewObjective(objectives[0]);
+        
+        objectiveItemPrefab = Resources.Load<GameObject>("Prefabs/ObjectiveItemPrefab");
 
         foreach (Objective objective in objectives) {
             if (objective == GameManager.currentObjective) {

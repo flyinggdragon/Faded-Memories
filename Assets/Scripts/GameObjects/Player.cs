@@ -110,6 +110,11 @@ public class Player : MonoBehaviour {
                     if (item.itemName == "200 Rukh Bill") {
                         GameManager.money += 200;
                     }
+
+                    if (item.itemName == "Note") {
+                        AlleyStart.noteCollected = true;
+                        AlleyStart.firstTimeIn = false;
+                    }
                 }
             }
         }

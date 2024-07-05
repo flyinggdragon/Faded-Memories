@@ -14,10 +14,10 @@ public class CultOutside2 : MonoBehaviour {
     }
 
     void Update() {
-        if (!suspect.enteredCult) {
-            kamu.gameObject.SetActive(false);
+        if (!Suspect.enteredCult) {
+            kamu.dt.tag = "Untagged";
         } else {
-            kamu.gameObject.SetActive(true);
+            kamu.dt.tag = "NPC";
         }
     }
 }

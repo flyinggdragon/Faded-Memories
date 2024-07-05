@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Kamu : NPC {
     public override string npcName { get; set; } = "Cultist";
-    private DialogueTrigger dt;
+    public DialogueTrigger dt;
 
     public override void RevealName() {
         npcName = "Kamu Uepeker";

@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 
 public class CluesManager : MonoBehaviour {
     [SerializeField]
+    public List<Item> items;
     public List<Cell> cells;
     public static CluesManager Instance { get; private set; }
 
@@ -24,17 +25,20 @@ public class CluesManager : MonoBehaviour {
     }
     
     public void Start() {
-        gameObject.SetActive(false);
+        items = LoadItemList();
+        GameManager.items = items;
 
         cells = GenerateCells();
 
         foreach (Cell cell in cells) {
             cell.ToggleVisibility();
         }
+
+        gameObject.SetActive(false);
     }
 
-    public List<Item> LoadItemList(string path) {
-        string jsonText = File.ReadAllText(path);
+    public List<Item> LoadItemList() {
+        string jsonText = File.ReadAllText("Assets/GameData/ItemList.json");
         ItemListWrapper wrapper = JsonUtility.FromJson<ItemListWrapper>(jsonText);
         
         return wrapper.item;

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 
 public class LevelManager : MonoBehaviour {
+    public List<Level> levels;
     public static LevelManager Instance { get; private set; }
 
     void Awake() {
@@ -18,6 +19,16 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
+    void Start() {
+        levels = LoadLevelList();
+        GameManager.levels = levels;
+
+        GameManager.currentLevel = levels[0];
+
+        AssignBackgroundMusic();
+        AudioManager.Instance.PlayBackgroundMusic(GameManager.currentLevel.backgroundSongClip, 0.3f);
+    }
+
     public void AssignBackgroundMusic() {
         foreach (Level level in GameManager.levels) {
             AudioClip clip = AudioManager.Instance.FindAudioClip(level.backgroundSong);
@@ -25,8 +36,8 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
-    public List<Level> LoadLevelList(string path) {
-        string jsonText = File.ReadAllText(path);
+    public List<Level> LoadLevelList() {
+        string jsonText = File.ReadAllText("Assets/GameData/LevelList.json");
         LevelListWrapper wrapper = JsonUtility.FromJson<LevelListWrapper>(jsonText);
         
         return wrapper.level;

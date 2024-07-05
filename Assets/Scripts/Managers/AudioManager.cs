@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
+    public List<AudioClip> audios;
     public AudioSource bgMusicSource;
     private AudioSource sfxSource;
     public static AudioManager Instance { get; private set; }
@@ -20,6 +21,9 @@ public class AudioManager : MonoBehaviour {
     }
 
     void Start() {
+        audios = LoadAudioClips();
+        GameManager.audios = audios;
+
         bgMusicSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
 

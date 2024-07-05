@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Starter : MonoBehaviour {
     
-    // Temporário (e gambiarra).
+    // Gambiarra
     public static bool firstTime = true;
     void Start() {
-        if (firstTime) { GameManager.Initialize(); }
+        if (firstTime) { 
+            Notebook.Instance.ToggleNotebook();
+        }
     }
 }

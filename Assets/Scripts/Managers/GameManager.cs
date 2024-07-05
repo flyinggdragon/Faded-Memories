@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class GameManager {
     public static List<LevelManager.Level> levels;
@@ -35,21 +36,6 @@ public static class GameManager {
     public static bool sawConfidentialDocuments = false;
 
     public static void Initialize() {
-        levels = LevelManager.Instance.LoadLevelList("Assets/GameData/LevelList.json");   
-        items = CluesManager.Instance.LoadItemList("Assets/GameData/ItemList.json");
-        audios = AudioManager.Instance.LoadAudioClips();
-        objectives = ObjectivesManager.LoadObjectiveList("Assets/GameData/Objectives.json");
-        
-        currentObjective = objectives[0];
-        currentLevel = levels[0];
-
-        LevelManager.Instance.AssignBackgroundMusic();
-
-        AudioManager.Instance.PlayBackgroundMusic(currentLevel.backgroundSongClip, 0.3f);
-        
-        Notebook.Instance.ToggleNotebook();
-        CluesManager.Instance.CollectItem(items[0]);
-        
-        Starter.firstTime = false;
+        SceneManager.LoadScene("AlleyStart");
     }
 }
