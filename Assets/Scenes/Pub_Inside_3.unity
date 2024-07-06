@@ -1232,7 +1232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[12].text
-      value: This is called "Kjestnim". It is a symbol that represents good fortune
+      value: This is called "Kjetnim". It is a symbol that represents good fortune
         in Kakim.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -1247,11 +1247,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[15].text
-      value: It means "May the fortune become your friend." "Kjesnin" means fortune.
+      value: It means "May the fortune become your friend." "Kjetnin" means fortune.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[16].text
-      value: Heh, Kakim is often unknown to people from Harkan, nice to share a bit.
+      value: Heh, Kakim is often unknown to people from Harkan, so it is never bad
+        to bring some culture.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[17].text
@@ -1635,7 +1636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.19
+      value: 27.47
       objectReference: {fileID: 0}
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1672,6 +1673,14 @@ PrefabInstance:
     - target: {fileID: 2839345182384550383, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867080035707387782, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.721387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867080035707387782, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0037647933
       objectReference: {fileID: 0}
     - target: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_Name
@@ -2367,7 +2376,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91e74ed3cbd3eb3419a4d3da2719ce62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dac7ef35db833ff4ca745d87a9806b38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3227,7 +3236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[5].text
-      value: 'What wcurrently know is that:'
+      value: 'What we currently know is that:'
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[6].text
@@ -3654,6 +3663,10 @@ PrefabInstance:
     - target: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: m_Name
       value: Journalist
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141080504594895913, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

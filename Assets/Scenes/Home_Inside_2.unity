@@ -2561,8 +2561,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[24].text
-      value: If you give me a hand, I'll tell you everything, or you even find it
-        all yourself, who knows, heh.
+      value: If you give me a hand, I'll tell you everything, or you'll even find
+        it all on your own, who knows, heh.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[25].text

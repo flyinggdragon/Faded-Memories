@@ -1293,7 +1293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[11].text
-      value: After all you have done.
+      value: After all you have done. After being pathetically expelled.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[12].text

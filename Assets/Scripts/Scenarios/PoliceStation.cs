@@ -6,6 +6,7 @@ public class PoliceStation : MonoBehaviour {
     Exit upTrigger;
     public static bool blindEye = false;
     public static bool allowedEntrance = false;
+    public GameObject officer;
 
     void Start() {
         if (GameObject.Find("UpTrigger_ChiefRoom").GetComponent<Exit>() != null) {
@@ -14,10 +15,6 @@ public class PoliceStation : MonoBehaviour {
     }
 
     void Update() {
-        Debug.Log("be: " + blindEye);
-        Debug.Log("ae: " + allowedEntrance);
-        Debug.Log("upn: " + upTrigger != null);
-        
         if ((blindEye || allowedEntrance) && (upTrigger != null)) {
             upTrigger.gameObject.SetActive(true);
         } else {

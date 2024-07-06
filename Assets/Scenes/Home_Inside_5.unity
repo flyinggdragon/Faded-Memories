@@ -1894,7 +1894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[53].text
-      value: We are disputing influence over smaller nations with them. And by conssquence,
+      value: We are disputing influence over smaller nations with them. And by consequence,
         global power hegemony.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -1990,7 +1990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[73].text
-      value: It is known in Kakim that the ward heavily depend on the metropolitan
+      value: It is known in Kakim that the wards heavily depend on the metropolitan
         authority, so if Harkan falls, every single ward follows suit.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -2000,8 +2000,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[75].text
-      value: In Kakim, however, if one city wants to go against the central government,
-        they have limited power over them.
+      value: However, if one city wants to go against the nation's government, the
+        central power has limited power over them.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[76].text
@@ -2571,11 +2571,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[30].answerOption1
-      value: I saw a graffiti in Downtown.
+      value: I've heard rumours...
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[30].answerOption2
-      value: I've heard rumours too...
+      value: I saw a graffiti in Downtown
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[31].answerOption1
@@ -2811,11 +2811,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[5].option1IndexJump
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[6].option1IndexJump
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[12].option1IndexJump
@@ -2864,6 +2864,10 @@ PrefabInstance:
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[26].option2IndexJump
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
+      propertyPath: dialogueStrings.Array.data[30].highlightOption2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[30].option1IndexJump

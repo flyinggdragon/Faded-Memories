@@ -2596,9 +2596,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2843,6 +2843,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513785691}
   m_CullTransparentMesh: 1
+--- !u!1 &518070807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518070810}
+  - component: {fileID: 518070809}
+  - component: {fileID: 518070808}
+  m_Layer: 5
+  m_Name: dimmedBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &518070808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518070807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.972549}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &518070809
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518070807}
+  m_CullTransparentMesh: 1
+--- !u!224 &518070810
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518070807}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2563, y: 1.2563, z: 1.2563}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1557952258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 693, y: 390}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,7 +3005,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000004371139}
-  m_LocalPosition: {x: 0.12325573, y: 0.014939999, z: -10}
+  m_LocalPosition: {x: 0.13048553, y: 0.014939999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3979,7 +4054,7 @@ RectTransform:
   m_GameObject: {fileID: 659296996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2563, y: 1.2563, z: 1.2563}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1290700631}
@@ -4463,7 +4538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0004, y: -2.1409}
+  m_AnchoredPosition: {x: -19.4, y: -2.1409}
   m_SizeDelta: {x: 36.8312, y: 14.5774}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &753543170
@@ -6172,7 +6247,7 @@ RectTransform:
   m_GameObject: {fileID: 993501106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5922, y: 1.5922, z: 1.5922}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 86863183}
@@ -6253,7 +6328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resume: {fileID: 1533412860}
-  save: {fileID: 0}
   quit: {fileID: 1879994793}
   holder: {fileID: 1045556029}
   isOpen: 0
@@ -8323,7 +8397,7 @@ RectTransform:
   m_GameObject: {fileID: 1312336009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.621815, y: 1.3472662, z: 1.4805121}
+  m_LocalScale: {x: 0.9900539, y: 2.1451173, z: 2.3572714}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1944663833}
@@ -9243,8 +9317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.857, y: 16.5988}
-  m_SizeDelta: {x: 37.713, y: 13.6956}
+  m_AnchoredPosition: {x: -43.9, y: 15.4846}
+  m_SizeDelta: {x: 37.713, y: 15.9241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513345315
 MonoBehaviour:
@@ -9258,7 +9332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2942de61a782244af4cca06bb16b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  answer: expulsion
+  answer: expelled
   spaceFilled: 0
 --- !u!114 &1513345316
 MonoBehaviour:
@@ -9359,7 +9433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I suffered expulsion from the Cult, and the reason was betrayal.
+  m_text: I was expelled from the Cult, and the reason was betrayal.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
   m_sharedMaterial: {fileID: -336017103543269328, guid: 92a793180d5513e44b227ec28b0a4a95, type: 2}
@@ -9518,19 +9592,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1533412861}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1045556030}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: TogglePause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1533412861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9767,6 +9829,7 @@ MonoBehaviour:
   container: {fileID: 1581066963}
   textContainer: {fileID: 562939463}
   imageContainer: {fileID: 1961336705}
+  dimmedBackground: {fileID: 518070807}
   textComponent: {fileID: 2035489679}
   imageComponent: {fileID: 1066103707}
   isActive: 0
@@ -10850,7 +10913,7 @@ MonoBehaviour:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
   - text: "\"You should understand that and refrain from letting your emotions get
-      in the way of reaason.\" \u2014 the same voice continues."
+      in the way of reason.\" \u2014 the same voice continues."
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -10902,8 +10965,8 @@ MonoBehaviour:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
   - text: "\"Lynx, you are new here and should understand that your will does not
-      matter if you are outnumbered by us.\" \u2014 this time, a feminine voice can
-      be heard."
+      match the majority's, I thought \"Snake\" had explained that to you.\" \u2014
+      this time, a soft female voice can be heard."
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -11005,8 +11068,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  - text: "\"Silence. This is what traitors would say.\" \u2014 an intimidating voice
-      sounds. Everyone understands the message, but you continue."
+  - text: "\"Lynx, you  must know that this is the Institution's and the Goddess
+      Herself will, do you think on betraying Her? \u2014 an intimidating voice sounds.
+      Everyone understands the message, but you continue."
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -11031,8 +11095,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  - text: '"Traitor? For what? Protecting this coutnry from this madness? Who do
-      you think you are!??"'
+  - text: '"Betraying? wWhat? Protecting this country from this madness is betrayal?
+      Who do you think you are!??"'
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -11134,7 +11198,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  - text: '"No way, this is total b******t! The population will know of this!"'
+  - text: '"No way, this is totally stupid! The population will know of this!"'
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -11665,7 +11729,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  - text: "\"\"Snake\", how dare you conspirate against Harkan? This city that open
+  - text: "\"\"Snake\", how dare you conspirate against Harkan? This city that opened
       its arms to the Goddess?\" \u2014 sounds your voice, in a disturbed tone."
     isEnd: 0
     isQuestion: 0
@@ -11846,8 +11910,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  - text: "\"You are a fanatic...\" \u2014 your speech is interrupted because you
-      had to cough out some blood, stuck inside your throat."
+  - text: "\"You are an entitled fanatic...\" \u2014 your speech is interrupted because
+      you had to cough out some blood, stuck inside your throat."
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -12026,7 +12090,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  - text: You cannot feel anything than rage.
+  - text: You cannot feel anything other than rage.
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -12291,6 +12355,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 518070810}
   - {fileID: 1581066964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12390,7 +12455,7 @@ RectTransform:
   m_GameObject: {fileID: 1581066963}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2563, y: 1.2563, z: 1.2563}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 562939464}
@@ -12646,7 +12711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.048508, y: 17.375}
+  m_AnchoredPosition: {x: 30.3, y: 17.375}
   m_SizeDelta: {x: 19.416, y: 12.142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637381142

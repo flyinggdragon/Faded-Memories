@@ -2,10 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class Pause : MonoBehaviour {
     public Button resume;
-    public Button save;
     public Button quit;
     public GameObject holder;
     public bool isOpen;
@@ -24,7 +22,9 @@ public class Pause : MonoBehaviour {
     void Start() {
         holder.SetActive(false);
         isOpen = false;
-        quit.onClick.AddListener(() => SceneManager.LoadScene("Main Menu"));
+        
+        resume.onClick.AddListener(() => TogglePause());
+        quit.onClick.AddListener(() => Quit());
     }
 
     public void TogglePause() {
@@ -39,5 +39,14 @@ public class Pause : MonoBehaviour {
             AudioManager.Instance.bgMusicSource.volume = 0.3f;
             UIManager.Instance.LockCursor();
         }
+    }
+
+    public void Quit() {
+        isOpen = !isOpen;
+        holder.SetActive(isOpen);
+
+        AudioManager.Instance.StopBackgroundMusic();
+
+        SceneManager.LoadScene("Main Menu");
     }
 }

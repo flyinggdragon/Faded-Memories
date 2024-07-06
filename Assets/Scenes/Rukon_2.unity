@@ -2989,18 +2989,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[1].text
-      value: Ah, you mean Amber? I knew her. She talked a lot to the people here
-        in Rukon.
+      value: Ah, you mean Amber? I used to know her. She used to be very accessible
+        to us residents of Rukon.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[2].text
-      value: I talked to her this afternoon before she was murdered. She said she
+      value: I talked to her this afternoon before... you know what. She said she
         was leaving home to go to the Business Center and after that would go to
         a bank here in Rukon.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[3].text
-      value: I guess she got murdered when she was making her way to the bank.
+      value: It might have happened while she was on her way...
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[4].text
@@ -3008,7 +3008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[5].text
-      value: See ya.
+      value: Bye bye.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[1].isEnd
@@ -3052,7 +3052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[0].answerOption1
-      value: Hello, i'm looking for clues about the victim.
+      value: Hello, I'm looking for clues about the victim.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[0].answerOption2

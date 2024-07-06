@@ -108,8 +108,11 @@ public class ObjectivesManager : MonoBehaviour {
         Quaternion rotation = Quaternion.identity;
 
         GameObject instantiatedPrefab = Instantiate(OCprefab, position, rotation);
+        
+        RectTransform rt = instantiatedPrefab.GetComponent<RectTransform>();
+        rt.anchoredPosition += new Vector2(0, 50);
 
-        TMP_Text txt = instantiatedPrefab.transform.GetChild(1).GetComponentInChildren<TMP_Text>();
+        TMP_Text txt = instantiatedPrefab.transform.GetChild(0).transform.GetChild(1).GetComponentInChildren<TMP_Text>();
         txt.text = name;
     }
 

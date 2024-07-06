@@ -34,7 +34,6 @@ public class AudioManager : MonoBehaviour {
         if (bgMusicSource.isPlaying) { StopBackgroundMusic(); }
 
         bgMusicSource.volume = volume;
-        bgMusicSource.loop = true;
         bgMusicSource.PlayOneShot(clip);
     }
 

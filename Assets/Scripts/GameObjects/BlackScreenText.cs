@@ -8,6 +8,7 @@ public class BlackScreenText : MonoBehaviour {
     public GameObject container;
     public GameObject textContainer;
     public GameObject imageContainer;
+    public GameObject dimmedBackground;
     public TMP_Text textComponent;
     public Image imageComponent;
     private static BlackScreenText instance;
@@ -45,6 +46,7 @@ public class BlackScreenText : MonoBehaviour {
 
     void Start() {
         container.SetActive(false);
+        dimmedBackground.SetActive(false);
     }
 
     public IEnumerator CreateBlackScreenWithText(List<DialogueString> ds) {
@@ -98,6 +100,7 @@ public class BlackScreenText : MonoBehaviour {
     private IEnumerator ShowImage(Sprite img) {
         imageComponent.sprite = img;
         imageComponent.preserveAspect = true;
+        dimmedBackground.SetActive(true);
 
         yield return new WaitForSeconds(textInterval);
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
@@ -108,6 +111,7 @@ public class BlackScreenText : MonoBehaviour {
     public void Hide() {
         isActive = false;
         gameObject.SetActive(isActive);
+        dimmedBackground.SetActive(false);
 
         textComponent.text = "";
     }
