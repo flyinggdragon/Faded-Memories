@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Downtown_Low
   nextPosX: 37.73
-  nextPosY: -2.08
+  nextPosY: -1.937
   nextScaleX: 1
 --- !u!1 &129673462
 GameObject:

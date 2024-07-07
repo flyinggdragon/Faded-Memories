@@ -833,7 +833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Deposit_2
   nextPosX: 1.85
-  nextPosY: -2.04
+  nextPosY: -1.89
   nextScaleX: 1
 --- !u!1 &476438397
 GameObject:
@@ -3193,7 +3193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Sanctuary_2
   nextPosX: -1.81
-  nextPosY: -1.41
+  nextPosY: -1.09
   nextScaleX: 1
 --- !u!1 &1807792125
 GameObject:

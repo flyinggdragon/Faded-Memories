@@ -3051,7 +3051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: BusinessCenter
   nextPosX: -5.8
-  nextPosY: -2.19
+  nextPosY: -1.967
   nextScaleX: 1
 --- !u!1 &1221140554
 GameObject:
@@ -3989,7 +3989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CityHall
   nextPosX: -23.69
-  nextPosY: -2.17
+  nextPosY: -1.933
   nextScaleX: 1
 --- !u!1 &1757715542
 GameObject:
@@ -4308,7 +4308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Rukon
   nextPosX: -15.84
-  nextPosY: -2.09
+  nextPosY: -1.93
   nextScaleX: 1
 --- !u!1001 &1853958509
 PrefabInstance:
@@ -4389,7 +4389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Downtown_Low
   nextPosX: 64
-  nextPosY: -2.08
+  nextPosY: -1.937
   nextScaleX: -1
 --- !u!1 &1955164993
 GameObject:
@@ -4636,7 +4636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Park
   nextPosX: -30
-  nextPosY: -2.17
+  nextPosY: -1.89
   nextScaleX: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

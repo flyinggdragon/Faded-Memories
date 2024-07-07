@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: PoliceStation_Main
   nextPosX: 12.3
-  nextPosY: -2.17
+  nextPosY: -1.91
   nextScaleX: -1
 --- !u!1 &129673462
 GameObject:

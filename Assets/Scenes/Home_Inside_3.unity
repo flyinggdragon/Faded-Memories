@@ -557,7 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Home_Outside
   nextPosX: 0.31
-  nextPosY: -2.19
+  nextPosY: -1.917
   nextScaleX: -1
 --- !u!1 &279165570
 GameObject:

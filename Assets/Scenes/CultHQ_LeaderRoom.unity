@@ -5071,7 +5071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Corridor
   nextPosX: 48.47
-  nextPosY: -2.16
+  nextPosY: -2.12
   nextScaleX: -1
 --- !u!1 &1807792125
 GameObject:

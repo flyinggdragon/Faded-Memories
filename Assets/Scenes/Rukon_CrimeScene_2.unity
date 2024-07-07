@@ -3316,7 +3316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Rukon_2
   nextPosX: 12.32
-  nextPosY: -2.09
+  nextPosY: -1.93
   nextScaleX: 1
 --- !u!1001 &3373841862135162221
 PrefabInstance:

@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Downtown_Low
   nextPosX: 37.73
-  nextPosY: -2.23
+  nextPosY: -1.937
   nextScaleX: 1
 --- !u!1 &129673462
 GameObject:
@@ -3198,7 +3198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: PoliceStation_ChiefRoom
   nextPosX: -14
-  nextPosY: -2.21
+  nextPosY: -1.92
   nextScaleX: 1
 --- !u!1 &1169001518
 GameObject:

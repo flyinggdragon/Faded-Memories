@@ -2434,7 +2434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Lobby_2
   nextPosX: 36.43
-  nextPosY: -2.19
+  nextPosY: -1.93
   nextScaleX: -1
 --- !u!1 &1000328567
 GameObject:

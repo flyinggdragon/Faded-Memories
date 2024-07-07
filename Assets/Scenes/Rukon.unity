@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Rukon_CrimeScene
   nextPosX: 5.73
-  nextPosY: -2.19
+  nextPosY: -1.93
   nextScaleX: -1
 --- !u!1 &70513591
 GameObject:
@@ -2984,7 +2984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Downtown_High
   nextPosX: 24.4
-  nextPosY: -2.08
+  nextPosY: -1.87
   nextScaleX: 1
 --- !u!1 &1955164993
 GameObject:

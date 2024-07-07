@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Downtown_Low
   nextPosX: 37.73
-  nextPosY: -2.08
+  nextPosY: -1.937
   nextScaleX: 1
 --- !u!1 &129673462
 GameObject:
@@ -2136,7 +2136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: PoliceStation_ChiefRoom_2
   nextPosX: -14
-  nextPosY: -2.23
+  nextPosY: -1.92
   nextScaleX: 1
 --- !u!1 &1169001518
 GameObject:
@@ -3410,6 +3410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f99a85ae5140b4b9e9b45216f84de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  officer: {fileID: 0}
 --- !u!4 &1535901820
 Transform:
   m_ObjectHideFlags: 0
@@ -4409,6 +4410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41c564185aa1874ea869f91319a2cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ds: []
 --- !u!1 &1955164993
 GameObject:
   m_ObjectHideFlags: 0

@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: 
   nextPosX: -9.59
-  nextPosY: -2.16
+  nextPosY: -2.12
   nextScaleX: 1
 --- !u!1 &129673462
 GameObject:
@@ -1847,7 +1847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Lobby
   nextPosX: 0
-  nextPosY: -2.19
+  nextPosY: -1.93
   nextScaleX: 1
 --- !u!1 &1094126695
 GameObject:

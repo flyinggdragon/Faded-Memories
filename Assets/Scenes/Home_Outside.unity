@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Park
   nextPosX: 22.68
-  nextPosY: -2.17
+  nextPosY: -1.89
   nextScaleX: -1
 --- !u!1 &1389408704
 GameObject:

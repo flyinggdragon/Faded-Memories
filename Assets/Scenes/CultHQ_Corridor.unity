@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Treasury
   nextPosX: -5
-  nextPosY: -2.19
+  nextPosY: -1.83
   nextScaleX: 1
 --- !u!1 &1389408704
 GameObject:
@@ -2940,7 +2940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Sanctuary_2
   nextPosX: 13.28
-  nextPosY: -1.41
+  nextPosY: -1.09
   nextScaleX: -1
 --- !u!1 &1897351869
 GameObject:
@@ -3275,7 +3275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: 
   nextPosX: -4.2
-  nextPosY: -2.04
+  nextPosY: -1.917
   nextScaleX: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

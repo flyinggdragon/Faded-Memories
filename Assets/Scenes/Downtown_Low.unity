@@ -1913,7 +1913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: PoliceStation_Main
   nextPosX: -29
-  nextPosY: -2.08
+  nextPosY: -1.91
   nextScaleX: 1
 --- !u!1 &1000328567
 GameObject:
@@ -2726,7 +2726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Outside
   nextPosX: -52.7
-  nextPosY: -8.23
+  nextPosY: -8.03
   nextScaleX: 1
 --- !u!1 &1389408704
 GameObject:
@@ -3671,7 +3671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Downtown_High
   nextPosX: -35
-  nextPosY: -2.08
+  nextPosY: -1.87
   nextScaleX: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

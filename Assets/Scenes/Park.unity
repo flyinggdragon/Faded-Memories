@@ -3118,7 +3118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Home_Outside
   nextPosX: -35.27
-  nextPosY: -2.19
+  nextPosY: -1.917
   nextScaleX: 1
 --- !u!1 &1807792125
 GameObject:
@@ -3345,7 +3345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Downtown_High
   nextPosX: 61.19
-  nextPosY: -2.08
+  nextPosY: -1.87
   nextScaleX: -1
 --- !u!1 &1899139506
 GameObject:
