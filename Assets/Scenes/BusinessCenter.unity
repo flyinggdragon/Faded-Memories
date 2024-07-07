@@ -374,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 143608617}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.5, y: 0, z: 0}
+  m_LocalPosition: {x: 12.5, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2967,11 +2967,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[6].text
-      value: They are known globally for being a very stable institution.
+      value: They are known across the globe for being a very stable institution.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[7].text
-      value: So they are pretty much one of the safest investments one can do.
+      value: So they're pretty much one of the safest investments one can do.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[8].text
@@ -2979,11 +2979,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[9].text
-      value: However, their actions have been plummeting recently, out of a sudden.
+      value: However, their shares have been plummeting recently, all of a sudden.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[10].text
-      value: Probably the government's fault.
+      value: It's probably the government's fault.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[11].text
@@ -2996,15 +2996,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[13].text
-      value: Feels like they are neglecting everything else.
+      value: It feels like they're neglecting everything else.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[14].text
-      value: This country is probably going into crisis. That's all so inexplicable.
+      value: This country is probably going into a crisis. It's all so unexplainable.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[15].text
-      value: We are currently in "war" with Kakim. It's like a cold war. A war for
+      value: We are currently at "war" with Kakim. It's like a cold war. A war for
         influences on other smaller nations.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -3031,11 +3031,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[21].text
-      value: But simply no one wants to buy my actions!
+      value: But simply no one wants to buy my shares!
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[22].text
-      value: Who would buy actions from a bank that has been losing value for 5 weeks
+      value: Who would buy shares from a bank that has been losing value for 5 weeks
         in a row?
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -3056,7 +3056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[27].text
-      value: But the responsible for it must know something we don't.
+      value: But the one responsible must know something we don't.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[28].text
@@ -3096,13 +3096,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[36].text
-      value: She is known for being an atheist and 100% anti-Cult. She has been responsible
+      value: She is known for being an atheist and 100% Anti-Cult. She has been responsible
         for bringing bad news about them.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[37].text
-      value: The rumour is that... I've heard that the Cult is involved in this,
-        somehow.
+      value: The rumour is that... the Cult is involved in this, somehow.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[38].text
@@ -3306,7 +3305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[14].answerOption1
-      value: Why military?
+      value: Why the military?
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[14].answerOption2
@@ -3540,8 +3539,8 @@ Transform:
   m_GameObject: {fileID: 1592305944}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0.93, z: 0}
-  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
+  m_LocalPosition: {x: -0.4, y: 1.41, z: 0}
+  m_LocalScale: {x: 0.3779931, y: 0.442403, z: 0.4086412}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 99185650}

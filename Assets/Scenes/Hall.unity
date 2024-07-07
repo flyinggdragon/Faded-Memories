@@ -2926,7 +2926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Street
   nextPosX: 29.23
-  nextPosY: -1.78
+  nextPosY: -1.6
   nextScaleX: -1
 --- !u!1 &1807792125
 GameObject:
