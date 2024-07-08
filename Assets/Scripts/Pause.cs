@@ -6,7 +6,7 @@ public class Pause : MonoBehaviour {
     public Button resume;
     public Button quit;
     public GameObject holder;
-    public static bool isOpen;
+    public static bool isOpen = false;
     private static Pause instance;
     public static Pause Instance { get; private set; }
 

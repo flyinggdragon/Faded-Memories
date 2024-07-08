@@ -2725,7 +2725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: CultHQ_Outside
-  nextPosX: -52.7
+  nextPosX: -52
   nextPosY: -8.03
   nextScaleX: 1
 --- !u!1 &1389408704

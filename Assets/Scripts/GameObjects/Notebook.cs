@@ -74,12 +74,12 @@ public class Notebook : MonoBehaviour {
         GameManager.firstQuarterCompleted = true;
         GameManager.secondQuarterCompleted = true;
         GameManager.wentToAlleyAndGotNecklace = true;
-        GameManager.sleptDay2 = true;
-        GameManager.spokeToNimrod = true;
+        GameManager.talkedToSuspectInRukon = true;
 
         CluesManager.Instance.CollectItem(GameManager.items[2]);
         CluesManager.Instance.CollectItem(GameManager.items[4]);
         CluesManager.Instance.CollectItem(GameManager.items[5]);
+        CluesManager.Instance.CollectItem(GameManager.items[9]);
     }
     public void Debug3() {
         

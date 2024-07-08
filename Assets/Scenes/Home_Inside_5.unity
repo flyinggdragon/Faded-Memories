@@ -1907,7 +1907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[56].text
-      value: Not really. I have nothing against them, they are jusst following their
+      value: Not really. I have nothing against them, they are just following their
         own national interests and so are we.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -1934,8 +1934,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[62].text
-      value: It is looks more technologic there. But living standards are pretty
-        much the same. They mostly face the same problems as us, problems that humanity
+      value: It looks more technologic there. But living standards are pretty much
+        the same. They mostly face the same problems as us, problems that humanity
         faces as a whole.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
@@ -2010,7 +2010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}
       propertyPath: dialogueStrings.Array.data[77].text
-      value: The only obligation I have as an Immediate, is helping to mantaint the
+      value: The only obligation I have as an Immediate, is helping to mantain the
         headquarters clean and organized, other than obeying my superiors.
       objectReference: {fileID: 0}
     - target: {fileID: 1604211681662699659, guid: 624f3085bc6603c43b860bb878957c4b, type: 3}

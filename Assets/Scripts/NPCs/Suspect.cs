@@ -11,6 +11,7 @@ public class Suspect : NPC {
 
     public void TalkToSuspectInRukon() {
         GameManager.talkedToSuspectInRukon = true;
+        Destroy(gameObject);
     }
 
     public void TalkToSuspectInPub() {

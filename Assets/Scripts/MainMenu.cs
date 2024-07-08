@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour {
     public GameObject mainCanvas;
     public GameObject creditsCanvas;
+    public GameObject controlsCanvas;
     public GameObject titleImage;
     public static bool comingFromEnd = false;
 
@@ -30,9 +31,19 @@ public class MainMenu : MonoBehaviour {
         mainCanvas.SetActive(false);
         titleImage.SetActive(false);
     }
+    public void ShowControls() {
+        controlsCanvas.SetActive(true);
+        mainCanvas.SetActive(false);
+        titleImage.SetActive(false);
+    }
 
     public void HideCredits() {
         creditsCanvas.SetActive(false);
+        mainCanvas.SetActive(true);
+        titleImage.SetActive(true);
+    }
+    public void HideControls() {
+        controlsCanvas.SetActive(false);
         mainCanvas.SetActive(true);
         titleImage.SetActive(true);
     }

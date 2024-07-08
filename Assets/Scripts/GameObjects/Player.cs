@@ -39,7 +39,7 @@ public class Player : MonoBehaviour {
 
         animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
 
-        if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive)) {
+        if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive || Pause.isOpen)) {
             horizontal = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(horizontal * speed, 0);
         } else { rb.velocity = Vector2.zero; }
@@ -97,7 +97,7 @@ public class Player : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen && !BlackScreenText.Instance.isActive) {            
+        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen && !BlackScreenText.Instance.isActive && !Pause.isOpen) {            
             if (currentTrigger.CompareTag("NPC")) {
                 currentTrigger.GetComponent<DialogueTrigger>().DialogueStart();
             }

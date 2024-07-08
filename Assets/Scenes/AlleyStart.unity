@@ -2640,7 +2640,7 @@ RectTransform:
   m_GameObject: {fileID: 518070807}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2563, y: 1.2563, z: 1.2563}
+  m_LocalScale: {x: 1.561093, y: 1.561093, z: 1.561093}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1557952258}
@@ -2737,7 +2737,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000004371139}
-  m_LocalPosition: {x: 0.11894131, y: 0.014939999, z: -10}
+  m_LocalPosition: {x: 0.12355518, y: 0.014939999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3786,7 +3786,7 @@ RectTransform:
   m_GameObject: {fileID: 659296996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2563, y: 1.2563, z: 1.2563}
+  m_LocalScale: {x: 1.4561774, y: 1.4561774, z: 1.4561774}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1290700631}
@@ -10751,9 +10751,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogueSoundEffect: {fileID: 0}
-  - text: "\"Lynx, you  must know that this is the Institution's and the Goddess
-      Herself will, do you think on betraying Her? \u2014 an intimidating voice sounds.
-      Everyone understands the message, but you continue."
+  - text: "\"Lynx, you must know that this is the Institution's and the Goddess Herself
+      will, do you think on betraying Her? \u2014 an intimidating voice sounds. Everyone
+      understands the message, but you continue."
     isEnd: 0
     isQuestion: 0
     answerOption1: 
@@ -12138,7 +12138,7 @@ RectTransform:
   m_GameObject: {fileID: 1581066963}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2563, y: 1.2563, z: 1.2563}
+  m_LocalScale: {x: 1.4339408, y: 1.4339408, z: 1.4339408}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 562939464}
