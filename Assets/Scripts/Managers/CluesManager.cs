@@ -81,8 +81,8 @@ public class CluesManager : MonoBehaviour {
 
     public void CollectItem(Item item) {
         if (!item.collected) {
-            string info = "\n" + item.itemName + "\n" + item.description + "\n" + item.keyword;
-            UIManager.Instance.CreateSimpleModal("You collected " + item.itemName + info, "Got item!");
+            string info = $"Desciption: {item.description}\nKeyword(s): {item.keyword}";
+            UIManager.Instance.CreateSimpleModal(info, "You have collected " + item.itemName);
 
             item.collected = true;
             

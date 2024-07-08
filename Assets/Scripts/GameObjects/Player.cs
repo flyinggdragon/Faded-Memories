@@ -50,7 +50,7 @@ public class Player : MonoBehaviour {
         transform.localScale = new Vector3(orientation, transform.localScale.y, transform.localScale.z);
 
         if (currentTrigger != null && currentTrigger.CompareTag("TriggerRight")) {
-            if (Input.GetKeyDown(KeyCode.D)) {
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
                 Exit exit = currentTrigger.gameObject.GetComponent<Exit>();
                 if (!string.IsNullOrEmpty(exit.nextLevel)) {
                     LevelManager.Instance.LoadLevel(exit.nextLevel);
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour {
         }
 
         if (currentTrigger != null && currentTrigger.CompareTag("TriggerLeft")) {
-            if (Input.GetKeyDown(KeyCode.A)) {
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
                 Exit exit = currentTrigger.gameObject.GetComponent<Exit>();
                 if (!string.IsNullOrEmpty(exit.nextLevel)) {
                     LevelManager.Instance.LoadLevel(exit.nextLevel);
