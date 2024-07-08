@@ -485,9 +485,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Marco "gairin" di Iorio
+  m_text: 'Marco A. L. di Iorio
 
-    Pietro'
+    Pietro Alberto Boscolo'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e1a4d9422d48054288163696fb33a1e, type: 2}
   m_sharedMaterial: {fileID: 4537658044317817725, guid: 0e1a4d9422d48054288163696fb33a1e, type: 2}
@@ -621,9 +621,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Marco "gairin" di Iorio
+  m_text: 'Marco A. L. di Iorio
 
-    Bernardo'
+    Bernardo G. S. Orlandi'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e1a4d9422d48054288163696fb33a1e, type: 2}
   m_sharedMaterial: {fileID: 4537658044317817725, guid: 0e1a4d9422d48054288163696fb33a1e, type: 2}
@@ -1749,11 +1749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pietro
-
-    Sofia
-
-    Exiled_Prince'
+  m_text: "Pietro Alberto Boscolo\nSofia Fantin \xC1lvares da Silva\nExiled_Prince"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e1a4d9422d48054288163696fb33a1e, type: 2}
   m_sharedMaterial: {fileID: 4537658044317817725, guid: 0e1a4d9422d48054288163696fb33a1e, type: 2}

@@ -11,6 +11,8 @@ public class BlackScreenText : MonoBehaviour {
     public GameObject dimmedBackground;
     public TMP_Text textComponent;
     public Image imageComponent;
+    private float typingSpeed = 0.03f;
+    private AudioClip typingSound;
     private static BlackScreenText instance;
     public static BlackScreenText Instance { get; private set; }
     public bool isActive = false;
@@ -47,6 +49,8 @@ public class BlackScreenText : MonoBehaviour {
     void Start() {
         container.SetActive(false);
         dimmedBackground.SetActive(false);
+
+        typingSound = Resources.Load<AudioClip>("Audio/SFX/typingSound");
     }
 
     public IEnumerator CreateBlackScreenWithText(List<DialogueString> ds) {
@@ -81,11 +85,12 @@ public class BlackScreenText : MonoBehaviour {
     private IEnumerator TextStart(List<DialogueString> ds) {
         while (textIndex < ds.Count) {
             DialogueString line = ds[textIndex];
-            textComponent.text = line.text;
+            //textComponent.text = line.text;
 
             nextIndicator.gameObject.SetActive(false);
-            yield return new WaitForSeconds(textInterval);
-            nextIndicator.gameObject.SetActive(true);
+            yield return StartCoroutine(TypeText(line.text));
+
+            //yield return new WaitForSeconds(textInterval);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
 
             if (line.isEnd) {
@@ -95,6 +100,19 @@ public class BlackScreenText : MonoBehaviour {
 
             textIndex++;
         }
+    }
+
+    private IEnumerator TypeText(string text) {
+        textComponent.text = "";
+
+        foreach (char letter in text.ToCharArray()) {
+            textComponent.text += letter;
+            AudioManager.Instance.PlaySound(typingSound, 0.3f);
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        nextIndicator.gameObject.SetActive(true);
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
     }
 
     private IEnumerator ShowImage(Sprite img) {

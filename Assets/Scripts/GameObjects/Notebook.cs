@@ -82,12 +82,7 @@ public class Notebook : MonoBehaviour {
         CluesManager.Instance.CollectItem(GameManager.items[5]);
     }
     public void Debug3() {
-        for (int i = 0; i < 10; i++) {
-            ObjectivesManager.Instance.FinishObjective(
-                GameManager.objectives[i]
-            );
-        }
-
+        
         GameManager.knowsPoliceCrackdown = true;
         GameManager.talkedToGerald = true;
         GameManager.knowsGeraldName = true;
@@ -104,10 +99,17 @@ public class Notebook : MonoBehaviour {
         GameManager.spokeToNimrod = true;
         GameManager.escaping = false;
         GameManager.spokeToHemer = true;
-        GameManager.reportedCult = true;/*
+        GameManager.reportedCult = true;
         GameManager.raidTime = true;
         GameManager.sawBag = true;
-        GameManager.sawFinances = true;*/
+        GameManager.sawFinances = true;
+
+        for (int i = 0; i < 15; i++) {
+            ObjectivesManager.Instance.FinishObjective(
+                GameManager.objectives[i]
+            );
+        }
+
 
         CluesManager.Instance.CollectItem(GameManager.items[2]);
         CluesManager.Instance.CollectItem(GameManager.items[4]);
@@ -139,7 +141,8 @@ public class Notebook : MonoBehaviour {
     }
 
     public void tp() {
-        LevelManager.Instance.LoadLevel("Home_Inside_6");
+        LevelManager.Instance.LoadLevel("Last_Scene");
+        GameManager.sawConfidentialDocuments = true;
     }
 
     void Start() {
@@ -159,6 +162,7 @@ public class Notebook : MonoBehaviour {
 
     public IEnumerator ToggleAndLock(int sentenceNumber) {
         ToggleNotebook();
+        ActivateCluesContent();
         shouldNotClose = true;
 
         Transform container = sentencesContent.transform.GetChild(0);

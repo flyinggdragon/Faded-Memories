@@ -6,7 +6,7 @@ public class Pause : MonoBehaviour {
     public Button resume;
     public Button quit;
     public GameObject holder;
-    public bool isOpen;
+    public static bool isOpen;
     private static Pause instance;
     public static Pause Instance { get; private set; }
 
@@ -33,11 +33,9 @@ public class Pause : MonoBehaviour {
 
         if (isOpen) {
             AudioManager.Instance.bgMusicSource.volume = 0.1f;
-            UIManager.Instance.UnlockCursor();
         }
         else {
             AudioManager.Instance.bgMusicSource.volume = 0.3f;
-            UIManager.Instance.LockCursor();
         }
     }
 
@@ -48,5 +46,7 @@ public class Pause : MonoBehaviour {
         AudioManager.Instance.StopBackgroundMusic();
 
         SceneManager.LoadScene("Main Menu");
+
+        Destroy(Player.Instance.gameObject);
     }
 }

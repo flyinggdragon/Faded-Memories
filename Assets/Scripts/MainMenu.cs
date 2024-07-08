@@ -7,6 +7,14 @@ public class MainMenu : MonoBehaviour {
     public GameObject mainCanvas;
     public GameObject creditsCanvas;
     public GameObject titleImage;
+    public static bool comingFromEnd = false;
+
+    void Start() {
+        if (comingFromEnd) {
+            ShowCredits();
+            comingFromEnd = false;
+        }
+    }
 
     public void StartGame() {
         GameManager.Initialize();

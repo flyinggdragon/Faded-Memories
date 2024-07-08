@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class Player : MonoBehaviour {
     public DialogueManager dialogueManager;
     private float horizontal;
-    private float speed = 20.0f;
+    private float speed = 10.0f;
     public Rigidbody2D rb;
     private bool inTrigger = false;
     private Collider2D currentTrigger;
@@ -35,8 +35,10 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
+        UIManager.Instance.UnlockCursor();
 
         animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+
         if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive)) {
             horizontal = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(horizontal * speed, 0);
@@ -90,7 +92,7 @@ public class Player : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) {
-            if (!dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen && !BlackScreenText.Instance.isActive) {
+            if (!dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen && !BlackScreenText.Instance.isActive && !Pause.isOpen) {
                 Notebook.Instance.ToggleNotebook();
             }
         }
@@ -147,7 +149,7 @@ public class Player : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.P)) {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive)) {
                 Pause.Instance.TogglePause();
                 rb.velocity = Vector2.zero;

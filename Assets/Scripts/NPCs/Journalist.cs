@@ -1,9 +1,12 @@
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Journalist : NPC {
     public override string npcName { get; set; } = "Journalist";
     private DialogueTrigger dt;
+    [SerializeField] public List<DialogueString> ds = new List<DialogueString>();
 
     void Start() {
         dt = GetComponentInChildren<DialogueTrigger>();
@@ -12,7 +15,7 @@ public class Journalist : NPC {
     public override void RevealName() {}
 
     void Update() {
-        if (!GameManager.firstPuzzleCompleted) { dt.dialogueStrings[9].isEnd = true; }
+        if (!GameManager.firstPuzzleCompleted && !GameManager.sawConfidentialDocuments) { dt.dialogueStrings[9].isEnd = true; }
         else { dt.dialogueStrings[9].isEnd = false; }
     }
     
@@ -24,5 +27,19 @@ public class Journalist : NPC {
         }
 
         GameManager.goingToFirstMeetJacob = true;
+    }
+
+    public void SendToCredits() {
+        StartCoroutine(DisplayFinalText());
+    }
+
+    public IEnumerator DisplayFinalText() {
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateBlackScreenWithText(ds)
+        );
+
+        MainMenu.comingFromEnd = true;
+        AudioManager.Instance.StopBackgroundMusic();
+        SceneManager.LoadScene("Main Menu");
     }
 }

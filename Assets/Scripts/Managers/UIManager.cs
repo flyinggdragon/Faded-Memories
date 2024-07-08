@@ -25,14 +25,8 @@ public class UIManager : MonoBehaviour {
         Cursor.visible = true;
     }
 
-    public void LockCursor() {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
     public void CreateSimpleModal(string body, string header = "") {
         modalOpen = true;
-        UnlockCursor();
 
         SimpleModalWindow.Create()
                    .SetHeader(header)
@@ -47,7 +41,6 @@ public class UIManager : MonoBehaviour {
         string header = ""
         ) {
         modalOpen = true;
-        UnlockCursor();
 
         SimpleModalWindow.Create()
                    .SetHeader(header)
@@ -66,7 +59,6 @@ public class UIManager : MonoBehaviour {
         string header = ""
     ) {
         modalOpen = true;
-        UnlockCursor();
 
         SimpleModalWindow.Create(false)
                    .SetHeader(header)
@@ -81,7 +73,6 @@ public class UIManager : MonoBehaviour {
         string header = ""
         ) {
         modalOpen = true;
-        UnlockCursor();
 
         InputModalWindow modal = InputModalWindow.Create()
             .SetHeader(header)
@@ -95,7 +86,6 @@ public class UIManager : MonoBehaviour {
 
     public void CreateToastModal(string body, string header = "") {
         modalOpen = true;
-        UnlockCursor();
 
         ToastModalWindow.Create(ignorable: true)
                         .SetHeader(header)

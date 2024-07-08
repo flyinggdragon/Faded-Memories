@@ -7,6 +7,7 @@ public class Jacob : NPC {
     public DialogueTrigger dt;
     public bool talkedToJacob = false;
     private bool passedInvestigateMission = false;
+    [SerializeField] public List<DialogueString> ds = new List<DialogueString>();
 
     void Start() {
         dt = GetComponentInChildren<DialogueTrigger>();
@@ -66,8 +67,16 @@ public class Jacob : NPC {
 
     public void DaviGoesSleep() {
         LevelManager.Instance.LoadLevel("Home_Inside_3");
+        
+        StartCoroutine(DayTwoToDayThree());
 
         GameManager.sleptDay2 = true;
+    }
+
+    private IEnumerator DayTwoToDayThree() {
+        yield return StartCoroutine(
+            BlackScreenText.Instance.CreateBlackScreenWithText(ds)
+        );
     }
 
     public void InvestigateMurder() {

@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour {
     private List<Button> activeOptions;
     private Image dialogueImage;
 
-    [SerializeField] private float typingSpeed = 0.05f;
+    [SerializeField] private float typingSpeed = 0.03f;
     private AudioClip typingSound;
     private List<DialogueString> dialogueList;
     private AudioSource audioSource;
@@ -36,27 +36,20 @@ public class DialogueManager : MonoBehaviour {
         dialogueParent.SetActive(false);
         activeOptions = new List<Button>();
         typingSound = Resources.Load<AudioClip>("Audio/SFX/typingSound");
-        nextIndicator.gameObject.SetActive(false); // Inicialmente desativado
-    }
-
-    void Update() {
-        if (isDialoguing) {
-            UIManager.Instance.UnlockCursor();
-        }
+        nextIndicator.gameObject.SetActive(false);
     }
 
     public void DialogueStart(List<DialogueString> textToPrint, string name, bool firstInteraction) {
         if (!firstInteraction) {
             typingSpeed = 0.01f;
         } else {
-            typingSpeed = 0.01f;
+            typingSpeed = 0.03f;
         }
 
         Player.Instance.hoverPopUp.SetActive(false);
 
         npcName = name;
         dialogueParent.SetActive(true);
-        UIManager.Instance.UnlockCursor();
 
         isDialoguing = true;
 
@@ -184,7 +177,7 @@ public class DialogueManager : MonoBehaviour {
 
         foreach (char letter in text.ToCharArray()) {
             dialogueText.text += letter;
-            AudioManager.Instance.PlaySound(typingSound, 0.5f);
+            AudioManager.Instance.PlaySound(typingSound, 0.3f);
             yield return new WaitForSeconds(typingSpeed);
         }
 
