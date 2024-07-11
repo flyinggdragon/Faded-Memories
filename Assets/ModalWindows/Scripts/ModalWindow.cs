@@ -149,7 +149,7 @@ public abstract class ModalWindow<T> : MonoBehaviour where T : ModalWindow<T>
 
     public virtual T Close()
     {
-        UIManager.Instance.modalOpen = false;
+        Player.Instance.ToggleMovement(true);
         
         Visible = false;
         Destroy(gameObject, 1f);

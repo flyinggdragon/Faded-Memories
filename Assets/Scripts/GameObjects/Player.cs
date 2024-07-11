@@ -7,16 +7,22 @@ using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour {
     public DialogueManager dialogueManager;
-    private float horizontal;
-    private float speed = 10.0f;
+    public Notebook notebook;
+    public BlackScreenText bst;
+    public Pause pause;
+    public Animator animator;
+    public static Player Instance { get; private set; }
     public Rigidbody2D rb;
-    private bool inTrigger = false;
     private Collider2D currentTrigger;
     public GameObject hoverPopUp;
+    public bool shouldMove = true;
+    public bool shouldOpenNotebook = true;
+    public bool shouldDialogue = true;
+    public bool shouldPause = true;
+    private float horizontal;
+    private float speed = 10.0f;
     private int orientation = 1;
-    public static Player Instance { get; private set; }
-
-    Animator animator;
+    private bool inTrigger = false;
    
     void Awake() {
         if (Instance == null && Instance != this) {
@@ -39,7 +45,7 @@ public class Player : MonoBehaviour {
 
         animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
 
-        if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive || Pause.isOpen)) {
+        if (shouldMove) {
             horizontal = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(horizontal * speed, 0);
         } else { rb.velocity = Vector2.zero; }
@@ -92,12 +98,12 @@ public class Player : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) {
-            if (!dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen && !BlackScreenText.Instance.isActive && !Pause.isOpen) {
-                Notebook.Instance.ToggleNotebook();
+            if (shouldOpenNotebook) {
+                notebook.ToggleNotebook();
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inTrigger && !dialogueManager.IsDialoguing && !UIManager.Instance.modalOpen && !BlackScreenText.Instance.isActive && !Pause.isOpen) {            
+        if (Input.GetKeyDown(KeyCode.E) && inTrigger && shouldDialogue) {            
             if (currentTrigger.CompareTag("NPC")) {
                 currentTrigger.GetComponent<DialogueTrigger>().DialogueStart();
             }
@@ -115,7 +121,6 @@ public class Player : MonoBehaviour {
 
                     if (item.itemName == "Note") {
                         AlleyStart.noteCollected = true;
-                        AlleyStart.firstTimeIn = false;
                     }
                 }
             }
@@ -150,9 +155,8 @@ public class Player : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (!(dialogueManager.IsDialoguing || Notebook.Instance.isOpen || UIManager.Instance.modalOpen || BlackScreenText.Instance.isActive)) {
+            if (shouldPause) {
                 Pause.Instance.TogglePause();
-                rb.velocity = Vector2.zero;
             }
         }
 
@@ -187,7 +191,7 @@ public class Player : MonoBehaviour {
             Transform ht = hoverPopUp.transform;
             ht.localScale = new Vector3(orientation * 4.75f, ht.transform.localScale.y, ht.transform.localScale.z);
             
-            if (dialogueManager.IsDialoguing) {
+            if (!shouldDialogue) {
                 hoverPopUp.GetComponent<SpriteRenderer>().sprite = null;
             }
 
@@ -208,5 +212,12 @@ public class Player : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D other) {
         currentTrigger = null;
         inTrigger = false;
+    }
+
+    public void ToggleMovement(bool should) {
+        shouldOpenNotebook = should;
+        shouldPause = should;
+        shouldDialogue = should;
+        shouldMove = should;
     }
 }

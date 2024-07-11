@@ -420,12 +420,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 86863183}
+  - component: {fileID: 86863184}
   - component: {fileID: 86863182}
   - component: {fileID: 86863181}
   - component: {fileID: 86863180}
-  - component: {fileID: 86863184}
   m_Layer: 5
-  m_Name: Notebook Holder
+  m_Name: Notebook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,7 +530,14 @@ MonoBehaviour:
   notebookObject: {fileID: 86863179}
   isOpen: 0
   openAudio: {fileID: 8300000, guid: 46f60182089d05b43abb9457e904d970, type: 3}
+  sentencesContent: {fileID: 1250830986}
+  cluesContent: {fileID: 217124197}
+  objectivesContent: {fileID: 368272702}
+  sentencesButton: {fileID: 584934434}
+  cluesButton: {fileID: 1219304473}
+  objectivesButton: {fileID: 1482440077}
   shouldNotClose: 0
+  dimmedBackground: {fileID: 993501106}
 --- !u!1 &88221790
 GameObject:
   m_ObjectHideFlags: 0
@@ -5818,8 +5825,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 988958399}
+  notebook: {fileID: 86863184}
+  animator: {fileID: 0}
   rb: {fileID: 988958393}
   hoverPopUp: {fileID: 1846876256}
+  shouldMove: 1
+  shouldOpenNotebook: 1
+  shouldDialogue: 1
+  shouldPause: 1
 --- !u!50 &988958393
 Rigidbody2D:
   serializedVersion: 4
@@ -13346,7 +13359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c53b828240d2f48986e0a3507bad20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modalOpen: 0
 --- !u!4 &1955164995
 Transform:
   m_ObjectHideFlags: 0

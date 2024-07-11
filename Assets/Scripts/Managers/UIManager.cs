@@ -6,7 +6,6 @@ using System.IO;
 
 public class UIManager : MonoBehaviour {
     private static UIManager instance;
-    public bool modalOpen = false;
     public static UIManager Instance { get; private set; }
 
     void Awake() {
@@ -26,7 +25,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void CreateSimpleModal(string body, string header = "") {
-        modalOpen = true;
+        Player.Instance.ToggleMovement(false);
 
         SimpleModalWindow.Create()
                    .SetHeader(header)
@@ -40,7 +39,7 @@ public class UIManager : MonoBehaviour {
         string btn2 = "No", 
         string header = ""
         ) {
-        modalOpen = true;
+        Player.Instance.ToggleMovement(false);
 
         SimpleModalWindow.Create()
                    .SetHeader(header)
@@ -58,7 +57,7 @@ public class UIManager : MonoBehaviour {
         string btn2 = "No",
         string header = ""
     ) {
-        modalOpen = true;
+        Player.Instance.ToggleMovement(false);
 
         SimpleModalWindow.Create(false)
                    .SetHeader(header)
@@ -72,7 +71,7 @@ public class UIManager : MonoBehaviour {
         string body,
         string header = ""
         ) {
-        modalOpen = true;
+        Player.Instance.ToggleMovement(false);
 
         InputModalWindow modal = InputModalWindow.Create()
             .SetHeader(header)
@@ -85,7 +84,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void CreateToastModal(string body, string header = "") {
-        modalOpen = true;
+        Player.Instance.ToggleMovement(false);
 
         ToastModalWindow.Create(ignorable: true)
                         .SetHeader(header)
