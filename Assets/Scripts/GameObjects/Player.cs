@@ -156,7 +156,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (shouldPause) {
-                Pause.Instance.TogglePause();
+                pause.TogglePause();
             }
         }
 
