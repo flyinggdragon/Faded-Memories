@@ -19,16 +19,10 @@ public class DialogueManager : MonoBehaviour {
     private Image dialogueImage;
 
     [SerializeField] private float typingSpeed = 0.03f;
-    private AudioClip typingSound;
+    public AudioClip typingSound;
     private List<DialogueString> dialogueList;
     private AudioSource audioSource;
-
-    private bool isDialoguing = false;
     private string npcName;
-
-    public bool IsDialoguing {
-        get { return isDialoguing; }
-    }
 
     public int currentDialogueIndex = 0;
 
@@ -51,7 +45,8 @@ public class DialogueManager : MonoBehaviour {
         npcName = name;
         dialogueParent.SetActive(true);
 
-        isDialoguing = true;
+        
+        Player.Instance.ToggleMovement(false);
 
         dialogueList = textToPrint;
         currentDialogueIndex = 0;
@@ -195,7 +190,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void DialogueStop() {
-        isDialoguing = false;
+        Player.Instance.ToggleMovement(true);
 
         StopAllCoroutines();
         dialogueText.text = "";

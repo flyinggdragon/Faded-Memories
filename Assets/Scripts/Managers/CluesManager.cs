@@ -11,6 +11,7 @@ public class CluesManager : MonoBehaviour {
     [SerializeField]
     public List<Item> items;
     public List<Cell> cells;
+    public GameObject cellContainer;
     public static CluesManager Instance { get; private set; }
 
     private void Awake() {
@@ -45,7 +46,6 @@ public class CluesManager : MonoBehaviour {
     }
 
     private List<Cell> GenerateCells() {
-        GameObject cellContainer = this.transform.GetChild(0).gameObject;
         List<Cell> cellsList = new List<Cell>();
 
         foreach (Item item in GameManager.items) {
@@ -56,9 +56,6 @@ public class CluesManager : MonoBehaviour {
 
             RectTransform rectTransform = obj.AddComponent<RectTransform>();
             rectTransform.anchoredPosition = Vector2.zero;
-
-            float aspectRatio = sprite.rect.width / sprite.rect.height;
-            rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.y * aspectRatio, rectTransform.sizeDelta.y);
 
             Cell cell = obj.AddComponent<Cell>();
             cell.itemId = item.id;
@@ -72,6 +69,7 @@ public class CluesManager : MonoBehaviour {
 
             cellsList.Add(cell);
         }
+
         return cellsList;
     }
 

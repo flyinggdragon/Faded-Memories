@@ -20,9 +20,6 @@ public class Pause : MonoBehaviour {
     }
 
     void Start() {
-        holder.SetActive(false);
-        isOpen = false;
-        
         resume.onClick.AddListener(() => TogglePause());
         quit.onClick.AddListener(() => Quit());
     }
@@ -30,6 +27,8 @@ public class Pause : MonoBehaviour {
     public void TogglePause() {
         isOpen = !isOpen;
         holder.SetActive(isOpen);
+
+        Player.Instance.ToggleMovement(!isOpen);
 
         if (isOpen) {
             AudioManager.Instance.bgMusicSource.volume = 0.1f;

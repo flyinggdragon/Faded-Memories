@@ -11,15 +11,14 @@ public class Notebook : MonoBehaviour {
     public AudioClip openAudio;
     private AudioSource audioSource;
 
-    // Fim das inutilidades
-    private GameObject sentencesContent;
-    private GameObject cluesContent;
-    private GameObject objectivesContent;
-    private Button sentencesButton;
-    private Button cluesButton;
-    private Button objectivesButton;
+    public GameObject sentencesContent;
+    public GameObject cluesContent;
+    public GameObject objectivesContent;
+    public Button sentencesButton;
+    public Button cluesButton;
+    public Button objectivesButton;
     public bool shouldNotClose = false;
-    private GameObject dimmedBackground;
+    public GameObject dimmedBackground;
 
     void Awake() {
         if (Instance == null && Instance != this) {
@@ -32,137 +31,8 @@ public class Notebook : MonoBehaviour {
         }
     }
 
-    public void Debug1() {
-
-        for (int i = 0; i < 6; i++) {
-            ObjectivesManager.Instance.FinishObjective(
-                GameManager.objectives[i]
-            );
-        }
-
-        GameManager.knowsPoliceCrackdown = true;
-        GameManager.talkedToGerald = true;
-        GameManager.knowsGeraldName = true;
-        GameManager.firstPuzzleCompleted = true;
-        GameManager.sawGraffiti = true;
-        GameManager.goingToFirstMeetJacob = true;
-        GameManager.talkedToJacob = true;
-        GameManager.knowsRumour = true;
-        GameManager.firstQuarterCompleted = true;
-        GameManager.secondQuarterCompleted = true;
-        
-
-        CluesManager.Instance.CollectItem(GameManager.items[2]);
-        CluesManager.Instance.CollectItem(GameManager.items[4]);
-        CluesManager.Instance.CollectItem(GameManager.items[5]);
-    }
-    public void Debug2() {
-        for (int i = 0; i < 8; i++) {
-            ObjectivesManager.Instance.FinishObjective(
-                GameManager.objectives[i]
-            );
-        }
-
-        GameManager.knowsPoliceCrackdown = true;
-        GameManager.talkedToGerald = true;
-        GameManager.knowsGeraldName = true;
-        GameManager.firstPuzzleCompleted = true;
-        GameManager.sawGraffiti = true;
-        GameManager.goingToFirstMeetJacob = true;
-        GameManager.talkedToJacob = true;
-        GameManager.knowsRumour = true;
-        GameManager.firstQuarterCompleted = true;
-        GameManager.secondQuarterCompleted = true;
-        GameManager.wentToAlleyAndGotNecklace = true;
-        GameManager.talkedToSuspectInRukon = true;
-
-        CluesManager.Instance.CollectItem(GameManager.items[2]);
-        CluesManager.Instance.CollectItem(GameManager.items[4]);
-        CluesManager.Instance.CollectItem(GameManager.items[5]);
-        CluesManager.Instance.CollectItem(GameManager.items[9]);
-    }
-    public void Debug3() {
-        
-        GameManager.knowsPoliceCrackdown = true;
-        GameManager.talkedToGerald = true;
-        GameManager.knowsGeraldName = true;
-        GameManager.firstPuzzleCompleted = true;
-        GameManager.sawGraffiti = true;
-        GameManager.goingToFirstMeetJacob = true;
-        GameManager.talkedToJacob = true;
-        GameManager.knowsRumour = true;
-        GameManager.firstQuarterCompleted = true;
-        GameManager.secondQuarterCompleted = true;
-        GameManager.thirdQuarterCompleted = true;
-        GameManager.wentToAlleyAndGotNecklace = true;
-        GameManager.sleptDay2 = true;
-        GameManager.spokeToNimrod = true;
-        GameManager.escaping = false;
-        GameManager.spokeToHemer = true;
-        GameManager.reportedCult = true;
-        GameManager.raidTime = true;
-        GameManager.sawBag = true;
-        GameManager.sawFinances = true;
-
-        for (int i = 0; i < 15; i++) {
-            ObjectivesManager.Instance.FinishObjective(
-                GameManager.objectives[i]
-            );
-        }
-
-
-        CluesManager.Instance.CollectItem(GameManager.items[2]);
-        CluesManager.Instance.CollectItem(GameManager.items[4]);
-        CluesManager.Instance.CollectItem(GameManager.items[5]);
-        CluesManager.Instance.CollectItem(GameManager.items[11]);
-    }
-
-    public void DebugM2() {
-        for (int i = 0; i < 5; i++) {
-            ObjectivesManager.Instance.FinishObjective(
-                GameManager.objectives[i]
-            );
-        }
-
-        GameManager.knowsPoliceCrackdown = true;
-        GameManager.talkedToGerald = true;
-        GameManager.knowsGeraldName = true;
-        GameManager.firstPuzzleCompleted = true;
-        GameManager.sawGraffiti = true;
-        GameManager.goingToFirstMeetJacob = true;
-        GameManager.talkedToJacob = true;
-        GameManager.knowsRumour = true;
-        GameManager.firstQuarterCompleted = true;
-        GameManager.secondQuarterCompleted = true;
-
-        CluesManager.Instance.CollectItem(GameManager.items[2]);
-        CluesManager.Instance.CollectItem(GameManager.items[4]);
-        CluesManager.Instance.CollectItem(GameManager.items[5]);
-    }
-
-    public void tp() {
-        LevelManager.Instance.LoadLevel("Last_Scene");
-        GameManager.sawConfidentialDocuments = true;
-    }
-
-    void Start() {
-        notebookObject.SetActive(false);
-
-        dimmedBackground = notebookObject.transform.GetChild(0).gameObject;
-        dimmedBackground.SetActive(false);
-
-        sentencesContent = transform.Find("Notebook Back/Sentences Content").gameObject;
-        cluesContent = transform.Find("Notebook Back/Clues Content").gameObject;
-        objectivesContent = transform.Find("Notebook Back/Objectives Content").gameObject;
-
-        sentencesButton = transform.Find("Notebook Back/Button Holder/Sentences Button").GetComponent<Button>();
-        cluesButton = transform.Find("Notebook Back/Button Holder/Clues Button").GetComponent<Button>();
-        objectivesButton = transform.Find("Notebook Back/Button Holder/Objectives Button").GetComponent<Button>();
-    }
-
     public IEnumerator ToggleAndLock(int sentenceNumber) {
         ToggleNotebook();
-        ActivateCluesContent();
         shouldNotClose = true;
 
         Transform container = sentencesContent.transform.GetChild(0);
@@ -171,6 +41,16 @@ public class Notebook : MonoBehaviour {
 
         attention.gameObject.SetActive(true);
         dimmedBackground.SetActive(true);
+
+        ActivateCluesContent();
+
+        yield return new WaitUntil(() => AllSpacesFilled(sentence));
+        
+        shouldNotClose = false;
+        attention.gameObject.SetActive(false);
+        dimmedBackground.SetActive(false);
+        
+        ToggleNotebook();
 
         bool AllSpacesFilled(Transform sentence) {
             foreach (Transform child in sentence.transform) {
@@ -188,14 +68,6 @@ public class Notebook : MonoBehaviour {
 
             return true;
         }
-
-        yield return new WaitUntil(() => AllSpacesFilled(sentence));
-        
-        shouldNotClose = false;
-        attention.gameObject.SetActive(false);
-        dimmedBackground.SetActive(false);
-        
-        ToggleNotebook();
     }
 
     public void ToggleNotebook() {
@@ -204,6 +76,10 @@ public class Notebook : MonoBehaviour {
         }
 
         isOpen = !isOpen;
+
+        Player.Instance.shouldMove = !isOpen;
+        Player.Instance.shouldDialogue = !isOpen;
+        Player.Instance.shouldPause = !isOpen;
         notebookObject.SetActive(isOpen);
         
         AudioManager.Instance.PlaySound(openAudio, 1f);

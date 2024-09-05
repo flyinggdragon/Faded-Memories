@@ -12,7 +12,7 @@ public class BlackScreenText : MonoBehaviour {
     public TMP_Text textComponent;
     public Image imageComponent;
     private float typingSpeed = 0.03f;
-    private AudioClip typingSound;
+    public AudioClip typingSound;
     private static BlackScreenText instance;
     public static BlackScreenText Instance { get; private set; }
     public bool isActive = false;
@@ -46,14 +46,9 @@ public class BlackScreenText : MonoBehaviour {
         }
     }
 
-    void Start() {
-        container.SetActive(false);
-        dimmedBackground.SetActive(false);
-
-        typingSound = Resources.Load<AudioClip>("Audio/SFX/typingSound");
-    }
-
     public IEnumerator CreateBlackScreenWithText(List<DialogueString> ds) {
+        Player.Instance.ToggleMovement(false);
+
         isActive = true;
         gameObject.SetActive(isActive);
 
@@ -69,6 +64,8 @@ public class BlackScreenText : MonoBehaviour {
     }
 
     public IEnumerator CreateTransparentItemDisplayer(Sprite image) {
+        Player.Instance.ToggleMovement(false);
+
         isActive = true;
         gameObject.SetActive(isActive);
 
